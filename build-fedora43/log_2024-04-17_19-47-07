@@ -1,0 +1,111 @@
+2024-04-17 19:47:07.817092 +0000 > starting log
+2024-04-17 19:47:07.817292 +0000 build-fedora43: > starting build with log
+2024-04-17 19:47:07.817309 +0000 build-fedora43: >> args:
+2024-04-17 19:47:07.817317 +0000 build-fedora43: >>   ()
+2024-04-17 19:47:07.817324 +0000 build-fedora43: >> component:
+2024-04-17 19:47:07.817330 +0000 build-fedora43: >>   python-qasync
+2024-04-17 19:47:07.817336 +0000 build-fedora43: >> distributions:
+2024-04-17 19:47:07.817344 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-17 19:47:22.338933 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7169 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:47:22.630453 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp7169 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-qasync.git /builder/python-qasync /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 19:47:28.309436 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 19:47:28.309510 +0000 build-fedora43: output: ---> Good tag 31b4e8744c981e004d6313a82059bada3015dd27.
+2024-04-17 19:47:28.309536 +0000 build-fedora43: output: ---> Good tag c339adc4af2d0946a1ba653b60174f03554d7e12.
+2024-04-17 19:47:28.309558 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 19:47:28.309578 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 19:47:28.326712 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7169 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-17 19:47:45.847813 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1998 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--qasync /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/python-qasync
+2024-04-17 19:47:46.084774 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1998 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:47:46.256223 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1998 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-qasync --file-name qasync-0.23.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz''.
+2024-04-17 19:47:46.439652 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 19:47:46.439758 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-qasync --file-name qasync-0.23.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz
+2024-04-17 19:47:46.442128 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/python-qasync'\'' --file-name '\''qasync-0.23.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz'\'' --'
+2024-04-17 19:47:46.442165 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/python-qasync'\'' --file-name '\''qasync-0.23.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz'\'' --'
+2024-04-17 19:47:46.442192 +0000 build-fedora43: output: ++ set -- --output-dir /builder/python-qasync --file-name qasync-0.23.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz --
+2024-04-17 19:47:46.442228 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:47:46.442246 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:46.442264 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/python-qasync
+2024-04-17 19:47:46.442283 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442298 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442315 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:47:46.442330 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:46.442348 +0000 build-fedora43: output: + FILE_NAME=qasync-0.23.0.tar.gz
+2024-04-17 19:47:46.442395 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442418 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442436 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:47:46.442452 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:46.442473 +0000 build-fedora43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz
+2024-04-17 19:47:46.442488 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442503 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442518 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:47:46.442533 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:46.442548 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:46.442563 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:47:46.442585 +0000 build-fedora43: output: + '[' -z https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz ']'
+2024-04-17 19:47:46.442605 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 19:47:46.442622 +0000 build-fedora43: output: + '[' -z qasync-0.23.0.tar.gz ']'
+2024-04-17 19:47:46.442640 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_qasync-0.23.0.tar.gz
+2024-04-17 19:47:46.442657 +0000 build-fedora43: output: + '[' -n /builder/python-qasync ']'
+2024-04-17 19:47:46.442677 +0000 build-fedora43: output: + mkdir -p /builder/python-qasync
+2024-04-17 19:47:46.443330 +0000 build-fedora43: output: + cd /builder/python-qasync
+2024-04-17 19:47:46.443457 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qasync-0.23.0.tar.gz -- https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz
+2024-04-17 19:47:50.037557 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 19:47:50.037644 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:47:50.049724 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1998 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync-2Funtrusted_qasync--0.23.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw
+2024-04-17 19:47:52.962976 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256'.
+2024-04-17 19:47:52.967740 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 19:47:52.968836 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256
+2024-04-17 19:47:52.970708 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256'\'' --'
+2024-04-17 19:47:52.970780 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256'\'' --'
+2024-04-17 19:47:52.971040 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 --
+2024-04-17 19:47:52.971161 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 19:47:52.971444 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 19:47:52.971725 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:52.972160 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw
+2024-04-17 19:47:52.972275 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.972458 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.972596 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:47:52.972722 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:52.973008 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz
+2024-04-17 19:47:52.973041 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.973166 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.973320 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:47:52.974587 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:52.974622 +0000 build-fedora43: output: + CHECKSUM_CMD=sha256sum
+2024-04-17 19:47:52.974643 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.974661 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.974678 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:47:52.974695 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:52.974718 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256
+2024-04-17 19:47:52.974735 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.974751 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.974767 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:47:52.974783 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:47:52.974799 +0000 build-fedora43: output: + shift
+2024-04-17 19:47:52.974816 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:47:52.974838 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz ']'
+2024-04-17 19:47:52.974859 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw ']'
+2024-04-17 19:47:52.974879 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw
+2024-04-17 19:47:52.977299 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz
+2024-04-17 19:47:52.979925 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_qasync-0.23.0.tar.gz
+2024-04-17 19:47:52.979967 +0000 build-fedora43: output: + FILE_NAME=qasync-0.23.0.tar.gz
+2024-04-17 19:47:52.979992 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-17 19:47:52.980015 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-17 19:47:52.980038 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-17 19:47:52.980054 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:47:52.980072 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 19:47:52.980089 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:47:52.980105 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:47:52.980127 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-17 19:47:52.980145 +0000 build-fedora43: output: + '[' -z sha256sum ']'
+2024-04-17 19:47:52.980163 +0000 build-fedora43: output: + sha256sum --status -c /dev/fd/63
+2024-04-17 19:47:52.981066 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/python-qasync/qasync-0.23.0.tar.gz.sha256
+2024-04-17 19:47:52.983558 +0000 build-fedora43: output: ++ printf '%s  -\n' 8965ec313e0107148d98e8ac1e77a77dce74de3cd97055a1aa62d513a3793a14
+2024-04-17 19:47:52.984535 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/untrusted_qasync-0.23.0.tar.gz /home/user/builder-r4.3-fedora/tmp/tmp7c8yiilw/qasync-0.23.0.tar.gz
+2024-04-17 19:47:53.001600 +0000 build-fedora43: ['rm -f -- /builder/python-qasync/hash /builder/python-qasync/vtags', 'cd -- /builder', "git -C /builder/python-qasync rev-parse 'HEAD^{}' >> /builder/python-qasync/hash", "git -C /builder/python-qasync tag --points-at HEAD --list 'v*' >> /builder/python-qasync/vtags"]
+2024-04-17 19:48:07.661957 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8142 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--qasync /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/python-qasync
+2024-04-17 19:48:07.922509 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8142 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-qasync/hash /builder/python-qasync/vtags && cd -- /builder && git -C /builder/python-qasync rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-qasync/hash && git -C /builder/python-qasync tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-qasync/vtags''.
+2024-04-17 19:48:08.113253 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8142 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpw6mo5z_0
+2024-04-17 19:48:08.332537 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8142 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpw6mo5z_0
+2024-04-17 19:48:11.060412 +0000 build-fedora43: > done
+2024-04-17 19:48:11.060496 +0000 > closing log
