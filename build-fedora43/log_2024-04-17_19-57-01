@@ -1,0 +1,34 @@
+2024-04-17 19:57:01.992811 +0000 > starting log
+2024-04-17 19:57:01.994005 +0000 build-fedora43: > starting build with log
+2024-04-17 19:57:01.994376 +0000 build-fedora43: >> args:
+2024-04-17 19:57:01.994395 +0000 build-fedora43: >>   ()
+2024-04-17 19:57:01.994406 +0000 build-fedora43: >> component:
+2024-04-17 19:57:01.994414 +0000 build-fedora43: >>   python-panflute
+2024-04-17 19:57:01.994421 +0000 build-fedora43: >> distributions:
+2024-04-17 19:57:01.994428 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-17 19:57:17.407668 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2688 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:57:17.672628 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp2688 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-panflute.git /builder/python-panflute /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 19:57:21.236137 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 19:57:21.236231 +0000 build-fedora43: output: ---> Good tag 66ef1a6ca0eb4570917cf3278b669d784a00910f.
+2024-04-17 19:57:21.236276 +0000 build-fedora43: output: ERROR: CalledProcessError(1, ['git', '-c', 'gpg.program=/usr/bin/gpg-sq', '-c', 'gpg.minTrustLevel=fully', 'verify-tag', '--raw', '--', '4398b8af5100e70fa6cc55c36c2ad79837e364da']); stderr: [GNUPG:] NEWSIG
+2024-04-17 19:57:21.236316 +0000 build-fedora43: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2024-04-17 19:57:21.236343 +0000 build-fedora43: output: [GNUPG:] ERRSIG 063938BA42CFA724 1 8 00 1634177680 6 0064428F455451B3EBE78A7F063938BA42CFA724
+2024-04-17 19:57:21.236406 +0000 build-fedora43: output: 
+2024-04-17 19:57:21.236430 +0000 build-fedora43: output: ---> Invalid tag 4398b8af5100e70fa6cc55c36c2ad79837e364da.
+2024-04-17 19:57:21.237228 +0000 build-fedora43: output: ---> Good tag e5d1d75dc895e808d34aa52af554dcff21c12e63.
+2024-04-17 19:57:21.237496 +0000 build-fedora43: output: ---> Good tag e6e43bbd31b39de36d92481b9a95b924a32d324e.
+2024-04-17 19:57:21.237554 +0000 build-fedora43: output: ERROR: CalledProcessError(1, ['git', '-c', 'gpg.program=/usr/bin/gpg-sq', '-c', 'gpg.minTrustLevel=fully', 'verify-tag', '--raw', '--', '09077c010eece17390f1b2fe93953fbea112d3f6']); stderr: [GNUPG:] NEWSIG
+2024-04-17 19:57:21.237581 +0000 build-fedora43: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2024-04-17 19:57:21.237609 +0000 build-fedora43: output: [GNUPG:] ERRSIG 063938BA42CFA724 1 8 00 1601784142 6 0064428F455451B3EBE78A7F063938BA42CFA724
+2024-04-17 19:57:21.237628 +0000 build-fedora43: output: 
+2024-04-17 19:57:21.237659 +0000 build-fedora43: output: ---> Invalid tag 09077c010eece17390f1b2fe93953fbea112d3f6.
+2024-04-17 19:57:21.237683 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 19:57:21.237704 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 19:57:21.248768 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2688 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-17 19:57:24.080583 +0000 build-fedora43: ['rm -f -- /builder/python-panflute/hash /builder/python-panflute/vtags', 'cd -- /builder', "git -C /builder/python-panflute rev-parse 'HEAD^{}' >> /builder/python-panflute/hash", "git -C /builder/python-panflute tag --points-at HEAD --list 'v*' >> /builder/python-panflute/vtags"]
+2024-04-17 19:57:38.788450 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4563 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--panflute /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/python-panflute
+2024-04-17 19:57:39.093518 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4563 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-panflute/hash /builder/python-panflute/vtags && cd -- /builder && git -C /builder/python-panflute rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-panflute/hash && git -C /builder/python-panflute tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-panflute/vtags''.
+2024-04-17 19:57:39.326559 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4563 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpod3dxtmn
+2024-04-17 19:57:39.521703 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4563 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpod3dxtmn
+2024-04-17 19:57:42.306790 +0000 build-fedora43: > done
+2024-04-17 19:57:42.306867 +0000 > closing log
