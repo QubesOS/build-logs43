@@ -1,0 +1,111 @@
+2024-04-17 19:20:40.436122 +0000 > starting log
+2024-04-17 19:20:40.436677 +0000 build-fedora43: > starting build with log
+2024-04-17 19:20:40.436696 +0000 build-fedora43: >> args:
+2024-04-17 19:20:40.436705 +0000 build-fedora43: >>   ()
+2024-04-17 19:20:40.436711 +0000 build-fedora43: >> component:
+2024-04-17 19:20:40.436854 +0000 build-fedora43: >>   python-objgraph
+2024-04-17 19:20:40.436862 +0000 build-fedora43: >> distributions:
+2024-04-17 19:20:40.436871 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-17 19:20:54.620427 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3325 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:20:54.959546 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3325 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-objgraph.git /builder/python-objgraph /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 19:21:01.711776 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 19:21:01.711832 +0000 build-fedora43: output: ---> Good tag 08b7568e32b5f23e367bfa9a76b667eefc9bfee7.
+2024-04-17 19:21:01.711850 +0000 build-fedora43: output: ---> Good tag df95ecc982398825a18b888ba5808afffc8ac68e.
+2024-04-17 19:21:01.711865 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 19:21:01.711877 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 19:21:01.729329 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3325 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-17 19:21:18.804344 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4233 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--objgraph /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/python-objgraph
+2024-04-17 19:21:19.108969 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4233 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:21:19.327127 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4233 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-objgraph --file-name objgraph-3.5.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz''.
+2024-04-17 19:21:19.521103 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 19:21:19.521200 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-objgraph --file-name objgraph-3.5.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+2024-04-17 19:21:19.521770 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/python-objgraph'\'' --file-name '\''objgraph-3.5.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz'\'' --'
+2024-04-17 19:21:19.521874 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/python-objgraph'\'' --file-name '\''objgraph-3.5.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz'\'' --'
+2024-04-17 19:21:19.521960 +0000 build-fedora43: output: ++ set -- --output-dir /builder/python-objgraph --file-name objgraph-3.5.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz --
+2024-04-17 19:21:19.522058 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:21:19.522070 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:19.522187 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/python-objgraph
+2024-04-17 19:21:19.522446 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.522502 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.522742 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:21:19.522775 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:19.522796 +0000 build-fedora43: output: + FILE_NAME=objgraph-3.5.0.tar.gz
+2024-04-17 19:21:19.522813 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.522830 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.523059 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:21:19.523091 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:19.523115 +0000 build-fedora43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+2024-04-17 19:21:19.523132 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.523149 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.523165 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:21:19.523181 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:19.523197 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:19.523214 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:21:19.523236 +0000 build-fedora43: output: + '[' -z https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz ']'
+2024-04-17 19:21:19.523259 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 19:21:19.523277 +0000 build-fedora43: output: + '[' -z objgraph-3.5.0.tar.gz ']'
+2024-04-17 19:21:19.523305 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_objgraph-3.5.0.tar.gz
+2024-04-17 19:21:19.523324 +0000 build-fedora43: output: + '[' -n /builder/python-objgraph ']'
+2024-04-17 19:21:19.523342 +0000 build-fedora43: output: + mkdir -p /builder/python-objgraph
+2024-04-17 19:21:19.523972 +0000 build-fedora43: output: + cd /builder/python-objgraph
+2024-04-17 19:21:19.524073 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_objgraph-3.5.0.tar.gz -- https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+2024-04-17 19:21:28.246764 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 19:21:28.246841 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:21:28.252785 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4233 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph-2Funtrusted_objgraph--3.5.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9
+2024-04-17 19:21:31.274162 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256'.
+2024-04-17 19:21:31.276051 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 19:21:31.276420 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256
+2024-04-17 19:21:31.277336 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256'\'' --'
+2024-04-17 19:21:31.277630 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256'\'' --'
+2024-04-17 19:21:31.277689 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 --
+2024-04-17 19:21:31.277895 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 19:21:31.277941 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 19:21:31.278312 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:31.278599 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9
+2024-04-17 19:21:31.278632 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.278946 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.278979 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:21:31.278999 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:31.279202 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz
+2024-04-17 19:21:31.279240 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.279258 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.279752 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:21:31.279980 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:31.280013 +0000 build-fedora43: output: + CHECKSUM_CMD=sha256sum
+2024-04-17 19:21:31.280032 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.280249 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.280282 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:21:31.280308 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:31.280751 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256
+2024-04-17 19:21:31.280964 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.280995 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.281191 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:21:31.281225 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:21:31.281469 +0000 build-fedora43: output: + shift
+2024-04-17 19:21:31.281503 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:21:31.281533 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz ']'
+2024-04-17 19:21:31.281872 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9 ']'
+2024-04-17 19:21:31.282079 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9
+2024-04-17 19:21:31.282117 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz
+2024-04-17 19:21:31.282345 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_objgraph-3.5.0.tar.gz
+2024-04-17 19:21:31.282406 +0000 build-fedora43: output: + FILE_NAME=objgraph-3.5.0.tar.gz
+2024-04-17 19:21:31.282605 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-17 19:21:31.282645 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-17 19:21:31.282675 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-17 19:21:31.283031 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:21:31.283235 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 19:21:31.283268 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:21:31.283497 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:21:31.283583 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-17 19:21:31.283750 +0000 build-fedora43: output: + '[' -z sha256sum ']'
+2024-04-17 19:21:31.283793 +0000 build-fedora43: output: + sha256sum --status -c /dev/fd/63
+2024-04-17 19:21:31.284127 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256
+2024-04-17 19:21:31.284386 +0000 build-fedora43: output: ++ printf '%s  -\n' 4752ca5bcc0e0512e41b8cc4d2780ac2fd3b3eabd03b7e950a5594c06203dfc4
+2024-04-17 19:21:31.284435 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/untrusted_objgraph-3.5.0.tar.gz /home/user/builder-r4.3-fedora/tmp/tmp4x9tffa9/objgraph-3.5.0.tar.gz
+2024-04-17 19:21:31.303362 +0000 build-fedora43: ['rm -f -- /builder/python-objgraph/hash /builder/python-objgraph/vtags', 'cd -- /builder', "git -C /builder/python-objgraph rev-parse 'HEAD^{}' >> /builder/python-objgraph/hash", "git -C /builder/python-objgraph tag --points-at HEAD --list 'v*' >> /builder/python-objgraph/vtags"]
+2024-04-17 19:21:45.715774 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4706 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--objgraph /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/python-objgraph
+2024-04-17 19:21:46.129798 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4706 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-objgraph/hash /builder/python-objgraph/vtags && cd -- /builder && git -C /builder/python-objgraph rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-objgraph/hash && git -C /builder/python-objgraph tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-objgraph/vtags''.
+2024-04-17 19:21:46.403753 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4706 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp8aykpdbb
+2024-04-17 19:21:46.615211 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4706 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp8aykpdbb
+2024-04-17 19:21:49.517393 +0000 build-fedora43: > done
+2024-04-17 19:21:49.517438 +0000 > closing log
