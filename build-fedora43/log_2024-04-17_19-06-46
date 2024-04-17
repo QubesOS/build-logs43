@@ -1,0 +1,111 @@
+2024-04-17 19:06:46.472021 +0000 > starting log
+2024-04-17 19:06:46.472225 +0000 build-fedora43: > starting build with log
+2024-04-17 19:06:46.472240 +0000 build-fedora43: >> args:
+2024-04-17 19:06:46.472249 +0000 build-fedora43: >>   ()
+2024-04-17 19:06:46.472255 +0000 build-fedora43: >> component:
+2024-04-17 19:06:46.472262 +0000 build-fedora43: >>   plymouth
+2024-04-17 19:06:46.472269 +0000 build-fedora43: >> distributions:
+2024-04-17 19:06:46.472278 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-17 19:07:00.813249 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp616 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:07:01.132836 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp616 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-plymouth.git /builder/plymouth /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 19:07:10.395010 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 19:07:10.395100 +0000 build-fedora43: output: ---> Good tag c567683c661ed44c1a1064fcd9f8d92c46752d46.
+2024-04-17 19:07:10.395196 +0000 build-fedora43: output: ---> Good tag a2c0347aad48cf758e4052e033f2d39025228d71.
+2024-04-17 19:07:10.395238 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 19:07:10.395261 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 19:07:10.410141 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp616 qubesbuilder.FileCopyOut+-2Fbuilder-2Fplymouth /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-17 19:07:27.452436 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6921 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplymouth /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/plymouth
+2024-04-17 19:07:27.829727 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6921 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:07:28.008075 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6921 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/plymouth --file-name plymouth-22.02.122.tar.bz2 --file-url https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2''.
+2024-04-17 19:07:28.163457 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 19:07:28.163519 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/plymouth --file-name plymouth-22.02.122.tar.bz2 --file-url https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:28.166135 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/plymouth'\'' --file-name '\''plymouth-22.02.122.tar.bz2'\'' --file-url '\''https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2'\'' --'
+2024-04-17 19:07:28.166197 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/plymouth'\'' --file-name '\''plymouth-22.02.122.tar.bz2'\'' --file-url '\''https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2'\'' --'
+2024-04-17 19:07:28.166213 +0000 build-fedora43: output: ++ set -- --output-dir /builder/plymouth --file-name plymouth-22.02.122.tar.bz2 --file-url https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2 --
+2024-04-17 19:07:28.166238 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:07:28.166245 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:28.166252 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/plymouth
+2024-04-17 19:07:28.166260 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166267 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166273 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:07:28.166300 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:28.166308 +0000 build-fedora43: output: + FILE_NAME=plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:28.166315 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166320 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166344 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:07:28.166374 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:28.166384 +0000 build-fedora43: output: + FILE_URL=https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:28.166410 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166417 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166427 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:07:28.166436 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:28.166461 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:28.166468 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:07:28.166477 +0000 build-fedora43: output: + '[' -z https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2 ']'
+2024-04-17 19:07:28.166485 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 19:07:28.166495 +0000 build-fedora43: output: + '[' -z plymouth-22.02.122.tar.bz2 ']'
+2024-04-17 19:07:28.166522 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:28.166529 +0000 build-fedora43: output: + '[' -n /builder/plymouth ']'
+2024-04-17 19:07:28.166537 +0000 build-fedora43: output: + mkdir -p /builder/plymouth
+2024-04-17 19:07:28.166545 +0000 build-fedora43: output: + cd /builder/plymouth
+2024-04-17 19:07:28.166558 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_plymouth-22.02.122.tar.bz2 -- https://gitlab.freedesktop.org/plymouth/plymouth/-/archive/22.02.122/plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:31.966015 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 19:07:31.966095 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:07:31.970919 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6921 qubesbuilder.FileCopyOut+-2Fbuilder-2Fplymouth-2Funtrusted_plymouth--22.02.122.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmplzojnk90
+2024-04-17 19:07:34.746580 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmplzojnk90 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512'.
+2024-04-17 19:07:34.753247 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 19:07:34.754314 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmplzojnk90 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512
+2024-04-17 19:07:34.755719 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmplzojnk90'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512'\'' --'
+2024-04-17 19:07:34.755870 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmplzojnk90'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512'\'' --'
+2024-04-17 19:07:34.756146 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmplzojnk90 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512 --
+2024-04-17 19:07:34.756238 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 19:07:34.756710 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 19:07:34.756973 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:34.757065 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmplzojnk90
+2024-04-17 19:07:34.757283 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.757315 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.757480 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:07:34.757712 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:34.757754 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:34.757859 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.757948 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.758223 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:07:34.758339 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:34.758637 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-17 19:07:34.758669 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.758767 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.758857 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:07:34.759157 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:34.759439 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512
+2024-04-17 19:07:34.759702 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.759735 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.759811 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:07:34.760045 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:07:34.760079 +0000 build-fedora43: output: + shift
+2024-04-17 19:07:34.760168 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:07:34.760373 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2 ']'
+2024-04-17 19:07:34.760670 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmplzojnk90 ']'
+2024-04-17 19:07:34.760977 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmplzojnk90
+2024-04-17 19:07:34.763639 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:34.765252 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:34.765347 +0000 build-fedora43: output: + FILE_NAME=plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:34.765595 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512 ']'
+2024-04-17 19:07:34.765767 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512 ']'
+2024-04-17 19:07:34.765966 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512 ']'
+2024-04-17 19:07:34.766112 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:07:34.766220 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 19:07:34.766341 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:07:34.766521 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:07:34.766746 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512 ']'
+2024-04-17 19:07:34.766765 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-17 19:07:34.766957 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-17 19:07:34.767887 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/plymouth/plymouth-22.02.122.tar.bz2.sha512
+2024-04-17 19:07:34.769742 +0000 build-fedora43: output: ++ printf '%s  -\n' 84dc4cc199c43ab56838f55e4f28564d1bcedcbca4feae91497f186ce2004e6efd098a6fcfc655cbc05ecd593c21a7ec5b1e96848469a3747a7eb79d4776fb8a
+2024-04-17 19:07:34.771678 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/untrusted_plymouth-22.02.122.tar.bz2 /home/user/builder-r4.3-fedora/tmp/tmplzojnk90/plymouth-22.02.122.tar.bz2
+2024-04-17 19:07:34.796646 +0000 build-fedora43: ['rm -f -- /builder/plymouth/hash /builder/plymouth/vtags', 'cd -- /builder', "git -C /builder/plymouth rev-parse 'HEAD^{}' >> /builder/plymouth/hash", "git -C /builder/plymouth tag --points-at HEAD --list 'v*' >> /builder/plymouth/vtags"]
+2024-04-17 19:07:48.959126 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6298 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplymouth /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/plymouth
+2024-04-17 19:07:49.286842 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6298 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/plymouth/hash /builder/plymouth/vtags && cd -- /builder && git -C /builder/plymouth rev-parse '"'"'HEAD^{}'"'"' >> /builder/plymouth/hash && git -C /builder/plymouth tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/plymouth/vtags''.
+2024-04-17 19:07:49.521137 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6298 qubesbuilder.FileCopyOut+-2Fbuilder-2Fplymouth-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp85jjd_fy
+2024-04-17 19:07:49.732963 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6298 qubesbuilder.FileCopyOut+-2Fbuilder-2Fplymouth-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp85jjd_fy
+2024-04-17 19:07:52.516338 +0000 build-fedora43: > done
+2024-04-17 19:07:52.516464 +0000 > closing log
