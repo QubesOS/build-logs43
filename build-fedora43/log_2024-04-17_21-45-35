@@ -1,0 +1,110 @@
+2024-04-17 21:45:35.964881 +0000 > starting log
+2024-04-17 21:45:35.965101 +0000 build-fedora43: > starting build with log
+2024-04-17 21:45:35.965117 +0000 build-fedora43: >> args:
+2024-04-17 21:45:35.965126 +0000 build-fedora43: >>   ()
+2024-04-17 21:45:35.965132 +0000 build-fedora43: >> component:
+2024-04-17 21:45:35.965142 +0000 build-fedora43: >>   intel-microcode
+2024-04-17 21:45:35.965148 +0000 build-fedora43: >> distributions:
+2024-04-17 21:45:35.965156 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-17 21:45:50.403746 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp509 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 21:45:50.788745 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp509 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-intel-microcode.git /builder/intel-microcode /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 21:45:57.606612 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 21:45:57.606675 +0000 build-fedora43: output: ---> Good tag fb50b241169deb8dd4409e11cac08572a78337a4.
+2024-04-17 21:45:57.606689 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 21:45:57.606697 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 21:45:57.617212 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp509 qubesbuilder.FileCopyOut+-2Fbuilder-2Fintel--microcode /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-17 21:46:15.962140 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3774 qubesbuilder.FileCopyIn+-2Fbuilder-2Fintel--microcode /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/intel-microcode
+2024-04-17 21:46:16.256187 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3774 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 21:46:16.450143 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3774 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/intel-microcode --file-name microcode-20240312.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz''.
+2024-04-17 21:46:16.700793 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 21:46:16.700898 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/intel-microcode --file-name microcode-20240312.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz
+2024-04-17 21:46:16.705045 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/intel-microcode'\'' --file-name '\''microcode-20240312.tar.gz'\'' --file-url '\''https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz'\'' --'
+2024-04-17 21:46:16.705086 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/intel-microcode'\'' --file-name '\''microcode-20240312.tar.gz'\'' --file-url '\''https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz'\'' --'
+2024-04-17 21:46:16.705101 +0000 build-fedora43: output: ++ set -- --output-dir /builder/intel-microcode --file-name microcode-20240312.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz --
+2024-04-17 21:46:16.705462 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 21:46:16.705481 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:46:16.705490 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/intel-microcode
+2024-04-17 21:46:16.705497 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.705505 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.705511 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 21:46:16.706169 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:46:16.706273 +0000 build-fedora43: output: + FILE_NAME=microcode-20240312.tar.gz
+2024-04-17 21:46:16.706295 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.706313 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.706331 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 21:46:16.706349 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:46:16.706375 +0000 build-fedora43: output: + FILE_URL=https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz
+2024-04-17 21:46:16.706393 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.706421 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.706439 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 21:46:16.706457 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:46:16.706474 +0000 build-fedora43: output: + shift
+2024-04-17 21:46:16.706491 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 21:46:16.706525 +0000 build-fedora43: output: + '[' -z https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz ']'
+2024-04-17 21:46:16.706550 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 21:46:16.706570 +0000 build-fedora43: output: + '[' -z microcode-20240312.tar.gz ']'
+2024-04-17 21:46:16.706592 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_microcode-20240312.tar.gz
+2024-04-17 21:46:16.706611 +0000 build-fedora43: output: + '[' -n /builder/intel-microcode ']'
+2024-04-17 21:46:16.706667 +0000 build-fedora43: output: + mkdir -p /builder/intel-microcode
+2024-04-17 21:46:16.707398 +0000 build-fedora43: output: + cd /builder/intel-microcode
+2024-04-17 21:46:16.707422 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_microcode-20240312.tar.gz -- https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240312.tar.gz
+2024-04-17 21:47:23.532860 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 21:47:23.532937 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 21:47:23.539941 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3774 qubesbuilder.FileCopyOut+-2Fbuilder-2Fintel--microcode-2Funtrusted_microcode--20240312.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk
+2024-04-17 21:47:26.912762 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512'.
+2024-04-17 21:47:26.917284 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 21:47:26.918198 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512
+2024-04-17 21:47:26.920830 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpzju9sddk'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512'\'' --'
+2024-04-17 21:47:26.920888 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpzju9sddk'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512'\'' --'
+2024-04-17 21:47:26.920922 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512 --
+2024-04-17 21:47:26.920936 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 21:47:26.920949 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 21:47:26.920961 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:47:26.920975 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpzju9sddk
+2024-04-17 21:47:26.920988 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.920999 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921010 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 21:47:26.921022 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:47:26.921038 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz
+2024-04-17 21:47:26.921050 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921068 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921079 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 21:47:26.921091 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:47:26.921103 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-17 21:47:26.921114 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921125 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921137 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 21:47:26.921149 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:47:26.921369 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512
+2024-04-17 21:47:26.921393 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921406 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921418 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 21:47:26.921430 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 21:47:26.921568 +0000 build-fedora43: output: + shift
+2024-04-17 21:47:26.921592 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 21:47:26.921872 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz ']'
+2024-04-17 21:47:26.922116 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk ']'
+2024-04-17 21:47:26.922151 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk
+2024-04-17 21:47:26.923131 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz
+2024-04-17 21:47:26.925520 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_microcode-20240312.tar.gz
+2024-04-17 21:47:26.925558 +0000 build-fedora43: output: + FILE_NAME=microcode-20240312.tar.gz
+2024-04-17 21:47:26.925577 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512 ']'
+2024-04-17 21:47:26.925595 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512 ']'
+2024-04-17 21:47:26.925611 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512 ']'
+2024-04-17 21:47:26.925624 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 21:47:26.925667 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 21:47:26.925680 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 21:47:26.925692 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 21:47:26.925709 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512 ']'
+2024-04-17 21:47:26.925721 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-17 21:47:26.925734 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-17 21:47:26.926591 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/intel-microcode/microcode-20240312.tar.gz.sha512
+2024-04-17 21:47:26.928475 +0000 build-fedora43: output: ++ printf '%s  -\n' f5f3dfb1706675060b00057b5f017c2cb4ac0df74727139185fd167ca67fc6c611e205b1caeded23b006e4d8d314f87537007e7bafba2c87373f6d960988c911
+2024-04-17 21:47:26.948077 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/untrusted_microcode-20240312.tar.gz /home/user/builder-r4.3-fedora/tmp/tmpzju9sddk/microcode-20240312.tar.gz
+2024-04-17 21:47:26.982793 +0000 build-fedora43: ['rm -f -- /builder/intel-microcode/hash /builder/intel-microcode/vtags', 'cd -- /builder', "git -C /builder/intel-microcode rev-parse 'HEAD^{}' >> /builder/intel-microcode/hash", "git -C /builder/intel-microcode tag --points-at HEAD --list 'v*' >> /builder/intel-microcode/vtags"]
+2024-04-17 21:47:41.828405 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp871 qubesbuilder.FileCopyIn+-2Fbuilder-2Fintel--microcode /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/intel-microcode
+2024-04-17 21:47:42.195897 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp871 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/intel-microcode/hash /builder/intel-microcode/vtags && cd -- /builder && git -C /builder/intel-microcode rev-parse '"'"'HEAD^{}'"'"' >> /builder/intel-microcode/hash && git -C /builder/intel-microcode tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/intel-microcode/vtags''.
+2024-04-17 21:47:42.599289 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp871 qubesbuilder.FileCopyOut+-2Fbuilder-2Fintel--microcode-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpjoyw8kdc
+2024-04-17 21:47:42.809922 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp871 qubesbuilder.FileCopyOut+-2Fbuilder-2Fintel--microcode-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpjoyw8kdc
+2024-04-17 21:47:46.116206 +0000 build-fedora43: > done
+2024-04-17 21:47:46.116283 +0000 > closing log
