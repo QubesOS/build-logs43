@@ -1,0 +1,251 @@
+2024-04-17 17:03:37.198765 +0000 > starting log
+2024-04-17 17:03:37.199000 +0000 build-fedora43: > starting build with log
+2024-04-17 17:03:37.199018 +0000 build-fedora43: >> args:
+2024-04-17 17:03:37.199026 +0000 build-fedora43: >>   ()
+2024-04-17 17:03:37.199033 +0000 build-fedora43: >> component:
+2024-04-17 17:03:37.199039 +0000 build-fedora43: >>   core-libvirt
+2024-04-17 17:03:37.199048 +0000 build-fedora43: >> distributions:
+2024-04-17 17:03:37.199055 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-17 17:03:51.606871 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4609 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 17:03:51.883718 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4609 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-core-libvirt.git /builder/core-libvirt /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 17:04:08.404902 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 17:04:08.405075 +0000 build-fedora43: output: ---> Good tag c55b1aae675b88a79e89f9674b9939e2df49133f.
+2024-04-17 17:04:08.405106 +0000 build-fedora43: output: ---> Good tag 4c721a13fa756cf014ec6e3cabd35d97ef5e2013.
+2024-04-17 17:04:08.405129 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 17:04:08.405149 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 17:04:08.423985 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4609 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-17 17:04:28.115249 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3879 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--libvirt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/core-libvirt
+2024-04-17 17:04:28.322984 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3879 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 17:04:28.523760 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3879 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/core-libvirt --file-name libvirt-8.9.0.tar.xz --file-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz --signature-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc''.
+2024-04-17 17:04:28.702573 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 17:04:28.702690 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/core-libvirt --file-name libvirt-8.9.0.tar.xz --file-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz --signature-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:28.706997 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-8.9.0.tar.xz'\'' --file-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz'\'' --signature-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc'\'' --'
+2024-04-17 17:04:28.707067 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-8.9.0.tar.xz'\'' --file-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz'\'' --signature-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc'\'' --'
+2024-04-17 17:04:28.707102 +0000 build-fedora43: output: ++ set -- --output-dir /builder/core-libvirt --file-name libvirt-8.9.0.tar.xz --file-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz --signature-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc --
+2024-04-17 17:04:28.707141 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 17:04:28.707159 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:28.707582 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/core-libvirt
+2024-04-17 17:04:28.707605 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707612 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707619 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 17:04:28.707625 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:28.707632 +0000 build-fedora43: output: + FILE_NAME=libvirt-8.9.0.tar.xz
+2024-04-17 17:04:28.707638 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707644 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707650 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 17:04:28.707656 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:28.707663 +0000 build-fedora43: output: + FILE_URL=https://libvirt.org/sources/libvirt-8.9.0.tar.xz
+2024-04-17 17:04:28.707669 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707675 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707688 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 17:04:28.707694 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:28.707702 +0000 build-fedora43: output: + SIGNATURE_URL=https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:28.707709 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707715 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707721 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 17:04:28.707727 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:28.707733 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:28.707739 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 17:04:28.707746 +0000 build-fedora43: output: + '[' -z https://libvirt.org/sources/libvirt-8.9.0.tar.xz ']'
+2024-04-17 17:04:28.707754 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 17:04:28.707761 +0000 build-fedora43: output: + '[' -z libvirt-8.9.0.tar.xz ']'
+2024-04-17 17:04:28.707768 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz
+2024-04-17 17:04:28.707775 +0000 build-fedora43: output: + '[' -n /builder/core-libvirt ']'
+2024-04-17 17:04:28.707782 +0000 build-fedora43: output: + mkdir -p /builder/core-libvirt
+2024-04-17 17:04:28.707788 +0000 build-fedora43: output: + cd /builder/core-libvirt
+2024-04-17 17:04:28.707799 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-8.9.0.tar.xz -- https://libvirt.org/sources/libvirt-8.9.0.tar.xz
+2024-04-17 17:04:53.224073 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 17:04:53.224640 +0000 build-fedora43: output: + '[' -n https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc ']'
+2024-04-17 17:04:53.225128 +0000 build-fedora43: output: ++ basename https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:53.226852 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:53.226967 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:53.227080 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-8.9.0.tar.xz.asc https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:55.348631 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3879 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt-2Funtrusted_libvirt--8.9.0.tar.xz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1
+2024-04-17 17:04:55.502522 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3879 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt-2Funtrusted_libvirt--8.9.0.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1
+2024-04-17 17:04:58.830792 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1 --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc'.
+2024-04-17 17:04:58.832812 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 17:04:58.833471 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1 --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc
+2024-04-17 17:04:58.834238 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2024-04-17 17:04:58.836186 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2024-04-17 17:04:58.836221 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1 --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc --
+2024-04-17 17:04:58.836229 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 17:04:58.836236 +0000 build-fedora43: output: + [[ 11 -gt 0 ]]
+2024-04-17 17:04:58.836255 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:58.836266 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1
+2024-04-17 17:04:58.836272 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836279 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836286 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 17:04:58.836292 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:58.836300 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz
+2024-04-17 17:04:58.836318 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836324 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836330 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 17:04:58.836336 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:58.836345 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:58.836362 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836369 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836375 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 17:04:58.836381 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:58.836387 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-17 17:04:58.836393 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836399 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836405 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 17:04:58.836411 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:58.836418 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-17 17:04:58.836424 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836429 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836436 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 17:04:58.836442 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:04:58.836447 +0000 build-fedora43: output: + shift
+2024-04-17 17:04:58.836453 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 17:04:58.836462 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz ']'
+2024-04-17 17:04:58.836470 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1 ']'
+2024-04-17 17:04:58.836477 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1
+2024-04-17 17:04:58.836486 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz
+2024-04-17 17:04:58.839631 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz
+2024-04-17 17:04:58.839680 +0000 build-fedora43: output: + FILE_NAME=libvirt-8.9.0.tar.xz
+2024-04-17 17:04:58.839707 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 17:04:58.839732 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2024-04-17 17:04:58.839750 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 17:04:58.839773 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2024-04-17 17:04:58.839796 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2024-04-17 17:04:58.839819 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2024-04-17 17:04:58.839848 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2024-04-17 17:04:58.839871 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2024-04-17 17:04:58.839888 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 17:04:58.839911 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2024-04-17 17:04:58.839933 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2024-04-17 17:04:58.839955 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:58.839976 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:58.840008 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:58.840026 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-17 17:04:58.840046 +0000 build-fedora43: output: + keyring=/tmp/tmp.Y2zPavK6Kz
+2024-04-17 17:04:58.840064 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-17 17:04:58.840080 +0000 build-fedora43: output: + sq help
+2024-04-17 17:04:58.884186 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.Y2zPavK6Kz /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc
+2024-04-17 17:04:58.936856 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.Y2zPavK6Kz /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz
+2024-04-17 17:04:58.959174 +0000 build-fedora43: output: 453B65310595562855471199CA68BE8010084C9C
+2024-04-17 17:04:58.959219 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz.asc /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/libvirt-8.9.0.tar.xz.asc
+2024-04-17 17:04:58.959678 +0000 build-fedora43: output: + rm -rf /tmp/tmp.Y2zPavK6Kz
+2024-04-17 17:04:58.960321 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/untrusted_libvirt-8.9.0.tar.xz /home/user/builder-r4.3-dom0/tmp/tmplar8u_i1/libvirt-8.9.0.tar.xz
+2024-04-17 17:05:15.183520 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7765 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--libvirt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/core-libvirt
+2024-04-17 17:05:15.436300 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7765 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 17:05:15.641780 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp7765 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/core-libvirt --file-name libvirt-python-8.9.0.tar.gz --file-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz --signature-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc''.
+2024-04-17 17:05:15.887586 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 17:05:15.887956 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/core-libvirt --file-name libvirt-python-8.9.0.tar.gz --file-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz --signature-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:15.889376 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-python-8.9.0.tar.gz'\'' --file-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz'\'' --signature-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc'\'' --'
+2024-04-17 17:05:15.889684 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-python-8.9.0.tar.gz'\'' --file-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz'\'' --signature-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc'\'' --'
+2024-04-17 17:05:15.889929 +0000 build-fedora43: output: ++ set -- --output-dir /builder/core-libvirt --file-name libvirt-python-8.9.0.tar.gz --file-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz --signature-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc --
+2024-04-17 17:05:15.890178 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 17:05:15.890425 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:15.890624 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/core-libvirt
+2024-04-17 17:05:15.890813 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.891024 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.891115 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 17:05:15.891388 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:15.891604 +0000 build-fedora43: output: + FILE_NAME=libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:15.891848 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.891862 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.892051 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 17:05:15.892244 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:15.892448 +0000 build-fedora43: output: + FILE_URL=https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:15.892712 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.892728 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.892964 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 17:05:15.893137 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:15.893640 +0000 build-fedora43: output: + SIGNATURE_URL=https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:15.893655 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.893977 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.893992 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 17:05:15.893998 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:15.894004 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:15.894284 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 17:05:15.894547 +0000 build-fedora43: output: + '[' -z https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz ']'
+2024-04-17 17:05:15.894564 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 17:05:15.894928 +0000 build-fedora43: output: + '[' -z libvirt-python-8.9.0.tar.gz ']'
+2024-04-17 17:05:15.895133 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:15.895428 +0000 build-fedora43: output: + '[' -n /builder/core-libvirt ']'
+2024-04-17 17:05:15.895635 +0000 build-fedora43: output: + mkdir -p /builder/core-libvirt
+2024-04-17 17:05:15.896876 +0000 build-fedora43: output: + cd /builder/core-libvirt
+2024-04-17 17:05:15.897096 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-python-8.9.0.tar.gz -- https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:26.175848 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 17:05:26.176001 +0000 build-fedora43: output: + '[' -n https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc ']'
+2024-04-17 17:05:26.176045 +0000 build-fedora43: output: ++ basename https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:26.178071 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:26.178131 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:26.178179 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-python-8.9.0.tar.gz.asc https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:46.672718 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7765 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt-2Funtrusted_libvirt--python--8.9.0.tar.gz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu
+2024-04-17 17:05:46.887611 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7765 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt-2Funtrusted_libvirt--python--8.9.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu
+2024-04-17 17:05:50.044198 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc'.
+2024-04-17 17:05:50.046202 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 17:05:50.046927 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc
+2024-04-17 17:05:50.048541 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2024-04-17 17:05:50.048707 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2024-04-17 17:05:50.048769 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc --
+2024-04-17 17:05:50.048787 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 17:05:50.048944 +0000 build-fedora43: output: + [[ 11 -gt 0 ]]
+2024-04-17 17:05:50.049037 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:50.049140 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu
+2024-04-17 17:05:50.049160 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.049298 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.049333 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 17:05:50.049696 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:50.049897 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:50.050043 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050064 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050122 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 17:05:50.050219 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:50.050247 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:50.050270 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050287 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050331 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 17:05:50.050372 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:50.050391 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-17 17:05:50.050407 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050423 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050439 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 17:05:50.050455 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:50.050471 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-17 17:05:50.050487 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050502 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050519 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 17:05:50.050535 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 17:05:50.050551 +0000 build-fedora43: output: + shift
+2024-04-17 17:05:50.050567 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 17:05:50.050589 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz ']'
+2024-04-17 17:05:50.050611 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu ']'
+2024-04-17 17:05:50.050631 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu
+2024-04-17 17:05:50.052665 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:50.053848 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:50.053891 +0000 build-fedora43: output: + FILE_NAME=libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:50.053911 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 17:05:50.053935 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2024-04-17 17:05:50.053952 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 17:05:50.053975 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2024-04-17 17:05:50.053997 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2024-04-17 17:05:50.054020 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2024-04-17 17:05:50.054043 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2024-04-17 17:05:50.054065 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2024-04-17 17:05:50.054081 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 17:05:50.054104 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2024-04-17 17:05:50.054126 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2024-04-17 17:05:50.054216 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:50.055927 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:50.055966 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:50.056212 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-17 17:05:50.057933 +0000 build-fedora43: output: + keyring=/tmp/tmp.Ic0lBCW8GR
+2024-04-17 17:05:50.058034 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-17 17:05:50.058135 +0000 build-fedora43: output: + sq help
+2024-04-17 17:05:50.068301 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.Ic0lBCW8GR /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-jiri-denemark-key.asc /home/user/builder-r4.3-dom0/sources/core-libvirt/redhat-veillard-key.asc
+2024-04-17 17:05:50.074239 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.Ic0lBCW8GR /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:50.076030 +0000 build-fedora43: output: 453B65310595562855471199CA68BE8010084C9C
+2024-04-17 17:05:50.076521 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz.asc /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/libvirt-python-8.9.0.tar.gz.asc
+2024-04-17 17:05:50.077664 +0000 build-fedora43: output: + rm -rf /tmp/tmp.Ic0lBCW8GR
+2024-04-17 17:05:50.078503 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/untrusted_libvirt-python-8.9.0.tar.gz /home/user/builder-r4.3-dom0/tmp/tmpbf47dhhu/libvirt-python-8.9.0.tar.gz
+2024-04-17 17:05:50.097274 +0000 build-fedora43: ['rm -f -- /builder/core-libvirt/hash /builder/core-libvirt/vtags', 'cd -- /builder', "git -C /builder/core-libvirt rev-parse 'HEAD^{}' >> /builder/core-libvirt/hash", "git -C /builder/core-libvirt tag --points-at HEAD --list 'v*' >> /builder/core-libvirt/vtags"]
+2024-04-17 17:06:04.762940 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9284 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--libvirt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/core-libvirt
+2024-04-17 17:06:05.050595 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9284 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/core-libvirt/hash /builder/core-libvirt/vtags && cd -- /builder && git -C /builder/core-libvirt rev-parse '"'"'HEAD^{}'"'"' >> /builder/core-libvirt/hash && git -C /builder/core-libvirt tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/core-libvirt/vtags''.
+2024-04-17 17:06:05.322180 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9284 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpvj0y9m68
+2024-04-17 17:06:05.527624 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9284 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--libvirt-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpvj0y9m68
+2024-04-17 17:06:08.672132 +0000 build-fedora43: > done
+2024-04-17 17:06:08.672211 +0000 > closing log
