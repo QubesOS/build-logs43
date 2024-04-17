@@ -1,0 +1,199 @@
+2024-04-17 19:11:29.560855 +0000 > starting log
+2024-04-17 19:11:29.561105 +0000 build-fedora43: > starting build with log
+2024-04-17 19:11:29.561126 +0000 build-fedora43: >> args:
+2024-04-17 19:11:29.561134 +0000 build-fedora43: >>   ()
+2024-04-17 19:11:29.561140 +0000 build-fedora43: >> component:
+2024-04-17 19:11:29.561147 +0000 build-fedora43: >>   dracut
+2024-04-17 19:11:29.561156 +0000 build-fedora43: >> distributions:
+2024-04-17 19:11:29.561164 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-17 19:11:44.199219 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9341 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:11:44.497097 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9341 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-dracut.git /builder/dracut /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-17 19:11:53.420872 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-17 19:11:53.420968 +0000 build-fedora43: output: ---> Good tag 495f2465561196a78205a8ee27652aa17387712b.
+2024-04-17 19:11:53.421001 +0000 build-fedora43: output: ---> Good tag e2db7afb227de7f6c7528f43521ccd3929b14a38.
+2024-04-17 19:11:53.421027 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-17 19:11:53.421048 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-17 19:11:53.438591 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9341 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-17 19:12:10.336170 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6280 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/dracut
+2024-04-17 19:12:10.563535 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6280 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:12:10.780739 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6280 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/dracut --file-name 059.tar.gz --file-url https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz''.
+2024-04-17 19:12:10.981667 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 19:12:10.982432 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/dracut --file-name 059.tar.gz --file-url https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz
+2024-04-17 19:12:10.984125 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/dracut'\'' --file-name '\''059.tar.gz'\'' --file-url '\''https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz'\'' --'
+2024-04-17 19:12:10.984531 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/dracut'\'' --file-name '\''059.tar.gz'\'' --file-url '\''https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz'\'' --'
+2024-04-17 19:12:10.984578 +0000 build-fedora43: output: ++ set -- --output-dir /builder/dracut --file-name 059.tar.gz --file-url https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz --
+2024-04-17 19:12:10.984597 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:12:10.984615 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:10.984654 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/dracut
+2024-04-17 19:12:10.984674 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.984978 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.985024 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:12:10.985043 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:10.985067 +0000 build-fedora43: output: + FILE_NAME=059.tar.gz
+2024-04-17 19:12:10.985083 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.985099 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.985115 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:12:10.986006 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:10.986051 +0000 build-fedora43: output: + FILE_URL=https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz
+2024-04-17 19:12:10.986070 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.986098 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.986116 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:12:10.986133 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:10.986149 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:10.986459 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:12:10.986473 +0000 build-fedora43: output: + '[' -z https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz ']'
+2024-04-17 19:12:10.986483 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 19:12:10.986489 +0000 build-fedora43: output: + '[' -z 059.tar.gz ']'
+2024-04-17 19:12:10.986496 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_059.tar.gz
+2024-04-17 19:12:10.986606 +0000 build-fedora43: output: + '[' -n /builder/dracut ']'
+2024-04-17 19:12:10.986623 +0000 build-fedora43: output: + mkdir -p /builder/dracut
+2024-04-17 19:12:10.986630 +0000 build-fedora43: output: + cd /builder/dracut
+2024-04-17 19:12:10.986642 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_059.tar.gz -- https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz
+2024-04-17 19:12:27.032737 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 19:12:27.032822 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:27.044190 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6280 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Funtrusted_059.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f
+2024-04-17 19:12:29.681184 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512'.
+2024-04-17 19:12:29.685380 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 19:12:29.686636 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512
+2024-04-17 19:12:29.688335 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512'\'' --'
+2024-04-17 19:12:29.688501 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512'\'' --'
+2024-04-17 19:12:29.688673 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512 --
+2024-04-17 19:12:29.688822 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 19:12:29.689067 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 19:12:29.689227 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:29.689549 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f
+2024-04-17 19:12:29.689860 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.690018 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.690171 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:12:29.690316 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:29.690555 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz
+2024-04-17 19:12:29.690689 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.690840 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.690987 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:12:29.691117 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:29.691277 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-17 19:12:29.691548 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.692804 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.692860 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:12:29.692881 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:29.692905 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512
+2024-04-17 19:12:29.692923 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.692940 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.692957 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:12:29.692974 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:29.692989 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:29.693006 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:12:29.693027 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz ']'
+2024-04-17 19:12:29.693048 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f ']'
+2024-04-17 19:12:29.693068 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f
+2024-04-17 19:12:29.695247 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz
+2024-04-17 19:12:29.698386 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_059.tar.gz
+2024-04-17 19:12:29.698436 +0000 build-fedora43: output: + FILE_NAME=059.tar.gz
+2024-04-17 19:12:29.698460 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-17 19:12:29.698484 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-17 19:12:29.698505 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-17 19:12:29.698522 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:29.698557 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 19:12:29.698575 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:29.698593 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:29.698615 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-17 19:12:29.698632 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-17 19:12:29.698651 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-17 19:12:29.699575 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/dracut/059.tar.gz.sha512
+2024-04-17 19:12:29.702015 +0000 build-fedora43: output: ++ printf '%s  -\n' 196bc8bf18703c72bffb51a7e0493719c58173ad2da7d121eb42f9a8de47e953af36d109214dc4a10b2dc2d3bd19e844f7f51c2bdec087e064ea11f75124032d
+2024-04-17 19:12:29.704722 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/untrusted_059.tar.gz /home/user/builder-r4.3-fedora/tmp/tmpk88pnq1f/059.tar.gz
+2024-04-17 19:12:44.119750 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2645 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/dracut
+2024-04-17 19:12:44.428857 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2645 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-17 19:12:44.667624 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp2645 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/dracut --file-name lgpl-2.1.txt --file-url https://www.gnu.org/licenses/lgpl-2.1.txt''.
+2024-04-17 19:12:44.872259 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-17 19:12:44.872695 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/dracut --file-name lgpl-2.1.txt --file-url https://www.gnu.org/licenses/lgpl-2.1.txt
+2024-04-17 19:12:44.874559 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/dracut'\'' --file-name '\''lgpl-2.1.txt'\'' --file-url '\''https://www.gnu.org/licenses/lgpl-2.1.txt'\'' --'
+2024-04-17 19:12:44.874610 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/dracut'\'' --file-name '\''lgpl-2.1.txt'\'' --file-url '\''https://www.gnu.org/licenses/lgpl-2.1.txt'\'' --'
+2024-04-17 19:12:44.874824 +0000 build-fedora43: output: ++ set -- --output-dir /builder/dracut --file-name lgpl-2.1.txt --file-url https://www.gnu.org/licenses/lgpl-2.1.txt --
+2024-04-17 19:12:44.874858 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:12:44.874879 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:44.874899 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/dracut
+2024-04-17 19:12:44.875099 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.875131 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.875150 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:12:44.875177 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:44.875397 +0000 build-fedora43: output: + FILE_NAME=lgpl-2.1.txt
+2024-04-17 19:12:44.875474 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.875496 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.875688 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:12:44.875721 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:44.875939 +0000 build-fedora43: output: + FILE_URL=https://www.gnu.org/licenses/lgpl-2.1.txt
+2024-04-17 19:12:44.875974 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.875994 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.876012 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:12:44.876414 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:44.876474 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:44.876493 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:12:44.876513 +0000 build-fedora43: output: + '[' -z https://www.gnu.org/licenses/lgpl-2.1.txt ']'
+2024-04-17 19:12:44.876537 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-17 19:12:44.876555 +0000 build-fedora43: output: + '[' -z lgpl-2.1.txt ']'
+2024-04-17 19:12:44.877177 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_lgpl-2.1.txt
+2024-04-17 19:12:44.877217 +0000 build-fedora43: output: + '[' -n /builder/dracut ']'
+2024-04-17 19:12:44.877236 +0000 build-fedora43: output: + mkdir -p /builder/dracut
+2024-04-17 19:12:44.877254 +0000 build-fedora43: output: + cd /builder/dracut
+2024-04-17 19:12:44.877282 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_lgpl-2.1.txt -- https://www.gnu.org/licenses/lgpl-2.1.txt
+2024-04-17 19:12:50.294309 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-17 19:12:50.294441 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:50.303973 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2645 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Funtrusted_lgpl--2.1.txt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090
+2024-04-17 19:12:53.334107 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512'.
+2024-04-17 19:12:53.338415 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-17 19:12:53.339941 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512
+2024-04-17 19:12:53.341517 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpk_ecn090'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512'\'' --'
+2024-04-17 19:12:53.341908 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpk_ecn090'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512'\'' --'
+2024-04-17 19:12:53.341972 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512 --
+2024-04-17 19:12:53.342301 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-17 19:12:53.342698 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-17 19:12:53.342791 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:53.343054 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpk_ecn090
+2024-04-17 19:12:53.343141 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.343291 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.343651 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-17 19:12:53.343765 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:53.344104 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt
+2024-04-17 19:12:53.344187 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.344220 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.344465 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-17 19:12:53.344553 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:53.344768 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-17 19:12:53.344856 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.345025 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.345185 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-17 19:12:53.346540 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:53.346559 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512
+2024-04-17 19:12:53.346566 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.346572 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.346578 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-17 19:12:53.346584 +0000 build-fedora43: output: + case "$1" in
+2024-04-17 19:12:53.346590 +0000 build-fedora43: output: + shift
+2024-04-17 19:12:53.346596 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-17 19:12:53.346604 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt ']'
+2024-04-17 19:12:53.346611 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090 ']'
+2024-04-17 19:12:53.346619 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090
+2024-04-17 19:12:53.347421 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt
+2024-04-17 19:12:53.349233 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_lgpl-2.1.txt
+2024-04-17 19:12:53.349252 +0000 build-fedora43: output: + FILE_NAME=lgpl-2.1.txt
+2024-04-17 19:12:53.349265 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-17 19:12:53.349275 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-17 19:12:53.349283 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-17 19:12:53.349290 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:53.349296 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-17 19:12:53.349303 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:53.349309 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-17 19:12:53.349316 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-17 19:12:53.349323 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-17 19:12:53.349332 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-17 19:12:53.349340 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/dracut/lgpl-2.1.txt.sha512
+2024-04-17 19:12:53.349667 +0000 build-fedora43: output: ++ printf '%s  -\n' 1bca76c9f2f559a7851c278650125cd4f44a7ae4a96ceee6a6ba81d34d28fe7d6125c5ee459fef729b6a2a0eba3075c0841c8a156b3a26f66194f77f7d49151c
+2024-04-17 19:12:53.349881 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/untrusted_lgpl-2.1.txt /home/user/builder-r4.3-fedora/tmp/tmpk_ecn090/lgpl-2.1.txt
+2024-04-17 19:12:53.362216 +0000 build-fedora43: ['rm -f -- /builder/dracut/hash /builder/dracut/vtags', 'cd -- /builder', "git -C /builder/dracut rev-parse 'HEAD^{}' >> /builder/dracut/hash", "git -C /builder/dracut tag --points-at HEAD --list 'v*' >> /builder/dracut/vtags"]
+2024-04-17 19:13:07.719320 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8573 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/dracut
+2024-04-17 19:13:08.057525 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8573 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/dracut/hash /builder/dracut/vtags && cd -- /builder && git -C /builder/dracut rev-parse '"'"'HEAD^{}'"'"' >> /builder/dracut/hash && git -C /builder/dracut tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/dracut/vtags''.
+2024-04-17 19:13:08.326614 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8573 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpzys5q3eq
+2024-04-17 19:13:08.552563 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8573 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpzys5q3eq
+2024-04-17 19:13:11.575471 +0000 build-fedora43: > done
+2024-04-17 19:13:11.575542 +0000 > closing log
