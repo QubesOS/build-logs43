@@ -1,0 +1,111 @@
+2024-04-18 11:20:59.647097 +0000 > starting log
+2024-04-18 11:20:59.647318 +0000 build-fedora43: > starting build with log
+2024-04-18 11:20:59.647334 +0000 build-fedora43: >> args:
+2024-04-18 11:20:59.647342 +0000 build-fedora43: >>   ()
+2024-04-18 11:20:59.647348 +0000 build-fedora43: >> component:
+2024-04-18 11:20:59.647356 +0000 build-fedora43: >>   flashrom
+2024-04-18 11:20:59.647363 +0000 build-fedora43: >> distributions:
+2024-04-18 11:20:59.647370 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 11:21:14.317939 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8025 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 11:21:14.529898 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8025 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-flashrom.git /builder/flashrom /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 11:21:17.429116 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 11:21:17.429189 +0000 build-fedora43: output: ---> Good tag 317095b0ff100460e6484dfcbbf8d28b9cf5f8fd.
+2024-04-18 11:21:17.429213 +0000 build-fedora43: output: ---> Good tag 4a3eb823380d68db7a46dec59687c673ada6ca9f.
+2024-04-18 11:21:17.429234 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 11:21:17.429252 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 11:21:17.448792 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8025 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 11:21:35.611529 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3660 qubesbuilder.FileCopyIn+-2Fbuilder-2Fflashrom /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/flashrom
+2024-04-18 11:21:35.911641 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3660 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 11:21:36.105985 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3660 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2''.
+2024-04-18 11:21:36.278477 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 11:21:36.278535 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:36.283804 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/flashrom'\'' --file-name '\''flashrom-v1.3.0.tar.bz2'\'' --file-url '\''https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2'\'' --'
+2024-04-18 11:21:36.283848 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/flashrom'\'' --file-name '\''flashrom-v1.3.0.tar.bz2'\'' --file-url '\''https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2'\'' --'
+2024-04-18 11:21:36.283860 +0000 build-fedora43: output: ++ set -- --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2 --
+2024-04-18 11:21:36.283867 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 11:21:36.283890 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:36.283898 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/flashrom
+2024-04-18 11:21:36.283906 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.283912 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.283918 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 11:21:36.283924 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:36.283931 +0000 build-fedora43: output: + FILE_NAME=flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:36.283937 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.283942 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.283948 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 11:21:36.283954 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:36.283968 +0000 build-fedora43: output: + FILE_URL=https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:36.283974 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.283980 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.283986 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 11:21:36.283992 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:36.283998 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:36.284004 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 11:21:36.284011 +0000 build-fedora43: output: + '[' -z https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2 ']'
+2024-04-18 11:21:36.284020 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 11:21:36.284026 +0000 build-fedora43: output: + '[' -z flashrom-v1.3.0.tar.bz2 ']'
+2024-04-18 11:21:36.284034 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:36.284040 +0000 build-fedora43: output: + '[' -n /builder/flashrom ']'
+2024-04-18 11:21:36.284051 +0000 build-fedora43: output: + mkdir -p /builder/flashrom
+2024-04-18 11:21:36.284057 +0000 build-fedora43: output: + cd /builder/flashrom
+2024-04-18 11:21:36.284068 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_flashrom-v1.3.0.tar.bz2 -- https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:44.135657 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 11:21:44.135748 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 11:21:44.146139 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3660 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom-2Funtrusted_flashrom--v1.3.0.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9
+2024-04-18 11:21:47.329809 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9 --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'.
+2024-04-18 11:21:47.334366 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 11:21:47.335782 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9 --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2024-04-18 11:21:47.337314 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'\'' --'
+2024-04-18 11:21:47.337892 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'\'' --'
+2024-04-18 11:21:47.337956 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9 --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 --
+2024-04-18 11:21:47.338240 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 11:21:47.338275 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 11:21:47.338293 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:47.338314 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9
+2024-04-18 11:21:47.338814 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.339068 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.339102 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 11:21:47.339270 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:47.339477 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:47.339510 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.339783 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.340052 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 11:21:47.340083 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:47.340264 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 11:21:47.340296 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.340477 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.340510 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 11:21:47.340868 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:47.340910 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2024-04-18 11:21:47.340930 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.341145 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.341345 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 11:21:47.341533 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:21:47.341564 +0000 build-fedora43: output: + shift
+2024-04-18 11:21:47.341790 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 11:21:47.342014 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2 ']'
+2024-04-18 11:21:47.342050 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9 ']'
+2024-04-18 11:21:47.342220 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9
+2024-04-18 11:21:47.345636 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:47.346871 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:47.346937 +0000 build-fedora43: output: + FILE_NAME=flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:47.347026 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-18 11:21:47.347150 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-18 11:21:47.347159 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-18 11:21:47.347239 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 11:21:47.347308 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 11:21:47.347364 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 11:21:47.347429 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 11:21:47.347578 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-18 11:21:47.347685 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 11:21:47.347853 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 11:21:47.348802 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-dom0/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2024-04-18 11:21:47.348828 +0000 build-fedora43: output: ++ printf '%s  -\n' 73b6e00bd3bc66c98d4ad53966a65b19d3d92f07d7b210d69e041d6f5788605b9791a9bf7aec0a52e13d19fcb62c4bdaf4bab9f805fc31468393ca313129a77b
+2024-04-18 11:21:47.350380 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/untrusted_flashrom-v1.3.0.tar.bz2 /home/user/builder-r4.3-dom0/tmp/tmph7pcz2l9/flashrom-v1.3.0.tar.bz2
+2024-04-18 11:21:47.371071 +0000 build-fedora43: ['rm -f -- /builder/flashrom/hash /builder/flashrom/vtags', 'cd -- /builder', "git -C /builder/flashrom rev-parse 'HEAD^{}' >> /builder/flashrom/hash", "git -C /builder/flashrom tag --points-at HEAD --list 'v*' >> /builder/flashrom/vtags"]
+2024-04-18 11:22:01.837586 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4915 qubesbuilder.FileCopyIn+-2Fbuilder-2Fflashrom /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/flashrom
+2024-04-18 11:22:02.194992 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4915 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/flashrom/hash /builder/flashrom/vtags && cd -- /builder && git -C /builder/flashrom rev-parse '"'"'HEAD^{}'"'"' >> /builder/flashrom/hash && git -C /builder/flashrom tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/flashrom/vtags''.
+2024-04-18 11:22:02.398287 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4915 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmp7qij282w
+2024-04-18 11:22:02.592498 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4915 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmp7qij282w
+2024-04-18 11:22:05.687372 +0000 build-fedora43: > done
+2024-04-18 11:22:05.687445 +0000 > closing log
