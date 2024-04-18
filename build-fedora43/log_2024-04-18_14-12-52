@@ -1,0 +1,23 @@
+2024-04-18 14:12:52.400126 +0000 > starting log
+2024-04-18 14:12:52.400414 +0000 build-fedora43: > starting build with log
+2024-04-18 14:12:52.400504 +0000 build-fedora43: >> args:
+2024-04-18 14:12:52.400518 +0000 build-fedora43: >>   ()
+2024-04-18 14:12:52.400524 +0000 build-fedora43: >> component:
+2024-04-18 14:12:52.400531 +0000 build-fedora43: >>   sbsigntools
+2024-04-18 14:12:52.400538 +0000 build-fedora43: >> distributions:
+2024-04-18 14:12:52.400545 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 14:13:07.137842 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9744 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 14:13:07.409897 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9744 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-sbsigntools.git /builder/sbsigntools /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 14:13:11.981137 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 14:13:11.981222 +0000 build-fedora43: output: ---> Good tag 73dd379ffd028910c97785dbccaa77c24ffccd11.
+2024-04-18 14:13:11.981250 +0000 build-fedora43: output: ---> Good tag 681f27638355b8af9bd4851f2c5c0ec7b0d4430f.
+2024-04-18 14:13:11.981266 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 14:13:11.981321 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 14:13:12.001475 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9744 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsbsigntools /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 14:13:14.947710 +0000 build-fedora43: ['rm -f -- /builder/sbsigntools/hash /builder/sbsigntools/vtags', 'cd -- /builder', "git -C /builder/sbsigntools rev-parse 'HEAD^{}' >> /builder/sbsigntools/hash", "git -C /builder/sbsigntools tag --points-at HEAD --list 'v*' >> /builder/sbsigntools/vtags"]
+2024-04-18 14:13:29.648671 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1001 qubesbuilder.FileCopyIn+-2Fbuilder-2Fsbsigntools /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/sbsigntools
+2024-04-18 14:13:29.999616 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1001 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/sbsigntools/hash /builder/sbsigntools/vtags && cd -- /builder && git -C /builder/sbsigntools rev-parse '"'"'HEAD^{}'"'"' >> /builder/sbsigntools/hash && git -C /builder/sbsigntools tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/sbsigntools/vtags''.
+2024-04-18 14:13:30.186680 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1001 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsbsigntools-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmp7kve_dd_
+2024-04-18 14:13:30.367950 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1001 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsbsigntools-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmp7kve_dd_
+2024-04-18 14:13:33.125004 +0000 build-fedora43: > done
+2024-04-18 14:13:33.125060 +0000 > closing log
