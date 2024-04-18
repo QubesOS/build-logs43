@@ -1,0 +1,510 @@
+2024-04-18 15:08:26.721559 +0000 > starting log
+2024-04-18 15:08:26.721792 +0000 build-fedora43: > starting build with log
+2024-04-18 15:08:26.721811 +0000 build-fedora43: >> args:
+2024-04-18 15:08:26.721819 +0000 build-fedora43: >>   ()
+2024-04-18 15:08:26.721825 +0000 build-fedora43: >> component:
+2024-04-18 15:08:26.721832 +0000 build-fedora43: >>   windows-tools-cross
+2024-04-18 15:08:26.721838 +0000 build-fedora43: >> distributions:
+2024-04-18 15:08:26.721847 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-18 15:08:42.048337 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp857 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 15:08:42.315571 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp857 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-windows-tools-cross.git /builder/windows-tools-cross /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 15:09:46.888907 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 15:09:46.888986 +0000 build-fedora43: output: ---> Good tag ca67ba783a22f38f08fbb13511cd27cb72ae7182.
+2024-04-18 15:09:46.889075 +0000 build-fedora43: output: ---> Good tag 112d227a446e7356c516c14f90e3345bd4afda0a.
+2024-04-18 15:09:46.889141 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 15:09:46.889173 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 15:09:46.889192 +0000 build-fedora43: output: --> Updating submodules
+2024-04-18 15:09:46.906900 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp857 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-18 15:10:04.884482 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp490 qubesbuilder.FileCopyIn+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/windows-tools-cross
+2024-04-18 15:10:05.325011 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp490 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 15:10:05.530035 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp490 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name wix311-binaries.zip --file-url https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip''.
+2024-04-18 15:10:05.727960 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 15:10:05.728384 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name wix311-binaries.zip --file-url https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip
+2024-04-18 15:10:05.730837 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''wix311-binaries.zip'\'' --file-url '\''https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip'\'' --'
+2024-04-18 15:10:05.730891 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''wix311-binaries.zip'\'' --file-url '\''https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip'\'' --'
+2024-04-18 15:10:05.731102 +0000 build-fedora43: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name wix311-binaries.zip --file-url https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip --
+2024-04-18 15:10:05.731367 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:10:05.731416 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:10:05.731442 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2024-04-18 15:10:05.731636 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.731669 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.731852 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:10:05.731885 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:10:05.731905 +0000 build-fedora43: output: + FILE_NAME=wix311-binaries.zip
+2024-04-18 15:10:05.732088 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.732144 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.732165 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:10:05.732378 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:10:05.732424 +0000 build-fedora43: output: + FILE_URL=https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip
+2024-04-18 15:10:05.732444 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.732629 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.732662 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:10:05.732940 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:10:05.732973 +0000 build-fedora43: output: + shift
+2024-04-18 15:10:05.733176 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:10:05.733216 +0000 build-fedora43: output: + '[' -z https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip ']'
+2024-04-18 15:10:05.733241 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 15:10:05.733261 +0000 build-fedora43: output: + '[' -z wix311-binaries.zip ']'
+2024-04-18 15:10:05.733426 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_wix311-binaries.zip
+2024-04-18 15:10:05.733461 +0000 build-fedora43: output: + '[' -n /builder/windows-tools-cross ']'
+2024-04-18 15:10:05.733875 +0000 build-fedora43: output: + mkdir -p /builder/windows-tools-cross
+2024-04-18 15:10:05.733915 +0000 build-fedora43: output: + cd /builder/windows-tools-cross
+2024-04-18 15:10:05.733949 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_wix311-binaries.zip -- https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip
+2024-04-18 15:12:03.994002 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 15:12:03.994081 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:12:03.999378 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp490 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Funtrusted_wix311--binaries.zip /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf
+2024-04-18 15:12:07.276690 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512'.
+2024-04-18 15:12:07.278640 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 15:12:07.279034 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512
+2024-04-18 15:12:07.281196 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmprq7np6bf'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512'\'' --'
+2024-04-18 15:12:07.281225 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmprq7np6bf'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512'\'' --'
+2024-04-18 15:12:07.281264 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512 --
+2024-04-18 15:12:07.281271 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 15:12:07.281278 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 15:12:07.281386 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:07.281405 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmprq7np6bf
+2024-04-18 15:12:07.281413 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.281420 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.281648 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:12:07.281697 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:07.281920 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip
+2024-04-18 15:12:07.281938 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.281945 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.281951 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:12:07.281958 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:07.281964 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 15:12:07.281970 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.281977 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.281983 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:12:07.281989 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:07.282217 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512
+2024-04-18 15:12:07.282231 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.282328 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.282342 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:12:07.282516 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:07.282615 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:07.282627 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:12:07.282636 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip ']'
+2024-04-18 15:12:07.282733 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf ']'
+2024-04-18 15:12:07.282819 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf
+2024-04-18 15:12:07.284958 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip
+2024-04-18 15:12:07.285762 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_wix311-binaries.zip
+2024-04-18 15:12:07.285779 +0000 build-fedora43: output: + FILE_NAME=wix311-binaries.zip
+2024-04-18 15:12:07.285788 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2024-04-18 15:12:07.285796 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2024-04-18 15:12:07.285805 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2024-04-18 15:12:07.285811 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:12:07.285818 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 15:12:07.285824 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:12:07.285830 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:12:07.286989 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2024-04-18 15:12:07.287010 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 15:12:07.287019 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 15:12:07.287028 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/windows-tools-cross/wix311-binaries.zip.sha512
+2024-04-18 15:12:07.288023 +0000 build-fedora43: output: ++ printf '%s  -\n' a8c3c2243489fc79e7a18b321ed03133354d43620dd265f087d32ba508f7baf769d32d12b1ccbc22f924573e205ebda7fd8d8ca5e35d5d4a7181af4997657a20
+2024-04-18 15:12:07.338382 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/untrusted_wix311-binaries.zip /home/user/builder-r4.3-fedora/tmp/tmprq7np6bf/wix311-binaries.zip
+2024-04-18 15:12:21.740220 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1412 qubesbuilder.FileCopyIn+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/windows-tools-cross
+2024-04-18 15:12:22.300160 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1412 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 15:12:22.496995 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1412 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name dotNetFx40_Full_x86_x64.exe --file-url https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe''.
+2024-04-18 15:12:22.735839 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 15:12:22.736224 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name dotNetFx40_Full_x86_x64.exe --file-url https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:12:22.737981 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''dotNetFx40_Full_x86_x64.exe'\'' --file-url '\''https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe'\'' --'
+2024-04-18 15:12:22.738372 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''dotNetFx40_Full_x86_x64.exe'\'' --file-url '\''https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe'\'' --'
+2024-04-18 15:12:22.738446 +0000 build-fedora43: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name dotNetFx40_Full_x86_x64.exe --file-url https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe --
+2024-04-18 15:12:22.738467 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:12:22.738770 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:22.738816 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2024-04-18 15:12:22.738836 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.738853 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.738870 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:12:22.738887 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:22.738906 +0000 build-fedora43: output: + FILE_NAME=dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:12:22.739338 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.739383 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.739403 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:12:22.739421 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:22.739450 +0000 build-fedora43: output: + FILE_URL=https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:12:22.739468 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.739907 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.739950 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:12:22.739970 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:12:22.739986 +0000 build-fedora43: output: + shift
+2024-04-18 15:12:22.740010 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:12:22.740039 +0000 build-fedora43: output: + '[' -z https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe ']'
+2024-04-18 15:12:22.740063 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 15:12:22.740083 +0000 build-fedora43: output: + '[' -z dotNetFx40_Full_x86_x64.exe ']'
+2024-04-18 15:12:22.740452 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:12:22.740488 +0000 build-fedora43: output: + '[' -n /builder/windows-tools-cross ']'
+2024-04-18 15:12:22.740508 +0000 build-fedora43: output: + mkdir -p /builder/windows-tools-cross
+2024-04-18 15:12:22.740779 +0000 build-fedora43: output: + cd /builder/windows-tools-cross
+2024-04-18 15:12:22.740928 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_dotNetFx40_Full_x86_x64.exe -- https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:15:26.223811 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 15:15:26.224831 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:26.234891 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1412 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Funtrusted_dotNetFx40_Full_x86_x64.exe /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8
+2024-04-18 15:15:29.450723 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512'.
+2024-04-18 15:15:29.452261 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 15:15:29.453096 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512
+2024-04-18 15:15:29.454937 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512'\'' --'
+2024-04-18 15:15:29.455216 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512'\'' --'
+2024-04-18 15:15:29.455405 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 --
+2024-04-18 15:15:29.455667 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 15:15:29.455878 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 15:15:29.455912 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:29.456086 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8
+2024-04-18 15:15:29.456142 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.456324 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.456358 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:15:29.456378 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:29.456402 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:15:29.456665 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.456698 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.456719 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:15:29.456737 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:29.456756 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 15:15:29.456933 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.456964 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.456981 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:15:29.457184 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:29.457223 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512
+2024-04-18 15:15:29.457243 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.457259 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.457469 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:15:29.457518 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:29.457539 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:29.457556 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:15:29.457719 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe ']'
+2024-04-18 15:15:29.457751 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8 ']'
+2024-04-18 15:15:29.457861 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8
+2024-04-18 15:15:29.460927 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:15:29.462060 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:15:29.462189 +0000 build-fedora43: output: + FILE_NAME=dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:15:29.462511 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2024-04-18 15:15:29.462682 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2024-04-18 15:15:29.462826 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2024-04-18 15:15:29.462991 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:29.463249 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 15:15:29.463467 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:29.463500 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:29.463695 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2024-04-18 15:15:29.463731 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 15:15:29.464035 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 15:15:29.464961 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512
+2024-04-18 15:15:29.466956 +0000 build-fedora43: output: ++ printf '%s  -\n' 241ba3f82f37818407bc00909c160b653b45a1a3d156e043b87ba18a7819294716705c952c7b46516c4afd86e6f99bad23e7235b951a371ae6728107f19e5f23
+2024-04-18 15:15:29.547680 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/untrusted_dotNetFx40_Full_x86_x64.exe /home/user/builder-r4.3-fedora/tmp/tmp3em4lpj8/dotNetFx40_Full_x86_x64.exe
+2024-04-18 15:15:44.146953 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6359 qubesbuilder.FileCopyIn+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/windows-tools-cross
+2024-04-18 15:15:44.560046 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6359 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 15:15:44.785313 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6359 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name devcon.tar.gz --file-url '"'"'https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz'"'"'''.
+2024-04-18 15:15:44.990829 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 15:15:44.991483 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name devcon.tar.gz --file-url https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz
+2024-04-18 15:15:44.993807 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''devcon.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz'\'' --'
+2024-04-18 15:15:44.994339 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''devcon.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz'\'' --'
+2024-04-18 15:15:44.994396 +0000 build-fedora43: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name devcon.tar.gz --file-url https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz --
+2024-04-18 15:15:44.994420 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:15:44.994439 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:44.994460 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2024-04-18 15:15:44.994478 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.994855 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.994910 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:15:44.994931 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:44.995384 +0000 build-fedora43: output: + FILE_NAME=devcon.tar.gz
+2024-04-18 15:15:44.995420 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.995440 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.995457 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:15:44.995475 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:44.995501 +0000 build-fedora43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz
+2024-04-18 15:15:44.995519 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.995823 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.995865 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:15:44.995884 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:44.995901 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:44.995918 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:15:44.995943 +0000 build-fedora43: output: + '[' -z https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz ']'
+2024-04-18 15:15:44.996302 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 15:15:44.996336 +0000 build-fedora43: output: + '[' -z devcon.tar.gz ']'
+2024-04-18 15:15:44.996356 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_devcon.tar.gz
+2024-04-18 15:15:44.996375 +0000 build-fedora43: output: + '[' -n /builder/windows-tools-cross ']'
+2024-04-18 15:15:44.996394 +0000 build-fedora43: output: + mkdir -p /builder/windows-tools-cross
+2024-04-18 15:15:44.997401 +0000 build-fedora43: output: + cd /builder/windows-tools-cross
+2024-04-18 15:15:44.997454 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_devcon.tar.gz -- https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz
+2024-04-18 15:15:52.247531 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 15:15:52.248379 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:52.256510 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6359 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Funtrusted_devcon.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r
+2024-04-18 15:15:55.467196 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512'.
+2024-04-18 15:15:55.472283 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 15:15:55.473202 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512
+2024-04-18 15:15:55.474611 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512'\'' --'
+2024-04-18 15:15:55.476050 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512'\'' --'
+2024-04-18 15:15:55.476302 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512 --
+2024-04-18 15:15:55.476403 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 15:15:55.476501 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 15:15:55.476596 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:55.476734 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r
+2024-04-18 15:15:55.476929 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.476958 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.476979 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:15:55.476997 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:55.477020 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz
+2024-04-18 15:15:55.477037 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477081 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477124 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:15:55.477142 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:55.477160 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 15:15:55.477176 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477192 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477208 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:15:55.477224 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:55.477247 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512
+2024-04-18 15:15:55.477264 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477305 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477323 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:15:55.477340 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:15:55.477356 +0000 build-fedora43: output: + shift
+2024-04-18 15:15:55.477372 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:15:55.477396 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz ']'
+2024-04-18 15:15:55.477417 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r ']'
+2024-04-18 15:15:55.477437 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r
+2024-04-18 15:15:55.477459 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz
+2024-04-18 15:15:55.478441 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_devcon.tar.gz
+2024-04-18 15:15:55.478461 +0000 build-fedora43: output: + FILE_NAME=devcon.tar.gz
+2024-04-18 15:15:55.478471 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2024-04-18 15:15:55.478480 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2024-04-18 15:15:55.478488 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2024-04-18 15:15:55.478495 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:55.478501 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 15:15:55.478507 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:55.478542 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:15:55.479206 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2024-04-18 15:15:55.479244 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 15:15:55.479265 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 15:15:55.479681 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/windows-tools-cross/devcon.tar.gz.sha512
+2024-04-18 15:15:55.480184 +0000 build-fedora43: output: ++ printf '%s  -\n' 2aa9f390d9a7b4d2a357f9d5ac4dff79ebb4f01f120a3e2419ff0d49e24977c08396f1d84764494eb4e6c8e0098e2190c557fcfbf85c19e1b02ca24758784a32
+2024-04-18 15:15:55.480509 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/untrusted_devcon.tar.gz /home/user/builder-r4.3-fedora/tmp/tmpjdyh4j_r/devcon.tar.gz
+2024-04-18 15:15:55.529937 +0000 build-fedora43: ['rm -f -- /builder/windows-tools-cross/hash /builder/windows-tools-cross/vtags', 'cd -- /builder', "git -C /builder/windows-tools-cross rev-parse 'HEAD^{}' >> /builder/windows-tools-cross/hash", "git -C /builder/windows-tools-cross tag --points-at HEAD --list 'v*' >> /builder/windows-tools-cross/vtags"]
+2024-04-18 15:16:10.456690 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9896 qubesbuilder.FileCopyIn+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/windows-tools-cross
+2024-04-18 15:16:11.003870 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9896 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/windows-tools-cross/hash /builder/windows-tools-cross/vtags && cd -- /builder && git -C /builder/windows-tools-cross rev-parse '"'"'HEAD^{}'"'"' >> /builder/windows-tools-cross/hash && git -C /builder/windows-tools-cross tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/windows-tools-cross/vtags''.
+2024-04-18 15:16:11.181141 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9896 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpz7ncqfj5
+2024-04-18 15:16:11.353312 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9896 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpz7ncqfj5
+2024-04-18 15:16:28.469297 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6661 qubesbuilder.FileCopyIn+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/windows-tools-cross
+2024-04-18 15:16:28.947586 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6661 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/windows-tools-cross/modules && cd -- /builder/windows-tools-cross && git -C /builder/windows-tools-cross/qubes-core-vchan-xen rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-core-agent-windows rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-core-qubesdb rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-windows-utils rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-gui-common rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-gui-agent-windows rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface rev-parse HEAD >> /builder/windows-tools-cross/modules''.
+2024-04-18 15:16:29.174597 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6661 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fmodules /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpz7ncqfj5
+2024-04-18 15:16:46.507785 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp236 qubesbuilder.FileCopyIn+-2Fbuilder-2Fwindows--tools--cross /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/windows-tools-cross
+2024-04-18 15:16:46.960946 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp236 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 15:16:47.158698 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp236 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-vchan-xen qubes-core-vchan-xen-ab3de83c88bdf5ce.tar.gz qubes-core-vchan-xen/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-agent-windows qubes-core-agent-windows-b42d97a244e65058.tar.gz qubes-core-agent-windows/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-qubesdb qubes-core-qubesdb-e94f2c908b04de45.tar.gz qubes-core-qubesdb/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-windows-utils qubes-windows-utils-f50e3c72f384445c.tar.gz qubes-windows-utils/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-gui-common qubes-gui-common-d39f0576ae18626e.tar.gz qubes-gui-common/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-gui-agent-windows qubes-gui-agent-windows-506be63e2b3dfcf7.tar.gz qubes-gui-agent-windows/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar.gz qubes-installer-qubes-os-windows-tools/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar.gz qubes-vmm-xen-windows-pvdrivers/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar.gz qubes-vmm-xen-win-pvdrivers-xeniface/''.
+2024-04-18 15:16:47.364455 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.364499 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.365202 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.382291 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.383009 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-vchan-xen
+2024-04-18 15:16:47.384124 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-core-vchan-xen ~
+2024-04-18 15:16:47.384370 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-vchan-xen
+2024-04-18 15:16:47.384430 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.384453 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-core-vchan-xen-ab3de83c88bdf5ce.tar
+2024-04-18 15:16:47.384478 +0000 build-fedora43: output: + '[' xqubes-core-vchan-xen/ '!=' x ']'
+2024-04-18 15:16:47.384614 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-core-vchan-xen/
+2024-04-18 15:16:47.384640 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-core-vchan-xen
+2024-04-18 15:16:47.384658 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.406358 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1645474118
+2024-04-18 15:16:47.406818 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.406956 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.407262 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.411403 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.411689 +0000 build-fedora43: output: + tar --sort=name --mtime=@1645474118 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-vchan-xen/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-vchan-xen-ab3de83c88bdf5ce.tar -cf qubes-core-vchan-xen-ab3de83c88bdf5ce.tar .
+2024-04-18 15:16:47.413406 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.413444 +0000 build-fedora43: output: + gzip -fn qubes-core-vchan-xen-ab3de83c88bdf5ce.tar
+2024-04-18 15:16:47.422164 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.422210 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.425534 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.426079 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.428194 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.431318 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.431735 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-agent-windows
+2024-04-18 15:16:47.433523 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-agent-windows
+2024-04-18 15:16:47.433623 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.434339 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-core-agent-windows-b42d97a244e65058.tar
+2024-04-18 15:16:47.434386 +0000 build-fedora43: output: + '[' xqubes-core-agent-windows/ '!=' x ']'
+2024-04-18 15:16:47.434407 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-core-agent-windows/
+2024-04-18 15:16:47.434428 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-core-agent-windows
+2024-04-18 15:16:47.434448 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-core-agent-windows ~
+2024-04-18 15:16:47.434963 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.438091 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1684237621
+2024-04-18 15:16:47.439139 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.439985 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.440032 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.443191 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.443272 +0000 build-fedora43: output: + tar --sort=name --mtime=@1684237621 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-agent-windows/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-agent-windows-b42d97a244e65058.tar -cf qubes-core-agent-windows-b42d97a244e65058.tar .
+2024-04-18 15:16:47.455029 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.455122 +0000 build-fedora43: output: + gzip -fn qubes-core-agent-windows-b42d97a244e65058.tar
+2024-04-18 15:16:47.469356 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.469430 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.472577 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.472622 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.473820 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.475690 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.475960 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-qubesdb
+2024-04-18 15:16:47.477345 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-core-qubesdb ~
+2024-04-18 15:16:47.477393 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-qubesdb
+2024-04-18 15:16:47.477414 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.477437 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-core-qubesdb-e94f2c908b04de45.tar
+2024-04-18 15:16:47.477456 +0000 build-fedora43: output: + '[' xqubes-core-qubesdb/ '!=' x ']'
+2024-04-18 15:16:47.477475 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-core-qubesdb/
+2024-04-18 15:16:47.477494 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-core-qubesdb
+2024-04-18 15:16:47.477511 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.478199 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1649537558
+2024-04-18 15:16:47.479339 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.479383 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.479558 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.479863 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.479927 +0000 build-fedora43: output: + tar --sort=name --mtime=@1649537558 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-qubesdb/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-qubesdb-e94f2c908b04de45.tar -cf qubes-core-qubesdb-e94f2c908b04de45.tar .
+2024-04-18 15:16:47.482061 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.482122 +0000 build-fedora43: output: + gzip -fn qubes-core-qubesdb-e94f2c908b04de45.tar
+2024-04-18 15:16:47.488383 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.488421 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.490352 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.490941 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.493924 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.495292 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.495410 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-windows-utils
+2024-04-18 15:16:47.496312 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-windows-utils
+2024-04-18 15:16:47.496374 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.496391 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-windows-utils-f50e3c72f384445c.tar
+2024-04-18 15:16:47.496410 +0000 build-fedora43: output: + '[' xqubes-windows-utils/ '!=' x ']'
+2024-04-18 15:16:47.496738 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-windows-utils/
+2024-04-18 15:16:47.496767 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-windows-utils
+2024-04-18 15:16:47.496782 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-windows-utils ~
+2024-04-18 15:16:47.496833 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.498243 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1684236843
+2024-04-18 15:16:47.498795 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.498831 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.499286 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.501293 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.501448 +0000 build-fedora43: output: + tar --sort=name --mtime=@1684236843 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-windows-utils/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-windows-utils-f50e3c72f384445c.tar -cf qubes-windows-utils-f50e3c72f384445c.tar .
+2024-04-18 15:16:47.503036 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.503170 +0000 build-fedora43: output: + gzip -fn qubes-windows-utils-f50e3c72f384445c.tar
+2024-04-18 15:16:47.508407 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.508440 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.511407 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.511434 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.512696 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.513868 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.514196 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-gui-common
+2024-04-18 15:16:47.514888 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-gui-common
+2024-04-18 15:16:47.515467 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.515509 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-gui-common-d39f0576ae18626e.tar
+2024-04-18 15:16:47.515541 +0000 build-fedora43: output: + '[' xqubes-gui-common/ '!=' x ']'
+2024-04-18 15:16:47.515561 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-gui-common/
+2024-04-18 15:16:47.515580 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-gui-common
+2024-04-18 15:16:47.515600 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-gui-common ~
+2024-04-18 15:16:47.515969 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.519015 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1647880228
+2024-04-18 15:16:47.520078 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.520797 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.520901 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.524363 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.524525 +0000 build-fedora43: output: + tar --sort=name --mtime=@1647880228 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-gui-common/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-gui-common-d39f0576ae18626e.tar -cf qubes-gui-common-d39f0576ae18626e.tar .
+2024-04-18 15:16:47.526200 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.526246 +0000 build-fedora43: output: + gzip -fn qubes-gui-common-d39f0576ae18626e.tar
+2024-04-18 15:16:47.527509 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.527601 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.530896 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.530935 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.532051 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.533557 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.534040 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-gui-agent-windows
+2024-04-18 15:16:47.535282 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-gui-agent-windows
+2024-04-18 15:16:47.535377 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.535404 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-gui-agent-windows-506be63e2b3dfcf7.tar
+2024-04-18 15:16:47.535425 +0000 build-fedora43: output: + '[' xqubes-gui-agent-windows/ '!=' x ']'
+2024-04-18 15:16:47.535445 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-gui-agent-windows/
+2024-04-18 15:16:47.535466 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-gui-agent-windows
+2024-04-18 15:16:47.535493 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-gui-agent-windows ~
+2024-04-18 15:16:47.535808 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.538000 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1684236886
+2024-04-18 15:16:47.539271 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.539365 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.540269 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.543258 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.543329 +0000 build-fedora43: output: + tar --sort=name --mtime=@1684236886 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-gui-agent-windows/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-gui-agent-windows-506be63e2b3dfcf7.tar -cf qubes-gui-agent-windows-506be63e2b3dfcf7.tar .
+2024-04-18 15:16:47.548837 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.548880 +0000 build-fedora43: output: + gzip -fn qubes-gui-agent-windows-506be63e2b3dfcf7.tar
+2024-04-18 15:16:47.576308 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.576405 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.579940 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.580412 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.583772 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.584838 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.584941 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2024-04-18 15:16:47.586281 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2024-04-18 15:16:47.586345 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.586372 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar
+2024-04-18 15:16:47.586440 +0000 build-fedora43: output: + '[' xqubes-installer-qubes-os-windows-tools/ '!=' x ']'
+2024-04-18 15:16:47.586461 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-installer-qubes-os-windows-tools/
+2024-04-18 15:16:47.586489 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2024-04-18 15:16:47.586556 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools ~
+2024-04-18 15:16:47.586581 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.587966 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1647879996
+2024-04-18 15:16:47.588945 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.588983 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.589482 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.590987 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.591060 +0000 build-fedora43: output: + tar --sort=name --mtime=@1647879996 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-installer-qubes-os-windows-tools/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar -cf qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar .
+2024-04-18 15:16:47.594868 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.594906 +0000 build-fedora43: output: + gzip -fn qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar
+2024-04-18 15:16:47.600181 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.600216 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.601830 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.602234 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.603888 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.604663 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.604848 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2024-04-18 15:16:47.605703 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2024-04-18 15:16:47.605719 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.605728 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar
+2024-04-18 15:16:47.605736 +0000 build-fedora43: output: + '[' xqubes-vmm-xen-windows-pvdrivers/ '!=' x ']'
+2024-04-18 15:16:47.605743 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-vmm-xen-windows-pvdrivers/
+2024-04-18 15:16:47.605751 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2024-04-18 15:16:47.605760 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers ~
+2024-04-18 15:16:47.605969 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.607212 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1647655413
+2024-04-18 15:16:47.607626 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.607858 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.607872 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.609067 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.609140 +0000 build-fedora43: output: + tar --sort=name --mtime=@1647655413 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-vmm-xen-windows-pvdrivers/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar -cf qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar .
+2024-04-18 15:16:47.610780 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.610821 +0000 build-fedora43: output: + gzip -fn qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar
+2024-04-18 15:16:47.614139 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.614200 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.615911 +0000 build-fedora43: output: ++ tar --version
+2024-04-18 15:16:47.616368 +0000 build-fedora43: output: ++ awk '{print $4}'
+2024-04-18 15:16:47.616957 +0000 build-fedora43: output: ++ head -1
+2024-04-18 15:16:47.620284 +0000 build-fedora43: output: + TAR_VERSION=1.35
+2024-04-18 15:16:47.620679 +0000 build-fedora43: output: ++ readlink -f /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2024-04-18 15:16:47.622189 +0000 build-fedora43: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2024-04-18 15:16:47.622296 +0000 build-fedora43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-18 15:16:47.622372 +0000 build-fedora43: output: + GIT_TARBALL_NAME=qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar
+2024-04-18 15:16:47.622397 +0000 build-fedora43: output: + '[' xqubes-vmm-xen-win-pvdrivers-xeniface/ '!=' x ']'
+2024-04-18 15:16:47.622471 +0000 build-fedora43: output: + GIT_ARCHIVE_PREFIX=qubes-vmm-xen-win-pvdrivers-xeniface/
+2024-04-18 15:16:47.622829 +0000 build-fedora43: output: + pushd /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2024-04-18 15:16:47.622862 +0000 build-fedora43: output: /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface ~
+2024-04-18 15:16:47.622877 +0000 build-fedora43: output: ++ git log -1 --format=%ct
+2024-04-18 15:16:47.623669 +0000 build-fedora43: output: + SOURCE_DATE_EPOCH=1642760675
+2024-04-18 15:16:47.624313 +0000 build-fedora43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-18 15:16:47.624713 +0000 build-fedora43: output: ++ sort -V
+2024-04-18 15:16:47.625398 +0000 build-fedora43: output: ++ head -n1
+2024-04-18 15:16:47.626998 +0000 build-fedora43: output: + '[' 1.28 == 1.28 ']'
+2024-04-18 15:16:47.627070 +0000 build-fedora43: output: + tar --sort=name --mtime=@1642760675 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-vmm-xen-win-pvdrivers-xeniface/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar -cf qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar .
+2024-04-18 15:16:47.632206 +0000 build-fedora43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-18 15:16:47.632246 +0000 build-fedora43: output: + gzip -fn qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar
+2024-04-18 15:16:47.656453 +0000 build-fedora43: output: + popd
+2024-04-18 15:16:47.658495 +0000 build-fedora43: output: ~
+2024-04-18 15:16:47.664551 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--gui--common-2Fqubes--gui--common--d39f0576ae18626e.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:47.865475 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--core--agent--windows-2Fqubes--core--agent--windows--b42d97a244e65058.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:48.079410 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--gui--agent--windows-2Fqubes--gui--agent--windows--506be63e2b3dfcf7.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:48.309393 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--vmm--xen--win--pvdrivers--xeniface-2Fqubes--vmm--xen--win--pvdrivers--xeniface--92236b2f92acebb8.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:48.534797 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--windows--utils-2Fqubes--windows--utils--f50e3c72f384445c.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:48.729673 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--core--vchan--xen-2Fqubes--core--vchan--xen--ab3de83c88bdf5ce.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:48.917241 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--vmm--xen--windows--pvdrivers-2Fqubes--vmm--xen--windows--pvdrivers--873e5e8598fefed7.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:49.216224 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--installer--qubes--os--windows--tools-2Fqubes--installer--qubes--os--windows--tools--d131b40eaa71af0f.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:49.421160 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp236 qubesbuilder.FileCopyOut+-2Fbuilder-2Fwindows--tools--cross-2Fqubes--core--qubesdb-2Fqubes--core--qubesdb--e94f2c908b04de45.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/distfiles/windows-tools-cross
+2024-04-18 15:16:52.401212 +0000 build-fedora43: > done
+2024-04-18 15:16:52.401287 +0000 > closing log
