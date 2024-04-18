@@ -1,0 +1,111 @@
+2024-04-18 13:30:23.797056 +0000 > starting log
+2024-04-18 13:30:23.797357 +0000 build-fedora43: > starting build with log
+2024-04-18 13:30:23.797379 +0000 build-fedora43: >> args:
+2024-04-18 13:30:23.797387 +0000 build-fedora43: >>   ()
+2024-04-18 13:30:23.797394 +0000 build-fedora43: >> component:
+2024-04-18 13:30:23.797400 +0000 build-fedora43: >>   anaconda
+2024-04-18 13:30:23.797406 +0000 build-fedora43: >> distributions:
+2024-04-18 13:30:23.797413 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 13:30:40.195742 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8114 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 13:30:40.403588 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8114 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-anaconda.git /builder/anaconda /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 13:30:51.392278 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 13:30:51.392357 +0000 build-fedora43: output: ---> Good tag 9c209baae8fda30b23d53bf52269ff8a9015add3.
+2024-04-18 13:30:51.392443 +0000 build-fedora43: output: ---> Good tag a787ce10307120d15235b4c97c33e65ff96cf87b.
+2024-04-18 13:30:51.392477 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 13:30:51.392498 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 13:30:51.414283 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8114 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 13:31:09.357070 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fanaconda /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/anaconda
+2024-04-18 13:31:09.715924 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 13:31:09.872179 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp7059 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2''.
+2024-04-18 13:31:10.037070 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 13:31:10.037557 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:10.039425 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/anaconda'\'' --file-name '\''anaconda-37.12.6.tar.bz2'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2'\'' --'
+2024-04-18 13:31:10.039476 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/anaconda'\'' --file-name '\''anaconda-37.12.6.tar.bz2'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2'\'' --'
+2024-04-18 13:31:10.039491 +0000 build-fedora43: output: ++ set -- --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2 --
+2024-04-18 13:31:10.039517 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 13:31:10.039539 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:10.039546 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/anaconda
+2024-04-18 13:31:10.039554 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.039577 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.039583 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 13:31:10.039589 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:10.039596 +0000 build-fedora43: output: + FILE_NAME=anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:10.039603 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.039613 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.039619 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 13:31:10.039625 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:10.039633 +0000 build-fedora43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:10.039660 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.039670 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.039676 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 13:31:10.039682 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:10.040492 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:10.040512 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 13:31:10.040521 +0000 build-fedora43: output: + '[' -z https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2 ']'
+2024-04-18 13:31:10.040530 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 13:31:10.040537 +0000 build-fedora43: output: + '[' -z anaconda-37.12.6.tar.bz2 ']'
+2024-04-18 13:31:10.040544 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:10.040551 +0000 build-fedora43: output: + '[' -n /builder/anaconda ']'
+2024-04-18 13:31:10.040573 +0000 build-fedora43: output: + mkdir -p /builder/anaconda
+2024-04-18 13:31:10.041057 +0000 build-fedora43: output: + cd /builder/anaconda
+2024-04-18 13:31:10.041081 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_anaconda-37.12.6.tar.bz2 -- https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:27.667371 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 13:31:27.667413 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 13:31:27.677696 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7059 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda-2Funtrusted_anaconda--37.12.6.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l
+2024-04-18 13:31:30.484056 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'.
+2024-04-18 13:31:30.486888 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 13:31:30.486991 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2024-04-18 13:31:30.487683 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'\'' --'
+2024-04-18 13:31:30.487768 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'\'' --'
+2024-04-18 13:31:30.487820 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 --
+2024-04-18 13:31:30.487839 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 13:31:30.487862 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 13:31:30.487974 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:30.488047 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l
+2024-04-18 13:31:30.488120 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.488209 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.488290 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 13:31:30.488368 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:30.488465 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:30.488596 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.488825 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.488967 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 13:31:30.489057 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:30.489322 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 13:31:30.489389 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.489452 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.489485 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 13:31:30.489504 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:30.489611 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2024-04-18 13:31:30.489686 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.489907 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.489986 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 13:31:30.490009 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 13:31:30.490071 +0000 build-fedora43: output: + shift
+2024-04-18 13:31:30.490096 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 13:31:30.490193 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2 ']'
+2024-04-18 13:31:30.490263 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l ']'
+2024-04-18 13:31:30.490356 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l
+2024-04-18 13:31:30.490580 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:30.492495 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:30.492511 +0000 build-fedora43: output: + FILE_NAME=anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:30.492520 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-18 13:31:30.492529 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-18 13:31:30.492537 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-18 13:31:30.492552 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 13:31:30.492578 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 13:31:30.492585 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 13:31:30.492591 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 13:31:30.492599 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-18 13:31:30.492606 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 13:31:30.492613 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 13:31:30.493571 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-dom0/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2024-04-18 13:31:30.495086 +0000 build-fedora43: output: ++ printf '%s  -\n' 6f4b3c13f7ecbd64501a1aff9ba1d8fde867b52df8a517821c1a70a4ab2af81ef6a22c8534afba8239a5c608f4c06fdd505e6d4c7a58a23fa8d852e54a79694a
+2024-04-18 13:31:30.501816 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/untrusted_anaconda-37.12.6.tar.bz2 /home/user/builder-r4.3-dom0/tmp/tmpa69mhn5l/anaconda-37.12.6.tar.bz2
+2024-04-18 13:31:30.524805 +0000 build-fedora43: ['rm -f -- /builder/anaconda/hash /builder/anaconda/vtags', 'cd -- /builder', "git -C /builder/anaconda rev-parse 'HEAD^{}' >> /builder/anaconda/hash", "git -C /builder/anaconda tag --points-at HEAD --list 'v*' >> /builder/anaconda/vtags"]
+2024-04-18 13:31:44.982633 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8577 qubesbuilder.FileCopyIn+-2Fbuilder-2Fanaconda /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/anaconda
+2024-04-18 13:31:45.339715 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8577 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/anaconda/hash /builder/anaconda/vtags && cd -- /builder && git -C /builder/anaconda rev-parse '"'"'HEAD^{}'"'"' >> /builder/anaconda/hash && git -C /builder/anaconda tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/anaconda/vtags''.
+2024-04-18 13:31:45.568936 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8577 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpuupqisg_
+2024-04-18 13:31:45.777380 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8577 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpuupqisg_
+2024-04-18 13:31:48.549754 +0000 build-fedora43: > done
+2024-04-18 13:31:48.549818 +0000 > closing log
