@@ -1,0 +1,129 @@
+2024-04-18 11:16:52.660103 +0000 > starting log
+2024-04-18 11:16:52.660314 +0000 build-fedora43: > starting build with log
+2024-04-18 11:16:52.660331 +0000 build-fedora43: >> args:
+2024-04-18 11:16:52.660339 +0000 build-fedora43: >>   ()
+2024-04-18 11:16:52.660345 +0000 build-fedora43: >> component:
+2024-04-18 11:16:52.660351 +0000 build-fedora43: >>   fwupd
+2024-04-18 11:16:52.660360 +0000 build-fedora43: >> distributions:
+2024-04-18 11:16:52.660369 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 11:17:07.857778 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9454 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 11:17:08.126126 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9454 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-fwupd.git /builder/fwupd /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 11:17:10.086207 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 11:17:10.086379 +0000 build-fedora43: output: ---> Good tag ecbb679e59be78d51ef170e850073346d439e54c.
+2024-04-18 11:17:10.086397 +0000 build-fedora43: output: ---> Good tag 0424e4fd6303b6aac29a0a42665b8bfb8e2b648b.
+2024-04-18 11:17:10.086407 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 11:17:10.086415 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 11:17:10.097134 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9454 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 11:17:28.243062 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4804 qubesbuilder.FileCopyIn+-2Fbuilder-2Ffwupd /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/fwupd
+2024-04-18 11:17:28.678523 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4804 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 11:17:28.907053 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4804 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/fwupd --file-name fwupd-1.8.14.tar.xz --file-url https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz --signature-url https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc''.
+2024-04-18 11:17:29.124641 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 11:17:29.124699 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/fwupd --file-name fwupd-1.8.14.tar.xz --file-url https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz --signature-url https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:17:29.133856 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/fwupd'\'' --file-name '\''fwupd-1.8.14.tar.xz'\'' --file-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz'\'' --signature-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc'\'' --'
+2024-04-18 11:17:29.133906 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/fwupd'\'' --file-name '\''fwupd-1.8.14.tar.xz'\'' --file-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz'\'' --signature-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc'\'' --'
+2024-04-18 11:17:29.133937 +0000 build-fedora43: output: ++ set -- --output-dir /builder/fwupd --file-name fwupd-1.8.14.tar.xz --file-url https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz --signature-url https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc --
+2024-04-18 11:17:29.133944 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 11:17:29.133950 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:17:29.133957 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/fwupd
+2024-04-18 11:17:29.133965 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.133972 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.133978 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 11:17:29.133984 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:17:29.133990 +0000 build-fedora43: output: + FILE_NAME=fwupd-1.8.14.tar.xz
+2024-04-18 11:17:29.133997 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134003 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134009 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 11:17:29.134128 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:17:29.134143 +0000 build-fedora43: output: + FILE_URL=https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz
+2024-04-18 11:17:29.134151 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134158 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134167 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 11:17:29.134174 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:17:29.134183 +0000 build-fedora43: output: + SIGNATURE_URL=https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:17:29.134190 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134196 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134202 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 11:17:29.134208 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:17:29.134214 +0000 build-fedora43: output: + shift
+2024-04-18 11:17:29.134220 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 11:17:29.134228 +0000 build-fedora43: output: + '[' -z https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz ']'
+2024-04-18 11:17:29.134374 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 11:17:29.134387 +0000 build-fedora43: output: + '[' -z fwupd-1.8.14.tar.xz ']'
+2024-04-18 11:17:29.134395 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_fwupd-1.8.14.tar.xz
+2024-04-18 11:17:29.134402 +0000 build-fedora43: output: + '[' -n /builder/fwupd ']'
+2024-04-18 11:17:29.134409 +0000 build-fedora43: output: + mkdir -p /builder/fwupd
+2024-04-18 11:17:29.134725 +0000 build-fedora43: output: + cd /builder/fwupd
+2024-04-18 11:17:29.134742 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fwupd-1.8.14.tar.xz -- https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz
+2024-04-18 11:18:10.059390 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 11:18:10.059488 +0000 build-fedora43: output: + '[' -n https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc ']'
+2024-04-18 11:18:10.060263 +0000 build-fedora43: output: ++ basename https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:10.062724 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:10.062770 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:10.063061 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fwupd-1.8.14.tar.xz.asc https://github.com/fwupd/fwupd/releases/download/1.8.14/fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:16.381162 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4804 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd-2Funtrusted_fwupd--1.8.14.tar.xz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf
+2024-04-18 11:18:16.621023 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4804 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd-2Funtrusted_fwupd--1.8.14.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf
+2024-04-18 11:18:19.727369 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub'.
+2024-04-18 11:18:19.732672 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 11:18:19.733850 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub
+2024-04-18 11:18:19.735499 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub'\'' --'
+2024-04-18 11:18:19.736066 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub'\'' --'
+2024-04-18 11:18:19.736146 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc --pubkey-file /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub --
+2024-04-18 11:18:19.736618 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 11:18:19.736955 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 11:18:19.737010 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:18:19.737232 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf
+2024-04-18 11:18:19.737265 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.737283 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.737543 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 11:18:19.737618 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:18:19.737892 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz
+2024-04-18 11:18:19.737927 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.738172 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.738206 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 11:18:19.738225 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:18:19.738437 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:19.738477 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.738778 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.738818 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 11:18:19.738836 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:18:19.740069 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-18 11:18:19.740112 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.740131 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.740150 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 11:18:19.740168 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 11:18:19.740186 +0000 build-fedora43: output: + shift
+2024-04-18 11:18:19.740204 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 11:18:19.740228 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz ']'
+2024-04-18 11:18:19.741132 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf ']'
+2024-04-18 11:18:19.741378 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf
+2024-04-18 11:18:19.744696 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz
+2024-04-18 11:18:19.747739 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_fwupd-1.8.14.tar.xz
+2024-04-18 11:18:19.747758 +0000 build-fedora43: output: + FILE_NAME=fwupd-1.8.14.tar.xz
+2024-04-18 11:18:19.747767 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 11:18:19.747776 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc ']'
+2024-04-18 11:18:19.747783 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 11:18:19.747792 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc ']'
+2024-04-18 11:18:19.747799 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub ']'
+2024-04-18 11:18:19.747809 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc ']'
+2024-04-18 11:18:19.747817 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc ']'
+2024-04-18 11:18:19.747825 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub ']'
+2024-04-18 11:18:19.747831 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 11:18:19.747845 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc ']'
+2024-04-18 11:18:19.747852 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub ']'
+2024-04-18 11:18:19.747860 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:19.748374 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:19.748395 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=fwupd-1.8.14.tar.xz.asc
+2024-04-18 11:18:19.748533 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-18 11:18:19.750432 +0000 build-fedora43: output: + keyring=/tmp/tmp.cgNfbzN8MU
+2024-04-18 11:18:19.750448 +0000 build-fedora43: output: + sq help
+2024-04-18 11:18:19.750624 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-18 11:18:19.793826 +0000 build-fedora43: output: thread 'main' panicked at library/std/src/io/stdio.rs:1030:9:
+2024-04-18 11:18:19.793977 +0000 build-fedora43: output: failed printing to stdout: Broken pipe (os error 32)
+2024-04-18 11:18:19.794033 +0000 build-fedora43: output: note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2024-04-18 11:18:19.800892 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.cgNfbzN8MU /home/user/builder-r4.3-dom0/sources/fwupd/hughsie.pub
+2024-04-18 11:18:19.826139 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.cgNfbzN8MU /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz.asc /home/user/builder-r4.3-dom0/tmp/tmpe6w6c6rf/untrusted_fwupd-1.8.14.tar.xz
+2024-04-18 11:18:19.842561 +0000 build-fedora43: output: Signing key on 163EB50119225DB3DF8F49EA17ACBA8DFA970E17 is not bound:
+2024-04-18 11:18:19.842614 +0000 build-fedora43: output:            No binding signature at time 2023-03-31T10:53:03Z
+2024-04-18 11:18:19.842625 +0000 build-fedora43: output:   because: Policy rejected non-revocation signature (PositiveCertification) requiring second pre-image resistance
+2024-04-18 11:18:19.842633 +0000 build-fedora43: output:   because: SHA1 is not considered secure since 2023-02-01T00:00:00Z
+2024-04-18 11:18:19.867203 +0000 > closing log
