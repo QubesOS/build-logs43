@@ -1,0 +1,110 @@
+2024-04-18 05:20:15.717293 +0000 > starting log
+2024-04-18 05:20:15.717919 +0000 build-fedora43: > starting build with log
+2024-04-18 05:20:15.717937 +0000 build-fedora43: >> args:
+2024-04-18 05:20:15.717945 +0000 build-fedora43: >>   ()
+2024-04-18 05:20:15.717951 +0000 build-fedora43: >> component:
+2024-04-18 05:20:15.717960 +0000 build-fedora43: >>   python-looseversion
+2024-04-18 05:20:15.717966 +0000 build-fedora43: >> distributions:
+2024-04-18 05:20:15.717974 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-18 05:20:30.659438 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3958 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 05:20:30.919288 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3958 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-looseversion.git /builder/python-looseversion /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 05:20:36.994570 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 05:20:36.994671 +0000 build-fedora43: output: ---> Good tag c3784317fc16506871d773ad1b0875329e367e3b.
+2024-04-18 05:20:36.994710 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 05:20:36.994734 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 05:20:37.007781 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3958 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-18 05:20:54.687329 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1848 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--looseversion /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/python-looseversion
+2024-04-18 05:20:54.893546 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1848 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 05:20:55.088351 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1848 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-looseversion --file-name python-looseversion-1.3.0.tar.gz --file-url '"'"'https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz'"'"'''.
+2024-04-18 05:20:55.298504 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 05:20:55.298964 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-looseversion --file-name python-looseversion-1.3.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz
+2024-04-18 05:20:55.301519 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/python-looseversion'\'' --file-name '\''python-looseversion-1.3.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz'\'' --'
+2024-04-18 05:20:55.302080 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/python-looseversion'\'' --file-name '\''python-looseversion-1.3.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz'\'' --'
+2024-04-18 05:20:55.302173 +0000 build-fedora43: output: ++ set -- --output-dir /builder/python-looseversion --file-name python-looseversion-1.3.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz --
+2024-04-18 05:20:55.302196 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 05:20:55.302214 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:20:55.302235 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/python-looseversion
+2024-04-18 05:20:55.302253 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.302285 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.302304 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 05:20:55.302687 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:20:55.303026 +0000 build-fedora43: output: + FILE_NAME=python-looseversion-1.3.0.tar.gz
+2024-04-18 05:20:55.303060 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.303079 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.303096 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 05:20:55.303543 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:20:55.303595 +0000 build-fedora43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz
+2024-04-18 05:20:55.303614 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.303642 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.303659 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 05:20:55.303676 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:20:55.303692 +0000 build-fedora43: output: + shift
+2024-04-18 05:20:55.304042 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 05:20:55.304085 +0000 build-fedora43: output: + '[' -z https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz ']'
+2024-04-18 05:20:55.304111 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 05:20:55.304132 +0000 build-fedora43: output: + '[' -z python-looseversion-1.3.0.tar.gz ']'
+2024-04-18 05:20:55.304157 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-18 05:20:55.304364 +0000 build-fedora43: output: + '[' -n /builder/python-looseversion ']'
+2024-04-18 05:20:55.304405 +0000 build-fedora43: output: + mkdir -p /builder/python-looseversion
+2024-04-18 05:20:55.304777 +0000 build-fedora43: output: + cd /builder/python-looseversion
+2024-04-18 05:20:55.304833 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_python-looseversion-1.3.0.tar.gz -- https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz
+2024-04-18 05:20:59.158418 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 05:20:59.158562 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 05:20:59.168914 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1848 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion-2Funtrusted_python--looseversion--1.3.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp9cligom1
+2024-04-18 05:21:02.271591 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp9cligom1 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256'.
+2024-04-18 05:21:02.276945 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 05:21:02.277813 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp9cligom1 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256
+2024-04-18 05:21:02.279861 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp9cligom1'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256'\'' --'
+2024-04-18 05:21:02.279889 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp9cligom1'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256'\'' --'
+2024-04-18 05:21:02.279914 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp9cligom1 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 --
+2024-04-18 05:21:02.279922 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 05:21:02.279929 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 05:21:02.279935 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:21:02.279942 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp9cligom1
+2024-04-18 05:21:02.279949 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.279955 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.279961 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 05:21:02.279967 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:21:02.279976 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-18 05:21:02.279982 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.279989 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.279995 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 05:21:02.280001 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:21:02.280007 +0000 build-fedora43: output: + CHECKSUM_CMD=sha256sum
+2024-04-18 05:21:02.280013 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.280019 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.280025 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 05:21:02.280031 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:21:02.280039 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256
+2024-04-18 05:21:02.280045 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.280051 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.280057 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 05:21:02.280072 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 05:21:02.280079 +0000 build-fedora43: output: + shift
+2024-04-18 05:21:02.280085 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 05:21:02.280093 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz ']'
+2024-04-18 05:21:02.280101 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp9cligom1 ']'
+2024-04-18 05:21:02.280108 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp9cligom1
+2024-04-18 05:21:02.280605 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-18 05:21:02.281538 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-18 05:21:02.281557 +0000 build-fedora43: output: + FILE_NAME=python-looseversion-1.3.0.tar.gz
+2024-04-18 05:21:02.281567 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-18 05:21:02.281576 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-18 05:21:02.281585 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-18 05:21:02.281591 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 05:21:02.281598 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 05:21:02.281604 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 05:21:02.281610 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 05:21:02.281619 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-18 05:21:02.281625 +0000 build-fedora43: output: + '[' -z sha256sum ']'
+2024-04-18 05:21:02.281632 +0000 build-fedora43: output: + sha256sum --status -c /dev/fd/63
+2024-04-18 05:21:02.282332 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256
+2024-04-18 05:21:02.282905 +0000 build-fedora43: output: ++ printf '%s  -\n' ebde65f3f6bb9531a81016c6fef3eb95a61181adc47b7f949e9c0ea47911669e
+2024-04-18 05:21:02.283257 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/untrusted_python-looseversion-1.3.0.tar.gz /home/user/builder-r4.3-fedora/tmp/tmp9cligom1/python-looseversion-1.3.0.tar.gz
+2024-04-18 05:21:02.295214 +0000 build-fedora43: ['rm -f -- /builder/python-looseversion/hash /builder/python-looseversion/vtags', 'cd -- /builder', "git -C /builder/python-looseversion rev-parse 'HEAD^{}' >> /builder/python-looseversion/hash", "git -C /builder/python-looseversion tag --points-at HEAD --list 'v*' >> /builder/python-looseversion/vtags"]
+2024-04-18 05:21:16.754431 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6798 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--looseversion /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/python-looseversion
+2024-04-18 05:21:16.974903 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6798 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-looseversion/hash /builder/python-looseversion/vtags && cd -- /builder && git -C /builder/python-looseversion rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-looseversion/hash && git -C /builder/python-looseversion tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-looseversion/vtags''.
+2024-04-18 05:21:17.204036 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6798 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp6w96fpiy
+2024-04-18 05:21:17.386504 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6798 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp6w96fpiy
+2024-04-18 05:21:20.182703 +0000 build-fedora43: > done
+2024-04-18 05:21:20.182775 +0000 > closing log
