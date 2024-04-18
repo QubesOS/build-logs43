@@ -1,0 +1,111 @@
+2024-04-18 12:39:11.311841 +0000 > starting log
+2024-04-18 12:39:11.312139 +0000 build-fedora43: > starting build with log
+2024-04-18 12:39:11.312160 +0000 build-fedora43: >> args:
+2024-04-18 12:39:11.312169 +0000 build-fedora43: >>   ()
+2024-04-18 12:39:11.312176 +0000 build-fedora43: >> component:
+2024-04-18 12:39:11.312182 +0000 build-fedora43: >>   linux-gbulb
+2024-04-18 12:39:11.312190 +0000 build-fedora43: >> distributions:
+2024-04-18 12:39:11.312199 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-18 12:39:25.702328 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6931 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 12:39:25.998140 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6931 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-gbulb.git /builder/linux-gbulb /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 12:39:30.717158 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 12:39:30.717233 +0000 build-fedora43: output: ---> Good tag c7dd1b45d01ec00421401d196d482c4314ffc6c6.
+2024-04-18 12:39:30.717260 +0000 build-fedora43: output: ---> Good tag 03348648d44c63b43f824608b5afa0463cc97d8f.
+2024-04-18 12:39:30.717281 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 12:39:30.717313 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 12:39:30.735997 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6931 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-18 12:39:48.513199 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2253 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--gbulb /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/linux-gbulb
+2024-04-18 12:39:48.969794 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2253 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 12:39:49.199727 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp2253 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-gbulb --file-name gbulb-0.6.3.tar.gz --file-url https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz''.
+2024-04-18 12:39:49.372379 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 12:39:49.372858 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-gbulb --file-name gbulb-0.6.3.tar.gz --file-url https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz
+2024-04-18 12:39:49.375496 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/linux-gbulb'\'' --file-name '\''gbulb-0.6.3.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz'\'' --'
+2024-04-18 12:39:49.375547 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/linux-gbulb'\'' --file-name '\''gbulb-0.6.3.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz'\'' --'
+2024-04-18 12:39:49.375908 +0000 build-fedora43: output: ++ set -- --output-dir /builder/linux-gbulb --file-name gbulb-0.6.3.tar.gz --file-url https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz --
+2024-04-18 12:39:49.375962 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 12:39:49.375986 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:49.376005 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/linux-gbulb
+2024-04-18 12:39:49.376340 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.376394 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.376415 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 12:39:49.376433 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:49.376451 +0000 build-fedora43: output: + FILE_NAME=gbulb-0.6.3.tar.gz
+2024-04-18 12:39:49.376473 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.376904 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.376939 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 12:39:49.376957 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:49.376979 +0000 build-fedora43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz
+2024-04-18 12:39:49.377262 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.377300 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.377329 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 12:39:49.377346 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:49.377362 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:49.377379 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 12:39:49.377413 +0000 build-fedora43: output: + '[' -z https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz ']'
+2024-04-18 12:39:49.377813 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 12:39:49.378156 +0000 build-fedora43: output: + '[' -z gbulb-0.6.3.tar.gz ']'
+2024-04-18 12:39:49.378192 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_gbulb-0.6.3.tar.gz
+2024-04-18 12:39:49.378211 +0000 build-fedora43: output: + '[' -n /builder/linux-gbulb ']'
+2024-04-18 12:39:49.378229 +0000 build-fedora43: output: + mkdir -p /builder/linux-gbulb
+2024-04-18 12:39:49.378450 +0000 build-fedora43: output: + cd /builder/linux-gbulb
+2024-04-18 12:39:49.378497 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_gbulb-0.6.3.tar.gz -- https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz
+2024-04-18 12:39:54.293326 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 12:39:54.293413 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:39:54.305841 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2253 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb-2Funtrusted_gbulb--0.6.3.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq
+2024-04-18 12:39:57.465983 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256'.
+2024-04-18 12:39:57.468749 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 12:39:57.469661 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256
+2024-04-18 12:39:57.470611 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpllgho5cq'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256'\'' --'
+2024-04-18 12:39:57.470721 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpllgho5cq'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256'\'' --'
+2024-04-18 12:39:57.470765 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 --
+2024-04-18 12:39:57.470784 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 12:39:57.470803 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 12:39:57.470820 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:57.470840 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpllgho5cq
+2024-04-18 12:39:57.470857 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.470873 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.470889 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 12:39:57.470919 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:57.470942 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz
+2024-04-18 12:39:57.470959 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.470974 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.470999 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 12:39:57.471243 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:57.471275 +0000 build-fedora43: output: + CHECKSUM_CMD=sha256sum
+2024-04-18 12:39:57.471293 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.471309 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.471575 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 12:39:57.471607 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:57.471635 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256
+2024-04-18 12:39:57.471684 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.471701 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.471717 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 12:39:57.471733 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:39:57.471940 +0000 build-fedora43: output: + shift
+2024-04-18 12:39:57.471974 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 12:39:57.472000 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz ']'
+2024-04-18 12:39:57.472022 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq ']'
+2024-04-18 12:39:57.472041 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq
+2024-04-18 12:39:57.473378 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz
+2024-04-18 12:39:57.474385 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_gbulb-0.6.3.tar.gz
+2024-04-18 12:39:57.474634 +0000 build-fedora43: output: + FILE_NAME=gbulb-0.6.3.tar.gz
+2024-04-18 12:39:57.474860 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-18 12:39:57.475114 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-18 12:39:57.475395 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-18 12:39:57.475429 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:39:57.475667 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 12:39:57.475699 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:39:57.475716 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:39:57.475910 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-18 12:39:57.475943 +0000 build-fedora43: output: + '[' -z sha256sum ']'
+2024-04-18 12:39:57.476118 +0000 build-fedora43: output: + sha256sum --status -c /dev/fd/63
+2024-04-18 12:39:57.477380 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256
+2024-04-18 12:39:57.478265 +0000 build-fedora43: output: ++ printf '%s  -\n' da003c5b17d3a2ba15c7255bb174defaa0f6b77e8b23f229685eb2714ceaeeec
+2024-04-18 12:39:57.478569 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/untrusted_gbulb-0.6.3.tar.gz /home/user/builder-r4.3-fedora/tmp/tmpllgho5cq/gbulb-0.6.3.tar.gz
+2024-04-18 12:39:57.501227 +0000 build-fedora43: ['rm -f -- /builder/linux-gbulb/hash /builder/linux-gbulb/vtags', 'cd -- /builder', "git -C /builder/linux-gbulb rev-parse 'HEAD^{}' >> /builder/linux-gbulb/hash", "git -C /builder/linux-gbulb tag --points-at HEAD --list 'v*' >> /builder/linux-gbulb/vtags"]
+2024-04-18 12:40:11.639807 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2861 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--gbulb /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/linux-gbulb
+2024-04-18 12:40:11.855417 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp2861 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/linux-gbulb/hash /builder/linux-gbulb/vtags && cd -- /builder && git -C /builder/linux-gbulb rev-parse '"'"'HEAD^{}'"'"' >> /builder/linux-gbulb/hash && git -C /builder/linux-gbulb tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/linux-gbulb/vtags''.
+2024-04-18 12:40:12.064931 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2861 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp1wnw6a0b
+2024-04-18 12:40:12.265497 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2861 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp1wnw6a0b
+2024-04-18 12:40:15.157016 +0000 build-fedora43: > done
+2024-04-18 12:40:15.157093 +0000 > closing log
