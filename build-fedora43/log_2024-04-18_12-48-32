@@ -1,0 +1,110 @@
+2024-04-18 12:48:32.380936 +0000 > starting log
+2024-04-18 12:48:32.381442 +0000 build-fedora43: > starting build with log
+2024-04-18 12:48:32.381464 +0000 build-fedora43: >> args:
+2024-04-18 12:48:32.381473 +0000 build-fedora43: >>   ()
+2024-04-18 12:48:32.381479 +0000 build-fedora43: >> component:
+2024-04-18 12:48:32.381489 +0000 build-fedora43: >>   linux-scrypt
+2024-04-18 12:48:32.381495 +0000 build-fedora43: >> distributions:
+2024-04-18 12:48:32.381502 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 12:48:46.965602 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9088 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 12:48:47.296746 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9088 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-scrypt.git /builder/linux-scrypt /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 12:48:50.671980 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 12:48:50.672024 +0000 build-fedora43: output: ---> Good tag 3a2ebde5e07a7c36c37c98a8f68a0d6d6dbed3ec.
+2024-04-18 12:48:50.672036 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 12:48:50.672044 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 12:48:50.686537 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9088 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 12:49:07.610234 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8091 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--scrypt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/linux-scrypt
+2024-04-18 12:49:07.895066 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8091 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 12:49:08.056634 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8091 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-scrypt --file-name scrypt-1.3.2.tgz --file-url https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz''.
+2024-04-18 12:49:08.259159 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 12:49:08.259837 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-scrypt --file-name scrypt-1.3.2.tgz --file-url https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz
+2024-04-18 12:49:08.261448 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/linux-scrypt'\'' --file-name '\''scrypt-1.3.2.tgz'\'' --file-url '\''https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz'\'' --'
+2024-04-18 12:49:08.261503 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/linux-scrypt'\'' --file-name '\''scrypt-1.3.2.tgz'\'' --file-url '\''https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz'\'' --'
+2024-04-18 12:49:08.261533 +0000 build-fedora43: output: ++ set -- --output-dir /builder/linux-scrypt --file-name scrypt-1.3.2.tgz --file-url https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz --
+2024-04-18 12:49:08.261551 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 12:49:08.261608 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:08.261629 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/linux-scrypt
+2024-04-18 12:49:08.261646 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261687 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261706 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 12:49:08.261723 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:08.261741 +0000 build-fedora43: output: + FILE_NAME=scrypt-1.3.2.tgz
+2024-04-18 12:49:08.261758 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261774 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261790 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 12:49:08.261806 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:08.261827 +0000 build-fedora43: output: + FILE_URL=https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz
+2024-04-18 12:49:08.261843 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261868 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261885 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 12:49:08.261902 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:08.261918 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:08.261934 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 12:49:08.261955 +0000 build-fedora43: output: + '[' -z https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz ']'
+2024-04-18 12:49:08.261977 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 12:49:08.261995 +0000 build-fedora43: output: + '[' -z scrypt-1.3.2.tgz ']'
+2024-04-18 12:49:08.262041 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_scrypt-1.3.2.tgz
+2024-04-18 12:49:08.262060 +0000 build-fedora43: output: + '[' -n /builder/linux-scrypt ']'
+2024-04-18 12:49:08.262078 +0000 build-fedora43: output: + mkdir -p /builder/linux-scrypt
+2024-04-18 12:49:08.262103 +0000 build-fedora43: output: + cd /builder/linux-scrypt
+2024-04-18 12:49:08.262132 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_scrypt-1.3.2.tgz -- https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz
+2024-04-18 12:49:12.269615 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 12:49:12.269700 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:49:12.283195 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8091 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt-2Funtrusted_scrypt--1.3.2.tgz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c
+2024-04-18 12:49:15.236244 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256'.
+2024-04-18 12:49:15.237975 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 12:49:15.238255 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256
+2024-04-18 12:49:15.238986 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpwxagr91c'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256'\'' --'
+2024-04-18 12:49:15.239024 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpwxagr91c'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256'\'' --'
+2024-04-18 12:49:15.239054 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 --
+2024-04-18 12:49:15.239062 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 12:49:15.239069 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 12:49:15.239075 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:15.239082 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmpwxagr91c
+2024-04-18 12:49:15.239089 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239094 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239662 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 12:49:15.239679 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:15.239688 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz
+2024-04-18 12:49:15.239695 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239704 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239710 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 12:49:15.239716 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:15.239723 +0000 build-fedora43: output: + CHECKSUM_CMD=sha256sum
+2024-04-18 12:49:15.239728 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239735 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239741 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 12:49:15.239747 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:15.239755 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256
+2024-04-18 12:49:15.239761 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239767 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239773 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 12:49:15.239779 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 12:49:15.239785 +0000 build-fedora43: output: + shift
+2024-04-18 12:49:15.239791 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 12:49:15.239799 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz ']'
+2024-04-18 12:49:15.239807 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c ']'
+2024-04-18 12:49:15.239815 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c
+2024-04-18 12:49:15.240535 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz
+2024-04-18 12:49:15.242752 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_scrypt-1.3.2.tgz
+2024-04-18 12:49:15.242772 +0000 build-fedora43: output: + FILE_NAME=scrypt-1.3.2.tgz
+2024-04-18 12:49:15.242781 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-18 12:49:15.242790 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-18 12:49:15.242799 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-18 12:49:15.242805 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:49:15.242811 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 12:49:15.242818 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:49:15.242824 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 12:49:15.242832 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-18 12:49:15.242848 +0000 build-fedora43: output: + '[' -z sha256sum ']'
+2024-04-18 12:49:15.242856 +0000 build-fedora43: output: + sha256sum --status -c /dev/fd/63
+2024-04-18 12:49:15.243627 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-dom0/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256
+2024-04-18 12:49:15.244344 +0000 build-fedora43: output: ++ printf '%s  -\n' d632c1193420ac6faebf9482e65e33d3a5664eccd643b09a509d21d1c1f29be2
+2024-04-18 12:49:15.245067 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/untrusted_scrypt-1.3.2.tgz /home/user/builder-r4.3-dom0/tmp/tmpwxagr91c/scrypt-1.3.2.tgz
+2024-04-18 12:49:15.266181 +0000 build-fedora43: ['rm -f -- /builder/linux-scrypt/hash /builder/linux-scrypt/vtags', 'cd -- /builder', "git -C /builder/linux-scrypt rev-parse 'HEAD^{}' >> /builder/linux-scrypt/hash", "git -C /builder/linux-scrypt tag --points-at HEAD --list 'v*' >> /builder/linux-scrypt/vtags"]
+2024-04-18 12:49:29.682200 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6586 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--scrypt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/linux-scrypt
+2024-04-18 12:49:30.057508 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6586 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/linux-scrypt/hash /builder/linux-scrypt/vtags && cd -- /builder && git -C /builder/linux-scrypt rev-parse '"'"'HEAD^{}'"'"' >> /builder/linux-scrypt/hash && git -C /builder/linux-scrypt tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/linux-scrypt/vtags''.
+2024-04-18 12:49:30.254873 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6586 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmp76lda_bl
+2024-04-18 12:49:30.537696 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6586 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmp76lda_bl
+2024-04-18 12:49:33.294620 +0000 build-fedora43: > done
+2024-04-18 12:49:33.294700 +0000 > closing log
