@@ -1,0 +1,516 @@
+2024-04-18 02:14:36.505471 +0000 > starting log
+2024-04-18 02:14:36.505762 +0000 build-fedora43: > starting build with log
+2024-04-18 02:14:36.505779 +0000 build-fedora43: >> args:
+2024-04-18 02:14:36.505787 +0000 build-fedora43: >>   ()
+2024-04-18 02:14:36.505794 +0000 build-fedora43: >> component:
+2024-04-18 02:14:36.505803 +0000 build-fedora43: >>   vmm-xen-stubdom-linux
+2024-04-18 02:14:36.505809 +0000 build-fedora43: >> distributions:
+2024-04-18 02:14:36.505817 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-18 02:14:50.849442 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3391 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 02:14:51.157857 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3391 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git /builder/vmm-xen-stubdom-linux /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 02:15:42.062204 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 02:15:42.062284 +0000 build-fedora43: output: ---> Good tag 6d7fab142b2ec1cac4965fbbb07db2a9dc8b37f3.
+2024-04-18 02:15:42.062560 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 02:15:42.062599 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 02:15:42.062621 +0000 build-fedora43: output: --> Updating submodules
+2024-04-18 02:15:42.072817 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3391 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-18 02:16:00.223691 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6288 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux
+2024-04-18 02:16:00.878712 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6288 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 02:16:01.093669 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6288 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-8.1.2.tar.xz --file-url https://download.qemu.org/qemu-8.1.2.tar.xz --signature-url https://download.qemu.org/qemu-8.1.2.tar.xz.sig''.
+2024-04-18 02:16:01.290656 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 02:16:01.290716 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-8.1.2.tar.xz --file-url https://download.qemu.org/qemu-8.1.2.tar.xz --signature-url https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-18 02:16:01.294111 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''qemu-8.1.2.tar.xz'\'' --file-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz'\'' --signature-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz.sig'\'' --'
+2024-04-18 02:16:01.294177 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''qemu-8.1.2.tar.xz'\'' --file-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz'\'' --signature-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz.sig'\'' --'
+2024-04-18 02:16:01.294209 +0000 build-fedora43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-8.1.2.tar.xz --file-url https://download.qemu.org/qemu-8.1.2.tar.xz --signature-url https://download.qemu.org/qemu-8.1.2.tar.xz.sig --
+2024-04-18 02:16:01.294217 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 02:16:01.294224 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:16:01.294232 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-18 02:16:01.294240 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294247 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294253 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:16:01.294259 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:16:01.294266 +0000 build-fedora43: output: + FILE_NAME=qemu-8.1.2.tar.xz
+2024-04-18 02:16:01.294272 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294278 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294285 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:16:01.294291 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:16:01.294298 +0000 build-fedora43: output: + FILE_URL=https://download.qemu.org/qemu-8.1.2.tar.xz
+2024-04-18 02:16:01.294304 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294315 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294321 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:16:01.294328 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:16:01.294335 +0000 build-fedora43: output: + SIGNATURE_URL=https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-18 02:16:01.294342 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294348 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294354 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:16:01.294359 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:16:01.294365 +0000 build-fedora43: output: + shift
+2024-04-18 02:16:01.294371 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:16:01.294378 +0000 build-fedora43: output: + '[' -z https://download.qemu.org/qemu-8.1.2.tar.xz ']'
+2024-04-18 02:16:01.294386 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 02:16:01.294393 +0000 build-fedora43: output: + '[' -z qemu-8.1.2.tar.xz ']'
+2024-04-18 02:16:01.294400 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_qemu-8.1.2.tar.xz
+2024-04-18 02:16:01.294407 +0000 build-fedora43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-18 02:16:01.294417 +0000 build-fedora43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-18 02:16:01.295017 +0000 build-fedora43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-18 02:16:01.295044 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qemu-8.1.2.tar.xz -- https://download.qemu.org/qemu-8.1.2.tar.xz
+2024-04-18 02:21:25.237187 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 02:21:25.237250 +0000 build-fedora43: output: + '[' -n https://download.qemu.org/qemu-8.1.2.tar.xz.sig ']'
+2024-04-18 02:21:25.238289 +0000 build-fedora43: output: ++ basename https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:25.242929 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:25.242990 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:25.243024 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qemu-8.1.2.tar.xz.sig https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:27.027791 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6288 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_qemu--8.1.2.tar.xz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj
+2024-04-18 02:21:27.344576 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6288 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_qemu--8.1.2.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj
+2024-04-18 02:21:31.466518 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'.
+2024-04-18 02:21:31.468378 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 02:21:31.468678 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc
+2024-04-18 02:21:31.469332 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'\'' --'
+2024-04-18 02:21:31.469600 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'\'' --'
+2024-04-18 02:21:31.470128 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc --
+2024-04-18 02:21:31.470260 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 02:21:31.470410 +0000 build-fedora43: output: + [[ 11 -gt 0 ]]
+2024-04-18 02:21:31.470542 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:31.470569 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj
+2024-04-18 02:21:31.470715 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.470832 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.470854 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 02:21:31.470871 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:31.470894 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz
+2024-04-18 02:21:31.470912 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.470928 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.470975 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:21:31.470992 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:31.471017 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:31.471034 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471050 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471066 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:21:31.471082 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:31.471099 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-18 02:21:31.471114 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471130 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471146 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:21:31.471162 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:31.471179 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-18 02:21:31.471194 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471210 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471226 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:21:31.471242 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:31.471258 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:31.471355 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:21:31.471431 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz ']'
+2024-04-18 02:21:31.471556 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj ']'
+2024-04-18 02:21:31.471581 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj
+2024-04-18 02:21:31.471729 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz
+2024-04-18 02:21:31.471879 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_qemu-8.1.2.tar.xz
+2024-04-18 02:21:31.471939 +0000 build-fedora43: output: + FILE_NAME=qemu-8.1.2.tar.xz
+2024-04-18 02:21:31.471999 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 02:21:31.472025 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-18 02:21:31.472042 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:21:31.472064 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-18 02:21:31.472086 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2024-04-18 02:21:31.472108 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-18 02:21:31.472130 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-18 02:21:31.472153 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2024-04-18 02:21:31.472178 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:21:31.472200 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-18 02:21:31.472222 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2024-04-18 02:21:31.472252 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:31.472358 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:31.472384 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:31.472574 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-18 02:21:31.473226 +0000 build-fedora43: output: + keyring=/tmp/tmp.RkOD5w4koR
+2024-04-18 02:21:31.473402 +0000 build-fedora43: output: + sq help
+2024-04-18 02:21:31.473428 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-18 02:21:31.479967 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.RkOD5w4koR /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc
+2024-04-18 02:21:31.486055 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.RkOD5w4koR /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz
+2024-04-18 02:21:31.776384 +0000 build-fedora43: output: CEACC9E15534EBABB82D3FA03353C9CEF108B584
+2024-04-18 02:21:31.776753 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz.sig /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/qemu-8.1.2.tar.xz.sig
+2024-04-18 02:21:31.778756 +0000 build-fedora43: output: + rm -rf /tmp/tmp.RkOD5w4koR
+2024-04-18 02:21:31.779654 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/untrusted_qemu-8.1.2.tar.xz /home/user/builder-r4.3-fedora/tmp/tmpsetpn8rj/qemu-8.1.2.tar.xz
+2024-04-18 02:21:46.538550 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5802 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux
+2024-04-18 02:21:47.192544 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5802 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 02:21:47.358160 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp5802 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.200.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign --uncompress''.
+2024-04-18 02:21:47.627875 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 02:21:47.627931 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.200.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign --uncompress
+2024-04-18 02:21:47.634395 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''linux-5.10.200.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign'\'' --uncompress --'
+2024-04-18 02:21:47.634433 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''linux-5.10.200.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign'\'' --uncompress --'
+2024-04-18 02:21:47.634462 +0000 build-fedora43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.200.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign --uncompress --
+2024-04-18 02:21:47.635441 +0000 build-fedora43: output: + [[ 10 -gt 0 ]]
+2024-04-18 02:21:47.635460 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:47.635468 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-18 02:21:47.635476 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635481 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635487 +0000 build-fedora43: output: + [[ 8 -gt 0 ]]
+2024-04-18 02:21:47.635493 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:47.635500 +0000 build-fedora43: output: + FILE_NAME=linux-5.10.200.tar.xz
+2024-04-18 02:21:47.635506 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635512 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635518 +0000 build-fedora43: output: + [[ 6 -gt 0 ]]
+2024-04-18 02:21:47.635524 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:47.635531 +0000 build-fedora43: output: + FILE_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz
+2024-04-18 02:21:47.635537 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635543 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635549 +0000 build-fedora43: output: + [[ 4 -gt 0 ]]
+2024-04-18 02:21:47.635555 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:47.635562 +0000 build-fedora43: output: + SIGNATURE_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign
+2024-04-18 02:21:47.635568 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635574 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635580 +0000 build-fedora43: output: + [[ 2 -gt 0 ]]
+2024-04-18 02:21:47.635586 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:21:47.635592 +0000 build-fedora43: output: + UNCOMPRESS=1
+2024-04-18 02:21:47.635598 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635604 +0000 build-fedora43: output: + shift
+2024-04-18 02:21:47.635610 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:21:47.635617 +0000 build-fedora43: output: + '[' -z https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz ']'
+2024-04-18 02:21:47.635625 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 02:21:47.635653 +0000 build-fedora43: output: + '[' -z linux-5.10.200.tar.xz ']'
+2024-04-18 02:21:47.635660 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.200.tar.xz
+2024-04-18 02:21:47.635667 +0000 build-fedora43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-18 02:21:47.635673 +0000 build-fedora43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-18 02:21:47.635957 +0000 build-fedora43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-18 02:21:47.635985 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-5.10.200.tar.xz -- https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz
+2024-04-18 02:23:59.688329 +0000 build-fedora43: output: + '[' 1 == 1 ']'
+2024-04-18 02:23:59.688418 +0000 build-fedora43: output: + '[' linux-5.10.200.tar.xz '!=' linux-5.10.200.tar.xz ']'
+2024-04-18 02:23:59.688446 +0000 build-fedora43: output: + '[' linux-5.10.200.tar '!=' linux-5.10.200.tar.xz ']'
+2024-04-18 02:23:59.688467 +0000 build-fedora43: output: + unxz untrusted_linux-5.10.200.tar.xz
+2024-04-18 02:24:07.468016 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.200.tar
+2024-04-18 02:24:07.468075 +0000 build-fedora43: output: + '[' -n https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign ']'
+2024-04-18 02:24:07.468086 +0000 build-fedora43: output: ++ basename https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign
+2024-04-18 02:24:07.469016 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=linux-5.10.200.tar.sign
+2024-04-18 02:24:07.469032 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-5.10.200.tar.sign
+2024-04-18 02:24:07.469044 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-5.10.200.tar.sign https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign
+2024-04-18 02:24:08.511233 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5802 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_linux--5.10.200.tar.sign /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmph4fr64em
+2024-04-18 02:24:08.758294 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5802 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_linux--5.10.200.tar /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmph4fr64em
+2024-04-18 02:24:16.748929 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmph4fr64em --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'.
+2024-04-18 02:24:16.753390 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 02:24:16.754341 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmph4fr64em --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc
+2024-04-18 02:24:16.758131 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmph4fr64em'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'\'' --'
+2024-04-18 02:24:16.758233 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmph4fr64em'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'\'' --'
+2024-04-18 02:24:16.758288 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmph4fr64em --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign --pubkey-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc --
+2024-04-18 02:24:16.758307 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 02:24:16.758355 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 02:24:16.758373 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:16.758393 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmph4fr64em
+2024-04-18 02:24:16.758410 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.758426 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.758442 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:24:16.758460 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:16.758483 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar
+2024-04-18 02:24:16.758500 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.758515 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.758531 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:24:16.758565 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:16.759124 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign
+2024-04-18 02:24:16.759177 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.759197 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.759215 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:24:16.759233 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:16.759249 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-18 02:24:16.759265 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.759282 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.759299 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:24:16.759315 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:16.759330 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:16.759346 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:24:16.759368 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar ']'
+2024-04-18 02:24:16.759393 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmph4fr64em ']'
+2024-04-18 02:24:16.759412 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmph4fr64em
+2024-04-18 02:24:16.761896 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar
+2024-04-18 02:24:16.765254 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.200.tar
+2024-04-18 02:24:16.765311 +0000 build-fedora43: output: + FILE_NAME=linux-5.10.200.tar
+2024-04-18 02:24:16.765332 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 02:24:16.765357 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-18 02:24:16.765375 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:24:16.765399 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-18 02:24:16.765421 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2024-04-18 02:24:16.765443 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-18 02:24:16.765464 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-18 02:24:16.765487 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2024-04-18 02:24:16.765502 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:24:16.765524 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-18 02:24:16.765553 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2024-04-18 02:24:16.765612 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign
+2024-04-18 02:24:16.766968 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-5.10.200.tar.sign
+2024-04-18 02:24:16.767040 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=linux-5.10.200.tar.sign
+2024-04-18 02:24:16.767730 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-18 02:24:16.769794 +0000 build-fedora43: output: + keyring=/tmp/tmp.01F8oXFvrG
+2024-04-18 02:24:16.769812 +0000 build-fedora43: output: + sq help
+2024-04-18 02:24:16.769820 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-18 02:24:16.775188 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.01F8oXFvrG /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc
+2024-04-18 02:24:16.781173 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.01F8oXFvrG /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar
+2024-04-18 02:24:18.947380 +0000 build-fedora43: output: 647F28654894E3BD457199BE38DBBDC86092693E
+2024-04-18 02:24:18.948217 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar.sign /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/linux-5.10.200.tar.sign
+2024-04-18 02:24:18.950693 +0000 build-fedora43: output: + rm -rf /tmp/tmp.01F8oXFvrG
+2024-04-18 02:24:18.952064 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/untrusted_linux-5.10.200.tar /home/user/builder-r4.3-fedora/tmp/tmph4fr64em/linux-5.10.200.tar
+2024-04-18 02:24:35.038450 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2685 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux
+2024-04-18 02:24:36.734858 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2685 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 02:24:36.977401 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp2685 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2''.
+2024-04-18 02:24:37.083414 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 02:24:37.083464 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2024-04-18 02:24:37.085947 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''busybox-1.31.1.tar.bz2'\'' --file-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2'\'' --'
+2024-04-18 02:24:37.086000 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''busybox-1.31.1.tar.bz2'\'' --file-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2'\'' --'
+2024-04-18 02:24:37.086013 +0000 build-fedora43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2 --
+2024-04-18 02:24:37.086038 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:24:37.086045 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:37.086053 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-18 02:24:37.086072 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086096 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086103 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:24:37.086110 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:37.086117 +0000 build-fedora43: output: + FILE_NAME=busybox-1.31.1.tar.bz2
+2024-04-18 02:24:37.086123 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086154 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086162 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:24:37.086168 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:37.086176 +0000 build-fedora43: output: + FILE_URL=https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2024-04-18 02:24:37.086182 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086204 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086213 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:24:37.086409 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:37.086514 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:37.086560 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:24:37.086581 +0000 build-fedora43: output: + '[' -z https://busybox.net/downloads/busybox-1.31.1.tar.bz2 ']'
+2024-04-18 02:24:37.086679 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 02:24:37.086748 +0000 build-fedora43: output: + '[' -z busybox-1.31.1.tar.bz2 ']'
+2024-04-18 02:24:37.086771 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2
+2024-04-18 02:24:37.086784 +0000 build-fedora43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-18 02:24:37.086796 +0000 build-fedora43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-18 02:24:37.086807 +0000 build-fedora43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-18 02:24:37.086825 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_busybox-1.31.1.tar.bz2 -- https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2024-04-18 02:24:47.536160 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 02:24:47.536248 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:24:47.543802 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2685 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_busybox--1.31.1.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy
+2024-04-18 02:24:50.385332 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512'.
+2024-04-18 02:24:50.389429 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 02:24:50.389586 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512
+2024-04-18 02:24:50.390618 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512'\'' --'
+2024-04-18 02:24:50.390876 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512'\'' --'
+2024-04-18 02:24:50.391003 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 --
+2024-04-18 02:24:50.391027 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 02:24:50.391088 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 02:24:50.391106 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:50.391183 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy
+2024-04-18 02:24:50.391242 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.391298 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.391319 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:24:50.391377 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:50.391441 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2
+2024-04-18 02:24:50.391500 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.391569 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.391589 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:24:50.391606 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:50.391690 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 02:24:50.391748 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.391804 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.391832 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:24:50.391849 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:50.391874 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512
+2024-04-18 02:24:50.391890 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.392079 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.392161 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:24:50.392254 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:24:50.392320 +0000 build-fedora43: output: + shift
+2024-04-18 02:24:50.392425 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:24:50.392498 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2 ']'
+2024-04-18 02:24:50.392567 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy ']'
+2024-04-18 02:24:50.392711 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy
+2024-04-18 02:24:50.392835 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2
+2024-04-18 02:24:50.393642 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2
+2024-04-18 02:24:50.393784 +0000 build-fedora43: output: + FILE_NAME=busybox-1.31.1.tar.bz2
+2024-04-18 02:24:50.393851 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-18 02:24:50.393929 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-18 02:24:50.394008 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-18 02:24:50.394028 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:24:50.394119 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 02:24:50.394141 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:24:50.394205 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:24:50.394271 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-18 02:24:50.394291 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 02:24:50.394314 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 02:24:50.395029 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512
+2024-04-18 02:24:50.396897 +0000 build-fedora43: output: ++ printf '%s  -\n' 0d1197c25d963d7f95ef21e08c06c0d6124ac7b59c99989e891f744ffee4878a3b1fe44a247241a9da39fa5de0ba87f1b6d862401b591f277e66e89c02764bbf
+2024-04-18 02:24:50.405701 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/untrusted_busybox-1.31.1.tar.bz2 /home/user/builder-r4.3-fedora/tmp/tmpdebu5ywy/busybox-1.31.1.tar.bz2
+2024-04-18 02:25:05.094925 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6983 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux
+2024-04-18 02:25:05.792194 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6983 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 02:25:05.970501 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6983 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz''.
+2024-04-18 02:25:06.189720 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 02:25:06.190011 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2024-04-18 02:25:06.193916 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''pulseaudio-14.2.tar.xz'\'' --file-url '\''https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz'\'' --'
+2024-04-18 02:25:06.193992 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''pulseaudio-14.2.tar.xz'\'' --file-url '\''https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz'\'' --'
+2024-04-18 02:25:06.194023 +0000 build-fedora43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz --
+2024-04-18 02:25:06.194041 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:25:06.194057 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:06.194075 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-18 02:25:06.194089 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194104 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194119 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:25:06.194163 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:06.194182 +0000 build-fedora43: output: + FILE_NAME=pulseaudio-14.2.tar.xz
+2024-04-18 02:25:06.194197 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194216 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194231 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:25:06.194247 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:06.194316 +0000 build-fedora43: output: + FILE_URL=https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2024-04-18 02:25:06.194336 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194351 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194366 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:25:06.194381 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:06.194396 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:06.194410 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:25:06.194437 +0000 build-fedora43: output: + '[' -z https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz ']'
+2024-04-18 02:25:06.194458 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 02:25:06.194475 +0000 build-fedora43: output: + '[' -z pulseaudio-14.2.tar.xz ']'
+2024-04-18 02:25:06.194493 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_pulseaudio-14.2.tar.xz
+2024-04-18 02:25:06.194511 +0000 build-fedora43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-18 02:25:06.194528 +0000 build-fedora43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-18 02:25:06.195073 +0000 build-fedora43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-18 02:25:06.195129 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_pulseaudio-14.2.tar.xz -- https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2024-04-18 02:25:10.697279 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 02:25:10.697363 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:10.709865 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6983 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_pulseaudio--14.2.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8
+2024-04-18 02:25:13.582485 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'.
+2024-04-18 02:25:13.585284 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 02:25:13.585855 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2024-04-18 02:25:13.587911 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'\'' --'
+2024-04-18 02:25:13.588009 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'\'' --'
+2024-04-18 02:25:13.588057 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 --
+2024-04-18 02:25:13.588076 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 02:25:13.588094 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 02:25:13.588110 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:13.588132 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8
+2024-04-18 02:25:13.589347 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589364 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589370 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:25:13.589377 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:13.589386 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz
+2024-04-18 02:25:13.589392 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589398 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589404 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:25:13.589409 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:13.589416 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 02:25:13.589421 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589427 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589433 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:25:13.589439 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:13.589448 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2024-04-18 02:25:13.589454 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589460 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589466 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:25:13.589472 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:13.589478 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:13.589484 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:25:13.589493 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz ']'
+2024-04-18 02:25:13.589500 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8 ']'
+2024-04-18 02:25:13.589507 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8
+2024-04-18 02:25:13.590920 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz
+2024-04-18 02:25:13.591766 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_pulseaudio-14.2.tar.xz
+2024-04-18 02:25:13.591785 +0000 build-fedora43: output: + FILE_NAME=pulseaudio-14.2.tar.xz
+2024-04-18 02:25:13.591795 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-18 02:25:13.591805 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-18 02:25:13.591822 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-18 02:25:13.591828 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:13.591835 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 02:25:13.591841 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:13.591847 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:13.592770 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-18 02:25:13.592815 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 02:25:13.592838 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 02:25:13.592865 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2024-04-18 02:25:13.593338 +0000 build-fedora43: output: ++ printf '%s  -\n' 196338cbb26c542301b6d0579070dfbcc42e76dc17405f3e216af70519bec2003089b80c573a32d5f96bdab078631ca09ce89998ab7a0a8ffa26955a9bcb3c4a
+2024-04-18 02:25:13.601743 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/untrusted_pulseaudio-14.2.tar.xz /home/user/builder-r4.3-fedora/tmp/tmp3ftb8tp8/pulseaudio-14.2.tar.xz
+2024-04-18 02:25:27.881231 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8550 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux
+2024-04-18 02:25:28.562310 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8550 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 02:25:28.759572 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8550 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2''.
+2024-04-18 02:25:29.080717 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 02:25:29.080770 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2024-04-18 02:25:29.084946 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''libusb-1.0.23.tar.bz2'\'' --file-url '\''https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2'\'' --'
+2024-04-18 02:25:29.084997 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''libusb-1.0.23.tar.bz2'\'' --file-url '\''https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2'\'' --'
+2024-04-18 02:25:29.085020 +0000 build-fedora43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2 --
+2024-04-18 02:25:29.085032 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:25:29.085043 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:29.085055 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-18 02:25:29.085065 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085075 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085103 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:25:29.085113 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:29.085124 +0000 build-fedora43: output: + FILE_NAME=libusb-1.0.23.tar.bz2
+2024-04-18 02:25:29.085133 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085143 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085152 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:25:29.085162 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:29.085175 +0000 build-fedora43: output: + FILE_URL=https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2024-04-18 02:25:29.085185 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085194 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085203 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:25:29.085213 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:29.085222 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:29.085232 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:25:29.085404 +0000 build-fedora43: output: + '[' -z https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2 ']'
+2024-04-18 02:25:29.085428 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 02:25:29.085439 +0000 build-fedora43: output: + '[' -z libusb-1.0.23.tar.bz2 ']'
+2024-04-18 02:25:29.085451 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_libusb-1.0.23.tar.bz2
+2024-04-18 02:25:29.085462 +0000 build-fedora43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-18 02:25:29.085473 +0000 build-fedora43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-18 02:25:29.085484 +0000 build-fedora43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-18 02:25:29.085502 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libusb-1.0.23.tar.bz2 -- https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2024-04-18 02:25:32.677718 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 02:25:32.677805 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:32.689773 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8550 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_libusb--1.0.23.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk
+2024-04-18 02:25:35.603795 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'.
+2024-04-18 02:25:35.605272 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 02:25:35.605796 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2024-04-18 02:25:35.607825 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'\'' --'
+2024-04-18 02:25:35.608201 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'\'' --'
+2024-04-18 02:25:35.608250 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 --
+2024-04-18 02:25:35.608269 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 02:25:35.608288 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 02:25:35.608304 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:35.608325 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk
+2024-04-18 02:25:35.608342 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608359 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608375 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 02:25:35.608392 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:35.608414 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2
+2024-04-18 02:25:35.608431 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608446 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608462 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 02:25:35.608478 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:35.608496 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 02:25:35.608511 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608527 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608547 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 02:25:35.608562 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:35.608585 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2024-04-18 02:25:35.608616 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608661 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608679 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 02:25:35.608700 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 02:25:35.608714 +0000 build-fedora43: output: + shift
+2024-04-18 02:25:35.608729 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 02:25:35.608750 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2 ']'
+2024-04-18 02:25:35.608768 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk ']'
+2024-04-18 02:25:35.608787 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk
+2024-04-18 02:25:35.608807 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2
+2024-04-18 02:25:35.609682 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_libusb-1.0.23.tar.bz2
+2024-04-18 02:25:35.609703 +0000 build-fedora43: output: + FILE_NAME=libusb-1.0.23.tar.bz2
+2024-04-18 02:25:35.609713 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-18 02:25:35.609754 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-18 02:25:35.609773 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-18 02:25:35.609780 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:35.609786 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 02:25:35.609795 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:35.610317 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 02:25:35.610363 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-18 02:25:35.610382 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 02:25:35.611020 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 02:25:35.611061 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2024-04-18 02:25:35.611087 +0000 build-fedora43: output: ++ printf '%s  -\n' 73430ad31dd405e76a9c6c55086961003989c44964e2735b5076f9ca849e3f6fe71d10a66b74b111f0c34a0d2cb744b9ca105863c552123fce4ec0bbdd2ec15b
+2024-04-18 02:25:35.612280 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/untrusted_libusb-1.0.23.tar.bz2 /home/user/builder-r4.3-fedora/tmp/tmp4ddduwwk/libusb-1.0.23.tar.bz2
+2024-04-18 02:25:35.811880 +0000 build-fedora43: ['rm -f -- /builder/vmm-xen-stubdom-linux/hash /builder/vmm-xen-stubdom-linux/vtags', 'cd -- /builder', "git -C /builder/vmm-xen-stubdom-linux rev-parse 'HEAD^{}' >> /builder/vmm-xen-stubdom-linux/hash", "git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list 'v*' >> /builder/vmm-xen-stubdom-linux/vtags"]
+2024-04-18 02:25:50.411745 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3242 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/vmm-xen-stubdom-linux
+2024-04-18 02:25:50.953389 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3242 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/vmm-xen-stubdom-linux/hash /builder/vmm-xen-stubdom-linux/vtags && cd -- /builder && git -C /builder/vmm-xen-stubdom-linux rev-parse '"'"'HEAD^{}'"'"' >> /builder/vmm-xen-stubdom-linux/hash && git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/vmm-xen-stubdom-linux/vtags''.
+2024-04-18 02:25:51.205740 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3242 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpmf3y3q5g
+2024-04-18 02:25:51.395268 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3242 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpmf3y3q5g
+2024-04-18 02:25:54.370320 +0000 build-fedora43: > done
+2024-04-18 02:25:54.370404 +0000 > closing log
