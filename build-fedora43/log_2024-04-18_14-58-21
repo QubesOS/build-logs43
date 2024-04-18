@@ -1,0 +1,111 @@
+2024-04-18 14:58:21.297929 +0000 > starting log
+2024-04-18 14:58:21.298169 +0000 build-fedora43: > starting build with log
+2024-04-18 14:58:21.298188 +0000 build-fedora43: >> args:
+2024-04-18 14:58:21.298197 +0000 build-fedora43: >>   ()
+2024-04-18 14:58:21.298203 +0000 build-fedora43: >> component:
+2024-04-18 14:58:21.298210 +0000 build-fedora43: >>   xscreensaver
+2024-04-18 14:58:21.298216 +0000 build-fedora43: >> distributions:
+2024-04-18 14:58:21.298224 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-18 14:58:36.068769 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp44 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 14:58:36.316578 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp44 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-xscreensaver.git /builder/xscreensaver /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 14:58:40.621158 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 14:58:40.621254 +0000 build-fedora43: output: ---> Good tag 60fe86916cf7f90d1620b2cb7deb6be235da1ab4.
+2024-04-18 14:58:40.621275 +0000 build-fedora43: output: ---> Good tag 9e42d9cfcd0ded05604910ad6385474c2544e9ae.
+2024-04-18 14:58:40.621293 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 14:58:40.621309 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 14:58:40.634007 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp44 qubesbuilder.FileCopyOut+-2Fbuilder-2Fxscreensaver /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-18 14:58:58.285671 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1 qubesbuilder.FileCopyIn+-2Fbuilder-2Fxscreensaver /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/xscreensaver
+2024-04-18 14:58:58.551612 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 14:58:58.747662 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/xscreensaver --file-name xscreensaver-6.08.tar.gz --file-url https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz''.
+2024-04-18 14:58:58.945283 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 14:58:58.945387 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/xscreensaver --file-name xscreensaver-6.08.tar.gz --file-url https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz
+2024-04-18 14:58:58.947007 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/xscreensaver'\'' --file-name '\''xscreensaver-6.08.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz'\'' --'
+2024-04-18 14:58:58.947315 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/xscreensaver'\'' --file-name '\''xscreensaver-6.08.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz'\'' --'
+2024-04-18 14:58:58.947360 +0000 build-fedora43: output: ++ set -- --output-dir /builder/xscreensaver --file-name xscreensaver-6.08.tar.gz --file-url https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz --
+2024-04-18 14:58:58.947401 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 14:58:58.947421 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 14:58:58.947632 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/xscreensaver
+2024-04-18 14:58:58.947672 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.947692 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.947710 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 14:58:58.947733 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 14:58:58.947753 +0000 build-fedora43: output: + FILE_NAME=xscreensaver-6.08.tar.gz
+2024-04-18 14:58:58.948307 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.948731 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.948769 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 14:58:58.948987 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 14:58:58.949028 +0000 build-fedora43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz
+2024-04-18 14:58:58.949054 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.949071 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.949088 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 14:58:58.949145 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 14:58:58.949161 +0000 build-fedora43: output: + shift
+2024-04-18 14:58:58.949184 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 14:58:58.949206 +0000 build-fedora43: output: + '[' -z https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz ']'
+2024-04-18 14:58:58.949229 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 14:58:58.949888 +0000 build-fedora43: output: + '[' -z xscreensaver-6.08.tar.gz ']'
+2024-04-18 14:58:58.950133 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_xscreensaver-6.08.tar.gz
+2024-04-18 14:58:58.950175 +0000 build-fedora43: output: + '[' -n /builder/xscreensaver ']'
+2024-04-18 14:58:58.950216 +0000 build-fedora43: output: + mkdir -p /builder/xscreensaver
+2024-04-18 14:58:58.950235 +0000 build-fedora43: output: + cd /builder/xscreensaver
+2024-04-18 14:58:58.950264 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_xscreensaver-6.08.tar.gz -- https://ftp.qubes-os.org/distfiles/xscreensaver-6.08.tar.gz
+2024-04-18 15:00:10.274308 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 15:00:10.274348 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:00:10.283344 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1 qubesbuilder.FileCopyOut+-2Fbuilder-2Fxscreensaver-2Funtrusted_xscreensaver--6.08.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7
+2024-04-18 15:00:13.522170 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512'.
+2024-04-18 15:00:13.527422 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 15:00:13.528614 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512
+2024-04-18 15:00:13.530264 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512'\'' --'
+2024-04-18 15:00:13.530742 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512'\'' --'
+2024-04-18 15:00:13.530808 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7 --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512 --
+2024-04-18 15:00:13.530828 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 15:00:13.531221 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 15:00:13.531280 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:00:13.531315 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7
+2024-04-18 15:00:13.531744 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.531781 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.531800 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 15:00:13.532061 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:00:13.532142 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz
+2024-04-18 15:00:13.532165 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.532426 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.532674 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 15:00:13.532708 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:00:13.532947 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 15:00:13.532980 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.532998 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.533353 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 15:00:13.533393 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:00:13.533419 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512
+2024-04-18 15:00:13.533948 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.534250 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.534263 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 15:00:13.534381 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 15:00:13.534393 +0000 build-fedora43: output: + shift
+2024-04-18 15:00:13.534400 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 15:00:13.534487 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz ']'
+2024-04-18 15:00:13.534501 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7 ']'
+2024-04-18 15:00:13.534664 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7
+2024-04-18 15:00:13.536306 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz
+2024-04-18 15:00:13.537498 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_xscreensaver-6.08.tar.gz
+2024-04-18 15:00:13.537605 +0000 build-fedora43: output: + FILE_NAME=xscreensaver-6.08.tar.gz
+2024-04-18 15:00:13.537621 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512 ']'
+2024-04-18 15:00:13.537728 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512 ']'
+2024-04-18 15:00:13.537742 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512 ']'
+2024-04-18 15:00:13.537749 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:00:13.537833 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 15:00:13.537845 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:00:13.537927 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 15:00:13.538018 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512 ']'
+2024-04-18 15:00:13.538031 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 15:00:13.539069 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 15:00:13.539090 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/xscreensaver/xscreensaver-6.08.tar.gz.sha512
+2024-04-18 15:00:13.539371 +0000 build-fedora43: output: ++ printf '%s  -\n' a333d4921ed3a8219f3b672dd68543aea31fcd64ea6766143f1c7f6e5ed3bc7122355635d5afba1632457ad71a11cabdc7b2756431e4f1dc7e0426ae0896e6db
+2024-04-18 15:00:13.569484 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/untrusted_xscreensaver-6.08.tar.gz /home/user/builder-r4.3-fedora/tmp/tmpqgj0q2r7/xscreensaver-6.08.tar.gz
+2024-04-18 15:00:13.605763 +0000 build-fedora43: ['rm -f -- /builder/xscreensaver/hash /builder/xscreensaver/vtags', 'cd -- /builder', "git -C /builder/xscreensaver rev-parse 'HEAD^{}' >> /builder/xscreensaver/hash", "git -C /builder/xscreensaver tag --points-at HEAD --list 'v*' >> /builder/xscreensaver/vtags"]
+2024-04-18 15:00:27.888424 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp316 qubesbuilder.FileCopyIn+-2Fbuilder-2Fxscreensaver /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/xscreensaver
+2024-04-18 15:00:28.137173 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp316 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/xscreensaver/hash /builder/xscreensaver/vtags && cd -- /builder && git -C /builder/xscreensaver rev-parse '"'"'HEAD^{}'"'"' >> /builder/xscreensaver/hash && git -C /builder/xscreensaver tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/xscreensaver/vtags''.
+2024-04-18 15:00:28.414304 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp316 qubesbuilder.FileCopyOut+-2Fbuilder-2Fxscreensaver-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp6srwjhs9
+2024-04-18 15:00:28.701711 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp316 qubesbuilder.FileCopyOut+-2Fbuilder-2Fxscreensaver-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp6srwjhs9
+2024-04-18 15:00:31.610159 +0000 build-fedora43: > done
+2024-04-18 15:00:31.610201 +0000 > closing log
