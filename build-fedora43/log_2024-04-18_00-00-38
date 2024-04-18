@@ -1,0 +1,125 @@
+2024-04-18 00:00:38.685438 +0000 > starting log
+2024-04-18 00:00:38.685701 +0000 build-fedora43: > starting build with log
+2024-04-18 00:00:38.685723 +0000 build-fedora43: >> args:
+2024-04-18 00:00:38.685731 +0000 build-fedora43: >>   ()
+2024-04-18 00:00:38.685738 +0000 build-fedora43: >> component:
+2024-04-18 00:00:38.685744 +0000 build-fedora43: >>   grub2
+2024-04-18 00:00:38.685750 +0000 build-fedora43: >> distributions:
+2024-04-18 00:00:38.685758 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 00:00:52.729357 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5185 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 00:00:52.998734 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp5185 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-grub2.git /builder/grub2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 00:01:23.167255 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 00:01:23.167299 +0000 build-fedora43: output: ---> Good tag 6f71c12a0902a9c70e92a4c747868e24f5288130.
+2024-04-18 00:01:23.167309 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 00:01:23.167317 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 00:01:23.183024 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5185 qubesbuilder.FileCopyOut+-2Fbuilder-2Fgrub2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 00:01:40.783706 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1312 qubesbuilder.FileCopyIn+-2Fbuilder-2Fgrub2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/grub2
+2024-04-18 00:01:41.293855 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1312 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 00:01:41.519784 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1312 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/grub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig''.
+2024-04-18 00:01:41.708057 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 00:01:41.709978 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/grub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-18 00:01:41.714845 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/grub2'\'' --file-name '\''grub-2.06.tar.xz'\'' --file-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz'\'' --signature-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig'\'' --'
+2024-04-18 00:01:41.714927 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/grub2'\'' --file-name '\''grub-2.06.tar.xz'\'' --file-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz'\'' --signature-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig'\'' --'
+2024-04-18 00:01:41.714987 +0000 build-fedora43: output: ++ set -- --output-dir /builder/grub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig --
+2024-04-18 00:01:41.715031 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 00:01:41.715052 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:01:41.715070 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/grub2
+2024-04-18 00:01:41.715087 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715106 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715124 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 00:01:41.715140 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:01:41.715158 +0000 build-fedora43: output: + FILE_NAME=grub-2.06.tar.xz
+2024-04-18 00:01:41.715174 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715191 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715207 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 00:01:41.715223 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:01:41.715243 +0000 build-fedora43: output: + FILE_URL=https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz
+2024-04-18 00:01:41.715259 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715275 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715291 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 00:01:41.715307 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:01:41.715328 +0000 build-fedora43: output: + SIGNATURE_URL=https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-18 00:01:41.715343 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715359 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715375 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 00:01:41.715391 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:01:41.715407 +0000 build-fedora43: output: + shift
+2024-04-18 00:01:41.715423 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 00:01:41.715443 +0000 build-fedora43: output: + '[' -z https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz ']'
+2024-04-18 00:01:41.715465 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 00:01:41.715483 +0000 build-fedora43: output: + '[' -z grub-2.06.tar.xz ']'
+2024-04-18 00:01:41.715502 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_grub-2.06.tar.xz
+2024-04-18 00:01:41.715519 +0000 build-fedora43: output: + '[' -n /builder/grub2 ']'
+2024-04-18 00:01:41.715536 +0000 build-fedora43: output: + mkdir -p /builder/grub2
+2024-04-18 00:01:41.715742 +0000 build-fedora43: output: + cd /builder/grub2
+2024-04-18 00:01:41.715772 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_grub-2.06.tar.xz -- https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz
+2024-04-18 00:02:12.075071 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 00:02:12.075112 +0000 build-fedora43: output: + '[' -n https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig ']'
+2024-04-18 00:02:12.075121 +0000 build-fedora43: output: ++ basename https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-18 00:02:12.076847 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=grub-2.06.tar.xz.sig
+2024-04-18 00:02:12.076871 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_grub-2.06.tar.xz.sig
+2024-04-18 00:02:12.076883 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_grub-2.06.tar.xz.sig https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-18 00:02:13.342098 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1312 qubesbuilder.FileCopyOut+-2Fbuilder-2Fgrub2-2Funtrusted_grub--2.06.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx
+2024-04-18 00:02:13.622374 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1312 qubesbuilder.FileCopyOut+-2Fbuilder-2Fgrub2-2Funtrusted_grub--2.06.tar.xz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx
+2024-04-18 00:02:16.603698 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc'.
+2024-04-18 00:02:16.608118 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 00:02:16.608882 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc
+2024-04-18 00:02:16.609997 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc'\'' --'
+2024-04-18 00:02:16.610246 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc'\'' --'
+2024-04-18 00:02:16.610560 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc --
+2024-04-18 00:02:16.610760 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 00:02:16.610983 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 00:02:16.611141 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:02:16.611315 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx
+2024-04-18 00:02:16.611590 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.611865 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.611986 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 00:02:16.612121 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:02:16.612278 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz
+2024-04-18 00:02:16.612411 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.612554 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.612719 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 00:02:16.612847 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:02:16.613012 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig
+2024-04-18 00:02:16.613147 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.613279 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.613413 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 00:02:16.613687 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:02:16.613839 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-18 00:02:16.613993 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.614130 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.614264 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 00:02:16.614408 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 00:02:16.614658 +0000 build-fedora43: output: + shift
+2024-04-18 00:02:16.614906 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 00:02:16.615076 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz ']'
+2024-04-18 00:02:16.615125 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx ']'
+2024-04-18 00:02:16.615379 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx
+2024-04-18 00:02:16.616229 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz
+2024-04-18 00:02:16.619751 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_grub-2.06.tar.xz
+2024-04-18 00:02:16.619775 +0000 build-fedora43: output: + FILE_NAME=grub-2.06.tar.xz
+2024-04-18 00:02:16.619783 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 00:02:16.619793 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-18 00:02:16.619800 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 00:02:16.619808 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-18 00:02:16.619816 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc ']'
+2024-04-18 00:02:16.619824 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-18 00:02:16.619833 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-18 00:02:16.619840 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc ']'
+2024-04-18 00:02:16.620243 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 00:02:16.620258 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-18 00:02:16.620267 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc ']'
+2024-04-18 00:02:16.620275 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig
+2024-04-18 00:02:16.620283 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_grub-2.06.tar.xz.sig
+2024-04-18 00:02:16.620290 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=grub-2.06.tar.xz.sig
+2024-04-18 00:02:16.620296 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-18 00:02:16.621966 +0000 build-fedora43: output: + keyring=/tmp/tmp.luuIqLmRyT
+2024-04-18 00:02:16.622203 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-18 00:02:16.622492 +0000 build-fedora43: output: + sq help
+2024-04-18 00:02:16.635350 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.luuIqLmRyT /home/user/builder-r4.3-dom0/sources/grub2/grub2-key.asc
+2024-04-18 00:02:16.691902 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.luuIqLmRyT /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz.sig /home/user/builder-r4.3-dom0/tmp/tmpo28u3vrx/untrusted_grub-2.06.tar.xz
+2024-04-18 00:02:16.702748 +0000 build-fedora43: output: Signing key on BE5C23209ACDDACEB20DB0A28C8189F1988C2166 is not bound:
+2024-04-18 00:02:16.702780 +0000 build-fedora43: output:            No binding signature at time 2021-06-08T15:11:08Z
+2024-04-18 00:02:16.702791 +0000 build-fedora43: output:   because: Policy rejected non-revocation signature (PositiveCertification) requiring second pre-image resistance
+2024-04-18 00:02:16.702817 +0000 build-fedora43: output:   because: SHA1 is not considered secure since 2023-02-01T00:00:00Z
+2024-04-18 00:02:16.756306 +0000 > closing log
