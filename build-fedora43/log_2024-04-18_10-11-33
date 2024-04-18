@@ -1,0 +1,111 @@
+2024-04-18 10:11:33.531786 +0000 > starting log
+2024-04-18 10:11:33.531989 +0000 build-fedora43: > starting build with log
+2024-04-18 10:11:33.532007 +0000 build-fedora43: >> args:
+2024-04-18 10:11:33.532016 +0000 build-fedora43: >>   ()
+2024-04-18 10:11:33.532022 +0000 build-fedora43: >> component:
+2024-04-18 10:11:33.532039 +0000 build-fedora43: >>   desktop-linux-awesome
+2024-04-18 10:11:33.532362 +0000 build-fedora43: >> distributions:
+2024-04-18 10:11:33.532371 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-18 10:11:48.040708 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8913 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 10:11:48.351938 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8913 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-desktop-linux-awesome.git /builder/desktop-linux-awesome /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 10:11:55.594696 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 10:11:55.594785 +0000 build-fedora43: output: ---> Good tag 5040bcd246d57e4a4c6ad14a15180a691d4982cf.
+2024-04-18 10:11:55.594817 +0000 build-fedora43: output: ---> Good tag e9f6f6e68323a7e334bcba279f487120e90d924b.
+2024-04-18 10:11:55.594843 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 10:11:55.594876 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 10:11:55.611708 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8913 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--awesome /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-18 10:12:13.701401 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1155 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--awesome /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome
+2024-04-18 10:12:13.990675 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1155 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 10:12:14.158353 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1155 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/desktop-linux-awesome --file-name awesome-4.3.tar.xz --file-url https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz''.
+2024-04-18 10:12:14.377829 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 10:12:14.377938 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/desktop-linux-awesome --file-name awesome-4.3.tar.xz --file-url https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz
+2024-04-18 10:12:14.379856 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/desktop-linux-awesome'\'' --file-name '\''awesome-4.3.tar.xz'\'' --file-url '\''https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz'\'' --'
+2024-04-18 10:12:14.380211 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/desktop-linux-awesome'\'' --file-name '\''awesome-4.3.tar.xz'\'' --file-url '\''https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz'\'' --'
+2024-04-18 10:12:14.380262 +0000 build-fedora43: output: ++ set -- --output-dir /builder/desktop-linux-awesome --file-name awesome-4.3.tar.xz --file-url https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz --
+2024-04-18 10:12:14.380303 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 10:12:14.380324 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:14.380344 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/desktop-linux-awesome
+2024-04-18 10:12:14.380364 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.380685 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.380729 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 10:12:14.380749 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:14.380767 +0000 build-fedora43: output: + FILE_NAME=awesome-4.3.tar.xz
+2024-04-18 10:12:14.380785 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.380801 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.380817 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 10:12:14.381186 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:14.381229 +0000 build-fedora43: output: + FILE_URL=https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz
+2024-04-18 10:12:14.381249 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.381267 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.381637 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 10:12:14.381681 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:14.381701 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:14.381718 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 10:12:14.381743 +0000 build-fedora43: output: + '[' -z https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz ']'
+2024-04-18 10:12:14.381766 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 10:12:14.382104 +0000 build-fedora43: output: + '[' -z awesome-4.3.tar.xz ']'
+2024-04-18 10:12:14.382144 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_awesome-4.3.tar.xz
+2024-04-18 10:12:14.382165 +0000 build-fedora43: output: + '[' -n /builder/desktop-linux-awesome ']'
+2024-04-18 10:12:14.382183 +0000 build-fedora43: output: + mkdir -p /builder/desktop-linux-awesome
+2024-04-18 10:12:14.382201 +0000 build-fedora43: output: + cd /builder/desktop-linux-awesome
+2024-04-18 10:12:14.382240 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_awesome-4.3.tar.xz -- https://raw.githubusercontent.com/awesomeWM/awesome-releases/master/awesome-4.3.tar.xz
+2024-04-18 10:12:18.109545 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-18 10:12:18.109671 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 10:12:18.119909 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1155 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--awesome-2Funtrusted_awesome--4.3.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmphenb8apr
+2024-04-18 10:12:20.958232 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmphenb8apr --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512'.
+2024-04-18 10:12:20.962462 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-18 10:12:20.962748 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmphenb8apr --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512
+2024-04-18 10:12:20.963408 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmphenb8apr'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512'\'' --'
+2024-04-18 10:12:20.963652 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmphenb8apr'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512'\'' --'
+2024-04-18 10:12:20.963709 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmphenb8apr --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512 --
+2024-04-18 10:12:20.963931 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-18 10:12:20.963965 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-18 10:12:20.963983 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:20.964020 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmphenb8apr
+2024-04-18 10:12:20.964211 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.964254 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.964274 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 10:12:20.964495 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:20.964534 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz
+2024-04-18 10:12:20.964755 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.964787 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.964807 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 10:12:20.964986 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:20.965021 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-18 10:12:20.965042 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.965265 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.965308 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 10:12:20.965327 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:20.965351 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512
+2024-04-18 10:12:20.965375 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.965839 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.965877 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 10:12:20.965897 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 10:12:20.966085 +0000 build-fedora43: output: + shift
+2024-04-18 10:12:20.966118 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 10:12:20.966144 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz ']'
+2024-04-18 10:12:20.966377 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmphenb8apr ']'
+2024-04-18 10:12:20.966414 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmphenb8apr
+2024-04-18 10:12:20.966439 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz
+2024-04-18 10:12:20.969056 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_awesome-4.3.tar.xz
+2024-04-18 10:12:20.969073 +0000 build-fedora43: output: + FILE_NAME=awesome-4.3.tar.xz
+2024-04-18 10:12:20.969081 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512 ']'
+2024-04-18 10:12:20.969090 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512 ']'
+2024-04-18 10:12:20.969098 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512 ']'
+2024-04-18 10:12:20.969104 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 10:12:20.969111 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-18 10:12:20.969117 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 10:12:20.969123 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-18 10:12:20.969200 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512 ']'
+2024-04-18 10:12:20.969216 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-18 10:12:20.969453 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-18 10:12:20.969798 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome/awesome-4.3.tar.xz.sha512
+2024-04-18 10:12:20.970697 +0000 build-fedora43: output: ++ printf '%s  -\n' c5ef1e8dc593e7783b895d22143154aea8f211beeda24672a7ee4ed5112b4f4284043f848a151f3d3c4f569e91308670367a4353f705b20511b36495b22fa3f5
+2024-04-18 10:12:20.977020 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/untrusted_awesome-4.3.tar.xz /home/user/builder-r4.3-fedora/tmp/tmphenb8apr/awesome-4.3.tar.xz
+2024-04-18 10:12:21.001661 +0000 build-fedora43: ['rm -f -- /builder/desktop-linux-awesome/hash /builder/desktop-linux-awesome/vtags', 'cd -- /builder', "git -C /builder/desktop-linux-awesome rev-parse 'HEAD^{}' >> /builder/desktop-linux-awesome/hash", "git -C /builder/desktop-linux-awesome tag --points-at HEAD --list 'v*' >> /builder/desktop-linux-awesome/vtags"]
+2024-04-18 10:12:35.822443 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9294 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--awesome /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/desktop-linux-awesome
+2024-04-18 10:12:36.074989 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp9294 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/desktop-linux-awesome/hash /builder/desktop-linux-awesome/vtags && cd -- /builder && git -C /builder/desktop-linux-awesome rev-parse '"'"'HEAD^{}'"'"' >> /builder/desktop-linux-awesome/hash && git -C /builder/desktop-linux-awesome tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/desktop-linux-awesome/vtags''.
+2024-04-18 10:12:36.333843 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9294 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--awesome-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpvmhzc93v
+2024-04-18 10:12:36.541461 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9294 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--awesome-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpvmhzc93v
+2024-04-18 10:12:39.431240 +0000 build-fedora43: > done
+2024-04-18 10:12:39.431325 +0000 > closing log
