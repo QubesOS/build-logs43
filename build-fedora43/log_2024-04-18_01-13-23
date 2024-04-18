@@ -1,0 +1,53 @@
+2024-04-18 01:13:23.378722 +0000 > starting log
+2024-04-18 01:13:23.379313 +0000 build-fedora43: > starting build with log
+2024-04-18 01:13:23.379331 +0000 build-fedora43: >> args:
+2024-04-18 01:13:23.379339 +0000 build-fedora43: >>   ()
+2024-04-18 01:13:23.379346 +0000 build-fedora43: >> component:
+2024-04-18 01:13:23.379353 +0000 build-fedora43: >>   seabios
+2024-04-18 01:13:23.379362 +0000 build-fedora43: >> distributions:
+2024-04-18 01:13:23.379449 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-18 01:13:38.068848 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp892 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 01:13:38.309137 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp892 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-seabios.git /builder/seabios /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-18 01:13:40.327092 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-18 01:13:40.327157 +0000 build-fedora43: output: ---> Good tag 3688e75835b091e137a0a59973e46b5d4bec4b09.
+2024-04-18 01:13:40.327179 +0000 build-fedora43: output: ---> Good tag 40f3fbce9f21f57f0edd52b660287389eaf3855a.
+2024-04-18 01:13:40.327197 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-18 01:13:40.327213 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-18 01:13:40.343704 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp892 qubesbuilder.FileCopyOut+-2Fbuilder-2Fseabios /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-18 01:13:57.853895 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5104 qubesbuilder.FileCopyIn+-2Fbuilder-2Fseabios /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/seabios
+2024-04-18 01:13:58.149055 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5104 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-18 01:13:58.389157 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp5104 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz''.
+2024-04-18 01:13:58.622767 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-18 01:13:58.623121 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2024-04-18 01:13:58.625856 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/seabios'\'' --file-name '\''seabios-1.16.2.tar.gz'\'' --file-url '\''https://www.seabios.org/downloads/seabios-1.16.2.tar.gz'\'' --'
+2024-04-18 01:13:58.625879 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/seabios'\'' --file-name '\''seabios-1.16.2.tar.gz'\'' --file-url '\''https://www.seabios.org/downloads/seabios-1.16.2.tar.gz'\'' --'
+2024-04-18 01:13:58.626165 +0000 build-fedora43: output: ++ set -- --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz --
+2024-04-18 01:13:58.626182 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-18 01:13:58.626932 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 01:13:58.626962 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/seabios
+2024-04-18 01:13:58.626971 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.626977 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.626984 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-18 01:13:58.626990 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 01:13:58.626997 +0000 build-fedora43: output: + FILE_NAME=seabios-1.16.2.tar.gz
+2024-04-18 01:13:58.627003 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.627009 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.627015 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-18 01:13:58.627021 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 01:13:58.627029 +0000 build-fedora43: output: + FILE_URL=https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2024-04-18 01:13:58.627035 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.627041 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.627052 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-18 01:13:58.627059 +0000 build-fedora43: output: + case "$1" in
+2024-04-18 01:13:58.627064 +0000 build-fedora43: output: + shift
+2024-04-18 01:13:58.627071 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-18 01:13:58.627079 +0000 build-fedora43: output: + '[' -z https://www.seabios.org/downloads/seabios-1.16.2.tar.gz ']'
+2024-04-18 01:13:58.627087 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-18 01:13:58.627095 +0000 build-fedora43: output: + '[' -z seabios-1.16.2.tar.gz ']'
+2024-04-18 01:13:58.627102 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_seabios-1.16.2.tar.gz
+2024-04-18 01:13:58.627685 +0000 build-fedora43: output: + '[' -n /builder/seabios ']'
+2024-04-18 01:13:58.627701 +0000 build-fedora43: output: + mkdir -p /builder/seabios
+2024-04-18 01:13:58.629472 +0000 build-fedora43: output: + cd /builder/seabios
+2024-04-18 01:13:58.629717 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_seabios-1.16.2.tar.gz -- https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2024-04-18 01:14:03.027238 +0000 build-fedora43: output: curl: (6) Could not resolve host: www.seabios.org
+2024-04-18 01:14:05.644210 +0000 > closing log
