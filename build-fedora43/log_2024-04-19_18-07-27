@@ -1,0 +1,111 @@
+2024-04-19 18:07:27.076471 +0000 > starting log
+2024-04-19 18:07:27.076674 +0000 build-fedora43: > starting build with log
+2024-04-19 18:07:27.077049 +0000 build-fedora43: >> args:
+2024-04-19 18:07:27.077060 +0000 build-fedora43: >>   ()
+2024-04-19 18:07:27.077067 +0000 build-fedora43: >> component:
+2024-04-19 18:07:27.077073 +0000 build-fedora43: >>   lorax
+2024-04-19 18:07:27.077081 +0000 build-fedora43: >> distributions:
+2024-04-19 18:07:27.077090 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-19 18:07:42.514347 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4272 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:07:42.949086 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4272 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-lorax.git /builder/lorax /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 18:08:12.602424 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-19 18:08:12.602469 +0000 build-fedora43: output: ---> Good tag 5ec68e6e014752fd329bd8cd69df4d5868f7f2e9.
+2024-04-19 18:08:12.602480 +0000 build-fedora43: output: ---> Good tag 5eafba420b3999552a3f172ffdb7574dc701bc1e.
+2024-04-19 18:08:12.602489 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 18:08:12.602496 +0000 build-fedora43: output: --> Switching branch from main branch to main
+2024-04-19 18:08:12.618131 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4272 qubesbuilder.FileCopyOut+-2Fbuilder-2Florax /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-19 18:08:31.199290 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1900 qubesbuilder.FileCopyIn+-2Fbuilder-2Florax /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/lorax
+2024-04-19 18:08:31.719772 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1900 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:08:31.858167 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1900 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/lorax --file-name lorax-37.8.tar.gz --file-url https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz''.
+2024-04-19 18:08:32.037430 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 18:08:32.037833 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/lorax --file-name lorax-37.8.tar.gz --file-url https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz
+2024-04-19 18:08:32.039465 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/lorax'\'' --file-name '\''lorax-37.8.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz'\'' --'
+2024-04-19 18:08:32.040615 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/lorax'\'' --file-name '\''lorax-37.8.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz'\'' --'
+2024-04-19 18:08:32.040679 +0000 build-fedora43: output: ++ set -- --output-dir /builder/lorax --file-name lorax-37.8.tar.gz --file-url https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz --
+2024-04-19 18:08:32.040701 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:08:32.040719 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:32.040759 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/lorax
+2024-04-19 18:08:32.040780 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.040797 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.040817 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:08:32.040833 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:32.041842 +0000 build-fedora43: output: + FILE_NAME=lorax-37.8.tar.gz
+2024-04-19 18:08:32.041887 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.041904 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.041922 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:08:32.041939 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:32.041959 +0000 build-fedora43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz
+2024-04-19 18:08:32.041975 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.041991 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.042033 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:08:32.042050 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:32.042066 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:32.042083 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:08:32.042107 +0000 build-fedora43: output: + '[' -z https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz ']'
+2024-04-19 18:08:32.042129 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 18:08:32.042148 +0000 build-fedora43: output: + '[' -z lorax-37.8.tar.gz ']'
+2024-04-19 18:08:32.042187 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_lorax-37.8.tar.gz
+2024-04-19 18:08:32.042391 +0000 build-fedora43: output: + '[' -n /builder/lorax ']'
+2024-04-19 18:08:32.042438 +0000 build-fedora43: output: + mkdir -p /builder/lorax
+2024-04-19 18:08:32.042457 +0000 build-fedora43: output: + cd /builder/lorax
+2024-04-19 18:08:32.042485 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_lorax-37.8.tar.gz -- https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz
+2024-04-19 18:08:35.449373 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-19 18:08:35.449462 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 18:08:35.457068 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1900 qubesbuilder.FileCopyOut+-2Fbuilder-2Florax-2Funtrusted_lorax--37.8.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg
+2024-04-19 18:08:38.686924 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512'.
+2024-04-19 18:08:38.690244 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 18:08:38.692476 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512
+2024-04-19 18:08:38.694208 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512'\'' --'
+2024-04-19 18:08:38.694355 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512'\'' --'
+2024-04-19 18:08:38.694378 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512 --
+2024-04-19 18:08:38.694386 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-19 18:08:38.694601 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-19 18:08:38.694726 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:38.694874 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg
+2024-04-19 18:08:38.694976 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.695084 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.695290 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:08:38.695359 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:38.695482 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz
+2024-04-19 18:08:38.695559 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.695682 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.695783 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:08:38.695884 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:38.696022 +0000 build-fedora43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 18:08:38.696125 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.696281 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.696357 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:08:38.696466 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:38.696611 +0000 build-fedora43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512
+2024-04-19 18:08:38.696712 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.696816 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.696923 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:08:38.697026 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:08:38.697141 +0000 build-fedora43: output: + shift
+2024-04-19 18:08:38.697600 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:08:38.697656 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz ']'
+2024-04-19 18:08:38.697683 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg ']'
+2024-04-19 18:08:38.697705 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg
+2024-04-19 18:08:38.699035 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz
+2024-04-19 18:08:38.701752 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_lorax-37.8.tar.gz
+2024-04-19 18:08:38.701791 +0000 build-fedora43: output: + FILE_NAME=lorax-37.8.tar.gz
+2024-04-19 18:08:38.701815 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2024-04-19 18:08:38.701837 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2024-04-19 18:08:38.701858 +0000 build-fedora43: output: + '[' -e /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2024-04-19 18:08:38.701893 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 18:08:38.701911 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-19 18:08:38.701928 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 18:08:38.701944 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 18:08:38.701966 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2024-04-19 18:08:38.701984 +0000 build-fedora43: output: + '[' -z sha512sum ']'
+2024-04-19 18:08:38.702003 +0000 build-fedora43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 18:08:38.702025 +0000 build-fedora43: output: +++ cat /home/user/builder-r4.3-fedora/sources/lorax/lorax-37.8.tar.gz.sha512
+2024-04-19 18:08:38.702377 +0000 build-fedora43: output: ++ printf '%s  -\n' 8669ea6b873f4376cf5cace5d2eaab969bfe49f5f594f3bb0968319049c99d052379bfb7c6e5233bae7aa6a525c61c5220a3a0b3e58c7bbbecf1d72498ded25f
+2024-04-19 18:08:38.707359 +0000 build-fedora43: output: + mv /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/untrusted_lorax-37.8.tar.gz /home/user/builder-r4.3-fedora/tmp/tmp2mht6ksg/lorax-37.8.tar.gz
+2024-04-19 18:08:38.744348 +0000 build-fedora43: ['rm -f -- /builder/lorax/hash /builder/lorax/vtags', 'cd -- /builder', "git -C /builder/lorax rev-parse 'HEAD^{}' >> /builder/lorax/hash", "git -C /builder/lorax tag --points-at HEAD --list 'v*' >> /builder/lorax/vtags"]
+2024-04-19 18:08:54.954851 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6889 qubesbuilder.FileCopyIn+-2Fbuilder-2Florax /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/lorax
+2024-04-19 18:08:55.326886 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6889 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/lorax/hash /builder/lorax/vtags && cd -- /builder && git -C /builder/lorax rev-parse '"'"'HEAD^{}'"'"' >> /builder/lorax/hash && git -C /builder/lorax tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/lorax/vtags''.
+2024-04-19 18:08:55.646997 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6889 qubesbuilder.FileCopyOut+-2Fbuilder-2Florax-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpyo1zcawp
+2024-04-19 18:08:55.872704 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6889 qubesbuilder.FileCopyOut+-2Fbuilder-2Florax-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpyo1zcawp
+2024-04-19 18:08:59.223463 +0000 build-fedora43: > done
+2024-04-19 18:08:59.223530 +0000 > closing log
