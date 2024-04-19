@@ -1,0 +1,111 @@
+2024-04-19 12:24:24.509742 +0000 > starting log
+2024-04-19 12:24:24.510587 +0000 build-debian43: > starting build with log
+2024-04-19 12:24:24.510605 +0000 build-debian43: >> args:
+2024-04-19 12:24:24.510613 +0000 build-debian43: >>   ()
+2024-04-19 12:24:24.510620 +0000 build-debian43: >> component:
+2024-04-19 12:24:24.510743 +0000 build-debian43: >>   python-objgraph
+2024-04-19 12:24:24.510754 +0000 build-debian43: >> distributions:
+2024-04-19 12:24:24.510768 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 12:24:40.351821 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8865 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:24:40.629910 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8865 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-objgraph.git /builder/python-objgraph /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 12:24:46.635605 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 12:24:46.635652 +0000 build-debian43: output: ---> Good tag 08b7568e32b5f23e367bfa9a76b667eefc9bfee7.
+2024-04-19 12:24:46.635663 +0000 build-debian43: output: ---> Good tag df95ecc982398825a18b888ba5808afffc8ac68e.
+2024-04-19 12:24:46.635671 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 12:24:46.635678 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 12:24:46.639085 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8865 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 12:25:06.164133 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5271 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--objgraph /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-objgraph
+2024-04-19 12:25:06.460631 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5271 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:25:06.709431 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp5271 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-objgraph --file-name objgraph-3.5.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz''.
+2024-04-19 12:25:06.940935 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 12:25:06.941380 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-objgraph --file-name objgraph-3.5.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+2024-04-19 12:25:06.943320 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/python-objgraph'\'' --file-name '\''objgraph-3.5.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz'\'' --'
+2024-04-19 12:25:06.943357 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/python-objgraph'\'' --file-name '\''objgraph-3.5.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz'\'' --'
+2024-04-19 12:25:06.943372 +0000 build-debian43: output: ++ set -- --output-dir /builder/python-objgraph --file-name objgraph-3.5.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz --
+2024-04-19 12:25:06.943397 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:25:06.943404 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:06.943412 +0000 build-debian43: output: + OUTPUT_DIR=/builder/python-objgraph
+2024-04-19 12:25:06.943419 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943426 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943432 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:25:06.943438 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:06.943445 +0000 build-debian43: output: + FILE_NAME=objgraph-3.5.0.tar.gz
+2024-04-19 12:25:06.943451 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943458 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943464 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:25:06.943470 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:06.943478 +0000 build-debian43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+2024-04-19 12:25:06.943484 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943490 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943501 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:25:06.943508 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:06.943514 +0000 build-debian43: output: + shift
+2024-04-19 12:25:06.943521 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:25:06.943529 +0000 build-debian43: output: + '[' -z https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz ']'
+2024-04-19 12:25:06.943538 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 12:25:06.943548 +0000 build-debian43: output: + '[' -z objgraph-3.5.0.tar.gz ']'
+2024-04-19 12:25:06.943555 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_objgraph-3.5.0.tar.gz
+2024-04-19 12:25:06.943562 +0000 build-debian43: output: + '[' -n /builder/python-objgraph ']'
+2024-04-19 12:25:06.943569 +0000 build-debian43: output: + mkdir -p /builder/python-objgraph
+2024-04-19 12:25:06.943713 +0000 build-debian43: output: + cd /builder/python-objgraph
+2024-04-19 12:25:06.943742 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_objgraph-3.5.0.tar.gz -- https://files.pythonhosted.org/packages/source/o/objgraph/objgraph-3.5.0.tar.gz
+2024-04-19 12:25:11.211189 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 12:25:11.211271 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:25:11.217205 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5271 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph-2Funtrusted_objgraph--3.5.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i
+2024-04-19 12:25:14.386667 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256'.
+2024-04-19 12:25:14.392008 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 12:25:14.392570 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256
+2024-04-19 12:25:14.394253 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256'\'' --'
+2024-04-19 12:25:14.396085 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256'\'' --'
+2024-04-19 12:25:14.396114 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 --
+2024-04-19 12:25:14.396123 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 12:25:14.396130 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 12:25:14.396137 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:14.396145 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i
+2024-04-19 12:25:14.396151 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396157 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396163 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:25:14.396169 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:14.396177 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz
+2024-04-19 12:25:14.396183 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396189 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396198 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:25:14.396204 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:14.396210 +0000 build-debian43: output: + CHECKSUM_CMD=sha256sum
+2024-04-19 12:25:14.396216 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396222 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396228 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:25:14.396234 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:14.396243 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256
+2024-04-19 12:25:14.396249 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396254 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396547 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:25:14.396590 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:25:14.396612 +0000 build-debian43: output: + shift
+2024-04-19 12:25:14.396630 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:25:14.396655 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz ']'
+2024-04-19 12:25:14.396678 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i ']'
+2024-04-19 12:25:14.396699 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i
+2024-04-19 12:25:14.397382 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz
+2024-04-19 12:25:14.397411 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_objgraph-3.5.0.tar.gz
+2024-04-19 12:25:14.397420 +0000 build-debian43: output: + FILE_NAME=objgraph-3.5.0.tar.gz
+2024-04-19 12:25:14.397429 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-19 12:25:14.397437 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-19 12:25:14.398145 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-19 12:25:14.398162 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:25:14.398169 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 12:25:14.398175 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:25:14.398182 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:25:14.398191 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256 ']'
+2024-04-19 12:25:14.398198 +0000 build-debian43: output: + '[' -z sha256sum ']'
+2024-04-19 12:25:14.398205 +0000 build-debian43: output: + sha256sum --status -c /dev/fd/63
+2024-04-19 12:25:14.398834 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/python-objgraph/objgraph-3.5.0.tar.gz.sha256
+2024-04-19 12:25:14.400045 +0000 build-debian43: output: ++ printf '%s  -\n' 4752ca5bcc0e0512e41b8cc4d2780ac2fd3b3eabd03b7e950a5594c06203dfc4
+2024-04-19 12:25:14.400689 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/untrusted_objgraph-3.5.0.tar.gz /home/user/builder-r4.3-debian/tmp/tmp0ve0mf9i/objgraph-3.5.0.tar.gz
+2024-04-19 12:25:14.418861 +0000 build-debian43: ['rm -f -- /builder/python-objgraph/hash /builder/python-objgraph/vtags', 'cd -- /builder', "git -C /builder/python-objgraph rev-parse 'HEAD^{}' >> /builder/python-objgraph/hash", "git -C /builder/python-objgraph tag --points-at HEAD --list 'v*' >> /builder/python-objgraph/vtags"]
+2024-04-19 12:25:31.166934 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp152 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--objgraph /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-objgraph
+2024-04-19 12:25:31.528288 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp152 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-objgraph/hash /builder/python-objgraph/vtags && cd -- /builder && git -C /builder/python-objgraph rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-objgraph/hash && git -C /builder/python-objgraph tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-objgraph/vtags''.
+2024-04-19 12:25:31.789828 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp152 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmprjy1xvvn
+2024-04-19 12:25:31.979228 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp152 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--objgraph-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmprjy1xvvn
+2024-04-19 12:25:35.114167 +0000 build-debian43: > done
+2024-04-19 12:25:35.114212 +0000 > closing log
