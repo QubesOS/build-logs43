@@ -1,0 +1,111 @@
+2024-04-19 22:15:52.504418 +0000 > starting log
+2024-04-19 22:15:52.504621 +0000 build-debian43: > starting build with log
+2024-04-19 22:15:52.504638 +0000 build-debian43: >> args:
+2024-04-19 22:15:52.504647 +0000 build-debian43: >>   ()
+2024-04-19 22:15:52.504653 +0000 build-debian43: >> component:
+2024-04-19 22:15:52.504660 +0000 build-debian43: >>   initial-setup
+2024-04-19 22:15:52.504666 +0000 build-debian43: >> distributions:
+2024-04-19 22:15:52.504674 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 22:16:06.974915 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7915 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:16:07.271727 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7915 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-initial-setup.git /builder/initial-setup /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 22:16:12.730828 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 22:16:12.730916 +0000 build-debian43: output: ---> Good tag c6855cb4caaf22e7846a08905f582d0781cf2aca.
+2024-04-19 22:16:12.730946 +0000 build-debian43: output: ---> Good tag 97475119ce61730a8f9bc2eb9a20773880b75b15.
+2024-04-19 22:16:12.730972 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 22:16:12.730993 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 22:16:12.744030 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7915 qubesbuilder.FileCopyOut+-2Fbuilder-2Finitial--setup /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 22:16:30.202307 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4480 qubesbuilder.FileCopyIn+-2Fbuilder-2Finitial--setup /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/initial-setup
+2024-04-19 22:16:30.490451 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4480 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:16:30.662998 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4480 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/initial-setup --file-name initial-setup-0.3.95.tar.gz --file-url https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz''.
+2024-04-19 22:16:30.883209 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 22:16:30.883317 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/initial-setup --file-name initial-setup-0.3.95.tar.gz --file-url https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:30.887799 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/initial-setup'\'' --file-name '\''initial-setup-0.3.95.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz'\'' --'
+2024-04-19 22:16:30.887871 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/initial-setup'\'' --file-name '\''initial-setup-0.3.95.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz'\'' --'
+2024-04-19 22:16:30.887904 +0000 build-debian43: output: ++ set -- --output-dir /builder/initial-setup --file-name initial-setup-0.3.95.tar.gz --file-url https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz --
+2024-04-19 22:16:30.887947 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:16:30.887967 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:30.887986 +0000 build-debian43: output: + OUTPUT_DIR=/builder/initial-setup
+2024-04-19 22:16:30.888006 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888022 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888039 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:16:30.888055 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:30.888074 +0000 build-debian43: output: + FILE_NAME=initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:30.888091 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888145 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888546 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:16:30.888581 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:30.888607 +0000 build-debian43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:30.888626 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888643 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888661 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:16:30.888678 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:30.888695 +0000 build-debian43: output: + shift
+2024-04-19 22:16:30.888713 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:16:30.889500 +0000 build-debian43: output: + '[' -z https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz ']'
+2024-04-19 22:16:30.889887 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 22:16:30.889927 +0000 build-debian43: output: + '[' -z initial-setup-0.3.95.tar.gz ']'
+2024-04-19 22:16:30.889950 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:30.889969 +0000 build-debian43: output: + '[' -n /builder/initial-setup ']'
+2024-04-19 22:16:30.889987 +0000 build-debian43: output: + mkdir -p /builder/initial-setup
+2024-04-19 22:16:30.890004 +0000 build-debian43: output: + cd /builder/initial-setup
+2024-04-19 22:16:30.890034 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_initial-setup-0.3.95.tar.gz -- https://ftp.qubes-os.org/distfiles/initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:36.458296 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 22:16:36.458379 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:16:36.466572 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4480 qubesbuilder.FileCopyOut+-2Fbuilder-2Finitial--setup-2Funtrusted_initial--setup--0.3.95.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpovwd3q13
+2024-04-19 22:16:39.520040 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpovwd3q13 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512'.
+2024-04-19 22:16:39.521845 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 22:16:39.522156 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpovwd3q13 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512
+2024-04-19 22:16:39.524351 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpovwd3q13'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512'\'' --'
+2024-04-19 22:16:39.524421 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpovwd3q13'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512'\'' --'
+2024-04-19 22:16:39.524465 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpovwd3q13 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512 --
+2024-04-19 22:16:39.524483 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 22:16:39.524502 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 22:16:39.524519 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:39.524549 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpovwd3q13
+2024-04-19 22:16:39.524567 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524590 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524608 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:16:39.524624 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:39.524648 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:39.524666 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524682 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524698 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:16:39.524715 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:39.524732 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 22:16:39.524748 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524764 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524780 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:16:39.524797 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:39.524820 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512
+2024-04-19 22:16:39.524837 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524852 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524868 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:16:39.524884 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:16:39.524900 +0000 build-debian43: output: + shift
+2024-04-19 22:16:39.524917 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:16:39.524939 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz ']'
+2024-04-19 22:16:39.524960 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpovwd3q13 ']'
+2024-04-19 22:16:39.524980 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpovwd3q13
+2024-04-19 22:16:39.525002 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:39.525621 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:39.525647 +0000 build-debian43: output: + FILE_NAME=initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:39.525670 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512 ']'
+2024-04-19 22:16:39.525694 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512 ']'
+2024-04-19 22:16:39.525717 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512 ']'
+2024-04-19 22:16:39.525734 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:16:39.525751 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 22:16:39.525768 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:16:39.525784 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:16:39.525807 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512 ']'
+2024-04-19 22:16:39.525825 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 22:16:39.525844 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 22:16:39.526425 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/initial-setup/initial-setup-0.3.95.tar.gz.sha512
+2024-04-19 22:16:39.528245 +0000 build-debian43: output: ++ printf '%s  -\n' 3522a1a64f93a6cd6c49751c4a76b1ff423ca572631cf6fcf167a005d643d708f15bb09051a18e234d54acacf3d7febd6a8788968b8d7d2bb61fe99e4aa4825c
+2024-04-19 22:16:39.528772 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/untrusted_initial-setup-0.3.95.tar.gz /home/user/builder-r4.3-debian/tmp/tmpovwd3q13/initial-setup-0.3.95.tar.gz
+2024-04-19 22:16:39.549959 +0000 build-debian43: ['rm -f -- /builder/initial-setup/hash /builder/initial-setup/vtags', 'cd -- /builder', "git -C /builder/initial-setup rev-parse 'HEAD^{}' >> /builder/initial-setup/hash", "git -C /builder/initial-setup tag --points-at HEAD --list 'v*' >> /builder/initial-setup/vtags"]
+2024-04-19 22:16:53.689198 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp361 qubesbuilder.FileCopyIn+-2Fbuilder-2Finitial--setup /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/initial-setup
+2024-04-19 22:16:54.096706 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp361 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/initial-setup/hash /builder/initial-setup/vtags && cd -- /builder && git -C /builder/initial-setup rev-parse '"'"'HEAD^{}'"'"' >> /builder/initial-setup/hash && git -C /builder/initial-setup tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/initial-setup/vtags''.
+2024-04-19 22:16:54.351058 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp361 qubesbuilder.FileCopyOut+-2Fbuilder-2Finitial--setup-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_0llzol7
+2024-04-19 22:16:54.523030 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp361 qubesbuilder.FileCopyOut+-2Fbuilder-2Finitial--setup-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_0llzol7
+2024-04-19 22:16:57.469764 +0000 build-debian43: > done
+2024-04-19 22:16:57.469835 +0000 > closing log
