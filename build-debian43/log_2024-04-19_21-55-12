@@ -1,0 +1,111 @@
+2024-04-19 21:55:12.856701 +0000 > starting log
+2024-04-19 21:55:12.858650 +0000 build-debian43: > starting build with log
+2024-04-19 21:55:12.858678 +0000 build-debian43: >> args:
+2024-04-19 21:55:12.858686 +0000 build-debian43: >>   ()
+2024-04-19 21:55:12.858693 +0000 build-debian43: >> component:
+2024-04-19 21:55:12.858700 +0000 build-debian43: >>   linux-gbulb
+2024-04-19 21:55:12.858710 +0000 build-debian43: >> distributions:
+2024-04-19 21:55:12.858718 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 21:55:27.686350 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4951 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 21:55:27.929485 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4951 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-gbulb.git /builder/linux-gbulb /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 21:55:36.431805 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 21:55:36.431880 +0000 build-debian43: output: ---> Good tag c7dd1b45d01ec00421401d196d482c4314ffc6c6.
+2024-04-19 21:55:36.431909 +0000 build-debian43: output: ---> Good tag 03348648d44c63b43f824608b5afa0463cc97d8f.
+2024-04-19 21:55:36.431931 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 21:55:36.431951 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 21:55:36.446677 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4951 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 21:55:53.677382 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3312 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--gbulb /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-gbulb
+2024-04-19 21:55:53.906250 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3312 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 21:55:54.104776 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3312 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-gbulb --file-name gbulb-0.6.3.tar.gz --file-url https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz''.
+2024-04-19 21:55:54.314526 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 21:55:54.314622 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-gbulb --file-name gbulb-0.6.3.tar.gz --file-url https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz
+2024-04-19 21:55:54.315830 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/linux-gbulb'\'' --file-name '\''gbulb-0.6.3.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz'\'' --'
+2024-04-19 21:55:54.316281 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/linux-gbulb'\'' --file-name '\''gbulb-0.6.3.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz'\'' --'
+2024-04-19 21:55:54.316344 +0000 build-debian43: output: ++ set -- --output-dir /builder/linux-gbulb --file-name gbulb-0.6.3.tar.gz --file-url https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz --
+2024-04-19 21:55:54.316385 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 21:55:54.316404 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:55:54.316423 +0000 build-debian43: output: + OUTPUT_DIR=/builder/linux-gbulb
+2024-04-19 21:55:54.316442 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.316974 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.317017 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 21:55:54.317040 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:55:54.317058 +0000 build-debian43: output: + FILE_NAME=gbulb-0.6.3.tar.gz
+2024-04-19 21:55:54.317075 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.317091 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.317141 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 21:55:54.317160 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:55:54.317567 +0000 build-debian43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz
+2024-04-19 21:55:54.317600 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.317627 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.318053 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 21:55:54.318099 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:55:54.318121 +0000 build-debian43: output: + shift
+2024-04-19 21:55:54.318168 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 21:55:54.318193 +0000 build-debian43: output: + '[' -z https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz ']'
+2024-04-19 21:55:54.318234 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 21:55:54.318254 +0000 build-debian43: output: + '[' -z gbulb-0.6.3.tar.gz ']'
+2024-04-19 21:55:54.318468 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_gbulb-0.6.3.tar.gz
+2024-04-19 21:55:54.318511 +0000 build-debian43: output: + '[' -n /builder/linux-gbulb ']'
+2024-04-19 21:55:54.318530 +0000 build-debian43: output: + mkdir -p /builder/linux-gbulb
+2024-04-19 21:55:54.318547 +0000 build-debian43: output: + cd /builder/linux-gbulb
+2024-04-19 21:55:54.319113 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_gbulb-0.6.3.tar.gz -- https://files.pythonhosted.org/packages/source/g/gbulb/gbulb-0.6.3.tar.gz
+2024-04-19 21:55:58.561894 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 21:55:58.561981 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:55:58.568106 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3312 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb-2Funtrusted_gbulb--0.6.3.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo
+2024-04-19 21:56:01.380542 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256'.
+2024-04-19 21:56:01.384381 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 21:56:01.384721 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256
+2024-04-19 21:56:01.386056 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256'\'' --'
+2024-04-19 21:56:01.386088 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256'\'' --'
+2024-04-19 21:56:01.386889 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 --
+2024-04-19 21:56:01.386919 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 21:56:01.386932 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 21:56:01.386943 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:56:01.386957 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo
+2024-04-19 21:56:01.386968 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.386979 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.386989 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 21:56:01.387000 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:56:01.387015 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz
+2024-04-19 21:56:01.387025 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387042 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387053 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 21:56:01.387063 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:56:01.387074 +0000 build-debian43: output: + CHECKSUM_CMD=sha256sum
+2024-04-19 21:56:01.387085 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387096 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387131 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 21:56:01.387144 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:56:01.387158 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256
+2024-04-19 21:56:01.387169 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387179 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387190 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 21:56:01.387201 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:56:01.387211 +0000 build-debian43: output: + shift
+2024-04-19 21:56:01.387222 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 21:56:01.387236 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz ']'
+2024-04-19 21:56:01.387249 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo ']'
+2024-04-19 21:56:01.387262 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo
+2024-04-19 21:56:01.387277 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz
+2024-04-19 21:56:01.388521 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_gbulb-0.6.3.tar.gz
+2024-04-19 21:56:01.388550 +0000 build-debian43: output: + FILE_NAME=gbulb-0.6.3.tar.gz
+2024-04-19 21:56:01.388566 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-19 21:56:01.388582 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-19 21:56:01.388596 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-19 21:56:01.388607 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:56:01.388619 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 21:56:01.388630 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:56:01.388642 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:56:01.388656 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256 ']'
+2024-04-19 21:56:01.388667 +0000 build-debian43: output: + '[' -z sha256sum ']'
+2024-04-19 21:56:01.388679 +0000 build-debian43: output: + sha256sum --status -c /dev/fd/63
+2024-04-19 21:56:01.389007 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/linux-gbulb/gbulb-0.6.3.tar.gz.sha256
+2024-04-19 21:56:01.389537 +0000 build-debian43: output: ++ printf '%s  -\n' da003c5b17d3a2ba15c7255bb174defaa0f6b77e8b23f229685eb2714ceaeeec
+2024-04-19 21:56:01.390445 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/untrusted_gbulb-0.6.3.tar.gz /home/user/builder-r4.3-debian/tmp/tmp8p9m5cyo/gbulb-0.6.3.tar.gz
+2024-04-19 21:56:01.407849 +0000 build-debian43: ['rm -f -- /builder/linux-gbulb/hash /builder/linux-gbulb/vtags', 'cd -- /builder', "git -C /builder/linux-gbulb rev-parse 'HEAD^{}' >> /builder/linux-gbulb/hash", "git -C /builder/linux-gbulb tag --points-at HEAD --list 'v*' >> /builder/linux-gbulb/vtags"]
+2024-04-19 21:56:16.728020 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9244 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--gbulb /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-gbulb
+2024-04-19 21:56:17.031051 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9244 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/linux-gbulb/hash /builder/linux-gbulb/vtags && cd -- /builder && git -C /builder/linux-gbulb rev-parse '"'"'HEAD^{}'"'"' >> /builder/linux-gbulb/hash && git -C /builder/linux-gbulb tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/linux-gbulb/vtags''.
+2024-04-19 21:56:17.271785 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9244 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_l0j0t5t
+2024-04-19 21:56:17.460320 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9244 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--gbulb-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_l0j0t5t
+2024-04-19 21:56:20.342676 +0000 build-debian43: > done
+2024-04-19 21:56:20.342755 +0000 > closing log
