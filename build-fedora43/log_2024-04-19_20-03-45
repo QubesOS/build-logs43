@@ -1,0 +1,129 @@
+2024-04-19 20:03:45.897808 +0000 > starting log
+2024-04-19 20:03:45.898012 +0000 build-fedora43: > starting build with log
+2024-04-19 20:03:45.898030 +0000 build-fedora43: >> args:
+2024-04-19 20:03:45.898039 +0000 build-fedora43: >>   ()
+2024-04-19 20:03:45.898046 +0000 build-fedora43: >> component:
+2024-04-19 20:03:45.898053 +0000 build-fedora43: >>   python-fido2
+2024-04-19 20:03:45.898063 +0000 build-fedora43: >>     commit-hash: 0666f157753d16a55c41725663e3330515318d85
+2024-04-19 20:03:45.898569 +0000 build-fedora43: >>     source-hash: 7e8e8b5559dee7d3df33b0a9e94bf1ef940e033f84b7f3e5a46e2d9a52dda5c7c8c8e3f682a8deafba2420a74efc4cf707d73fe32728b0efb3795287dcd17102
+2024-04-19 20:03:45.898583 +0000 build-fedora43: >> distributions:
+2024-04-19 20:03:45.898591 +0000 build-fedora43: >>   [<QubesDistribution host-fedora-37.x86_64>]
+2024-04-19 20:03:45.898598 +0000 build-fedora43: python-fido2: source already fetched. Updating.
+2024-04-19 20:04:01.244358 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1859 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--fido2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/python-fido2
+2024-04-19 20:04:01.480952 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1859 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 20:04:01.707064 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp1859 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-fido2.git /builder/python-fido2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 20:04:06.692461 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-19 20:04:06.702360 +0000 build-fedora43: output: ---> Good tag cc0716d2c216fbc583370d99dec4ca66dd96aeba.
+2024-04-19 20:04:06.702438 +0000 build-fedora43: output: ---> Good tag f794b73a25aa68bc2ba6fcfcd446317727bbf8c8.
+2024-04-19 20:04:06.702464 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 20:04:06.702484 +0000 build-fedora43: output: --> Merging...
+2024-04-19 20:04:06.712936 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1859 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--fido2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/sources
+2024-04-19 20:04:27.419430 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5023 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--fido2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-dom0/sources/python-fido2
+2024-04-19 20:04:27.639327 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5023 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 20:04:27.857280 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp5023 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-fido2 --file-name fido2-1.1.2.tar.gz --file-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz --signature-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig''.
+2024-04-19 20:04:28.063474 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 20:04:28.063532 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-fido2 --file-name fido2-1.1.2.tar.gz --file-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz --signature-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:28.065421 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/python-fido2'\'' --file-name '\''fido2-1.1.2.tar.gz'\'' --file-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz'\'' --signature-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig'\'' --'
+2024-04-19 20:04:28.065464 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/python-fido2'\'' --file-name '\''fido2-1.1.2.tar.gz'\'' --file-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz'\'' --signature-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig'\'' --'
+2024-04-19 20:04:28.065481 +0000 build-fedora43: output: ++ set -- --output-dir /builder/python-fido2 --file-name fido2-1.1.2.tar.gz --file-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz --signature-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig --
+2024-04-19 20:04:28.065489 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-19 20:04:28.065495 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:28.065503 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/python-fido2
+2024-04-19 20:04:28.066704 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.066758 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.066779 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-19 20:04:28.066796 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:28.066814 +0000 build-fedora43: output: + FILE_NAME=fido2-1.1.2.tar.gz
+2024-04-19 20:04:28.066830 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.066845 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.066867 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-19 20:04:28.066884 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:28.066906 +0000 build-fedora43: output: + FILE_URL=https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz
+2024-04-19 20:04:28.066923 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.066939 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.066954 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-19 20:04:28.066970 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:28.066999 +0000 build-fedora43: output: + SIGNATURE_URL=https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:28.067014 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.067029 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.067045 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-19 20:04:28.067061 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:28.067075 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:28.067091 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-19 20:04:28.067112 +0000 build-fedora43: output: + '[' -z https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz ']'
+2024-04-19 20:04:28.067133 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 20:04:28.067151 +0000 build-fedora43: output: + '[' -z fido2-1.1.2.tar.gz ']'
+2024-04-19 20:04:28.067170 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_fido2-1.1.2.tar.gz
+2024-04-19 20:04:28.067187 +0000 build-fedora43: output: + '[' -n /builder/python-fido2 ']'
+2024-04-19 20:04:28.067204 +0000 build-fedora43: output: + mkdir -p /builder/python-fido2
+2024-04-19 20:04:28.067613 +0000 build-fedora43: output: + cd /builder/python-fido2
+2024-04-19 20:04:28.067649 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fido2-1.1.2.tar.gz -- https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz
+2024-04-19 20:04:32.686341 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-19 20:04:32.686371 +0000 build-fedora43: output: + '[' -n https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig ']'
+2024-04-19 20:04:32.686381 +0000 build-fedora43: output: ++ basename https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:32.686435 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:32.686446 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:32.686457 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fido2-1.1.2.tar.gz.sig https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:37.343318 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5023 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--fido2-2Funtrusted_fido2--1.1.2.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw
+2024-04-19 20:04:37.497329 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5023 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--fido2-2Funtrusted_fido2--1.1.2.tar.gz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw
+2024-04-19 20:04:40.555163 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig --pubkey-file /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc'.
+2024-04-19 20:04:40.556902 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 20:04:40.557213 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig --pubkey-file /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc
+2024-04-19 20:04:40.557970 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc'\'' --'
+2024-04-19 20:04:40.558005 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw'\'' --untrusted-file '\''/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc'\'' --'
+2024-04-19 20:04:40.558026 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw --untrusted-file /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz --untrusted-signature-file /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig --pubkey-file /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc --
+2024-04-19 20:04:40.558045 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-19 20:04:40.558053 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-19 20:04:40.558059 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:40.558067 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw
+2024-04-19 20:04:40.558074 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558080 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558226 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-19 20:04:40.558240 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:40.558249 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz
+2024-04-19 20:04:40.558257 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558263 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558269 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-19 20:04:40.558275 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:40.558297 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:40.558305 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558311 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558412 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-19 20:04:40.558424 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:40.558432 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 20:04:40.558439 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558445 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558452 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-19 20:04:40.558548 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 20:04:40.558560 +0000 build-fedora43: output: + shift
+2024-04-19 20:04:40.558567 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-19 20:04:40.558577 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz ']'
+2024-04-19 20:04:40.558585 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw ']'
+2024-04-19 20:04:40.558683 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw
+2024-04-19 20:04:40.559484 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz
+2024-04-19 20:04:40.561571 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_fido2-1.1.2.tar.gz
+2024-04-19 20:04:40.561590 +0000 build-fedora43: output: + FILE_NAME=fido2-1.1.2.tar.gz
+2024-04-19 20:04:40.561597 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-19 20:04:40.561612 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-04-19 20:04:40.561619 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 20:04:40.561627 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-04-19 20:04:40.561636 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc ']'
+2024-04-19 20:04:40.561645 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-04-19 20:04:40.561653 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-04-19 20:04:40.561662 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc ']'
+2024-04-19 20:04:40.561677 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 20:04:40.561688 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-04-19 20:04:40.561697 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc ']'
+2024-04-19 20:04:40.561705 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:40.561736 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:40.561744 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=fido2-1.1.2.tar.gz.sig
+2024-04-19 20:04:40.561930 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-19 20:04:40.566484 +0000 build-fedora43: output: + keyring=/tmp/tmp.mOyrtEb6Tb
+2024-04-19 20:04:40.566506 +0000 build-fedora43: output: + sq help
+2024-04-19 20:04:40.566731 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-19 20:04:40.643018 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.mOyrtEb6Tb /home/user/builder-r4.3-dom0/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc
+2024-04-19 20:04:40.675648 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.mOyrtEb6Tb /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz.sig /home/user/builder-r4.3-dom0/tmp/tmpijcd47hw/untrusted_fido2-1.1.2.tar.gz
+2024-04-19 20:04:40.741114 +0000 build-fedora43: output: Signing key on 20EE325B86A81BCBD3E56798F04367096FBA95E8 is bad:
+2024-04-19 20:04:40.741193 +0000 build-fedora43: output:            The primary key is not live
+2024-04-19 20:04:40.741288 +0000 build-fedora43: output:   because: Expired on 2020-05-01T11:07:16Z
+2024-04-19 20:04:40.756989 +0000 > closing log
