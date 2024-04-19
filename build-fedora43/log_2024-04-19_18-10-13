@@ -1,0 +1,129 @@
+2024-04-19 18:10:13.478651 +0000 > starting log
+2024-04-19 18:10:13.478862 +0000 build-fedora43: > starting build with log
+2024-04-19 18:10:13.478879 +0000 build-fedora43: >> args:
+2024-04-19 18:10:13.478888 +0000 build-fedora43: >>   ()
+2024-04-19 18:10:13.478894 +0000 build-fedora43: >> component:
+2024-04-19 18:10:13.478902 +0000 build-fedora43: >>   lvm2
+2024-04-19 18:10:13.478910 +0000 build-fedora43: >>     commit-hash: bdf63b4ceb458480bf95dc96ba54963ecefc1504
+2024-04-19 18:10:13.478920 +0000 build-fedora43: >>     source-hash: e0d38ca973fd0829f1f82c1431f07ffad34f4f8e04e57fa9c64c81edd5de03fd6602026c4c880ea595426ca60107ea87aaf9e1ef5b3c87ef75836e4bcab0775e
+2024-04-19 18:10:13.478926 +0000 build-fedora43: >> distributions:
+2024-04-19 18:10:13.478934 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-04-19 18:10:13.478941 +0000 build-fedora43: lvm2: source already fetched. Updating.
+2024-04-19 18:10:27.760727 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7500 qubesbuilder.FileCopyIn+-2Fbuilder-2Flvm2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/lvm2
+2024-04-19 18:10:28.099440 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7500 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:10:28.344681 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp7500 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-lvm2.git /builder/lvm2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 18:10:32.185779 +0000 build-fedora43: output: --> Verifying tags...
+2024-04-19 18:10:32.185828 +0000 build-fedora43: output: ---> Good tag c2e9a40424a70fcda8522326ee2139aa04fc0ba6.
+2024-04-19 18:10:32.185838 +0000 build-fedora43: output: ---> Good tag 79b61f588a6338ae30b43db7986599ac2dcf25cb.
+2024-04-19 18:10:32.185846 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 18:10:32.185853 +0000 build-fedora43: output: --> Merging...
+2024-04-19 18:10:32.196306 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7500 qubesbuilder.FileCopyOut+-2Fbuilder-2Flvm2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-04-19 18:10:50.609954 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4453 qubesbuilder.FileCopyIn+-2Fbuilder-2Flvm2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/lvm2
+2024-04-19 18:10:51.118518 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4453 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:10:51.324235 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp4453 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/lvm2 --file-name LVM2.2.03.09.tgz --file-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz --signature-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc''.
+2024-04-19 18:10:51.574226 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 18:10:51.574313 +0000 build-fedora43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/lvm2 --file-name LVM2.2.03.09.tgz --file-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz --signature-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2024-04-19 18:10:51.577143 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/builder/lvm2'\'' --file-name '\''LVM2.2.03.09.tgz'\'' --file-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz'\'' --signature-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc'\'' --'
+2024-04-19 18:10:51.577210 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/builder/lvm2'\'' --file-name '\''LVM2.2.03.09.tgz'\'' --file-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz'\'' --signature-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc'\'' --'
+2024-04-19 18:10:51.577239 +0000 build-fedora43: output: ++ set -- --output-dir /builder/lvm2 --file-name LVM2.2.03.09.tgz --file-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz --signature-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc --
+2024-04-19 18:10:51.577247 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-19 18:10:51.577254 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:10:51.577261 +0000 build-fedora43: output: + OUTPUT_DIR=/builder/lvm2
+2024-04-19 18:10:51.577267 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577273 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577279 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:10:51.577285 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:10:51.577440 +0000 build-fedora43: output: + FILE_NAME=LVM2.2.03.09.tgz
+2024-04-19 18:10:51.577454 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577467 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577474 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:10:51.577480 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:10:51.577488 +0000 build-fedora43: output: + FILE_URL=https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz
+2024-04-19 18:10:51.577494 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577501 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577507 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:10:51.577512 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:10:51.577520 +0000 build-fedora43: output: + SIGNATURE_URL=https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2024-04-19 18:10:51.577526 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577532 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577538 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:10:51.577544 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:10:51.577550 +0000 build-fedora43: output: + shift
+2024-04-19 18:10:51.577556 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:10:51.577563 +0000 build-fedora43: output: + '[' -z https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz ']'
+2024-04-19 18:10:51.577572 +0000 build-fedora43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 18:10:51.577579 +0000 build-fedora43: output: + '[' -z LVM2.2.03.09.tgz ']'
+2024-04-19 18:10:51.577586 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_LVM2.2.03.09.tgz
+2024-04-19 18:10:51.577593 +0000 build-fedora43: output: + '[' -n /builder/lvm2 ']'
+2024-04-19 18:10:51.577599 +0000 build-fedora43: output: + mkdir -p /builder/lvm2
+2024-04-19 18:10:51.578552 +0000 build-fedora43: output: + cd /builder/lvm2
+2024-04-19 18:10:51.578592 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_LVM2.2.03.09.tgz -- https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz
+2024-04-19 18:10:59.607396 +0000 build-fedora43: output: + '[' '' == 1 ']'
+2024-04-19 18:10:59.607450 +0000 build-fedora43: output: + '[' -n https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc ']'
+2024-04-19 18:10:59.607461 +0000 build-fedora43: output: ++ basename https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2024-04-19 18:10:59.619181 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=LVM2.2.03.09.tgz.asc
+2024-04-19 18:10:59.619246 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_LVM2.2.03.09.tgz.asc
+2024-04-19 18:10:59.619260 +0000 build-fedora43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_LVM2.2.03.09.tgz.asc https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2024-04-19 18:11:01.386275 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4453 qubesbuilder.FileCopyOut+-2Fbuilder-2Flvm2-2Funtrusted_LVM2.2.03.09.tgz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx
+2024-04-19 18:11:01.578540 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4453 qubesbuilder.FileCopyOut+-2Fbuilder-2Flvm2-2Funtrusted_LVM2.2.03.09.tgz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx
+2024-04-19 18:11:05.081467 +0000 build-fedora43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc --pubkey-file /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc'.
+2024-04-19 18:11:05.083648 +0000 build-fedora43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 18:11:05.084666 +0000 build-fedora43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc --pubkey-file /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc
+2024-04-19 18:11:05.084847 +0000 build-fedora43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc'\'' --'
+2024-04-19 18:11:05.084948 +0000 build-fedora43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx'\'' --untrusted-file '\''/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc'\'' --'
+2024-04-19 18:11:05.085046 +0000 build-fedora43: output: ++ set -- --output-dir /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx --untrusted-file /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz --untrusted-signature-file /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc --pubkey-file /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc --
+2024-04-19 18:11:05.085118 +0000 build-fedora43: output: + PUBKEY_FILE=()
+2024-04-19 18:11:05.085249 +0000 build-fedora43: output: + [[ 9 -gt 0 ]]
+2024-04-19 18:11:05.085322 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:11:05.085397 +0000 build-fedora43: output: + OUTPUT_DIR=/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx
+2024-04-19 18:11:05.085409 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.085562 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.085575 +0000 build-fedora43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:11:05.085582 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:11:05.085647 +0000 build-fedora43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz
+2024-04-19 18:11:05.085659 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.085764 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.085806 +0000 build-fedora43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:11:05.085900 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:11:05.085916 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc
+2024-04-19 18:11:05.085924 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.085986 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.085998 +0000 build-fedora43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:11:05.086061 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:11:05.086073 +0000 build-fedora43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 18:11:05.086148 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.086292 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.086306 +0000 build-fedora43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:11:05.086313 +0000 build-fedora43: output: + case "$1" in
+2024-04-19 18:11:05.086375 +0000 build-fedora43: output: + shift
+2024-04-19 18:11:05.086387 +0000 build-fedora43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:11:05.086474 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz ']'
+2024-04-19 18:11:05.086539 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx ']'
+2024-04-19 18:11:05.086606 +0000 build-fedora43: output: + mkdir -p /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx
+2024-04-19 18:11:05.088373 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz
+2024-04-19 18:11:05.088846 +0000 build-fedora43: output: + UNTRUSTED_FILE_NAME=untrusted_LVM2.2.03.09.tgz
+2024-04-19 18:11:05.088922 +0000 build-fedora43: output: + FILE_NAME=LVM2.2.03.09.tgz
+2024-04-19 18:11:05.088998 +0000 build-fedora43: output: + '[' -z '' ']'
+2024-04-19 18:11:05.089071 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc ']'
+2024-04-19 18:11:05.089144 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 18:11:05.089434 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc ']'
+2024-04-19 18:11:05.089455 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc ']'
+2024-04-19 18:11:05.089465 +0000 build-fedora43: output: + '[' -z /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc ']'
+2024-04-19 18:11:05.089474 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc ']'
+2024-04-19 18:11:05.089482 +0000 build-fedora43: output: + '[' '!' -e /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc ']'
+2024-04-19 18:11:05.089554 +0000 build-fedora43: output: + '[' -n '' ']'
+2024-04-19 18:11:05.089622 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc ']'
+2024-04-19 18:11:05.089688 +0000 build-fedora43: output: + '[' -n /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc ']'
+2024-04-19 18:11:05.091455 +0000 build-fedora43: output: ++ basename /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc
+2024-04-19 18:11:05.091566 +0000 build-fedora43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_LVM2.2.03.09.tgz.asc
+2024-04-19 18:11:05.091648 +0000 build-fedora43: output: + SIGNATURE_FILE_NAME=LVM2.2.03.09.tgz.asc
+2024-04-19 18:11:05.092799 +0000 build-fedora43: output: ++ mktemp -u
+2024-04-19 18:11:05.092889 +0000 build-fedora43: output: + keyring=/tmp/tmp.o0YnHMvanf
+2024-04-19 18:11:05.093323 +0000 build-fedora43: output: + sq help
+2024-04-19 18:11:05.093338 +0000 build-fedora43: output: + grep -q toolbox
+2024-04-19 18:11:05.099067 +0000 build-fedora43: output: + sq toolbox keyring merge --output /tmp/tmp.o0YnHMvanf /home/user/builder-r4.3-fedora/sources/lvm2/mcsontos-key.asc
+2024-04-19 18:11:05.105229 +0000 build-fedora43: output: + sqv --keyring /tmp/tmp.o0YnHMvanf /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz.asc /home/user/builder-r4.3-fedora/tmp/tmpcr8rhktx/untrusted_LVM2.2.03.09.tgz
+2024-04-19 18:11:05.115313 +0000 build-fedora43: output: Verifying signature:
+2024-04-19 18:11:05.115582 +0000 build-fedora43: output:            Policy rejected non-revocation signature (Binary) requiring collision resistance
+2024-04-19 18:11:05.115605 +0000 build-fedora43: output:   because: SHA1 is not considered secure since 2013-02-01T00:00:00Z
+2024-04-19 18:11:05.128642 +0000 > closing log
