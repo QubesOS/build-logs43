@@ -1,0 +1,125 @@
+2024-04-19 13:45:26.843383 +0000 > starting log
+2024-04-19 13:45:26.843717 +0000 build-debian43: > starting build with log
+2024-04-19 13:45:26.843736 +0000 build-debian43: >> args:
+2024-04-19 13:45:26.843745 +0000 build-debian43: >>   ()
+2024-04-19 13:45:26.843751 +0000 build-debian43: >> component:
+2024-04-19 13:45:26.843758 +0000 build-debian43: >>   grub2
+2024-04-19 13:45:26.843767 +0000 build-debian43: >> distributions:
+2024-04-19 13:45:26.843775 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 13:45:43.172318 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5615 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 13:45:43.460244 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp5615 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-grub2.git /builder/grub2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 13:46:01.773752 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 13:46:01.773825 +0000 build-debian43: output: ---> Good tag 6f71c12a0902a9c70e92a4c747868e24f5288130.
+2024-04-19 13:46:01.774000 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 13:46:01.774015 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 13:46:01.791565 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5615 qubesbuilder.FileCopyOut+-2Fbuilder-2Fgrub2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 13:46:27.584006 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7860 qubesbuilder.FileCopyIn+-2Fbuilder-2Fgrub2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/grub2
+2024-04-19 13:46:28.399736 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7860 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 13:46:29.007955 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7860 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/grub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig''.
+2024-04-19 13:46:29.351734 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 13:46:29.351809 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/grub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-19 13:46:29.360727 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/grub2'\'' --file-name '\''grub-2.06.tar.xz'\'' --file-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz'\'' --signature-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig'\'' --'
+2024-04-19 13:46:29.360784 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/grub2'\'' --file-name '\''grub-2.06.tar.xz'\'' --file-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz'\'' --signature-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig'\'' --'
+2024-04-19 13:46:29.360824 +0000 build-debian43: output: ++ set -- --output-dir /builder/grub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig --
+2024-04-19 13:46:29.360857 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 13:46:29.360865 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:29.360873 +0000 build-debian43: output: + OUTPUT_DIR=/builder/grub2
+2024-04-19 13:46:29.360880 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360888 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360894 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 13:46:29.360901 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:29.360908 +0000 build-debian43: output: + FILE_NAME=grub-2.06.tar.xz
+2024-04-19 13:46:29.360914 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360920 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360927 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 13:46:29.360933 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:29.360940 +0000 build-debian43: output: + FILE_URL=https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz
+2024-04-19 13:46:29.360947 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360953 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360960 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 13:46:29.360972 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:29.360980 +0000 build-debian43: output: + SIGNATURE_URL=https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-19 13:46:29.360987 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.360993 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.361000 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 13:46:29.361006 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:29.361012 +0000 build-debian43: output: + shift
+2024-04-19 13:46:29.361021 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 13:46:29.361028 +0000 build-debian43: output: + '[' -z https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz ']'
+2024-04-19 13:46:29.361037 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 13:46:29.361044 +0000 build-debian43: output: + '[' -z grub-2.06.tar.xz ']'
+2024-04-19 13:46:29.361052 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_grub-2.06.tar.xz
+2024-04-19 13:46:29.361059 +0000 build-debian43: output: + '[' -n /builder/grub2 ']'
+2024-04-19 13:46:29.361066 +0000 build-debian43: output: + mkdir -p /builder/grub2
+2024-04-19 13:46:29.366543 +0000 build-debian43: output: + cd /builder/grub2
+2024-04-19 13:46:29.366600 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_grub-2.06.tar.xz -- https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz
+2024-04-19 13:46:47.323961 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 13:46:47.324012 +0000 build-debian43: output: + '[' -n https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig ']'
+2024-04-19 13:46:47.324023 +0000 build-debian43: output: ++ basename https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-19 13:46:47.325073 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=grub-2.06.tar.xz.sig
+2024-04-19 13:46:47.325103 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_grub-2.06.tar.xz.sig
+2024-04-19 13:46:47.325115 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_grub-2.06.tar.xz.sig https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2024-04-19 13:46:48.253322 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7860 qubesbuilder.FileCopyOut+-2Fbuilder-2Fgrub2-2Funtrusted_grub--2.06.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5
+2024-04-19 13:46:48.733821 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7860 qubesbuilder.FileCopyOut+-2Fbuilder-2Fgrub2-2Funtrusted_grub--2.06.tar.xz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5
+2024-04-19 13:46:52.641681 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc'.
+2024-04-19 13:46:52.643635 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 13:46:52.644849 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc
+2024-04-19 13:46:52.644935 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc'\'' --'
+2024-04-19 13:46:52.645753 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc'\'' --'
+2024-04-19 13:46:52.645836 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc --
+2024-04-19 13:46:52.645854 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 13:46:52.645868 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 13:46:52.645890 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:52.645905 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5
+2024-04-19 13:46:52.645918 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.645931 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.645943 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 13:46:52.645955 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:52.645971 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz
+2024-04-19 13:46:52.645984 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.645996 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.646008 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 13:46:52.646020 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:52.646037 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig
+2024-04-19 13:46:52.646050 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.646062 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.646090 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 13:46:52.646102 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:52.646115 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 13:46:52.646126 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.646138 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.646149 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 13:46:52.646161 +0000 build-debian43: output: + case "$1" in
+2024-04-19 13:46:52.646172 +0000 build-debian43: output: + shift
+2024-04-19 13:46:52.646184 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 13:46:52.646200 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz ']'
+2024-04-19 13:46:52.646214 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5 ']'
+2024-04-19 13:46:52.646229 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5
+2024-04-19 13:46:52.648960 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz
+2024-04-19 13:46:52.651227 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_grub-2.06.tar.xz
+2024-04-19 13:46:52.651267 +0000 build-debian43: output: + FILE_NAME=grub-2.06.tar.xz
+2024-04-19 13:46:52.651287 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 13:46:52.651311 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-19 13:46:52.651327 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 13:46:52.651349 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-19 13:46:52.651368 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc ']'
+2024-04-19 13:46:52.651390 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-19 13:46:52.651413 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-19 13:46:52.651433 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc ']'
+2024-04-19 13:46:52.651459 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 13:46:52.651490 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig ']'
+2024-04-19 13:46:52.651517 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc ']'
+2024-04-19 13:46:52.651538 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig
+2024-04-19 13:46:52.652467 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_grub-2.06.tar.xz.sig
+2024-04-19 13:46:52.652538 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=grub-2.06.tar.xz.sig
+2024-04-19 13:46:52.652788 +0000 build-debian43: output: ++ mktemp -u
+2024-04-19 13:46:52.656145 +0000 build-debian43: output: + keyring=/tmp/tmp.aTvizyWfwM
+2024-04-19 13:46:52.656194 +0000 build-debian43: output: + grep -q toolbox
+2024-04-19 13:46:52.656441 +0000 build-debian43: output: + sq help
+2024-04-19 13:46:52.676753 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.aTvizyWfwM /home/user/builder-r4.3-debian/sources/grub2/grub2-key.asc
+2024-04-19 13:46:52.765553 +0000 build-debian43: output: + sqv --keyring /tmp/tmp.aTvizyWfwM /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz.sig /home/user/builder-r4.3-debian/tmp/tmpalgmhoa5/untrusted_grub-2.06.tar.xz
+2024-04-19 13:46:52.784464 +0000 build-debian43: output: Signing key on BE5C23209ACDDACEB20DB0A28C8189F1988C2166 is not bound:
+2024-04-19 13:46:52.784512 +0000 build-debian43: output:            No binding signature at time 2021-06-08T15:11:08Z
+2024-04-19 13:46:52.784547 +0000 build-debian43: output:   because: Policy rejected non-revocation signature (PositiveCertification) requiring second pre-image resistance
+2024-04-19 13:46:52.784572 +0000 build-debian43: output:   because: SHA1 is not considered secure since 2023-02-01T00:00:00Z
+2024-04-19 13:46:52.811106 +0000 > closing log
