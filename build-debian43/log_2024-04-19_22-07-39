@@ -1,0 +1,111 @@
+2024-04-19 22:07:39.693647 +0000 > starting log
+2024-04-19 22:07:39.694187 +0000 build-debian43: > starting build with log
+2024-04-19 22:07:39.694229 +0000 build-debian43: >> args:
+2024-04-19 22:07:39.694247 +0000 build-debian43: >>   ()
+2024-04-19 22:07:39.694261 +0000 build-debian43: >> component:
+2024-04-19 22:07:39.694275 +0000 build-debian43: >>   pykickstart
+2024-04-19 22:07:39.694288 +0000 build-debian43: >> distributions:
+2024-04-19 22:07:39.694306 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 22:07:54.570639 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8424 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:07:54.866279 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8424 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-pykickstart.git /builder/pykickstart /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 22:08:04.400076 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 22:08:04.400195 +0000 build-debian43: output: ---> Good tag abad6c41aac60de3c344aeb1ddbd8a97f082f5ac.
+2024-04-19 22:08:04.400224 +0000 build-debian43: output: ---> Good tag e44dead03929d0e560b5da67bf652ecbc106d3d4.
+2024-04-19 22:08:04.400248 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 22:08:04.400279 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 22:08:04.421247 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8424 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpykickstart /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 22:08:21.711993 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8938 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpykickstart /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/pykickstart
+2024-04-19 22:08:22.082249 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8938 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:08:22.269941 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8938 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/pykickstart --file-name pykickstart-3.41.tar.gz --file-url https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz''.
+2024-04-19 22:08:22.460042 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 22:08:22.460560 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/pykickstart --file-name pykickstart-3.41.tar.gz --file-url https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz
+2024-04-19 22:08:22.464406 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/pykickstart'\'' --file-name '\''pykickstart-3.41.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz'\'' --'
+2024-04-19 22:08:22.464505 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/pykickstart'\'' --file-name '\''pykickstart-3.41.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz'\'' --'
+2024-04-19 22:08:22.464540 +0000 build-debian43: output: ++ set -- --output-dir /builder/pykickstart --file-name pykickstart-3.41.tar.gz --file-url https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz --
+2024-04-19 22:08:22.464560 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:08:22.464603 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:22.464625 +0000 build-debian43: output: + OUTPUT_DIR=/builder/pykickstart
+2024-04-19 22:08:22.464645 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.464682 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.464700 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:08:22.464716 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:22.464736 +0000 build-debian43: output: + FILE_NAME=pykickstart-3.41.tar.gz
+2024-04-19 22:08:22.464753 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.464769 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.464795 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:08:22.464813 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:22.464952 +0000 build-debian43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz
+2024-04-19 22:08:22.464973 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.465291 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.465312 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:08:22.465329 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:22.465363 +0000 build-debian43: output: + shift
+2024-04-19 22:08:22.465381 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:08:22.465402 +0000 build-debian43: output: + '[' -z https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz ']'
+2024-04-19 22:08:22.465477 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 22:08:22.465500 +0000 build-debian43: output: + '[' -z pykickstart-3.41.tar.gz ']'
+2024-04-19 22:08:22.465653 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_pykickstart-3.41.tar.gz
+2024-04-19 22:08:22.465829 +0000 build-debian43: output: + '[' -n /builder/pykickstart ']'
+2024-04-19 22:08:22.465851 +0000 build-debian43: output: + mkdir -p /builder/pykickstart
+2024-04-19 22:08:22.467323 +0000 build-debian43: output: + cd /builder/pykickstart
+2024-04-19 22:08:22.467371 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_pykickstart-3.41.tar.gz -- https://ftp.qubes-os.org/distfiles/pykickstart-3.41.tar.gz
+2024-04-19 22:08:50.716684 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 22:08:50.716771 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:08:50.725209 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8938 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpykickstart-2Funtrusted_pykickstart--3.41.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7
+2024-04-19 22:08:53.689195 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512'.
+2024-04-19 22:08:53.694148 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 22:08:53.695297 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512
+2024-04-19 22:08:53.697030 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512'\'' --'
+2024-04-19 22:08:53.697211 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512'\'' --'
+2024-04-19 22:08:53.697433 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512 --
+2024-04-19 22:08:53.697636 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 22:08:53.698045 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 22:08:53.698309 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:53.698600 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7
+2024-04-19 22:08:53.698763 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.698919 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.699072 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:08:53.699205 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:53.699460 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz
+2024-04-19 22:08:53.699610 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.699748 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.699992 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:08:53.700190 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:53.700326 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 22:08:53.700489 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.700628 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.700764 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:08:53.700937 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:53.701069 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512
+2024-04-19 22:08:53.701223 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.701376 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.701570 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:08:53.701739 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:08:53.702084 +0000 build-debian43: output: + shift
+2024-04-19 22:08:53.702293 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:08:53.702607 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz ']'
+2024-04-19 22:08:53.702835 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7 ']'
+2024-04-19 22:08:53.703024 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7
+2024-04-19 22:08:53.705263 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz
+2024-04-19 22:08:53.705792 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_pykickstart-3.41.tar.gz
+2024-04-19 22:08:53.705999 +0000 build-debian43: output: + FILE_NAME=pykickstart-3.41.tar.gz
+2024-04-19 22:08:53.706219 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512 ']'
+2024-04-19 22:08:53.706452 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512 ']'
+2024-04-19 22:08:53.706631 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512 ']'
+2024-04-19 22:08:53.706820 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:08:53.706997 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 22:08:53.707156 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:08:53.707439 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:08:53.707722 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512 ']'
+2024-04-19 22:08:53.707997 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 22:08:53.708584 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 22:08:53.708764 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/pykickstart/pykickstart-3.41.tar.gz.sha512
+2024-04-19 22:08:53.709483 +0000 build-debian43: output: ++ printf '%s  -\n' 8af758aee222c5c94f0fddbeb67097794c7d9fb57e97c13e1eb552f8ca0cb43bd855d85e190ecc3192defa3706b45d551d4e75ed98691d80ff0c5b12ac511438
+2024-04-19 22:08:53.712569 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/untrusted_pykickstart-3.41.tar.gz /home/user/builder-r4.3-debian/tmp/tmp3m7m9sl7/pykickstart-3.41.tar.gz
+2024-04-19 22:08:53.727091 +0000 build-debian43: ['rm -f -- /builder/pykickstart/hash /builder/pykickstart/vtags', 'cd -- /builder', "git -C /builder/pykickstart rev-parse 'HEAD^{}' >> /builder/pykickstart/hash", "git -C /builder/pykickstart tag --points-at HEAD --list 'v*' >> /builder/pykickstart/vtags"]
+2024-04-19 22:09:08.417415 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6060 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpykickstart /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/pykickstart
+2024-04-19 22:09:08.847956 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6060 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/pykickstart/hash /builder/pykickstart/vtags && cd -- /builder && git -C /builder/pykickstart rev-parse '"'"'HEAD^{}'"'"' >> /builder/pykickstart/hash && git -C /builder/pykickstart tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/pykickstart/vtags''.
+2024-04-19 22:09:09.101760 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6060 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpykickstart-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpw5jvirsl
+2024-04-19 22:09:09.295579 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6060 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpykickstart-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpw5jvirsl
+2024-04-19 22:09:12.528011 +0000 build-debian43: > done
+2024-04-19 22:09:12.528088 +0000 > closing log
