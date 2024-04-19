@@ -1,0 +1,1118 @@
+2024-04-19 12:11:48.638339 +0000 > starting log
+2024-04-19 12:11:48.638611 +0000 build-debian43: > starting build with log
+2024-04-19 12:11:48.638696 +0000 build-debian43: >> args:
+2024-04-19 12:11:48.638713 +0000 build-debian43: >>   ()
+2024-04-19 12:11:48.638719 +0000 build-debian43: >> component:
+2024-04-19 12:11:48.638726 +0000 build-debian43: >>   core-qrexec
+2024-04-19 12:11:48.638767 +0000 build-debian43: >>     commit-hash: c9185638cdd78e4ba0b59546f8182c1ca86dde44
+2024-04-19 12:11:48.638778 +0000 build-debian43: >>     source-hash: 22a7cb46317b3ba2516ab0f8b5a782019c0d73d9987c1c472f845e3312932fffed6b46519b9ff49ddc13168506ed5b45c41603fcc97d15dff5b7a992103321f5
+2024-04-19 12:11:48.638785 +0000 build-debian43: >> distributions:
+2024-04-19 12:11:48.638809 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 12:11:48.638819 +0000 build-debian43: core-qrexec:vm-debian-12.amd64: Source hash is the same than already prepared source. Skipping.
+2024-04-19 12:12:02.303167 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb/pbuilder
+2024-04-19 12:12:02.552247 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--core--qrexec_4.2.18--1-2Bdeb12u1.debian.tar.xz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/prep/qubes-core-qrexec_4.2.18-1+deb12u1.debian.tar.xz
+2024-04-19 12:12:02.814146 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--core--qrexec_4.2.18.orig.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/prep/qubes-core-qrexec_4.2.18.orig.tar.gz
+2024-04-19 12:12:02.978288 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--core--qrexec_4.2.18--1-2Bdeb12u1.dsc /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/prep/qubes-core-qrexec_4.2.18-1+deb12u1.dsc
+2024-04-19 12:12:03.168944 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder-2Fbase.tgz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/cache/chroot/bookworm/pbuilder/base.tgz
+2024-04-19 12:12:06.232698 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-04-19 12:12:06.372747 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_deb
+2024-04-19 12:12:06.513657 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb
+2024-04-19 12:12:06.664761 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8049 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--bookworm /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/repository/vm-bookworm
+2024-04-19 12:12:06.952048 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8049 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'mkdir -p /builder/cache/aptcache && /builder/plugins/build_deb/scripts/create-local-repo /builder/repository debian bookworm && sudo -E pbuilder update --distribution bookworm --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb bookworm main" && sudo -E pbuilder build --override-config --distribution bookworm --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb bookworm main" /builder/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc && /builder/plugins/build_deb/scripts/patch-changes /builder/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc /builder/pbuilder/results/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.buildinfo /builder/pbuilder/results/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes''.
+2024-04-19 12:12:07.058298 +0000 build-debian43: output: + '[' 3 -lt 2 ']'
+2024-04-19 12:12:07.058342 +0000 build-debian43: output: + REPO_DIR=/builder/repository
+2024-04-19 12:12:07.058351 +0000 build-debian43: output: + DISTRIBUTION=debian
+2024-04-19 12:12:07.058358 +0000 build-debian43: output: + SUITE=bookworm
+2024-04-19 12:12:07.058365 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-04-19 12:12:07.059013 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-04-19 12:12:07.060095 +0000 build-debian43: output: + cd /builder/repository
+2024-04-19 12:12:07.060122 +0000 build-debian43: output: + cat
+2024-04-19 12:12:07.060840 +0000 build-debian43: output: + mkdir -p dists/bookworm/main/binary-amd64
+2024-04-19 12:12:07.061884 +0000 build-debian43: output: + dpkg-scanpackages --multiversion .
+2024-04-19 12:12:07.277607 +0000 build-debian43: output: dpkg-scanpackages: info: Wrote 24 entries to output Packages file.
+2024-04-19 12:12:07.279314 +0000 build-debian43: output: + gzip -9c dists/bookworm/main/binary-amd64/Packages
+2024-04-19 12:12:07.282423 +0000 build-debian43: output: ++ LC_ALL=C
+2024-04-19 12:12:07.282463 +0000 build-debian43: output: ++ date -u '+%a, %d %b %Y %H:%M:%S %Z'
+2024-04-19 12:12:07.283252 +0000 build-debian43: output: + DATE='Fri, 19 Apr 2024 12:12:06 UTC'
+2024-04-19 12:12:07.283276 +0000 build-debian43: output: + cat
+2024-04-19 12:12:07.284220 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages
+2024-04-19 12:12:07.284240 +0000 build-debian43: output: + f=dists/bookworm/main/binary-amd64/Packages
+2024-04-19 12:12:07.284256 +0000 build-debian43: output: + echo -n ' '
+2024-04-19 12:12:07.284520 +0000 build-debian43: output: ++ sha256sum dists/bookworm/main/binary-amd64/Packages
+2024-04-19 12:12:07.284537 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-04-19 12:12:07.287894 +0000 build-debian43: output: + echo -n 2bcc00c12b90487a9e6ca95f0b35cf5b69defaf9673f90131f99afade8fd034e ''
+2024-04-19 12:12:07.288432 +0000 build-debian43: output: ++ stat -c %s dists/bookworm/main/binary-amd64/Packages
+2024-04-19 12:12:07.291385 +0000 build-debian43: output: + echo -n 16230 ''
+2024-04-19 12:12:07.291423 +0000 build-debian43: output: + echo main/binary-amd64/Packages
+2024-04-19 12:12:07.291434 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages.gz
+2024-04-19 12:12:07.291442 +0000 build-debian43: output: + f=dists/bookworm/main/binary-amd64/Packages.gz
+2024-04-19 12:12:07.291448 +0000 build-debian43: output: + echo -n ' '
+2024-04-19 12:12:07.291484 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-04-19 12:12:07.292968 +0000 build-debian43: output: ++ sha256sum dists/bookworm/main/binary-amd64/Packages.gz
+2024-04-19 12:12:07.293227 +0000 build-debian43: output: + echo -n 79cb434abc71d5eb3c38c04f3a35746b920f623e8196a6933e193b4b5b9136e2 ''
+2024-04-19 12:12:07.293453 +0000 build-debian43: output: ++ stat -c %s dists/bookworm/main/binary-amd64/Packages.gz
+2024-04-19 12:12:07.294358 +0000 build-debian43: output: + echo -n 4746 ''
+2024-04-19 12:12:07.294380 +0000 build-debian43: output: + echo main/binary-amd64/Packages.gz
+2024-04-19 12:12:07.294388 +0000 build-debian43: output: + mapfile -d '' changes_files
+2024-04-19 12:12:07.294739 +0000 build-debian43: output: ++ find /builder/repository -name '*.changes' -not -path /builder/repository/dists -not -path /builder/repository/pool -print0
+2024-04-19 12:12:07.298671 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 12:12:07.298716 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-vchan-xen_4.2.3/libvchan-xen_4.2.3-1+deb12u1_amd64.changes
+2024-04-19 12:12:07.601912 +0000 build-debian43: output: Exporting indices...
+2024-04-19 12:12:07.601981 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 12:12:07.602020 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-qubesdb_4.2.4/qubesdb_4.2.4-1+deb12u1_amd64.changes
+2024-04-19 12:12:07.663021 +0000 build-debian43: output: Exporting indices...
+2024-04-19 12:12:07.663999 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 12:12:07.664072 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/desktop-linux-menu_1.1.5/qubes-desktop-linux-menu_1.1.5-1+deb12u1_amd64.changes
+2024-04-19 12:12:07.719258 +0000 build-debian43: output: Exporting indices...
+2024-04-19 12:12:07.720030 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 12:12:07.720078 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/linux-utils_4.2.15/qubes-utils_4.2.15+deb12u1_amd64.changes
+2024-04-19 12:12:07.803547 +0000 build-debian43: output: Exporting indices...
+2024-04-19 12:12:07.804426 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 12:12:07.804466 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/vmm-xen-guest_5.0.0/xen-guest_5.0.0-1+deb12u1_amd64.changes
+2024-04-19 12:12:07.847739 +0000 build-debian43: output: Exporting indices...
+2024-04-19 12:12:07.873474 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-04-19 12:12:07.912356 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-04-19 12:12:07.917438 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-04-19 12:12:07.934919 +0000 build-debian43: output: I: Current time: Fri Apr 19 12:12:06 GMT 2024
+2024-04-19 12:12:07.934962 +0000 build-debian43: output: I: pbuilder-time-stamp: 1713528726
+2024-04-19 12:12:07.934970 +0000 build-debian43: output: I: Building the build Environment
+2024-04-19 12:12:07.946304 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-04-19 12:12:11.677460 +0000 build-debian43: output: I: copying local configuration
+2024-04-19 12:12:11.693194 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/1718/etc/hostname to be correct
+2024-04-19 12:12:11.693237 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/1718/etc/mailname to be correct
+2024-04-19 12:12:11.699160 +0000 build-debian43: output: W: --override-config is not set; not updating apt.conf Read the manpage for details.
+2024-04-19 12:12:11.699205 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-04-19 12:12:11.706857 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-04-19 12:12:11.710778 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-04-19 12:12:11.719074 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-04-19 12:12:11.724496 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-04-19 12:12:11.734390 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-04-19 12:12:11.737641 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-04-19 12:12:11.743251 +0000 build-debian43: output: I: Refreshing the base.tgz
+2024-04-19 12:12:11.743294 +0000 build-debian43: output: I: upgrading packages
+2024-04-19 12:12:24.045941 +0000 build-debian43: output: Hit:1 https://deb.debian.org/debian bookworm InRelease
+2024-04-19 12:12:24.507845 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:12:24.530057 +0000 build-debian43: output: I: Obtaining the cached apt archive contents
+2024-04-19 12:12:24.544948 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:12:24.711225 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 12:12:24.711274 +0000 build-debian43: output: Reading state information...
+2024-04-19 12:12:24.818420 +0000 build-debian43: output: Calculating upgrade...
+2024-04-19 12:12:24.909841 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 12:12:24.922154 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:12:25.025263 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 12:12:25.025339 +0000 build-debian43: output: Reading state information...
+2024-04-19 12:12:25.136020 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 12:12:25.151108 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:12:25.254137 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 12:12:25.254214 +0000 build-debian43: output: Reading state information...
+2024-04-19 12:12:25.404383 +0000 build-debian43: output: build-essential is already the newest version (12.9).
+2024-04-19 12:12:25.404432 +0000 build-debian43: output: dpkg-dev is already the newest version (1.21.22).
+2024-04-19 12:12:25.404442 +0000 build-debian43: output: aptitude is already the newest version (0.8.13-5).
+2024-04-19 12:12:25.404450 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 12:12:25.405016 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-04-19 12:12:25.407291 +0000 build-debian43: output: I: user script /builder/pbuilder/build/1718/tmp/hooks/E30origin starting
+2024-04-19 12:12:25.411021 +0000 build-debian43: output: I: user script /builder/pbuilder/build/1718/tmp/hooks/E30origin finished
+2024-04-19 12:12:25.411826 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-04-19 12:12:25.425603 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-04-19 12:12:25.428596 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-04-19 12:12:25.432202 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-04-19 12:12:25.434903 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-04-19 12:12:25.437787 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-04-19 12:12:25.457906 +0000 build-debian43: output: I: creating base tarball [/builder/pbuilder/base.tgz]
+2024-04-19 12:12:43.474894 +0000 build-debian43: output: I: cleaning the build env
+2024-04-19 12:12:43.474942 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/1718 and its subdirectories
+2024-04-19 12:12:43.749382 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-04-19 12:12:43.825064 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-04-19 12:12:43.839483 +0000 build-debian43: output: dpkg-query: no packages found matching systemd
+2024-04-19 12:12:43.843246 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-04-19 12:12:43.881655 +0000 build-debian43: output: I: pbuilder: network access will be disabled during build
+2024-04-19 12:12:43.885000 +0000 build-debian43: output: I: Current time: Fri Apr 19 12:12:42 GMT 2024
+2024-04-19 12:12:43.885053 +0000 build-debian43: output: I: pbuilder-time-stamp: 1713528762
+2024-04-19 12:12:43.886068 +0000 build-debian43: output: I: Building the build Environment
+2024-04-19 12:12:43.886111 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-04-19 12:12:47.650465 +0000 build-debian43: output: I: copying local configuration
+2024-04-19 12:12:47.654625 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/1931/etc/hostname to be correct
+2024-04-19 12:12:47.654672 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/1931/etc/mailname to be correct
+2024-04-19 12:12:47.667005 +0000 build-debian43: output: I: Installing apt-lines
+2024-04-19 12:12:47.804352 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-04-19 12:12:47.810987 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-04-19 12:12:47.817440 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-04-19 12:12:47.830920 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-04-19 12:12:47.832214 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-04-19 12:12:47.836954 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-04-19 12:12:47.839138 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-04-19 12:12:47.845633 +0000 build-debian43: output: I: created buildresult dir: /builder/pbuilder/results
+2024-04-19 12:12:47.845681 +0000 build-debian43: output: I: Obtaining the cached apt archive contents
+2024-04-19 12:12:47.867366 +0000 build-debian43: output: I: Copying source file
+2024-04-19 12:12:47.882544 +0000 build-debian43: output: I: copying [/builder/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc]
+2024-04-19 12:12:47.884663 +0000 build-debian43: output: I: copying [/builder/build/qubes-core-qrexec_4.2.18.orig.tar.gz]
+2024-04-19 12:12:47.889128 +0000 build-debian43: output: I: copying [/builder/build/qubes-core-qrexec_4.2.18-1+deb12u1.debian.tar.xz]
+2024-04-19 12:12:47.898987 +0000 build-debian43: output: I: Extracting source
+2024-04-19 12:12:47.965419 +0000 build-debian43: output: dpkg-source: warning: extracting unsigned source package (qubes-core-qrexec_4.2.18-1+deb12u1.dsc)
+2024-04-19 12:12:47.969534 +0000 build-debian43: output: dpkg-source: info: extracting qubes-core-qrexec in qubes-core-qrexec-4.2.18
+2024-04-19 12:12:47.969600 +0000 build-debian43: output: dpkg-source: info: unpacking qubes-core-qrexec_4.2.18.orig.tar.gz
+2024-04-19 12:12:47.979886 +0000 build-debian43: output: dpkg-source: info: unpacking qubes-core-qrexec_4.2.18-1+deb12u1.debian.tar.xz
+2024-04-19 12:12:47.995657 +0000 build-debian43: output: I: using fakeroot in build.
+2024-04-19 12:12:47.995701 +0000 build-debian43: output: I: Installing the build-deps
+2024-04-19 12:12:47.995712 +0000 build-debian43: output: I: user script /builder/pbuilder/build/1931/tmp/hooks/D30update starting
+2024-04-19 12:12:48.016158 +0000 build-debian43: output: Get:1 file:/tmp/qubes-deb bookworm InRelease
+2024-04-19 12:12:48.016202 +0000 build-debian43: output: Ign:1 file:/tmp/qubes-deb bookworm InRelease
+2024-04-19 12:12:48.016211 +0000 build-debian43: output: Get:2 file:/tmp/qubes-deb bookworm Release [2583 B]
+2024-04-19 12:12:48.021820 +0000 build-debian43: output: Get:2 file:/tmp/qubes-deb bookworm Release [2583 B]
+2024-04-19 12:12:48.023922 +0000 build-debian43: output: Get:3 file:/tmp/qubes-deb bookworm Release.gpg
+2024-04-19 12:12:48.023959 +0000 build-debian43: output: Ign:3 file:/tmp/qubes-deb bookworm Release.gpg
+2024-04-19 12:12:48.023969 +0000 build-debian43: output: Get:4 file:/tmp/qubes-deb bookworm/main amd64 Packages [6695 B]
+2024-04-19 12:12:49.476186 +0000 build-debian43: output: Hit:5 https://deb.debian.org/debian bookworm InRelease
+2024-04-19 12:12:49.996358 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:12:50.019296 +0000 build-debian43: output: I: user script /builder/pbuilder/build/1931/tmp/hooks/D30update finished
+2024-04-19 12:12:50.078958 +0000 build-debian43: output:  -> Attempting to satisfy build-dependencies
+2024-04-19 12:12:50.200753 +0000 build-debian43: output:  -> Creating pbuilder-satisfydepends-dummy package
+2024-04-19 12:12:50.206010 +0000 build-debian43: output: Package: pbuilder-satisfydepends-dummy
+2024-04-19 12:12:50.206069 +0000 build-debian43: output: Version: 0.invalid.0
+2024-04-19 12:12:50.206081 +0000 build-debian43: output: Architecture: amd64
+2024-04-19 12:12:50.206095 +0000 build-debian43: output: Maintainer: Debian Pbuilder Team <pbuilder-maint@lists.alioth.debian.org>
+2024-04-19 12:12:50.206145 +0000 build-debian43: output: Description: Dummy package to satisfy dependencies with aptitude - created by pbuilder
+2024-04-19 12:12:50.206159 +0000 build-debian43: output:  This package was created automatically by pbuilder to satisfy the
+2024-04-19 12:12:50.206171 +0000 build-debian43: output:  build-dependencies of the package being currently built.
+2024-04-19 12:12:50.206186 +0000 build-debian43: output: Depends: debhelper, libpam0g-dev, libvchan-xen-dev, pkg-config, dh-python, lsb-release, python3-setuptools, python3-gbulb, pandoc
+2024-04-19 12:12:50.208090 +0000 build-debian43: output: dpkg-deb: building package 'pbuilder-satisfydepends-dummy' in '/tmp/satisfydepends-aptitude/pbuilder-satisfydepends-dummy.deb'.
+2024-04-19 12:12:50.335544 +0000 build-debian43: output: Selecting previously unselected package pbuilder-satisfydepends-dummy.
+2024-04-19 12:12:50.337056 +0000 build-debian43: output: (Reading database ... 12915 files and directories currently installed.)
+2024-04-19 12:12:50.337710 +0000 build-debian43: output: Preparing to unpack .../pbuilder-satisfydepends-dummy.deb ...
+2024-04-19 12:12:50.414677 +0000 build-debian43: output: Unpacking pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2024-04-19 12:12:50.512961 +0000 build-debian43: output: dpkg: pbuilder-satisfydepends-dummy: dependency problems, but configuring anyway as you requested:
+2024-04-19 12:12:50.513009 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on debhelper; however:
+2024-04-19 12:12:50.513022 +0000 build-debian43: output:   Package debhelper is not installed.
+2024-04-19 12:12:50.513030 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on libpam0g-dev; however:
+2024-04-19 12:12:50.513037 +0000 build-debian43: output:   Package libpam0g-dev is not installed.
+2024-04-19 12:12:50.513045 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on libvchan-xen-dev; however:
+2024-04-19 12:12:50.513052 +0000 build-debian43: output:   Package libvchan-xen-dev is not installed.
+2024-04-19 12:12:50.513060 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on pkg-config; however:
+2024-04-19 12:12:50.513066 +0000 build-debian43: output:   Package pkg-config is not installed.
+2024-04-19 12:12:50.513074 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on dh-python; however:
+2024-04-19 12:12:50.513080 +0000 build-debian43: output:   Package dh-python is not installed.
+2024-04-19 12:12:50.513088 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on lsb-release; however:
+2024-04-19 12:12:50.513094 +0000 build-debian43: output:   Package lsb-release is not installed.
+2024-04-19 12:12:50.513102 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-setuptools; however:
+2024-04-19 12:12:50.513109 +0000 build-debian43: output:   Package python3-setuptools is not installed.
+2024-04-19 12:12:50.513116 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-gbulb; however:
+2024-04-19 12:12:50.513123 +0000 build-debian43: output:   Package python3-gbulb is not installed.
+2024-04-19 12:12:50.513132 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on pandoc; however:
+2024-04-19 12:12:50.513138 +0000 build-debian43: output:   Package pandoc is not installed.
+2024-04-19 12:12:50.513478 +0000 build-debian43: output: 
+2024-04-19 12:12:50.513526 +0000 build-debian43: output: Setting up pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2024-04-19 12:12:50.766556 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:12:50.879096 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 12:12:50.879175 +0000 build-debian43: output: Reading state information...
+2024-04-19 12:12:50.908336 +0000 build-debian43: output: Initializing package states...
+2024-04-19 12:12:51.096741 +0000 build-debian43: output: Writing extended state information...
+2024-04-19 12:12:51.192908 +0000 build-debian43: output: Building tag database...
+2024-04-19 12:12:51.884364 +0000 build-debian43: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2024-04-19 12:12:51.884410 +0000 build-debian43: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2024-04-19 12:12:51.884419 +0000 build-debian43: output: The following NEW packages will be installed:
+2024-04-19 12:12:51.884474 +0000 build-debian43: output:   autoconf{a} automake{a} autopoint{a} autotools-dev{a} bsdextrautils{a} debhelper{a} dh-autoreconf{a} dh-python{a} dh-strip-nondeterminism{a} dwz{a} file{a} gettext{a} gettext-base{a} gir1.2-glib-2.0{a} groff-base{a} intltool-debian{a} libarchive-zip-perl{a} libdebhelper-perl{a} libelf1{a} libexpat1{a} libfile-stripnondeterminism-perl{a} libgirepository-1.0-1{a} libglib2.0-0{a} libicu72{a} liblua5.3-0{a} libmagic-mgc{a} libmagic1{a} libpam0g-dev{a} libpipeline1{a} libpkgconf3{a} libpython3-stdlib{a} libpython3.11-minimal{a} libpython3.11-stdlib{a} libreadline8{a} libsub-override-perl{a} libtool{a} libuchardet0{a} libvchan-xen-dev{a} libvchan-xen1{a} libxencall1{a} libxendevicemodel1{a} libxenevtchn1{a} libxenforeignmemory1{a} libxengnttab1{a} libxenhypfs1{a} libxenmisc4.17{a} libxenstore4{a} libxentoolcore1{a} libxentoollog1{a} libxml2{a} libyajl2{a} libyaml-0-2{a} lsb-release{a} m4{a} man-db{a} media-types{a} pandoc{a} pandoc-data{a} pkg-config{a} pkgconf{a} pkgconf-bin{a} po-debconf{a} python3{a} python3-distutils{a} python3-gbulb{a} python3-gi{a} python3-lib2to3{a} python3-minimal{a} python3-pkg-resources{a} python3-setuptools{a} python3.11{a} python3.11-minimal{a} readline-common{a} sensible-utils{a}
+2024-04-19 12:12:51.884489 +0000 build-debian43: output: The following packages are RECOMMENDED but will NOT be installed:
+2024-04-19 12:12:51.884499 +0000 build-debian43: output:   curl libarchive-cpio-perl libglib2.0-data libltdl-dev libmail-sendmail-perl lynx shared-mime-info wget xdg-user-dirs
+2024-04-19 12:12:51.884507 +0000 build-debian43: output: 0 packages upgraded, 74 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 12:12:51.884515 +0000 build-debian43: output: Need to get 50.4 MB/50.4 MB of archives. After unpacking 284 MB will be used.
+2024-04-19 12:12:51.884522 +0000 build-debian43: output: Writing extended state information...
+2024-04-19 12:12:51.926625 +0000 build-debian43: output: Get: 1 file:/tmp/qubes-deb bookworm/main amd64 libvchan-xen1 amd64 4.2.3-1+deb12u1 [8584 B]
+2024-04-19 12:12:51.927251 +0000 build-debian43: output: Get: 2 file:/tmp/qubes-deb bookworm/main amd64 libvchan-xen-dev amd64 4.2.3-1+deb12u1 [4848 B]
+2024-04-19 12:12:52.878562 +0000 build-debian43: output: Get: 3 https://deb.debian.org/debian bookworm/main amd64 libpython3.11-minimal amd64 3.11.2-6 [813 kB]
+2024-04-19 12:13:00.272536 +0000 build-debian43: output: Get: 4 https://deb.debian.org/debian bookworm/main amd64 libexpat1 amd64 2.5.0-1 [99.3 kB]
+2024-04-19 12:13:00.704543 +0000 build-debian43: output: Get: 5 https://deb.debian.org/debian bookworm/main amd64 python3.11-minimal amd64 3.11.2-6 [2064 kB]
+2024-04-19 12:13:06.257732 +0000 build-debian43: output: Get: 6 https://deb.debian.org/debian bookworm/main amd64 python3-minimal amd64 3.11.2-1+b1 [26.3 kB]
+2024-04-19 12:13:06.351335 +0000 build-debian43: output: Get: 7 https://deb.debian.org/debian bookworm/main amd64 media-types all 10.0.0 [26.1 kB]
+2024-04-19 12:13:06.450431 +0000 build-debian43: output: Get: 8 https://deb.debian.org/debian bookworm/main amd64 readline-common all 8.2-1.3 [69.0 kB]
+2024-04-19 12:13:06.634758 +0000 build-debian43: output: Get: 9 https://deb.debian.org/debian bookworm/main amd64 libreadline8 amd64 8.2-1.3 [166 kB]
+2024-04-19 12:13:06.894066 +0000 build-debian43: output: Get: 10 https://deb.debian.org/debian bookworm/main amd64 libpython3.11-stdlib amd64 3.11.2-6 [1796 kB]
+2024-04-19 12:13:11.233146 +0000 build-debian43: output: Get: 11 https://deb.debian.org/debian bookworm/main amd64 python3.11 amd64 3.11.2-6 [572 kB]
+2024-04-19 12:13:12.543909 +0000 build-debian43: output: Get: 12 https://deb.debian.org/debian bookworm/main amd64 libpython3-stdlib amd64 3.11.2-1+b1 [9312 B]
+2024-04-19 12:13:12.567841 +0000 build-debian43: output: Get: 13 https://deb.debian.org/debian bookworm/main amd64 python3 amd64 3.11.2-1+b1 [26.3 kB]
+2024-04-19 12:13:12.628038 +0000 build-debian43: output: Get: 14 https://deb.debian.org/debian bookworm/main amd64 sensible-utils all 0.0.17+nmu1 [19.0 kB]
+2024-04-19 12:13:12.686858 +0000 build-debian43: output: Get: 15 https://deb.debian.org/debian bookworm/main amd64 libmagic-mgc amd64 1:5.44-3 [305 kB]
+2024-04-19 12:13:13.261763 +0000 build-debian43: output: Get: 16 https://deb.debian.org/debian bookworm/main amd64 libmagic1 amd64 1:5.44-3 [104 kB]
+2024-04-19 12:13:13.572419 +0000 build-debian43: output: Get: 17 https://deb.debian.org/debian bookworm/main amd64 file amd64 1:5.44-3 [42.5 kB]
+2024-04-19 12:13:13.662304 +0000 build-debian43: output: Get: 18 https://deb.debian.org/debian bookworm/main amd64 gettext-base amd64 0.21-12 [160 kB]
+2024-04-19 12:13:13.931307 +0000 build-debian43: output: Get: 19 https://deb.debian.org/debian bookworm/main amd64 libuchardet0 amd64 0.0.7-1 [67.8 kB]
+2024-04-19 12:13:14.096505 +0000 build-debian43: output: Get: 20 https://deb.debian.org/debian bookworm/main amd64 groff-base amd64 1.22.4-10 [916 kB]
+2024-04-19 12:13:16.806920 +0000 build-debian43: output: Get: 21 https://deb.debian.org/debian bookworm/main amd64 bsdextrautils amd64 2.38.1-5+b1 [86.6 kB]
+2024-04-19 12:13:17.000865 +0000 build-debian43: output: Get: 22 https://deb.debian.org/debian bookworm/main amd64 libpipeline1 amd64 1.5.7-1 [38.5 kB]
+2024-04-19 12:13:17.059101 +0000 build-debian43: output: Get: 23 https://deb.debian.org/debian bookworm/main amd64 man-db amd64 2.11.2-2 [1386 kB]
+2024-04-19 12:13:20.526374 +0000 build-debian43: output: Get: 24 https://deb.debian.org/debian bookworm/main amd64 m4 amd64 1.4.19-3 [287 kB]
+2024-04-19 12:13:21.132955 +0000 build-debian43: output: Get: 25 https://deb.debian.org/debian bookworm/main amd64 autoconf all 2.71-3 [332 kB]
+2024-04-19 12:13:21.703891 +0000 build-debian43: output: Get: 26 https://deb.debian.org/debian bookworm/main amd64 autotools-dev all 20220109.1 [51.6 kB]
+2024-04-19 12:13:21.895626 +0000 build-debian43: output: Get: 27 https://deb.debian.org/debian bookworm/main amd64 automake all 1:1.16.5-1.3 [823 kB]
+2024-04-19 12:13:25.198173 +0000 build-debian43: output: Get: 28 https://deb.debian.org/debian bookworm/main amd64 autopoint all 0.21-12 [495 kB]
+2024-04-19 12:13:26.560272 +0000 build-debian43: output: Get: 29 https://deb.debian.org/debian bookworm/main amd64 libdebhelper-perl all 13.11.4 [81.2 kB]
+2024-04-19 12:13:26.739819 +0000 build-debian43: output: Get: 30 https://deb.debian.org/debian bookworm/main amd64 libtool all 2.4.7-5 [517 kB]
+2024-04-19 12:13:28.859420 +0000 build-debian43: output: Get: 31 https://deb.debian.org/debian bookworm/main amd64 dh-autoreconf all 20 [17.1 kB]
+2024-04-19 12:13:28.960963 +0000 build-debian43: output: Get: 32 https://deb.debian.org/debian bookworm/main amd64 libarchive-zip-perl all 1.68-1 [104 kB]
+2024-04-19 12:13:29.275162 +0000 build-debian43: output: Get: 33 https://deb.debian.org/debian bookworm/main amd64 libsub-override-perl all 0.09-4 [9304 B]
+2024-04-19 12:13:29.282358 +0000 build-debian43: output: Get: 34 https://deb.debian.org/debian bookworm/main amd64 libfile-stripnondeterminism-perl all 1.13.1-1 [19.4 kB]
+2024-04-19 12:13:29.307106 +0000 build-debian43: output: Get: 35 https://deb.debian.org/debian bookworm/main amd64 dh-strip-nondeterminism all 1.13.1-1 [8620 B]
+2024-04-19 12:13:29.308907 +0000 build-debian43: output: Get: 36 https://deb.debian.org/debian bookworm/main amd64 libelf1 amd64 0.188-2.1 [174 kB]
+2024-04-19 12:13:29.737482 +0000 build-debian43: output: Get: 37 https://deb.debian.org/debian bookworm/main amd64 dwz amd64 0.15-1 [109 kB]
+2024-04-19 12:13:29.871196 +0000 build-debian43: output: Get: 38 https://deb.debian.org/debian bookworm/main amd64 libicu72 amd64 72.1-3 [9376 kB]
+2024-04-19 12:13:54.780265 +0000 build-debian43: output: Get: 39 https://deb.debian.org/debian bookworm/main amd64 libxml2 amd64 2.9.14+dfsg-1.3~deb12u1 [687 kB]
+2024-04-19 12:14:01.596952 +0000 build-debian43: output: Get: 40 https://deb.debian.org/debian bookworm/main amd64 gettext amd64 0.21-12 [1300 kB]
+2024-04-19 12:14:08.605036 +0000 build-debian43: output: Get: 41 https://deb.debian.org/debian bookworm/main amd64 intltool-debian all 0.35.0+20060710.6 [22.9 kB]
+2024-04-19 12:14:08.664619 +0000 build-debian43: output: Get: 42 https://deb.debian.org/debian bookworm/main amd64 po-debconf all 1.0.21+nmu1 [248 kB]
+2024-04-19 12:14:09.360998 +0000 build-debian43: output: Get: 43 https://deb.debian.org/debian bookworm/main amd64 debhelper all 13.11.4 [942 kB]
+2024-04-19 12:14:11.925265 +0000 build-debian43: output: Get: 44 https://deb.debian.org/debian bookworm/main amd64 python3-lib2to3 all 3.11.2-3 [76.3 kB]
+2024-04-19 12:14:12.038039 +0000 build-debian43: output: Get: 45 https://deb.debian.org/debian bookworm/main amd64 python3-distutils all 3.11.2-3 [131 kB]
+2024-04-19 12:14:12.381116 +0000 build-debian43: output: Get: 46 https://deb.debian.org/debian bookworm/main amd64 dh-python all 5.20230130+deb12u1 [104 kB]
+2024-04-19 12:14:12.678427 +0000 build-debian43: output: Get: 47 https://deb.debian.org/debian bookworm/main amd64 libglib2.0-0 amd64 2.74.6-2 [1398 kB]
+2024-04-19 12:14:15.485252 +0000 build-debian43: output: Get: 48 https://deb.debian.org/debian bookworm/main amd64 libgirepository-1.0-1 amd64 1.74.0-3 [101 kB]
+2024-04-19 12:14:15.826209 +0000 build-debian43: output: Get: 49 https://deb.debian.org/debian bookworm/main amd64 gir1.2-glib-2.0 amd64 1.74.0-3 [159 kB]
+2024-04-19 12:14:16.075122 +0000 build-debian43: output: Get: 50 https://deb.debian.org/debian bookworm/main amd64 liblua5.3-0 amd64 5.3.6-2 [123 kB]
+2024-04-19 12:14:16.336001 +0000 build-debian43: output: Get: 51 https://deb.debian.org/debian bookworm/main amd64 libpam0g-dev amd64 1.5.2-6+deb12u1 [148 kB]
+2024-04-19 12:14:16.679518 +0000 build-debian43: output: Get: 52 https://deb.debian.org/debian bookworm/main amd64 libpkgconf3 amd64 1.8.1-1 [36.1 kB]
+2024-04-19 12:14:16.893080 +0000 build-debian43: output: Get: 53 https://deb.debian.org/debian bookworm/main amd64 libxentoolcore1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [30.2 kB]
+2024-04-19 12:14:16.954976 +0000 build-debian43: output: Get: 54 https://deb.debian.org/debian bookworm/main amd64 libxentoollog1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [32.0 kB]
+2024-04-19 12:14:17.010767 +0000 build-debian43: output: Get: 55 https://deb.debian.org/debian bookworm/main amd64 libxencall1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [32.5 kB]
+2024-04-19 12:14:17.216118 +0000 build-debian43: output: Get: 56 https://deb.debian.org/debian bookworm/main amd64 libxendevicemodel1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [33.2 kB]
+2024-04-19 12:14:17.309303 +0000 build-debian43: output: Get: 57 https://deb.debian.org/debian bookworm/main amd64 libxenevtchn1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [30.9 kB]
+2024-04-19 12:14:17.565345 +0000 build-debian43: output: Get: 58 https://deb.debian.org/debian bookworm/main amd64 libxenforeignmemory1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [32.7 kB]
+2024-04-19 12:14:17.689672 +0000 build-debian43: output: Get: 59 https://deb.debian.org/debian bookworm/main amd64 libxengnttab1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [33.1 kB]
+2024-04-19 12:14:18.081852 +0000 build-debian43: output: Get: 60 https://deb.debian.org/debian bookworm/main amd64 libxenhypfs1 amd64 4.17.3+10-g091466ba55-1~deb12u1 [32.7 kB]
+2024-04-19 12:14:18.622951 +0000 build-debian43: output: Get: 61 https://deb.debian.org/debian bookworm/main amd64 libxenstore4 amd64 4.17.3+10-g091466ba55-1~deb12u1 [39.3 kB]
+2024-04-19 12:14:18.903084 +0000 build-debian43: output: Get: 62 https://deb.debian.org/debian bookworm/main amd64 libyajl2 amd64 2.1.0-3+deb12u2 [23.0 kB]
+2024-04-19 12:14:19.025073 +0000 build-debian43: output: Get: 63 https://deb.debian.org/debian bookworm/main amd64 libxenmisc4.17 amd64 4.17.3+10-g091466ba55-1~deb12u1 [517 kB]
+2024-04-19 12:14:23.092393 +0000 build-debian43: output: Get: 64 https://deb.debian.org/debian bookworm/main amd64 libyaml-0-2 amd64 0.2.5-1 [53.6 kB]
+2024-04-19 12:14:23.274552 +0000 build-debian43: output: Get: 65 https://deb.debian.org/debian bookworm/main amd64 lsb-release all 12.0-1 [6416 B]
+2024-04-19 12:14:23.319715 +0000 build-debian43: output: Get: 66 https://deb.debian.org/debian bookworm/main amd64 pandoc-data all 2.17.1.1-2~deb12u1 [418 kB]
+2024-04-19 12:14:24.891697 +0000 build-debian43: output: Get: 67 https://deb.debian.org/debian bookworm/main amd64 pandoc amd64 2.17.1.1-2~deb12u1 [21.3 MB]
+2024-04-19 12:15:34.721004 +0000 build-debian43: output: Get: 68 https://deb.debian.org/debian bookworm/main amd64 pkgconf-bin amd64 1.8.1-1 [29.5 kB]
+2024-04-19 12:15:34.803507 +0000 build-debian43: output: Get: 69 https://deb.debian.org/debian bookworm/main amd64 pkgconf amd64 1.8.1-1 [25.9 kB]
+2024-04-19 12:15:34.838141 +0000 build-debian43: output: Get: 70 https://deb.debian.org/debian bookworm/main amd64 pkg-config amd64 1.8.1-1 [13.7 kB]
+2024-04-19 12:15:34.843772 +0000 build-debian43: output: Get: 71 https://deb.debian.org/debian bookworm/main amd64 python3-gi amd64 3.42.2-3+b1 [219 kB]
+2024-04-19 12:15:35.235373 +0000 build-debian43: output: Get: 72 https://deb.debian.org/debian bookworm/main amd64 python3-gbulb all 0.6.3-0.1 [17.8 kB]
+2024-04-19 12:15:35.244541 +0000 build-debian43: output: Get: 73 https://deb.debian.org/debian bookworm/main amd64 python3-pkg-resources all 66.1.1-1 [296 kB]
+2024-04-19 12:15:35.810254 +0000 build-debian43: output: Get: 74 https://deb.debian.org/debian bookworm/main amd64 python3-setuptools all 66.1.1-1 [521 kB]
+2024-04-19 12:15:37.285310 +0000 build-debian43: output: Fetched 50.4 MB in 2min 45s (305 kB/s)
+2024-04-19 12:15:37.392994 +0000 build-debian43: output: debconf: delaying package configuration, since apt-utils is not installed
+2024-04-19 12:15:37.458970 +0000 build-debian43: output: Selecting previously unselected package libpython3.11-minimal:amd64..
+2024-04-19 12:15:37.463313 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 12915 files and directories currently installed.).
+2024-04-19 12:15:37.464208 +0000 build-debian43: output: Preparing to unpack .../libpython3.11-minimal_3.11.2-6_amd64.deb ....
+2024-04-19 12:15:37.474944 +0000 build-debian43: output: Unpacking libpython3.11-minimal:amd64 (3.11.2-6) ....
+2024-04-19 12:15:37.695813 +0000 build-debian43: output: Selecting previously unselected package libexpat1:amd64..
+2024-04-19 12:15:37.697040 +0000 build-debian43: output: Preparing to unpack .../libexpat1_2.5.0-1_amd64.deb ....
+2024-04-19 12:15:37.714508 +0000 build-debian43: output: Unpacking libexpat1:amd64 (2.5.0-1) ....
+2024-04-19 12:15:37.816587 +0000 build-debian43: output: Selecting previously unselected package python3.11-minimal..
+2024-04-19 12:15:37.816662 +0000 build-debian43: output: Preparing to unpack .../python3.11-minimal_3.11.2-6_amd64.deb ....
+2024-04-19 12:15:37.835100 +0000 build-debian43: output: Unpacking python3.11-minimal (3.11.2-6) ....
+2024-04-19 12:15:38.058058 +0000 build-debian43: output: Setting up libpython3.11-minimal:amd64 (3.11.2-6) ....
+2024-04-19 12:15:38.096821 +0000 build-debian43: output: Setting up libexpat1:amd64 (2.5.0-1) ....
+2024-04-19 12:15:38.129941 +0000 build-debian43: output: Setting up python3.11-minimal (3.11.2-6) ....
+2024-04-19 12:15:38.684608 +0000 build-debian43: output: Selecting previously unselected package python3-minimal..
+2024-04-19 12:15:38.690249 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 13231 files and directories currently installed.).
+2024-04-19 12:15:38.690292 +0000 build-debian43: output: Preparing to unpack .../0-python3-minimal_3.11.2-1+b1_amd64.deb ....
+2024-04-19 12:15:38.699982 +0000 build-debian43: output: Unpacking python3-minimal (3.11.2-1+b1) ....
+2024-04-19 12:15:38.780975 +0000 build-debian43: output: Selecting previously unselected package media-types..
+2024-04-19 12:15:38.781712 +0000 build-debian43: output: Preparing to unpack .../1-media-types_10.0.0_all.deb ....
+2024-04-19 12:15:38.790930 +0000 build-debian43: output: Unpacking media-types (10.0.0) ....
+2024-04-19 12:15:38.867206 +0000 build-debian43: output: Selecting previously unselected package readline-common..
+2024-04-19 12:15:38.868241 +0000 build-debian43: output: Preparing to unpack .../2-readline-common_8.2-1.3_all.deb ....
+2024-04-19 12:15:38.879872 +0000 build-debian43: output: Unpacking readline-common (8.2-1.3) ....
+2024-04-19 12:15:38.953690 +0000 build-debian43: output: Selecting previously unselected package libreadline8:amd64..
+2024-04-19 12:15:38.953736 +0000 build-debian43: output: Preparing to unpack .../3-libreadline8_8.2-1.3_amd64.deb ....
+2024-04-19 12:15:38.961927 +0000 build-debian43: output: Unpacking libreadline8:amd64 (8.2-1.3) ....
+2024-04-19 12:15:39.036493 +0000 build-debian43: output: Selecting previously unselected package libpython3.11-stdlib:amd64..
+2024-04-19 12:15:39.036862 +0000 build-debian43: output: Preparing to unpack .../4-libpython3.11-stdlib_3.11.2-6_amd64.deb ....
+2024-04-19 12:15:39.044671 +0000 build-debian43: output: Unpacking libpython3.11-stdlib:amd64 (3.11.2-6) ....
+2024-04-19 12:15:39.327603 +0000 build-debian43: output: Selecting previously unselected package python3.11..
+2024-04-19 12:15:39.328383 +0000 build-debian43: output: Preparing to unpack .../5-python3.11_3.11.2-6_amd64.deb ....
+2024-04-19 12:15:39.337715 +0000 build-debian43: output: Unpacking python3.11 (3.11.2-6) ....
+2024-04-19 12:15:39.413114 +0000 build-debian43: output: Selecting previously unselected package libpython3-stdlib:amd64..
+2024-04-19 12:15:39.413701 +0000 build-debian43: output: Preparing to unpack .../6-libpython3-stdlib_3.11.2-1+b1_amd64.deb ....
+2024-04-19 12:15:39.423726 +0000 build-debian43: output: Unpacking libpython3-stdlib:amd64 (3.11.2-1+b1) ....
+2024-04-19 12:15:39.503693 +0000 build-debian43: output: Setting up python3-minimal (3.11.2-1+b1) ....
+2024-04-19 12:15:39.683500 +0000 build-debian43: output: Selecting previously unselected package python3..
+2024-04-19 12:15:39.688431 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 13665 files and directories currently installed.).
+2024-04-19 12:15:39.688529 +0000 build-debian43: output: Preparing to unpack .../00-python3_3.11.2-1+b1_amd64.deb ....
+2024-04-19 12:15:39.699922 +0000 build-debian43: output: Unpacking python3 (3.11.2-1+b1) ....
+2024-04-19 12:15:39.766292 +0000 build-debian43: output: Selecting previously unselected package sensible-utils..
+2024-04-19 12:15:39.775309 +0000 build-debian43: output: Preparing to unpack .../01-sensible-utils_0.0.17+nmu1_all.deb ....
+2024-04-19 12:15:39.775356 +0000 build-debian43: output: Unpacking sensible-utils (0.0.17+nmu1) ....
+2024-04-19 12:15:39.867196 +0000 build-debian43: output: Selecting previously unselected package libmagic-mgc..
+2024-04-19 12:15:39.867244 +0000 build-debian43: output: Preparing to unpack .../02-libmagic-mgc_1%3a5.44-3_amd64.deb ....
+2024-04-19 12:15:39.877335 +0000 build-debian43: output: Unpacking libmagic-mgc (1:5.44-3) ....
+2024-04-19 12:15:40.011839 +0000 build-debian43: output: Selecting previously unselected package libmagic1:amd64..
+2024-04-19 12:15:40.011888 +0000 build-debian43: output: Preparing to unpack .../03-libmagic1_1%3a5.44-3_amd64.deb ....
+2024-04-19 12:15:40.020859 +0000 build-debian43: output: Unpacking libmagic1:amd64 (1:5.44-3) ....
+2024-04-19 12:15:40.095198 +0000 build-debian43: output: Selecting previously unselected package file..
+2024-04-19 12:15:40.096706 +0000 build-debian43: output: Preparing to unpack .../04-file_1%3a5.44-3_amd64.deb ....
+2024-04-19 12:15:40.108052 +0000 build-debian43: output: Unpacking file (1:5.44-3) ....
+2024-04-19 12:15:40.177714 +0000 build-debian43: output: Selecting previously unselected package gettext-base..
+2024-04-19 12:15:40.179843 +0000 build-debian43: output: Preparing to unpack .../05-gettext-base_0.21-12_amd64.deb ....
+2024-04-19 12:15:40.187636 +0000 build-debian43: output: Unpacking gettext-base (0.21-12) ....
+2024-04-19 12:15:40.301303 +0000 build-debian43: output: Selecting previously unselected package libuchardet0:amd64..
+2024-04-19 12:15:40.301348 +0000 build-debian43: output: Preparing to unpack .../06-libuchardet0_0.0.7-1_amd64.deb ....
+2024-04-19 12:15:40.307149 +0000 build-debian43: output: Unpacking libuchardet0:amd64 (0.0.7-1) ....
+2024-04-19 12:15:40.397497 +0000 build-debian43: output: Selecting previously unselected package groff-base..
+2024-04-19 12:15:40.399758 +0000 build-debian43: output: Preparing to unpack .../07-groff-base_1.22.4-10_amd64.deb ....
+2024-04-19 12:15:40.413080 +0000 build-debian43: output: Unpacking groff-base (1.22.4-10) ....
+2024-04-19 12:15:40.607456 +0000 build-debian43: output: Selecting previously unselected package bsdextrautils..
+2024-04-19 12:15:40.609560 +0000 build-debian43: output: Preparing to unpack .../08-bsdextrautils_2.38.1-5+b1_amd64.deb ....
+2024-04-19 12:15:40.622331 +0000 build-debian43: output: Unpacking bsdextrautils (2.38.1-5+b1) ....
+2024-04-19 12:15:40.709390 +0000 build-debian43: output: Selecting previously unselected package libpipeline1:amd64..
+2024-04-19 12:15:40.710337 +0000 build-debian43: output: Preparing to unpack .../09-libpipeline1_1.5.7-1_amd64.deb ....
+2024-04-19 12:15:40.723100 +0000 build-debian43: output: Unpacking libpipeline1:amd64 (1.5.7-1) ....
+2024-04-19 12:15:40.817754 +0000 build-debian43: output: Selecting previously unselected package man-db..
+2024-04-19 12:15:40.820005 +0000 build-debian43: output: Preparing to unpack .../10-man-db_2.11.2-2_amd64.deb ....
+2024-04-19 12:15:40.832838 +0000 build-debian43: output: Unpacking man-db (2.11.2-2) ....
+2024-04-19 12:15:41.110510 +0000 build-debian43: output: Selecting previously unselected package m4..
+2024-04-19 12:15:41.110557 +0000 build-debian43: output: Preparing to unpack .../11-m4_1.4.19-3_amd64.deb ....
+2024-04-19 12:15:41.119695 +0000 build-debian43: output: Unpacking m4 (1.4.19-3) ....
+2024-04-19 12:15:41.235485 +0000 build-debian43: output: Selecting previously unselected package autoconf..
+2024-04-19 12:15:41.236808 +0000 build-debian43: output: Preparing to unpack .../12-autoconf_2.71-3_all.deb ....
+2024-04-19 12:15:41.245244 +0000 build-debian43: output: Unpacking autoconf (2.71-3) ....
+2024-04-19 12:15:41.362773 +0000 build-debian43: output: Selecting previously unselected package autotools-dev..
+2024-04-19 12:15:41.364158 +0000 build-debian43: output: Preparing to unpack .../13-autotools-dev_20220109.1_all.deb ....
+2024-04-19 12:15:41.373410 +0000 build-debian43: output: Unpacking autotools-dev (20220109.1) ....
+2024-04-19 12:15:41.447256 +0000 build-debian43: output: Selecting previously unselected package automake..
+2024-04-19 12:15:41.448071 +0000 build-debian43: output: Preparing to unpack .../14-automake_1%3a1.16.5-1.3_all.deb ....
+2024-04-19 12:15:41.461358 +0000 build-debian43: output: Unpacking automake (1:1.16.5-1.3) ....
+2024-04-19 12:15:41.610110 +0000 build-debian43: output: Selecting previously unselected package autopoint..
+2024-04-19 12:15:41.612145 +0000 build-debian43: output: Preparing to unpack .../15-autopoint_0.21-12_all.deb ....
+2024-04-19 12:15:41.621269 +0000 build-debian43: output: Unpacking autopoint (0.21-12) ....
+2024-04-19 12:15:41.689279 +0000 build-debian43: output: Selecting previously unselected package libdebhelper-perl..
+2024-04-19 12:15:41.689325 +0000 build-debian43: output: Preparing to unpack .../16-libdebhelper-perl_13.11.4_all.deb ....
+2024-04-19 12:15:41.701022 +0000 build-debian43: output: Unpacking libdebhelper-perl (13.11.4) ....
+2024-04-19 12:15:41.801962 +0000 build-debian43: output: Selecting previously unselected package libtool..
+2024-04-19 12:15:41.802012 +0000 build-debian43: output: Preparing to unpack .../17-libtool_2.4.7-5_all.deb ....
+2024-04-19 12:15:41.813295 +0000 build-debian43: output: Unpacking libtool (2.4.7-5) ....
+2024-04-19 12:15:41.897636 +0000 build-debian43: output: Selecting previously unselected package dh-autoreconf..
+2024-04-19 12:15:41.898127 +0000 build-debian43: output: Preparing to unpack .../18-dh-autoreconf_20_all.deb ....
+2024-04-19 12:15:41.906944 +0000 build-debian43: output: Unpacking dh-autoreconf (20) ....
+2024-04-19 12:15:41.974837 +0000 build-debian43: output: Selecting previously unselected package libarchive-zip-perl..
+2024-04-19 12:15:41.974888 +0000 build-debian43: output: Preparing to unpack .../19-libarchive-zip-perl_1.68-1_all.deb ....
+2024-04-19 12:15:41.984840 +0000 build-debian43: output: Unpacking libarchive-zip-perl (1.68-1) ....
+2024-04-19 12:15:42.063211 +0000 build-debian43: output: Selecting previously unselected package libsub-override-perl..
+2024-04-19 12:15:42.063256 +0000 build-debian43: output: Preparing to unpack .../20-libsub-override-perl_0.09-4_all.deb ....
+2024-04-19 12:15:42.072133 +0000 build-debian43: output: Unpacking libsub-override-perl (0.09-4) ....
+2024-04-19 12:15:42.142243 +0000 build-debian43: output: Selecting previously unselected package libfile-stripnondeterminism-perl..
+2024-04-19 12:15:42.142306 +0000 build-debian43: output: Preparing to unpack .../21-libfile-stripnondeterminism-perl_1.13.1-1_all.deb ....
+2024-04-19 12:15:42.154467 +0000 build-debian43: output: Unpacking libfile-stripnondeterminism-perl (1.13.1-1) ....
+2024-04-19 12:15:42.230097 +0000 build-debian43: output: Selecting previously unselected package dh-strip-nondeterminism..
+2024-04-19 12:15:42.230310 +0000 build-debian43: output: Preparing to unpack .../22-dh-strip-nondeterminism_1.13.1-1_all.deb ....
+2024-04-19 12:15:42.240711 +0000 build-debian43: output: Unpacking dh-strip-nondeterminism (1.13.1-1) ....
+2024-04-19 12:15:42.330612 +0000 build-debian43: output: Selecting previously unselected package libelf1:amd64..
+2024-04-19 12:15:42.331243 +0000 build-debian43: output: Preparing to unpack .../23-libelf1_0.188-2.1_amd64.deb ....
+2024-04-19 12:15:42.338527 +0000 build-debian43: output: Unpacking libelf1:amd64 (0.188-2.1) ....
+2024-04-19 12:15:42.423071 +0000 build-debian43: output: Selecting previously unselected package dwz..
+2024-04-19 12:15:42.423124 +0000 build-debian43: output: Preparing to unpack .../24-dwz_0.15-1_amd64.deb ....
+2024-04-19 12:15:42.434046 +0000 build-debian43: output: Unpacking dwz (0.15-1) ....
+2024-04-19 12:15:42.521499 +0000 build-debian43: output: Selecting previously unselected package libicu72:amd64..
+2024-04-19 12:15:42.522723 +0000 build-debian43: output: Preparing to unpack .../25-libicu72_72.1-3_amd64.deb ....
+2024-04-19 12:15:42.547543 +0000 build-debian43: output: Unpacking libicu72:amd64 (72.1-3) ....
+2024-04-19 12:15:43.214951 +0000 build-debian43: output: Selecting previously unselected package libxml2:amd64..
+2024-04-19 12:15:43.216017 +0000 build-debian43: output: Preparing to unpack .../26-libxml2_2.9.14+dfsg-1.3~deb12u1_amd64.deb ....
+2024-04-19 12:15:43.224588 +0000 build-debian43: output: Unpacking libxml2:amd64 (2.9.14+dfsg-1.3~deb12u1) ....
+2024-04-19 12:15:43.339944 +0000 build-debian43: output: Selecting previously unselected package gettext..
+2024-04-19 12:15:43.341406 +0000 build-debian43: output: Preparing to unpack .../27-gettext_0.21-12_amd64.deb ....
+2024-04-19 12:15:43.349985 +0000 build-debian43: output: Unpacking gettext (0.21-12) ....
+2024-04-19 12:15:43.580597 +0000 build-debian43: output: Selecting previously unselected package intltool-debian..
+2024-04-19 12:15:43.581891 +0000 build-debian43: output: Preparing to unpack .../28-intltool-debian_0.35.0+20060710.6_all.deb ....
+2024-04-19 12:15:43.603854 +0000 build-debian43: output: Unpacking intltool-debian (0.35.0+20060710.6) ....
+2024-04-19 12:15:43.662874 +0000 build-debian43: output: Selecting previously unselected package po-debconf..
+2024-04-19 12:15:43.663710 +0000 build-debian43: output: Preparing to unpack .../29-po-debconf_1.0.21+nmu1_all.deb ....
+2024-04-19 12:15:43.672090 +0000 build-debian43: output: Unpacking po-debconf (1.0.21+nmu1) ....
+2024-04-19 12:15:43.778045 +0000 build-debian43: output: Selecting previously unselected package debhelper..
+2024-04-19 12:15:43.779264 +0000 build-debian43: output: Preparing to unpack .../30-debhelper_13.11.4_all.deb ....
+2024-04-19 12:15:43.785028 +0000 build-debian43: output: Unpacking debhelper (13.11.4) ....
+2024-04-19 12:15:44.035081 +0000 build-debian43: output: Selecting previously unselected package python3-lib2to3..
+2024-04-19 12:15:44.035129 +0000 build-debian43: output: Preparing to unpack .../31-python3-lib2to3_3.11.2-3_all.deb ....
+2024-04-19 12:15:44.052288 +0000 build-debian43: output: Unpacking python3-lib2to3 (3.11.2-3) ....
+2024-04-19 12:15:44.157456 +0000 build-debian43: output: Selecting previously unselected package python3-distutils..
+2024-04-19 12:15:44.158135 +0000 build-debian43: output: Preparing to unpack .../32-python3-distutils_3.11.2-3_all.deb ....
+2024-04-19 12:15:44.166623 +0000 build-debian43: output: Unpacking python3-distutils (3.11.2-3) ....
+2024-04-19 12:15:44.264045 +0000 build-debian43: output: Selecting previously unselected package dh-python..
+2024-04-19 12:15:44.266600 +0000 build-debian43: output: Preparing to unpack .../33-dh-python_5.20230130+deb12u1_all.deb ....
+2024-04-19 12:15:44.281484 +0000 build-debian43: output: Unpacking dh-python (5.20230130+deb12u1) ....
+2024-04-19 12:15:44.422009 +0000 build-debian43: output: Selecting previously unselected package libglib2.0-0:amd64..
+2024-04-19 12:15:44.422383 +0000 build-debian43: output: Preparing to unpack .../34-libglib2.0-0_2.74.6-2_amd64.deb ....
+2024-04-19 12:15:44.432302 +0000 build-debian43: output: Unpacking libglib2.0-0:amd64 (2.74.6-2) ....
+2024-04-19 12:15:44.590933 +0000 build-debian43: output: Selecting previously unselected package libgirepository-1.0-1:amd64..
+2024-04-19 12:15:44.591847 +0000 build-debian43: output: Preparing to unpack .../35-libgirepository-1.0-1_1.74.0-3_amd64.deb ....
+2024-04-19 12:15:44.602853 +0000 build-debian43: output: Unpacking libgirepository-1.0-1:amd64 (1.74.0-3) ....
+2024-04-19 12:15:44.686018 +0000 build-debian43: output: Selecting previously unselected package gir1.2-glib-2.0:amd64..
+2024-04-19 12:15:44.687643 +0000 build-debian43: output: Preparing to unpack .../36-gir1.2-glib-2.0_1.74.0-3_amd64.deb ....
+2024-04-19 12:15:44.694397 +0000 build-debian43: output: Unpacking gir1.2-glib-2.0:amd64 (1.74.0-3) ....
+2024-04-19 12:15:44.797142 +0000 build-debian43: output: Selecting previously unselected package liblua5.3-0:amd64..
+2024-04-19 12:15:44.807020 +0000 build-debian43: output: Preparing to unpack .../37-liblua5.3-0_5.3.6-2_amd64.deb ....
+2024-04-19 12:15:44.810637 +0000 build-debian43: output: Unpacking liblua5.3-0:amd64 (5.3.6-2) ....
+2024-04-19 12:15:44.897066 +0000 build-debian43: output: Selecting previously unselected package libpam0g-dev:amd64..
+2024-04-19 12:15:44.898862 +0000 build-debian43: output: Preparing to unpack .../38-libpam0g-dev_1.5.2-6+deb12u1_amd64.deb ....
+2024-04-19 12:15:44.909452 +0000 build-debian43: output: Unpacking libpam0g-dev:amd64 (1.5.2-6+deb12u1) ....
+2024-04-19 12:15:45.047953 +0000 build-debian43: output: Selecting previously unselected package libpkgconf3:amd64..
+2024-04-19 12:15:45.049041 +0000 build-debian43: output: Preparing to unpack .../39-libpkgconf3_1.8.1-1_amd64.deb ....
+2024-04-19 12:15:45.061738 +0000 build-debian43: output: Unpacking libpkgconf3:amd64 (1.8.1-1) ....
+2024-04-19 12:15:45.129075 +0000 build-debian43: output: Selecting previously unselected package libxentoolcore1:amd64..
+2024-04-19 12:15:45.129766 +0000 build-debian43: output: Preparing to unpack .../40-libxentoolcore1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.138045 +0000 build-debian43: output: Unpacking libxentoolcore1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.216211 +0000 build-debian43: output: Selecting previously unselected package libxentoollog1:amd64..
+2024-04-19 12:15:45.216988 +0000 build-debian43: output: Preparing to unpack .../41-libxentoollog1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.225250 +0000 build-debian43: output: Unpacking libxentoollog1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.284327 +0000 build-debian43: output: Selecting previously unselected package libxencall1:amd64..
+2024-04-19 12:15:45.285399 +0000 build-debian43: output: Preparing to unpack .../42-libxencall1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.293571 +0000 build-debian43: output: Unpacking libxencall1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.367889 +0000 build-debian43: output: Selecting previously unselected package libxendevicemodel1:amd64..
+2024-04-19 12:15:45.368856 +0000 build-debian43: output: Preparing to unpack .../43-libxendevicemodel1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.377516 +0000 build-debian43: output: Unpacking libxendevicemodel1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.455217 +0000 build-debian43: output: Selecting previously unselected package libxenevtchn1:amd64..
+2024-04-19 12:15:45.456018 +0000 build-debian43: output: Preparing to unpack .../44-libxenevtchn1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.463947 +0000 build-debian43: output: Unpacking libxenevtchn1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.531760 +0000 build-debian43: output: Selecting previously unselected package libxenforeignmemory1:amd64..
+2024-04-19 12:15:45.532761 +0000 build-debian43: output: Preparing to unpack .../45-libxenforeignmemory1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.540514 +0000 build-debian43: output: Unpacking libxenforeignmemory1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.611217 +0000 build-debian43: output: Selecting previously unselected package libxengnttab1:amd64..
+2024-04-19 12:15:45.612262 +0000 build-debian43: output: Preparing to unpack .../46-libxengnttab1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.625186 +0000 build-debian43: output: Unpacking libxengnttab1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.695968 +0000 build-debian43: output: Selecting previously unselected package libxenhypfs1:amd64..
+2024-04-19 12:15:45.696853 +0000 build-debian43: output: Preparing to unpack .../47-libxenhypfs1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.705703 +0000 build-debian43: output: Unpacking libxenhypfs1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.794762 +0000 build-debian43: output: Selecting previously unselected package libxenstore4:amd64..
+2024-04-19 12:15:45.795238 +0000 build-debian43: output: Preparing to unpack .../48-libxenstore4_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.805111 +0000 build-debian43: output: Unpacking libxenstore4:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:45.879750 +0000 build-debian43: output: Selecting previously unselected package libyajl2:amd64..
+2024-04-19 12:15:45.881712 +0000 build-debian43: output: Preparing to unpack .../49-libyajl2_2.1.0-3+deb12u2_amd64.deb ....
+2024-04-19 12:15:45.891043 +0000 build-debian43: output: Unpacking libyajl2:amd64 (2.1.0-3+deb12u2) ....
+2024-04-19 12:15:45.961831 +0000 build-debian43: output: Selecting previously unselected package libxenmisc4.17:amd64..
+2024-04-19 12:15:45.962803 +0000 build-debian43: output: Preparing to unpack .../50-libxenmisc4.17_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb ....
+2024-04-19 12:15:45.971536 +0000 build-debian43: output: Unpacking libxenmisc4.17:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:46.092402 +0000 build-debian43: output: Selecting previously unselected package libyaml-0-2:amd64..
+2024-04-19 12:15:46.094430 +0000 build-debian43: output: Preparing to unpack .../51-libyaml-0-2_0.2.5-1_amd64.deb ....
+2024-04-19 12:15:46.102756 +0000 build-debian43: output: Unpacking libyaml-0-2:amd64 (0.2.5-1) ....
+2024-04-19 12:15:46.159258 +0000 build-debian43: output: Selecting previously unselected package lsb-release..
+2024-04-19 12:15:46.160244 +0000 build-debian43: output: Preparing to unpack .../52-lsb-release_12.0-1_all.deb ....
+2024-04-19 12:15:46.168081 +0000 build-debian43: output: Unpacking lsb-release (12.0-1) ....
+2024-04-19 12:15:46.219698 +0000 build-debian43: output: Selecting previously unselected package pandoc-data..
+2024-04-19 12:15:46.220726 +0000 build-debian43: output: Preparing to unpack .../53-pandoc-data_2.17.1.1-2~deb12u1_all.deb ....
+2024-04-19 12:15:46.228504 +0000 build-debian43: output: Unpacking pandoc-data (2.17.1.1-2~deb12u1) ....
+2024-04-19 12:15:46.373610 +0000 build-debian43: output: Selecting previously unselected package pandoc..
+2024-04-19 12:15:46.374711 +0000 build-debian43: output: Preparing to unpack .../54-pandoc_2.17.1.1-2~deb12u1_amd64.deb ....
+2024-04-19 12:15:46.385774 +0000 build-debian43: output: Unpacking pandoc (2.17.1.1-2~deb12u1) ....
+2024-04-19 12:15:48.407395 +0000 build-debian43: output: Selecting previously unselected package pkgconf-bin..
+2024-04-19 12:15:48.410123 +0000 build-debian43: output: Preparing to unpack .../55-pkgconf-bin_1.8.1-1_amd64.deb ....
+2024-04-19 12:15:48.418998 +0000 build-debian43: output: Unpacking pkgconf-bin (1.8.1-1) ....
+2024-04-19 12:15:48.621071 +0000 build-debian43: output: Selecting previously unselected package pkgconf:amd64..
+2024-04-19 12:15:48.625781 +0000 build-debian43: output: Preparing to unpack .../56-pkgconf_1.8.1-1_amd64.deb ....
+2024-04-19 12:15:48.636277 +0000 build-debian43: output: Unpacking pkgconf:amd64 (1.8.1-1) ....
+2024-04-19 12:15:48.755387 +0000 build-debian43: output: Selecting previously unselected package pkg-config:amd64..
+2024-04-19 12:15:48.756331 +0000 build-debian43: output: Preparing to unpack .../57-pkg-config_1.8.1-1_amd64.deb ....
+2024-04-19 12:15:48.767199 +0000 build-debian43: output: Unpacking pkg-config:amd64 (1.8.1-1) ....
+2024-04-19 12:15:48.890988 +0000 build-debian43: output: Selecting previously unselected package python3-gi..
+2024-04-19 12:15:48.891033 +0000 build-debian43: output: Preparing to unpack .../58-python3-gi_3.42.2-3+b1_amd64.deb ....
+2024-04-19 12:15:48.900602 +0000 build-debian43: output: Unpacking python3-gi (3.42.2-3+b1) ....
+2024-04-19 12:15:49.090343 +0000 build-debian43: output: Selecting previously unselected package python3-gbulb..
+2024-04-19 12:15:49.091941 +0000 build-debian43: output: Preparing to unpack .../59-python3-gbulb_0.6.3-0.1_all.deb ....
+2024-04-19 12:15:49.103535 +0000 build-debian43: output: Unpacking python3-gbulb (0.6.3-0.1) ....
+2024-04-19 12:15:49.210693 +0000 build-debian43: output: Selecting previously unselected package python3-pkg-resources..
+2024-04-19 12:15:49.212912 +0000 build-debian43: output: Preparing to unpack .../60-python3-pkg-resources_66.1.1-1_all.deb ....
+2024-04-19 12:15:49.222727 +0000 build-debian43: output: Unpacking python3-pkg-resources (66.1.1-1) ....
+2024-04-19 12:15:49.370242 +0000 build-debian43: output: Selecting previously unselected package python3-setuptools..
+2024-04-19 12:15:49.371978 +0000 build-debian43: output: Preparing to unpack .../61-python3-setuptools_66.1.1-1_all.deb ....
+2024-04-19 12:15:49.381070 +0000 build-debian43: output: Unpacking python3-setuptools (66.1.1-1) ....
+2024-04-19 12:15:49.680566 +0000 build-debian43: output: Selecting previously unselected package libvchan-xen1..
+2024-04-19 12:15:49.682538 +0000 build-debian43: output: Preparing to unpack .../62-libvchan-xen1_4.2.3-1+deb12u1_amd64.deb ....
+2024-04-19 12:15:49.693459 +0000 build-debian43: output: Unpacking libvchan-xen1 (4.2.3-1+deb12u1) ....
+2024-04-19 12:15:49.776703 +0000 build-debian43: output: Selecting previously unselected package libvchan-xen-dev..
+2024-04-19 12:15:49.777859 +0000 build-debian43: output: Preparing to unpack .../63-libvchan-xen-dev_4.2.3-1+deb12u1_amd64.deb ....
+2024-04-19 12:15:49.797089 +0000 build-debian43: output: Unpacking libvchan-xen-dev (4.2.3-1+deb12u1) ....
+2024-04-19 12:15:49.888593 +0000 build-debian43: output: Setting up media-types (10.0.0) ....
+2024-04-19 12:15:49.935432 +0000 build-debian43: output: Setting up libpipeline1:amd64 (1.5.7-1) ....
+2024-04-19 12:15:49.981524 +0000 build-debian43: output: Setting up libxentoollog1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:50.010484 +0000 build-debian43: output: Setting up libxentoolcore1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:50.047350 +0000 build-debian43: output: Setting up libicu72:amd64 (72.1-3) ....
+2024-04-19 12:15:50.090262 +0000 build-debian43: output: Setting up bsdextrautils (2.38.1-5+b1) ....
+2024-04-19 12:15:50.146090 +0000 build-debian43: output: Setting up libxencall1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:50.176987 +0000 build-debian43: output: Setting up libpam0g-dev:amd64 (1.5.2-6+deb12u1) ....
+2024-04-19 12:15:50.208854 +0000 build-debian43: output: Setting up libmagic-mgc (1:5.44-3) ....
+2024-04-19 12:15:50.239137 +0000 build-debian43: output: Setting up libarchive-zip-perl (1.68-1) ....
+2024-04-19 12:15:50.270116 +0000 build-debian43: output: Setting up libyaml-0-2:amd64 (0.2.5-1) ....
+2024-04-19 12:15:50.300842 +0000 build-debian43: output: Setting up libglib2.0-0:amd64 (2.74.6-2) ....
+2024-04-19 12:15:50.377156 +0000 build-debian43: output: No schema files found: doing nothing..
+2024-04-19 12:15:50.411074 +0000 build-debian43: output: Setting up libdebhelper-perl (13.11.4) ....
+2024-04-19 12:15:50.477585 +0000 build-debian43: output: Setting up libyajl2:amd64 (2.1.0-3+deb12u2) ....
+2024-04-19 12:15:50.508611 +0000 build-debian43: output: Setting up libmagic1:amd64 (1:5.44-3) ....
+2024-04-19 12:15:50.655991 +0000 build-debian43: output: Setting up gettext-base (0.21-12) ....
+2024-04-19 12:15:50.690146 +0000 build-debian43: output: Setting up m4 (1.4.19-3) ....
+2024-04-19 12:15:50.723109 +0000 build-debian43: output: Setting up file (1:5.44-3) ....
+2024-04-19 12:15:50.755327 +0000 build-debian43: output: Setting up libxenforeignmemory1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:50.785696 +0000 build-debian43: output: Setting up autotools-dev (20220109.1) ....
+2024-04-19 12:15:50.834516 +0000 build-debian43: output: Setting up libpkgconf3:amd64 (1.8.1-1) ....
+2024-04-19 12:15:50.864965 +0000 build-debian43: output: Setting up autopoint (0.21-12) ....
+2024-04-19 12:15:50.899065 +0000 build-debian43: output: Setting up pkgconf-bin (1.8.1-1) ....
+2024-04-19 12:15:50.928690 +0000 build-debian43: output: Setting up libxenstore4:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:50.959852 +0000 build-debian43: output: Setting up autoconf (2.71-3) ....
+2024-04-19 12:15:51.013422 +0000 build-debian43: output: Setting up libxengnttab1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:51.043150 +0000 build-debian43: output: Setting up sensible-utils (0.0.17+nmu1) ....
+2024-04-19 12:15:51.078360 +0000 build-debian43: output: Setting up libuchardet0:amd64 (0.0.7-1) ....
+2024-04-19 12:15:51.117402 +0000 build-debian43: output: Setting up liblua5.3-0:amd64 (5.3.6-2) ....
+2024-04-19 12:15:51.148520 +0000 build-debian43: output: Setting up libxenevtchn1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:51.187557 +0000 build-debian43: output: Setting up libsub-override-perl (0.09-4) ....
+2024-04-19 12:15:51.226656 +0000 build-debian43: output: Setting up libgirepository-1.0-1:amd64 (1.74.0-3) ....
+2024-04-19 12:15:51.255627 +0000 build-debian43: output: Setting up pandoc-data (2.17.1.1-2~deb12u1) ....
+2024-04-19 12:15:51.294463 +0000 build-debian43: output: Setting up lsb-release (12.0-1) ....
+2024-04-19 12:15:51.328788 +0000 build-debian43: output: Setting up libelf1:amd64 (0.188-2.1) ....
+2024-04-19 12:15:51.360483 +0000 build-debian43: output: Setting up readline-common (8.2-1.3) ....
+2024-04-19 12:15:51.407001 +0000 build-debian43: output: Setting up libxendevicemodel1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:51.444551 +0000 build-debian43: output: Setting up libxml2:amd64 (2.9.14+dfsg-1.3~deb12u1) ....
+2024-04-19 12:15:51.477848 +0000 build-debian43: output: Setting up automake (1:1.16.5-1.3) ....
+2024-04-19 12:15:51.498714 +0000 build-debian43: output: update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode.
+2024-04-19 12:15:51.522339 +0000 build-debian43: output: Setting up libfile-stripnondeterminism-perl (1.13.1-1) ....
+2024-04-19 12:15:51.552994 +0000 build-debian43: output: Setting up gettext (0.21-12) ....
+2024-04-19 12:15:51.606289 +0000 build-debian43: output: Setting up libxenhypfs1:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:51.656719 +0000 build-debian43: output: Setting up libtool (2.4.7-5) ....
+2024-04-19 12:15:51.687831 +0000 build-debian43: output: Setting up libreadline8:amd64 (8.2-1.3) ....
+2024-04-19 12:15:51.723269 +0000 build-debian43: output: Setting up pkgconf:amd64 (1.8.1-1) ....
+2024-04-19 12:15:51.761331 +0000 build-debian43: output: Setting up intltool-debian (0.35.0+20060710.6) ....
+2024-04-19 12:15:51.806832 +0000 build-debian43: output: Setting up dh-autoreconf (20) ....
+2024-04-19 12:15:51.842655 +0000 build-debian43: output: Setting up pandoc (2.17.1.1-2~deb12u1) ....
+2024-04-19 12:15:51.875687 +0000 build-debian43: output: Setting up pkg-config:amd64 (1.8.1-1) ....
+2024-04-19 12:15:51.922192 +0000 build-debian43: output: Setting up gir1.2-glib-2.0:amd64 (1.74.0-3) ....
+2024-04-19 12:15:51.961930 +0000 build-debian43: output: Setting up dh-strip-nondeterminism (1.13.1-1) ....
+2024-04-19 12:15:52.009370 +0000 build-debian43: output: Setting up dwz (0.15-1) ....
+2024-04-19 12:15:52.039134 +0000 build-debian43: output: Setting up groff-base (1.22.4-10) ....
+2024-04-19 12:15:52.112514 +0000 build-debian43: output: Setting up libxenmisc4.17:amd64 (4.17.3+10-g091466ba55-1~deb12u1) ....
+2024-04-19 12:15:52.144996 +0000 build-debian43: output: Setting up libvchan-xen1 (4.2.3-1+deb12u1) ....
+2024-04-19 12:15:52.173154 +0000 build-debian43: output: Setting up po-debconf (1.0.21+nmu1) ....
+2024-04-19 12:15:52.214662 +0000 build-debian43: output: Setting up libpython3.11-stdlib:amd64 (3.11.2-6) ....
+2024-04-19 12:15:52.253631 +0000 build-debian43: output: Setting up man-db (2.11.2-2) ....
+2024-04-19 12:15:52.378860 +0000 build-debian43: output: Not building database; man-db/auto-update is not 'true'..
+2024-04-19 12:15:52.506287 +0000 build-debian43: output: Setting up libvchan-xen-dev (4.2.3-1+deb12u1) ....
+2024-04-19 12:15:52.535696 +0000 build-debian43: output: Setting up libpython3-stdlib:amd64 (3.11.2-1+b1) ....
+2024-04-19 12:15:52.579190 +0000 build-debian43: output: Setting up python3.11 (3.11.2-6) ....
+2024-04-19 12:15:53.162010 +0000 build-debian43: output: Setting up debhelper (13.11.4) ....
+2024-04-19 12:15:53.192900 +0000 build-debian43: output: Setting up python3 (3.11.2-1+b1) ....
+2024-04-19 12:15:53.499452 +0000 build-debian43: output: Setting up python3-gi (3.42.2-3+b1) ....
+2024-04-19 12:15:53.672981 +0000 build-debian43: output: Setting up python3-gbulb (0.6.3-0.1) ....
+2024-04-19 12:15:53.829727 +0000 build-debian43: output: Setting up python3-lib2to3 (3.11.2-3) ....
+2024-04-19 12:15:53.943582 +0000 build-debian43: output: Setting up python3-pkg-resources (66.1.1-1) ....
+2024-04-19 12:15:54.154578 +0000 build-debian43: output: Setting up python3-distutils (3.11.2-3) ....
+2024-04-19 12:15:54.314856 +0000 build-debian43: output: Setting up dh-python (5.20230130+deb12u1) ....
+2024-04-19 12:15:54.471942 +0000 build-debian43: output: Setting up python3-setuptools (66.1.1-1) ....
+2024-04-19 12:15:54.901683 +0000 build-debian43: output: Processing triggers for libc-bin (2.36-9+deb12u4) ....
+2024-04-19 12:15:55.126209 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:15:55.357354 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 12:15:55.358664 +0000 build-debian43: output: Reading state information...
+2024-04-19 12:15:55.448610 +0000 build-debian43: output: Reading extended state information...
+2024-04-19 12:15:55.459992 +0000 build-debian43: output: Initializing package states...
+2024-04-19 12:15:55.583725 +0000 build-debian43: output: Writing extended state information...
+2024-04-19 12:15:55.669010 +0000 build-debian43: output: Building tag database...
+2024-04-19 12:15:55.703368 +0000 build-debian43: output:  -> Finished parsing the build-deps
+2024-04-19 12:15:55.752933 +0000 build-debian43: output: Reading package lists...
+2024-04-19 12:15:55.914397 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 12:15:55.914470 +0000 build-debian43: output: Reading state information...
+2024-04-19 12:15:56.033403 +0000 build-debian43: output: The following additional packages will be installed:
+2024-04-19 12:15:56.033765 +0000 build-debian43: output:   libfakeroot
+2024-04-19 12:15:56.051300 +0000 build-debian43: output: The following NEW packages will be installed:
+2024-04-19 12:15:56.052083 +0000 build-debian43: output:   fakeroot libfakeroot
+2024-04-19 12:15:57.470728 +0000 build-debian43: output: 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 12:15:57.470848 +0000 build-debian43: output: Need to get 95.2 kB of archives.
+2024-04-19 12:15:57.470877 +0000 build-debian43: output: After this operation, 360 kB of additional disk space will be used.
+2024-04-19 12:15:57.470901 +0000 build-debian43: output: Get:1 https://deb.debian.org/debian bookworm/main amd64 libfakeroot amd64 1.31-1.2 [28.3 kB]
+2024-04-19 12:15:58.259186 +0000 build-debian43: output: Get:2 https://deb.debian.org/debian bookworm/main amd64 fakeroot amd64 1.31-1.2 [66.9 kB]
+2024-04-19 12:15:58.792787 +0000 build-debian43: output: debconf: delaying package configuration, since apt-utils is not installed
+2024-04-19 12:15:58.808906 +0000 build-debian43: output: Fetched 95.2 kB in 3s (36.0 kB/s)
+2024-04-19 12:15:58.885142 +0000 build-debian43: output: Selecting previously unselected package libfakeroot:amd64..
+2024-04-19 12:15:58.892259 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 16650 files and directories currently installed.).
+2024-04-19 12:15:58.892336 +0000 build-debian43: output: Preparing to unpack .../libfakeroot_1.31-1.2_amd64.deb ....
+2024-04-19 12:15:58.916547 +0000 build-debian43: output: Unpacking libfakeroot:amd64 (1.31-1.2) ....
+2024-04-19 12:15:59.064891 +0000 build-debian43: output: Selecting previously unselected package fakeroot..
+2024-04-19 12:15:59.067615 +0000 build-debian43: output: Preparing to unpack .../fakeroot_1.31-1.2_amd64.deb ....
+2024-04-19 12:15:59.076455 +0000 build-debian43: output: Unpacking fakeroot (1.31-1.2) ....
+2024-04-19 12:15:59.206457 +0000 build-debian43: output: Setting up libfakeroot:amd64 (1.31-1.2) ....
+2024-04-19 12:15:59.243871 +0000 build-debian43: output: Setting up fakeroot (1.31-1.2) ....
+2024-04-19 12:15:59.269262 +0000 build-debian43: output: update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode.
+2024-04-19 12:15:59.301206 +0000 build-debian43: output: Processing triggers for man-db (2.11.2-2) ....
+2024-04-19 12:15:59.317018 +0000 build-debian43: output: Not building database; man-db/auto-update is not 'true'..
+2024-04-19 12:15:59.350161 +0000 build-debian43: output: Processing triggers for libc-bin (2.36-9+deb12u4) ....
+2024-04-19 12:15:59.533858 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-04-19 12:15:59.541400 +0000 build-debian43: output: I: new cache content 'gir1.2-glib-2.0_1.74.0-3_amd64.deb' added
+2024-04-19 12:15:59.543784 +0000 build-debian43: output: I: new cache content 'intltool-debian_0.35.0+20060710.6_all.deb' added
+2024-04-19 12:15:59.546371 +0000 build-debian43: output: I: new cache content 'libmagic1_1%3a5.44-3_amd64.deb' added
+2024-04-19 12:15:59.548758 +0000 build-debian43: output: I: new cache content 'libpython3-stdlib_3.11.2-1+b1_amd64.deb' added
+2024-04-19 12:15:59.551294 +0000 build-debian43: output: I: new cache content 'autopoint_0.21-12_all.deb' added
+2024-04-19 12:15:59.553713 +0000 build-debian43: output: I: new cache content 'gettext-base_0.21-12_amd64.deb' added
+2024-04-19 12:15:59.556394 +0000 build-debian43: output: I: new cache content 'po-debconf_1.0.21+nmu1_all.deb' added
+2024-04-19 12:15:59.558650 +0000 build-debian43: output: I: new cache content 'libfile-stripnondeterminism-perl_1.13.1-1_all.deb' added
+2024-04-19 12:15:59.561201 +0000 build-debian43: output: I: new cache content 'libdebhelper-perl_13.11.4_all.deb' added
+2024-04-19 12:15:59.563706 +0000 build-debian43: output: I: new cache content 'libicu72_72.1-3_amd64.deb' added
+2024-04-19 12:15:59.566535 +0000 build-debian43: output: I: new cache content 'libglib2.0-0_2.74.6-2_amd64.deb' added
+2024-04-19 12:15:59.569281 +0000 build-debian43: output: I: new cache content 'python3-setuptools_66.1.1-1_all.deb' added
+2024-04-19 12:15:59.571593 +0000 build-debian43: output: I: new cache content 'man-db_2.11.2-2_amd64.deb' added
+2024-04-19 12:15:59.574050 +0000 build-debian43: output: I: new cache content 'python3-gi_3.42.2-3+b1_amd64.deb' added
+2024-04-19 12:15:59.576572 +0000 build-debian43: output: I: new cache content 'libtool_2.4.7-5_all.deb' added
+2024-04-19 12:15:59.578991 +0000 build-debian43: output: I: new cache content 'libreadline8_8.2-1.3_amd64.deb' added
+2024-04-19 12:15:59.581426 +0000 build-debian43: output: I: new cache content 'python3.11-minimal_3.11.2-6_amd64.deb' added
+2024-04-19 12:15:59.583760 +0000 build-debian43: output: I: new cache content 'automake_1%3a1.16.5-1.3_all.deb' added
+2024-04-19 12:15:59.586205 +0000 build-debian43: output: I: new cache content 'bsdextrautils_2.38.1-5+b1_amd64.deb' added
+2024-04-19 12:15:59.588332 +0000 build-debian43: output: I: new cache content 'pandoc-data_2.17.1.1-2~deb12u1_all.deb' added
+2024-04-19 12:15:59.590614 +0000 build-debian43: output: I: new cache content 'libgirepository-1.0-1_1.74.0-3_amd64.deb' added
+2024-04-19 12:15:59.593122 +0000 build-debian43: output: I: new cache content 'libxentoolcore1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.595456 +0000 build-debian43: output: I: new cache content 'python3.11_3.11.2-6_amd64.deb' added
+2024-04-19 12:15:59.597603 +0000 build-debian43: output: I: new cache content 'libxenhypfs1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.600001 +0000 build-debian43: output: I: new cache content 'dh-python_5.20230130+deb12u1_all.deb' added
+2024-04-19 12:15:59.602425 +0000 build-debian43: output: I: new cache content 'libxendevicemodel1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.604641 +0000 build-debian43: output: I: new cache content 'libuchardet0_0.0.7-1_amd64.deb' added
+2024-04-19 12:15:59.607808 +0000 build-debian43: output: I: new cache content 'pandoc_2.17.1.1-2~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.610084 +0000 build-debian43: output: I: new cache content 'libxenevtchn1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.612622 +0000 build-debian43: output: I: new cache content 'readline-common_8.2-1.3_all.deb' added
+2024-04-19 12:15:59.615279 +0000 build-debian43: output: I: new cache content 'm4_1.4.19-3_amd64.deb' added
+2024-04-19 12:15:59.617759 +0000 build-debian43: output: I: new cache content 'libpam0g-dev_1.5.2-6+deb12u1_amd64.deb' added
+2024-04-19 12:15:59.620327 +0000 build-debian43: output: I: new cache content 'pkgconf-bin_1.8.1-1_amd64.deb' added
+2024-04-19 12:15:59.622889 +0000 build-debian43: output: I: new cache content 'libyajl2_2.1.0-3+deb12u2_amd64.deb' added
+2024-04-19 12:15:59.625298 +0000 build-debian43: output: I: new cache content 'python3-minimal_3.11.2-1+b1_amd64.deb' added
+2024-04-19 12:15:59.627518 +0000 build-debian43: output: I: new cache content 'dh-autoreconf_20_all.deb' added
+2024-04-19 12:15:59.630314 +0000 build-debian43: output: I: new cache content 'liblua5.3-0_5.3.6-2_amd64.deb' added
+2024-04-19 12:15:59.632434 +0000 build-debian43: output: I: new cache content 'libxml2_2.9.14+dfsg-1.3~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.634528 +0000 build-debian43: output: I: new cache content 'libxenmisc4.17_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.636665 +0000 build-debian43: output: I: new cache content 'libpython3.11-stdlib_3.11.2-6_amd64.deb' added
+2024-04-19 12:15:59.638844 +0000 build-debian43: output: I: new cache content 'sensible-utils_0.0.17+nmu1_all.deb' added
+2024-04-19 12:15:59.641158 +0000 build-debian43: output: I: new cache content 'libmagic-mgc_1%3a5.44-3_amd64.deb' added
+2024-04-19 12:15:59.644133 +0000 build-debian43: output: I: new cache content 'libfakeroot_1.31-1.2_amd64.deb' added
+2024-04-19 12:15:59.646473 +0000 build-debian43: output: I: new cache content 'pkgconf_1.8.1-1_amd64.deb' added
+2024-04-19 12:15:59.648718 +0000 build-debian43: output: I: new cache content 'libsub-override-perl_0.09-4_all.deb' added
+2024-04-19 12:15:59.650969 +0000 build-debian43: output: I: new cache content 'autotools-dev_20220109.1_all.deb' added
+2024-04-19 12:15:59.653466 +0000 build-debian43: output: I: new cache content 'python3-distutils_3.11.2-3_all.deb' added
+2024-04-19 12:15:59.655780 +0000 build-debian43: output: I: new cache content 'autoconf_2.71-3_all.deb' added
+2024-04-19 12:15:59.658038 +0000 build-debian43: output: I: new cache content 'debhelper_13.11.4_all.deb' added
+2024-04-19 12:15:59.660514 +0000 build-debian43: output: I: new cache content 'media-types_10.0.0_all.deb' added
+2024-04-19 12:15:59.663369 +0000 build-debian43: output: I: new cache content 'libxenforeignmemory1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.665500 +0000 build-debian43: output: I: new cache content 'fakeroot_1.31-1.2_amd64.deb' added
+2024-04-19 12:15:59.668241 +0000 build-debian43: output: I: new cache content 'pkg-config_1.8.1-1_amd64.deb' added
+2024-04-19 12:15:59.670388 +0000 build-debian43: output: I: new cache content 'libxentoollog1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.672902 +0000 build-debian43: output: I: new cache content 'libpkgconf3_1.8.1-1_amd64.deb' added
+2024-04-19 12:15:59.675926 +0000 build-debian43: output: I: new cache content 'libyaml-0-2_0.2.5-1_amd64.deb' added
+2024-04-19 12:15:59.678359 +0000 build-debian43: output: I: new cache content 'dh-strip-nondeterminism_1.13.1-1_all.deb' added
+2024-04-19 12:15:59.681326 +0000 build-debian43: output: I: new cache content 'libxenstore4_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.683754 +0000 build-debian43: output: I: new cache content 'groff-base_1.22.4-10_amd64.deb' added
+2024-04-19 12:15:59.685866 +0000 build-debian43: output: I: new cache content 'libpython3.11-minimal_3.11.2-6_amd64.deb' added
+2024-04-19 12:15:59.688976 +0000 build-debian43: output: I: new cache content 'gettext_0.21-12_amd64.deb' added
+2024-04-19 12:15:59.691517 +0000 build-debian43: output: I: new cache content 'python3_3.11.2-1+b1_amd64.deb' added
+2024-04-19 12:15:59.693824 +0000 build-debian43: output: I: new cache content 'python3-gbulb_0.6.3-0.1_all.deb' added
+2024-04-19 12:15:59.696390 +0000 build-debian43: output: I: new cache content 'python3-pkg-resources_66.1.1-1_all.deb' added
+2024-04-19 12:15:59.699015 +0000 build-debian43: output: I: new cache content 'lsb-release_12.0-1_all.deb' added
+2024-04-19 12:15:59.702253 +0000 build-debian43: output: I: new cache content 'libarchive-zip-perl_1.68-1_all.deb' added
+2024-04-19 12:15:59.704915 +0000 build-debian43: output: I: new cache content 'file_1%3a5.44-3_amd64.deb' added
+2024-04-19 12:15:59.707550 +0000 build-debian43: output: I: new cache content 'python3-lib2to3_3.11.2-3_all.deb' added
+2024-04-19 12:15:59.710217 +0000 build-debian43: output: I: new cache content 'libxengnttab1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.712704 +0000 build-debian43: output: I: new cache content 'libelf1_0.188-2.1_amd64.deb' added
+2024-04-19 12:15:59.714897 +0000 build-debian43: output: I: new cache content 'libexpat1_2.5.0-1_amd64.deb' added
+2024-04-19 12:15:59.717860 +0000 build-debian43: output: I: new cache content 'libpipeline1_1.5.7-1_amd64.deb' added
+2024-04-19 12:15:59.719993 +0000 build-debian43: output: I: new cache content 'libxencall1_4.17.3+10-g091466ba55-1~deb12u1_amd64.deb' added
+2024-04-19 12:15:59.722765 +0000 build-debian43: output: I: new cache content 'dwz_0.15-1_amd64.deb' added
+2024-04-19 12:15:59.733391 +0000 build-debian43: output: I: Building the package
+2024-04-19 12:15:59.740391 +0000 build-debian43: output: I: Running cd /build/qubes-core-qrexec-4.2.18/ && env PATH="/usr/sbin:/usr/bin:/sbin:/bin" HOME="/nonexistent" dpkg-buildpackage -us -uc -sa
+2024-04-19 12:15:59.821102 +0000 build-debian43: output: dpkg-buildpackage: info: source package qubes-core-qrexec
+2024-04-19 12:15:59.821148 +0000 build-debian43: output: dpkg-buildpackage: info: source version 4.2.18-1+deb12u1
+2024-04-19 12:15:59.821157 +0000 build-debian43: output: dpkg-buildpackage: info: source distribution bookworm
+2024-04-19 12:15:59.821166 +0000 build-debian43: output: dpkg-buildpackage: info: source changed by Builder <user@localhost>
+2024-04-19 12:15:59.838597 +0000 build-debian43: output: dpkg-buildpackage: info: host architecture amd64
+2024-04-19 12:15:59.838657 +0000 build-debian43: output:  dpkg-source --before-build .
+2024-04-19 12:15:59.948204 +0000 build-debian43: output:  fakeroot debian/rules clean
+2024-04-19 12:15:59.956517 +0000 build-debian43: output: dh clean --with systemd,python3
+2024-04-19 12:16:00.029970 +0000 build-debian43: output:    dh_auto_clean
+2024-04-19 12:16:00.093778 +0000 build-debian43: output: .make -j2 clean
+2024-04-19 12:16:00.095421 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:00.095452 +0000 build-debian43: output: make -C libqrexec clean
+2024-04-19 12:16:00.096326 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:00.099481 +0000 build-debian43: output: rm -f -- *.o *~ *.a *.so *.so.* *.o.dep *.gcda *.gcno
+2024-04-19 12:16:00.101798 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:00.101829 +0000 build-debian43: output: make -C daemon clean
+2024-04-19 12:16:00.103346 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18/daemon'
+2024-04-19 12:16:00.103867 +0000 build-debian43: output: rm -f -- *.o *~ qrexec-daemon qrexec-client *.o.dep *.gcda *.gcno
+2024-04-19 12:16:00.105148 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18/daemon'
+2024-04-19 12:16:00.105172 +0000 build-debian43: output: make -C agent clean
+2024-04-19 12:16:00.106794 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:00.114312 +0000 build-debian43: output: rm -f -- *.o *~ qrexec-agent qrexec-client-vm *.o.dep *.gcda *.gcno
+2024-04-19 12:16:00.116029 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:00.116058 +0000 build-debian43: output: rm -rf selinux/*.pp selinux/tmp/
+2024-04-19 12:16:00.117999 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:00.121881 +0000 build-debian43: output:    dh_clean
+2024-04-19 12:16:00.155341 +0000 build-debian43: output:  dpkg-source -b .
+2024-04-19 12:16:00.240683 +0000 build-debian43: output: dpkg-source: info: using source format '3.0 (quilt)'
+2024-04-19 12:16:00.240754 +0000 build-debian43: output: dpkg-source: info: building qubes-core-qrexec using existing ./qubes-core-qrexec_4.2.18.orig.tar.gz
+2024-04-19 12:16:00.271358 +0000 build-debian43: output: dpkg-source: info: building qubes-core-qrexec in qubes-core-qrexec_4.2.18-1+deb12u1.debian.tar.xz
+2024-04-19 12:16:00.299609 +0000 build-debian43: output: dpkg-source: info: building qubes-core-qrexec in qubes-core-qrexec_4.2.18-1+deb12u1.dsc
+2024-04-19 12:16:00.302115 +0000 build-debian43: output:  debian/rules build
+2024-04-19 12:16:00.303430 +0000 build-debian43: output: dh build --with systemd,python3
+2024-04-19 12:16:00.369475 +0000 build-debian43: output:    dh_update_autotools_config
+2024-04-19 12:16:00.402475 +0000 build-debian43: output:    dh_autoreconf
+2024-04-19 12:16:00.431335 +0000 build-debian43: output:    dh_auto_configure
+2024-04-19 12:16:00.460585 +0000 build-debian43: output:    debian/rules override_dh_auto_build
+2024-04-19 12:16:00.462715 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:00.462755 +0000 build-debian43: output: make all-base
+2024-04-19 12:16:00.780638 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:00.780683 +0000 build-debian43: output: make all -C libqrexec
+2024-04-19 12:16:00.781187 +0000 build-debian43: output: make[3]: Entering directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:00.783974 +0000 build-debian43: output: gcc unix-server.c -c -o unix-server.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF unix-server.o.dep
+2024-04-19 12:16:00.893204 +0000 build-debian43: output: gcc ioall.c -c -o ioall.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF ioall.o.dep
+2024-04-19 12:16:01.052753 +0000 build-debian43: output: gcc buffer.c -c -o buffer.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF buffer.o.dep
+2024-04-19 12:16:01.353220 +0000 build-debian43: output: gcc exec.c -c -o exec.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF exec.o.dep
+2024-04-19 12:16:01.490016 +0000 build-debian43: output: gcc txrx-vchan.c -c -o txrx-vchan.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF txrx-vchan.o.dep
+2024-04-19 12:16:01.536894 +0000 build-debian43: output: gcc write-stdin.c -c -o write-stdin.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF write-stdin.o.dep
+2024-04-19 12:16:01.598264 +0000 build-debian43: output: gcc replace.c -c -o replace.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF replace.o.dep
+2024-04-19 12:16:01.639253 +0000 build-debian43: output: gcc remote.c -c -o remote.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF remote.o.dep
+2024-04-19 12:16:01.711422 +0000 build-debian43: output: gcc process_io.c -c -o process_io.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF process_io.o.dep
+2024-04-19 12:16:01.808133 +0000 build-debian43: output: gcc log.c -c -o log.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF log.o.dep
+2024-04-19 12:16:01.861832 +0000 build-debian43: output: gcc toml.c -c -o toml.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF toml.o.dep
+2024-04-19 12:16:01.981504 +0000 build-debian43: output: gcc -Wl,-z,relro -pie -Wl,-z,relro,-z,now -shared -Wl,-soname,libqrexec-utils.so.3 -o libqrexec-utils.so.3 unix-server.o ioall.o buffer.o exec.o txrx-vchan.o write-stdin.o replace.o remote.o process_io.o log.o toml.o -lvchan-xen
+2024-04-19 12:16:01.998132 +0000 build-debian43: output: ln -sf libqrexec-utils.so.3 libqrexec-utils.so
+2024-04-19 12:16:02.000041 +0000 build-debian43: output: make[3]: Leaving directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:02.000565 +0000 build-debian43: output: python3 setup.py build
+2024-04-19 12:16:02.147191 +0000 build-debian43: output: running build
+2024-04-19 12:16:02.147240 +0000 build-debian43: output: running build_py
+2024-04-19 12:16:02.147249 +0000 build-debian43: output: creating build
+2024-04-19 12:16:02.147256 +0000 build-debian43: output: creating build/lib
+2024-04-19 12:16:02.147262 +0000 build-debian43: output: creating build/lib/qrexec
+2024-04-19 12:16:02.147271 +0000 build-debian43: output: copying qrexec/utils.py -> build/lib/qrexec
+2024-04-19 12:16:02.151583 +0000 build-debian43: output: copying qrexec/__init__.py -> build/lib/qrexec
+2024-04-19 12:16:02.151630 +0000 build-debian43: output: copying qrexec/exc.py -> build/lib/qrexec
+2024-04-19 12:16:02.151637 +0000 build-debian43: output: copying qrexec/client.py -> build/lib/qrexec
+2024-04-19 12:16:02.151644 +0000 build-debian43: output: copying qrexec/server.py -> build/lib/qrexec
+2024-04-19 12:16:02.151650 +0000 build-debian43: output: creating build/lib/qrexec/tests
+2024-04-19 12:16:02.151658 +0000 build-debian43: output: copying qrexec/tests/qrexec_policy_daemon.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151683 +0000 build-debian43: output: copying qrexec/tests/policy_parser.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151691 +0000 build-debian43: output: copying qrexec/tests/policy_graph.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151698 +0000 build-debian43: output: copying qrexec/tests/gtkhelpers.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151705 +0000 build-debian43: output: copying qrexec/tests/__init__.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151713 +0000 build-debian43: output: copying qrexec/tests/qrexec_legacy_convert.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151721 +0000 build-debian43: output: copying qrexec/tests/server.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151731 +0000 build-debian43: output: copying qrexec/tests/rpcconfirmation.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151738 +0000 build-debian43: output: copying qrexec/tests/cli.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151746 +0000 build-debian43: output: copying qrexec/tests/policy_admin.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151753 +0000 build-debian43: output: copying qrexec/tests/policy_cache.py -> build/lib/qrexec/tests
+2024-04-19 12:16:02.151759 +0000 build-debian43: output: creating build/lib/qrexec/tools
+2024-04-19 12:16:02.151767 +0000 build-debian43: output: copying qrexec/tools/qrexec_policy_daemon.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151774 +0000 build-debian43: output: copying qrexec/tools/qrexec_policy_restore.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151782 +0000 build-debian43: output: copying qrexec/tools/qubes_policy_lint.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151790 +0000 build-debian43: output: copying qrexec/tools/qubes_policy_admin.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151821 +0000 build-debian43: output: copying qrexec/tools/qrexec_policy_agent.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151829 +0000 build-debian43: output: copying qrexec/tools/__init__.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151837 +0000 build-debian43: output: copying qrexec/tools/qubes_policy_editor.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151844 +0000 build-debian43: output: copying qrexec/tools/qrexec_policy_graph.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151852 +0000 build-debian43: output: copying qrexec/tools/qrexec_legacy_convert.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151859 +0000 build-debian43: output: copying qrexec/tools/qubes_policy.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151867 +0000 build-debian43: output: copying qrexec/tools/qrexec_policy_exec.py -> build/lib/qrexec/tools
+2024-04-19 12:16:02.151873 +0000 build-debian43: output: creating build/lib/qrexec/policy
+2024-04-19 12:16:02.151881 +0000 build-debian43: output: copying qrexec/policy/parser.py -> build/lib/qrexec/policy
+2024-04-19 12:16:02.151888 +0000 build-debian43: output: copying qrexec/policy/utils.py -> build/lib/qrexec/policy
+2024-04-19 12:16:02.151896 +0000 build-debian43: output: copying qrexec/policy/admin_client.py -> build/lib/qrexec/policy
+2024-04-19 12:16:02.151903 +0000 build-debian43: output: copying qrexec/policy/__init__.py -> build/lib/qrexec/policy
+2024-04-19 12:16:02.151910 +0000 build-debian43: output: copying qrexec/policy/parser_compat.py -> build/lib/qrexec/policy
+2024-04-19 12:16:02.151917 +0000 build-debian43: output: copying qrexec/policy/admin.py -> build/lib/qrexec/policy
+2024-04-19 12:16:02.151924 +0000 build-debian43: output: creating build/lib/qrexec/tests/socket
+2024-04-19 12:16:02.151931 +0000 build-debian43: output: copying qrexec/tests/socket/agent.py -> build/lib/qrexec/tests/socket
+2024-04-19 12:16:02.151939 +0000 build-debian43: output: copying qrexec/tests/socket/__init__.py -> build/lib/qrexec/tests/socket
+2024-04-19 12:16:02.151947 +0000 build-debian43: output: copying qrexec/tests/socket/daemon.py -> build/lib/qrexec/tests/socket
+2024-04-19 12:16:02.153333 +0000 build-debian43: output: copying qrexec/tests/socket/qrexec.py -> build/lib/qrexec/tests/socket
+2024-04-19 12:16:02.153386 +0000 build-debian43: output: copying qrexec/tests/socket/util.py -> build/lib/qrexec/tests/socket
+2024-04-19 12:16:02.153396 +0000 build-debian43: output: creating build/lib/qrexec/glade
+2024-04-19 12:16:02.153405 +0000 build-debian43: output: copying qrexec/glade/RPCConfirmationWindow.glade -> build/lib/qrexec/glade
+2024-04-19 12:16:02.183287 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:02.183334 +0000 build-debian43: output: make all-vm
+2024-04-19 12:16:02.183344 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:02.183357 +0000 build-debian43: output: make all -C agent
+2024-04-19 12:16:02.184047 +0000 build-debian43: output: make[3]: Entering directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:02.190141 +0000 build-debian43: output: cc qrexec-agent.c -c -o qrexec-agent.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -DHAVE_PAM -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -Werror=vla -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF qrexec-agent.o.dep
+2024-04-19 12:16:02.489754 +0000 build-debian43: output: cc qrexec-agent-data.c -c -o qrexec-agent-data.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -DHAVE_PAM -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -Werror=vla -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF qrexec-agent-data.o.dep
+2024-04-19 12:16:03.291186 +0000 build-debian43: output: cc -Wl,-z,relro -pie -Wl,-z,relro,-z,now -L../libqrexec -pie -g -o qrexec-agent qrexec-agent.o qrexec-agent-data.o -lqrexec-utils -lvchan-xen  -lpam
+2024-04-19 12:16:03.325441 +0000 build-debian43: output: cc qrexec-client-vm.c -c -o qrexec-client-vm.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -DHAVE_PAM -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -Werror=vla -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF qrexec-client-vm.o.dep
+2024-04-19 12:16:03.435451 +0000 build-debian43: output: cc -Wl,-z,relro -pie -Wl,-z,relro,-z,now -L../libqrexec -pie -g -o qrexec-client-vm qrexec-client-vm.o qrexec-agent-data.o -lqrexec-utils -lvchan-xen  -lpam
+2024-04-19 12:16:03.452227 +0000 build-debian43: output: cc qrexec-fork-server.c -c -o qrexec-fork-server.o -I. -I../libqrexec -g -O2 -Wall -Wextra -Werror -I/usr/include/vchan-xen  -fstack-protector -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fPIC -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_GNU_SOURCE -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -DHAVE_PAM -Wstrict-prototypes -Wold-style-definition -Wmissing-declarations -Werror=vla -g -O2 -ffile-prefix-map=/build/qubes-core-qrexec-4.2.18=. -fstack-protector-strong -Wformat -Werror=format-security -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-declarations -Werror=missing-prototypes -MD -MP -MF qrexec-fork-server.o.dep
+2024-04-19 12:16:03.593395 +0000 build-debian43: output: cc -Wl,-z,relro -pie -Wl,-z,relro,-z,now -L../libqrexec -pie -g -o qrexec-fork-server qrexec-fork-server.o qrexec-agent-data.o -lqrexec-utils -lvchan-xen  -lpam
+2024-04-19 12:16:03.621978 +0000 build-debian43: output: pandoc -s -t man qrexec-client-vm.rst > qrexec-client-vm.1
+2024-04-19 12:16:03.668300 +0000 build-debian43: output: gzip -f qrexec-client-vm.1
+2024-04-19 12:16:03.669429 +0000 build-debian43: output: make[3]: Leaving directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:03.669699 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:03.669977 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:03.672374 +0000 build-debian43: output:    dh_auto_test
+2024-04-19 12:16:03.704648 +0000 build-debian43: output:    create-stamp debian/debhelper-build-stamp
+2024-04-19 12:16:03.709614 +0000 build-debian43: output:  fakeroot debian/rules binary
+2024-04-19 12:16:03.717045 +0000 build-debian43: output: dh binary --with systemd,python3
+2024-04-19 12:16:03.782948 +0000 build-debian43: output:    dh_testroot
+2024-04-19 12:16:03.806992 +0000 build-debian43: output:    dh_prep
+2024-04-19 12:16:03.834919 +0000 build-debian43: output:    debian/rules override_dh_auto_install
+2024-04-19 12:16:03.838786 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:03.838829 +0000 build-debian43: output: make install-base
+2024-04-19 12:16:04.149610 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:04.149650 +0000 build-debian43: output: make all -C libqrexec
+2024-04-19 12:16:04.149661 +0000 build-debian43: output: make[3]: Entering directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:04.156238 +0000 build-debian43: output: make[3]: Nothing to be done for 'all'.
+2024-04-19 12:16:04.156283 +0000 build-debian43: output: make[3]: Leaving directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:04.156292 +0000 build-debian43: output: python3 setup.py build
+2024-04-19 12:16:04.354852 +0000 build-debian43: output: running build
+2024-04-19 12:16:04.354932 +0000 build-debian43: output: running build_py
+2024-04-19 12:16:04.396009 +0000 build-debian43: output: make install -C libqrexec
+2024-04-19 12:16:04.396923 +0000 build-debian43: output: make[3]: Entering directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:04.406007 +0000 build-debian43: output: install -d -m 0755 /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib
+2024-04-19 12:16:04.408521 +0000 build-debian43: output: install libqrexec-utils.so.3 /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib
+2024-04-19 12:16:04.411011 +0000 build-debian43: output: ln -sf libqrexec-utils.so.3 /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/libqrexec-utils.so
+2024-04-19 12:16:04.413333 +0000 build-debian43: output: install -d -m 0755 /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/include
+2024-04-19 12:16:04.414564 +0000 build-debian43: output: install -m 0644 libqrexec-utils.h /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/include
+2024-04-19 12:16:04.415642 +0000 build-debian43: output: install -m 0644 qrexec.h /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/include
+2024-04-19 12:16:04.416781 +0000 build-debian43: output: make[3]: Leaving directory '/build/qubes-core-qrexec-4.2.18/libqrexec'
+2024-04-19 12:16:04.418198 +0000 build-debian43: output: python3 setup.py install -O1 --install-layout=deb --skip-build --root /build/qubes-core-qrexec-4.2.18/debian/tmp
+2024-04-19 12:16:04.544681 +0000 build-debian43: output: running install
+2024-04-19 12:16:04.544735 +0000 build-debian43: output: /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+2024-04-19 12:16:04.544744 +0000 build-debian43: output:   warnings.warn(
+2024-04-19 12:16:04.551351 +0000 build-debian43: output: running install_lib
+2024-04-19 12:16:04.553255 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3
+2024-04-19 12:16:04.553286 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages
+2024-04-19 12:16:04.553295 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec
+2024-04-19 12:16:04.553305 +0000 build-debian43: output: copying build/lib/qrexec/utils.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec
+2024-04-19 12:16:04.553314 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.554028 +0000 build-debian43: output: copying build/lib/qrexec/tests/qrexec_policy_daemon.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.554061 +0000 build-debian43: output: copying build/lib/qrexec/tests/policy_parser.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.554636 +0000 build-debian43: output: copying build/lib/qrexec/tests/policy_graph.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.554680 +0000 build-debian43: output: copying build/lib/qrexec/tests/gtkhelpers.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.554693 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket
+2024-04-19 12:16:04.554724 +0000 build-debian43: output: copying build/lib/qrexec/tests/socket/agent.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket
+2024-04-19 12:16:04.554845 +0000 build-debian43: output: copying build/lib/qrexec/tests/socket/__init__.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket
+2024-04-19 12:16:04.555487 +0000 build-debian43: output: copying build/lib/qrexec/tests/socket/daemon.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket
+2024-04-19 12:16:04.555507 +0000 build-debian43: output: copying build/lib/qrexec/tests/socket/qrexec.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket
+2024-04-19 12:16:04.555942 +0000 build-debian43: output: copying build/lib/qrexec/tests/socket/util.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket
+2024-04-19 12:16:04.555961 +0000 build-debian43: output: copying build/lib/qrexec/tests/__init__.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.555972 +0000 build-debian43: output: copying build/lib/qrexec/tests/qrexec_legacy_convert.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.555995 +0000 build-debian43: output: copying build/lib/qrexec/tests/server.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.556463 +0000 build-debian43: output: copying build/lib/qrexec/tests/rpcconfirmation.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.556483 +0000 build-debian43: output: copying build/lib/qrexec/tests/cli.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.556494 +0000 build-debian43: output: copying build/lib/qrexec/tests/policy_admin.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.556504 +0000 build-debian43: output: copying build/lib/qrexec/tests/policy_cache.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests
+2024-04-19 12:16:04.557606 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.557631 +0000 build-debian43: output: copying build/lib/qrexec/tools/qrexec_policy_daemon.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.557643 +0000 build-debian43: output: copying build/lib/qrexec/tools/qrexec_policy_restore.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.557653 +0000 build-debian43: output: copying build/lib/qrexec/tools/qubes_policy_lint.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558366 +0000 build-debian43: output: copying build/lib/qrexec/tools/qubes_policy_admin.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558389 +0000 build-debian43: output: copying build/lib/qrexec/tools/qrexec_policy_agent.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558400 +0000 build-debian43: output: copying build/lib/qrexec/tools/__init__.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558410 +0000 build-debian43: output: copying build/lib/qrexec/tools/qubes_policy_editor.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558420 +0000 build-debian43: output: copying build/lib/qrexec/tools/qrexec_policy_graph.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558430 +0000 build-debian43: output: copying build/lib/qrexec/tools/qrexec_legacy_convert.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558440 +0000 build-debian43: output: copying build/lib/qrexec/tools/qubes_policy.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558450 +0000 build-debian43: output: copying build/lib/qrexec/tools/qrexec_policy_exec.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools
+2024-04-19 12:16:04.558459 +0000 build-debian43: output: copying build/lib/qrexec/__init__.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec
+2024-04-19 12:16:04.558468 +0000 build-debian43: output: copying build/lib/qrexec/exc.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec
+2024-04-19 12:16:04.558477 +0000 build-debian43: output: copying build/lib/qrexec/client.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec
+2024-04-19 12:16:04.558788 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/glade
+2024-04-19 12:16:04.558839 +0000 build-debian43: output: copying build/lib/qrexec/glade/RPCConfirmationWindow.glade -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/glade
+2024-04-19 12:16:04.558884 +0000 build-debian43: output: copying build/lib/qrexec/server.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec
+2024-04-19 12:16:04.558897 +0000 build-debian43: output: creating /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.558972 +0000 build-debian43: output: copying build/lib/qrexec/policy/parser.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.562161 +0000 build-debian43: output: copying build/lib/qrexec/policy/utils.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.562202 +0000 build-debian43: output: copying build/lib/qrexec/policy/admin_client.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.562214 +0000 build-debian43: output: copying build/lib/qrexec/policy/__init__.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.562224 +0000 build-debian43: output: copying build/lib/qrexec/policy/parser_compat.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.562234 +0000 build-debian43: output: copying build/lib/qrexec/policy/admin.py -> /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy
+2024-04-19 12:16:04.562243 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/utils.py to utils.cpython-311.pyc
+2024-04-19 12:16:04.562255 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/qrexec_policy_daemon.py to qrexec_policy_daemon.cpython-311.pyc
+2024-04-19 12:16:04.563558 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/policy_parser.py to policy_parser.cpython-311.pyc
+2024-04-19 12:16:04.571890 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/policy_graph.py to policy_graph.cpython-311.pyc
+2024-04-19 12:16:04.572827 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/gtkhelpers.py to gtkhelpers.cpython-311.pyc
+2024-04-19 12:16:04.574823 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket/agent.py to agent.cpython-311.pyc
+2024-04-19 12:16:04.578576 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket/__init__.py to __init__.cpython-311.pyc
+2024-04-19 12:16:04.579903 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket/daemon.py to daemon.cpython-311.pyc
+2024-04-19 12:16:04.582763 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket/qrexec.py to qrexec.cpython-311.pyc
+2024-04-19 12:16:04.584073 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/socket/util.py to util.cpython-311.pyc
+2024-04-19 12:16:04.584666 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/__init__.py to __init__.cpython-311.pyc
+2024-04-19 12:16:04.584692 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/qrexec_legacy_convert.py to qrexec_legacy_convert.cpython-311.pyc
+2024-04-19 12:16:04.585922 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/server.py to server.cpython-311.pyc
+2024-04-19 12:16:04.586709 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/rpcconfirmation.py to rpcconfirmation.cpython-311.pyc
+2024-04-19 12:16:04.588746 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/cli.py to cli.cpython-311.pyc
+2024-04-19 12:16:04.591552 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/policy_admin.py to policy_admin.cpython-311.pyc
+2024-04-19 12:16:04.591583 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tests/policy_cache.py to policy_cache.cpython-311.pyc
+2024-04-19 12:16:04.593164 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qrexec_policy_daemon.py to qrexec_policy_daemon.cpython-311.pyc
+2024-04-19 12:16:04.594383 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qrexec_policy_restore.py to qrexec_policy_restore.cpython-311.pyc
+2024-04-19 12:16:04.594411 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qubes_policy_lint.py to qubes_policy_lint.cpython-311.pyc
+2024-04-19 12:16:04.595753 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qubes_policy_admin.py to qubes_policy_admin.cpython-311.pyc
+2024-04-19 12:16:04.596961 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qrexec_policy_agent.py to qrexec_policy_agent.cpython-311.pyc
+2024-04-19 12:16:04.598882 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/__init__.py to __init__.cpython-311.pyc
+2024-04-19 12:16:04.600183 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qubes_policy_editor.py to qubes_policy_editor.cpython-311.pyc
+2024-04-19 12:16:04.600441 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qrexec_policy_graph.py to qrexec_policy_graph.cpython-311.pyc
+2024-04-19 12:16:04.601855 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qrexec_legacy_convert.py to qrexec_legacy_convert.cpython-311.pyc
+2024-04-19 12:16:04.603025 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qubes_policy.py to qubes_policy.cpython-311.pyc
+2024-04-19 12:16:04.604050 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/tools/qrexec_policy_exec.py to qrexec_policy_exec.cpython-311.pyc
+2024-04-19 12:16:04.605446 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/__init__.py to __init__.cpython-311.pyc
+2024-04-19 12:16:04.606628 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/exc.py to exc.cpython-311.pyc
+2024-04-19 12:16:04.606655 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/client.py to client.cpython-311.pyc
+2024-04-19 12:16:04.607915 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/server.py to server.cpython-311.pyc
+2024-04-19 12:16:04.607942 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy/parser.py to parser.cpython-311.pyc
+2024-04-19 12:16:04.614944 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy/utils.py to utils.cpython-311.pyc
+2024-04-19 12:16:04.615326 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy/admin_client.py to admin_client.cpython-311.pyc
+2024-04-19 12:16:04.617000 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy/__init__.py to __init__.cpython-311.pyc
+2024-04-19 12:16:04.617033 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy/parser_compat.py to parser_compat.cpython-311.pyc
+2024-04-19 12:16:04.619828 +0000 build-debian43: output: byte-compiling /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec/policy/admin.py to admin.cpython-311.pyc
+2024-04-19 12:16:04.621421 +0000 build-debian43: output: writing byte-compilation script '/tmp/tmpo4iso1sy.py'
+2024-04-19 12:16:04.621448 +0000 build-debian43: output: /usr/bin/python3 /tmp/tmpo4iso1sy.py
+2024-04-19 12:16:04.852888 +0000 build-debian43: output: removing /tmp/tmpo4iso1sy.py
+2024-04-19 12:16:04.852950 +0000 build-debian43: output: running install_egg_info
+2024-04-19 12:16:04.865195 +0000 build-debian43: output: running egg_info
+2024-04-19 12:16:04.865267 +0000 build-debian43: output: creating qrexec.egg-info
+2024-04-19 12:16:04.867482 +0000 build-debian43: output: writing qrexec.egg-info/PKG-INFO
+2024-04-19 12:16:04.868067 +0000 build-debian43: output: writing dependency_links to qrexec.egg-info/dependency_links.txt
+2024-04-19 12:16:04.868830 +0000 build-debian43: output: writing top-level names to qrexec.egg-info/top_level.txt
+2024-04-19 12:16:04.869571 +0000 build-debian43: output: writing manifest file 'qrexec.egg-info/SOURCES.txt'
+2024-04-19 12:16:04.874552 +0000 build-debian43: output: reading manifest file 'qrexec.egg-info/SOURCES.txt'
+2024-04-19 12:16:04.877547 +0000 build-debian43: output: writing manifest file 'qrexec.egg-info/SOURCES.txt'
+2024-04-19 12:16:04.878317 +0000 build-debian43: output: Copying qrexec.egg-info to /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/python3/dist-packages/qrexec-4.2.18.egg-info
+2024-04-19 12:16:04.878560 +0000 build-debian43: output: Skipping SOURCES.txt
+2024-04-19 12:16:04.879813 +0000 build-debian43: output: running install_scripts
+2024-04-19 12:16:04.936540 +0000 build-debian43: output: ln -sf qrexec-policy-exec /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/bin/qrexec-policy
+2024-04-19 12:16:04.938888 +0000 build-debian43: output: install -d /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/qubes -m 755
+2024-04-19 12:16:04.938928 +0000 build-debian43: output: install -t /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/qubes -m 755 lib/*
+2024-04-19 12:16:04.941709 +0000 build-debian43: output: install -d /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/qubes-rpc -m 755
+2024-04-19 12:16:04.941755 +0000 build-debian43: output: ln -sf /var/run/qubes/policy-agent.sock /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/qubes-rpc/policy.Ask
+2024-04-19 12:16:04.943155 +0000 build-debian43: output: ln -sf /var/run/qubes/policy-agent.sock /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/qubes-rpc/policy.Notify
+2024-04-19 12:16:04.943180 +0000 build-debian43: output: install -d /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/xdg/autostart -m 755
+2024-04-19 12:16:04.944614 +0000 build-debian43: output: install -m 644 policy-agent-extra/qrexec-policy-agent.desktop \
+2024-04-19 12:16:04.944636 +0000 build-debian43: output: ./build/qubes-core-qrexec-4.2.18/debian/tmp/etc/xdg/autostart/qrexec-policy-agent.desktop
+2024-04-19 12:16:04.945320 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:04.945338 +0000 build-debian43: output: make install-vm
+2024-04-19 12:16:04.946673 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:04.946694 +0000 build-debian43: output: make all -C agent
+2024-04-19 12:16:04.947362 +0000 build-debian43: output: make[3]: Entering directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:04.961525 +0000 build-debian43: output: make[3]: Nothing to be done for 'all'.
+2024-04-19 12:16:04.961571 +0000 build-debian43: output: make[3]: Leaving directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:04.962978 +0000 build-debian43: output: make install -C agent
+2024-04-19 12:16:04.963715 +0000 build-debian43: output: make[3]: Entering directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:04.983483 +0000 build-debian43: output: install -d /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/qubes-rpc /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/qubes \
+2024-04-19 12:16:04.983534 +0000 build-debian43: output: ./build/qubes-core-qrexec-4.2.18/debian/tmp/usr/bin /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/share/man/man1
+2024-04-19 12:16:04.984422 +0000 build-debian43: output: install qrexec-agent /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/qubes
+2024-04-19 12:16:04.985588 +0000 build-debian43: output: install qrexec-client-vm /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/bin
+2024-04-19 12:16:04.987579 +0000 build-debian43: output: install -d /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/share/man/man1
+2024-04-19 12:16:04.987612 +0000 build-debian43: output: install qrexec-client-vm.1.gz /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/share/man/man1
+2024-04-19 12:16:04.989287 +0000 build-debian43: output: ln -sf ../../bin/qrexec-client-vm /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/qubes/qrexec-client-vm
+2024-04-19 12:16:04.989318 +0000 build-debian43: output: ln -sf ../../bin/qrexec-client-vm /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/lib/qubes/qrexec_client_vm
+2024-04-19 12:16:04.990262 +0000 build-debian43: output: install qrexec-fork-server /build/qubes-core-qrexec-4.2.18/debian/tmp/usr/bin
+2024-04-19 12:16:04.991563 +0000 build-debian43: output: install -D -m 0644 qrexec.pam.debian /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/pam.d/qrexec
+2024-04-19 12:16:04.992266 +0000 build-debian43: output: make[3]: Leaving directory '/build/qubes-core-qrexec-4.2.18/agent'
+2024-04-19 12:16:04.992287 +0000 build-debian43: output: install -d /build/qubes-core-qrexec-4.2.18/debian/tmp//lib/systemd/system -m 755
+2024-04-19 12:16:04.993138 +0000 build-debian43: output: install -t /build/qubes-core-qrexec-4.2.18/debian/tmp//lib/systemd/system -m 644 systemd/qubes-qrexec-agent.service
+2024-04-19 12:16:04.994947 +0000 build-debian43: output: install -m 0644 -D qubes-rpc-config/README /build/qubes-core-qrexec-4.2.18/debian/tmp/etc/qubes/rpc-config/README
+2024-04-19 12:16:04.995802 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:04.997410 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:04.997436 +0000 build-debian43: output:    debian/rules override_dh_install
+2024-04-19 12:16:04.998631 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:04.998653 +0000 build-debian43: output: dh_install --fail-missing
+2024-04-19 12:16:05.385440 +0000 build-debian43: output: dh_install: warning: Please use dh_missing --list-missing/--fail-missing instead
+2024-04-19 12:16:05.385506 +0000 build-debian43: output: dh_install: warning: This feature will be removed in compat 12.
+2024-04-19 12:16:05.463016 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:05.463654 +0000 build-debian43: output:    dh_installdocs
+2024-04-19 12:16:05.496365 +0000 build-debian43: output:    dh_installchangelogs
+2024-04-19 12:16:05.553011 +0000 build-debian43: output:    dh_installman
+2024-04-19 12:16:05.602687 +0000 build-debian43: output:    dh_systemd_enable
+2024-04-19 12:16:05.643685 +0000 build-debian43: output:    dh_python3
+2024-04-19 12:16:05.717859 +0000 build-debian43: output:    debian/rules override_dh_systemd_start
+2024-04-19 12:16:05.719680 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:05.719704 +0000 build-debian43: output: dh_systemd_start --no-restart-on-upgrade
+2024-04-19 12:16:06.066326 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-core-qrexec-4.2.18'
+2024-04-19 12:16:06.068587 +0000 build-debian43: output:    dh_perl
+2024-04-19 12:16:06.113236 +0000 build-debian43: output:    dh_link
+2024-04-19 12:16:06.153943 +0000 build-debian43: output:    dh_strip_nondeterminism
+2024-04-19 12:16:06.657538 +0000 build-debian43: output:    dh_compress
+2024-04-19 12:16:06.709264 +0000 build-debian43: output:    dh_fixperms
+2024-04-19 12:16:06.798356 +0000 build-debian43: output:    dh_missing
+2024-04-19 12:16:06.817142 +0000 build-debian43: output:    dh_strip
+2024-04-19 12:16:06.938622 +0000 build-debian43: output:    dh_makeshlibs
+2024-04-19 12:16:06.979683 +0000 build-debian43: output:    dh_shlibdeps
+2024-04-19 12:16:07.509288 +0000 build-debian43: output:    dh_installdeb
+2024-04-19 12:16:07.546748 +0000 build-debian43: output:    dh_gencontrol
+2024-04-19 12:16:07.836472 +0000 build-debian43: output:    dh_md5sums
+2024-04-19 12:16:07.886925 +0000 build-debian43: output:    dh_builddeb
+2024-04-19 12:16:07.905822 +0000 build-debian43: output: dpkg-deb: building package 'libqrexec-utils2-dbgsym' in '../libqrexec-utils2-dbgsym_4.2.18-1+deb12u1_amd64.deb'.
+2024-04-19 12:16:07.905874 +0000 build-debian43: output: dpkg-deb: building package 'qubes-core-qrexec' in '../qubes-core-qrexec_4.2.18-1+deb12u1_amd64.deb'.
+2024-04-19 12:16:07.959533 +0000 build-debian43: output: dpkg-deb: building package 'libqrexec-utils-dev' in '../libqrexec-utils-dev_4.2.18-1+deb12u1_amd64.deb'.
+2024-04-19 12:16:07.973919 +0000 build-debian43: output: dpkg-deb: building package 'qubes-core-qrexec-dbgsym' in '../qubes-core-qrexec-dbgsym_4.2.18-1+deb12u1_amd64.deb'.
+2024-04-19 12:16:08.026951 +0000 build-debian43: output: dpkg-deb: building package 'python3-qrexec' in '../python3-qrexec_4.2.18-1+deb12u1_amd64.deb'.
+2024-04-19 12:16:08.035753 +0000 build-debian43: output: dpkg-deb: building package 'libqrexec-utils2' in '../libqrexec-utils2_4.2.18-1+deb12u1_amd64.deb'.
+2024-04-19 12:16:08.171045 +0000 build-debian43: output:  dpkg-genbuildinfo -O../qubes-core-qrexec_4.2.18-1+deb12u1_amd64.buildinfo
+2024-04-19 12:16:08.273106 +0000 build-debian43: output:  dpkg-genchanges -sa -O../qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes
+2024-04-19 12:16:08.419281 +0000 build-debian43: output: dpkg-genchanges: info: including full source code in upload
+2024-04-19 12:16:08.424598 +0000 build-debian43: output:  dpkg-source --after-build .
+2024-04-19 12:16:08.509306 +0000 build-debian43: output: dpkg-buildpackage: info: full upload (original source is included)
+2024-04-19 12:16:08.512546 +0000 build-debian43: output: I: copying local configuration
+2024-04-19 12:16:08.539273 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-04-19 12:16:08.644353 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-04-19 12:16:08.658015 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-04-19 12:16:08.662242 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-04-19 12:16:08.665056 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-04-19 12:16:08.668996 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-04-19 12:16:08.673354 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-04-19 12:16:08.679625 +0000 build-debian43: output: I: cleaning the build env
+2024-04-19 12:16:08.679669 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/1931 and its subdirectories
+2024-04-19 12:16:09.205585 +0000 build-debian43: output: I: Current time: Fri Apr 19 12:16:08 GMT 2024
+2024-04-19 12:16:09.205996 +0000 build-debian43: output: I: pbuilder-time-stamp: 1713528968
+2024-04-19 12:16:09.476107 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Flibqrexec--utils2--dbgsym_4.2.18--1-2Bdeb12u1_amd64.ddeb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:09.705045 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/libqrexec-utils2-dbgsym_4.2.18-1+deb12u1_amd64.ddeb.
+2024-04-19 12:16:09.705100 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Flibqrexec--utils--dev--dbgsym_4.2.18--1-2Bdeb12u1_amd64.ddeb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:09.930349 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/libqrexec-utils-dev-dbgsym_4.2.18-1+deb12u1_amd64.ddeb.
+2024-04-19 12:16:09.930677 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Flibqrexec--utils2_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.072640 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--core--qrexec_4.2.18--1-2Bdeb12u1_amd64.buildinfo /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.225678 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fpython3--qrexec_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.343533 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Flibqrexec--utils2--dbgsym_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.474725 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--core--qrexec--dbgsym_4.2.18--1-2Bdeb12u1_amd64.ddeb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.611449 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/qubes-core-qrexec-dbgsym_4.2.18-1+deb12u1_amd64.ddeb.
+2024-04-19 12:16:10.611508 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Flibqrexec--utils--dev--dbgsym_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.782786 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/libqrexec-utils-dev-dbgsym_4.2.18-1+deb12u1_amd64.deb.
+2024-04-19 12:16:10.782957 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--core--qrexec--dbgsym_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:10.913747 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fpython3--qrexec--dbgsym_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:11.046001 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/python3-qrexec-dbgsym_4.2.18-1+deb12u1_amd64.deb.
+2024-04-19 12:16:11.046078 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fpython3--qrexec--dbgsym_4.2.18--1-2Bdeb12u1_amd64.ddeb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:11.185895 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/python3-qrexec-dbgsym_4.2.18-1+deb12u1_amd64.ddeb.
+2024-04-19 12:16:11.185949 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Flibqrexec--utils--dev_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:11.314207 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--core--qrexec_4.2.18--1-2Bdeb12u1_amd64.changes /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:11.449170 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8049 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--core--qrexec_4.2.18--1-2Bdeb12u1_amd64.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build
+2024-04-19 12:16:15.566120 +0000 build-debian43: core-qrexec:vm-debian-12.amd64:debian: Provisioning local repository '/home/user/builder-r4.3-debian/repository/vm-bookworm'.
+2024-04-19 12:16:15.583417 +0000 build-debian43: Executing 'bash -c qubes-gpg-client-wrapper --armor --export 1B496066C096FE93D4CF0A6E720415900AB8C804 > /tmp/tmp6ql4wn_q/1B496066C096FE93D4CF0A6E720415900AB8C804.asc&&gpg2 --homedir /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/sign/keyring --import /tmp/tmp6ql4wn_q/1B496066C096FE93D4CF0A6E720415900AB8C804.asc'.
+2024-04-19 12:16:15.705318 +0000 build-debian43: output: gpg: keybox '/home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/sign/keyring/pubring.kbx' created
+2024-04-19 12:16:15.707079 +0000 build-debian43: output: gpg: /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/sign/keyring/trustdb.gpg: trustdb created
+2024-04-19 12:16:15.707115 +0000 build-debian43: output: gpg: key 720415900AB8C804: public key "Qubes OS 4.3 Debian Packages Signing Key" imported
+2024-04-19 12:16:15.712978 +0000 build-debian43: output: gpg: Total number processed: 1
+2024-04-19 12:16:15.713025 +0000 build-debian43: output: gpg:               imported: 1
+2024-04-19 12:16:15.724610 +0000 build-debian43: core-qrexec:vm-debian-12.amd64:debian: Signing from 'qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes' info.
+2024-04-19 12:16:15.724664 +0000 build-debian43: Executing 'bash -c debsign -k1B496066C096FE93D4CF0A6E720415900AB8C804 -pqubes-gpg-client-wrapper --no-re-sign /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes'.
+2024-04-19 12:16:15.748636 +0000 build-debian43: output:  signfile dsc /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 12:16:15.959732 +0000 build-debian43: output: 
+2024-04-19 12:16:15.981752 +0000 build-debian43: output:  fixup_buildinfo /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.buildinfo
+2024-04-19 12:16:15.983287 +0000 build-debian43: output:  signfile buildinfo /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.buildinfo 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 12:16:16.193834 +0000 build-debian43: output: 
+2024-04-19 12:16:16.207665 +0000 build-debian43: output:  fixup_changes dsc /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes
+2024-04-19 12:16:16.219983 +0000 build-debian43: output:  fixup_changes buildinfo /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.buildinfo /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes
+2024-04-19 12:16:16.221291 +0000 build-debian43: output:  signfile changes /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 12:16:16.411832 +0000 build-debian43: output: 
+2024-04-19 12:16:16.414845 +0000 build-debian43: output: Successfully signed dsc, buildinfo, changes files
+2024-04-19 12:16:16.433114 +0000 build-debian43: core-qrexec:vm-debian-12.amd64:debian: Provisioning local repository '/home/user/builder-r4.3-debian/repository/vm-bookworm'.
+2024-04-19 12:16:16.433166 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/publish_deb/scripts/create-skeleton r4.3 debian /home/user/builder-r4.3-debian/repository-publish/deb'.
+2024-04-19 12:16:16.468865 +0000 build-debian43: core-qrexec:vm-debian-12.amd64:debian: Publishing packages.
+2024-04-19 12:16:16.468915 +0000 build-debian43: core-qrexec:vm-debian-12.amd64:debian: Verifying signatures.
+2024-04-19 12:16:16.469048 +0000 build-debian43: Executing 'bash -c gpg2 -q --homedir /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/sign/keyring --verify /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1.dsc&&gpg2 -q --homedir /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/sign/keyring --verify /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes&&gpg2 -q --homedir /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/sign/keyring --verify /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.buildinfo'.
+2024-04-19 12:16:16.472294 +0000 build-debian43: output: gpg: Signature made Fri Apr 19 12:16:15 2024 GMT
+2024-04-19 12:16:16.472335 +0000 build-debian43: output: gpg:                using RSA key 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 12:16:16.473235 +0000 build-debian43: output: gpg: Good signature from "Qubes OS 4.3 Debian Packages Signing Key" [unknown]
+2024-04-19 12:16:16.473272 +0000 build-debian43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-04-19 12:16:16.473298 +0000 build-debian43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-04-19 12:16:16.473306 +0000 build-debian43: output: Primary key fingerprint: 1B49 6066 C096 FE93 D4CF  0A6E 7204 1590 0AB8 C804
+2024-04-19 12:16:16.476089 +0000 build-debian43: output: gpg: Signature made Fri Apr 19 12:16:16 2024 GMT
+2024-04-19 12:16:16.476122 +0000 build-debian43: output: gpg:                using RSA key 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 12:16:16.476131 +0000 build-debian43: output: gpg: Good signature from "Qubes OS 4.3 Debian Packages Signing Key" [unknown]
+2024-04-19 12:16:16.476207 +0000 build-debian43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-04-19 12:16:16.476221 +0000 build-debian43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-04-19 12:16:16.476384 +0000 build-debian43: output: Primary key fingerprint: 1B49 6066 C096 FE93 D4CF  0A6E 7204 1590 0AB8 C804
+2024-04-19 12:16:16.484467 +0000 build-debian43: output: gpg: Signature made Fri Apr 19 12:16:16 2024 GMT
+2024-04-19 12:16:16.484510 +0000 build-debian43: output: gpg:                using RSA key 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 12:16:16.484884 +0000 build-debian43: output: gpg: Good signature from "Qubes OS 4.3 Debian Packages Signing Key" [unknown]
+2024-04-19 12:16:16.484908 +0000 build-debian43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-04-19 12:16:16.484917 +0000 build-debian43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-04-19 12:16:16.484925 +0000 build-debian43: output: Primary key fingerprint: 1B49 6066 C096 FE93 D4CF  0A6E 7204 1590 0AB8 C804
+2024-04-19 12:16:16.495225 +0000 build-debian43: Executing 'bash -c reprepro --ignore=surprisingbinary --ignore=surprisingarch --keepunreferencedfiles -b /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm include bookworm-testing /home/user/builder-r4.3-debian/components/core-qrexec/4.2.18-1/vm-bookworm/build/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes'.
+2024-04-19 12:16:16.572726 +0000 build-debian43: output: Exporting indices...
+2024-04-19 12:16:16.582963 +0000 build-debian43: core-qrexec:vm-debian-12.amd64: Signing metadata (Release.gpg).
+2024-04-19 12:16:16.583091 +0000 build-debian43: Executing 'bash -c qubes-gpg-client-wrapper --detach-sign --armor --local-user 1B496066C096FE93D4CF0A6E720415900AB8C804 --batch --no-tty --output /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/Release.gpg /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/Release'.
+2024-04-19 12:16:16.702966 +0000 build-debian43: core-qrexec:vm-debian-12.amd64: Signing metadata (InRelease).
+2024-04-19 12:16:16.703899 +0000 build-debian43: Executing 'bash -c qubes-gpg-client-wrapper --clearsign --armor --local-user 1B496066C096FE93D4CF0A6E720415900AB8C804 --batch --no-tty --output /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/InRelease /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/Release'.
+2024-04-19 12:16:16.856322 +0000 build-debian43: > done
+2024-04-19 12:16:16.856372 +0000 > closing log
