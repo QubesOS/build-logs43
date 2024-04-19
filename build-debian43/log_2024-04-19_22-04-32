@@ -1,0 +1,110 @@
+2024-04-19 22:04:32.301212 +0000 > starting log
+2024-04-19 22:04:32.301457 +0000 build-debian43: > starting build with log
+2024-04-19 22:04:32.301474 +0000 build-debian43: >> args:
+2024-04-19 22:04:32.301482 +0000 build-debian43: >>   ()
+2024-04-19 22:04:32.301489 +0000 build-debian43: >> component:
+2024-04-19 22:04:32.301496 +0000 build-debian43: >>   linux-scrypt
+2024-04-19 22:04:32.301505 +0000 build-debian43: >> distributions:
+2024-04-19 22:04:32.301513 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 22:04:46.923561 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3132 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:04:47.266738 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3132 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-scrypt.git /builder/linux-scrypt /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 22:04:51.026026 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 22:04:51.026187 +0000 build-debian43: output: ---> Good tag 3a2ebde5e07a7c36c37c98a8f68a0d6d6dbed3ec.
+2024-04-19 22:04:51.026201 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 22:04:51.026211 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 22:04:51.047181 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3132 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 22:05:09.005391 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp587 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--scrypt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-scrypt
+2024-04-19 22:05:09.265601 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp587 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:05:09.456476 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp587 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-scrypt --file-name scrypt-1.3.2.tgz --file-url https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz''.
+2024-04-19 22:05:09.661493 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 22:05:09.661883 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-scrypt --file-name scrypt-1.3.2.tgz --file-url https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz
+2024-04-19 22:05:09.665768 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/linux-scrypt'\'' --file-name '\''scrypt-1.3.2.tgz'\'' --file-url '\''https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz'\'' --'
+2024-04-19 22:05:09.665827 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/linux-scrypt'\'' --file-name '\''scrypt-1.3.2.tgz'\'' --file-url '\''https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz'\'' --'
+2024-04-19 22:05:09.665856 +0000 build-debian43: output: ++ set -- --output-dir /builder/linux-scrypt --file-name scrypt-1.3.2.tgz --file-url https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz --
+2024-04-19 22:05:09.665875 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:05:09.665892 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:09.665912 +0000 build-debian43: output: + OUTPUT_DIR=/builder/linux-scrypt
+2024-04-19 22:05:09.665963 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.667332 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.667398 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:05:09.667419 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:09.667439 +0000 build-debian43: output: + FILE_NAME=scrypt-1.3.2.tgz
+2024-04-19 22:05:09.667457 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.667474 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.667492 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:05:09.667509 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:09.667530 +0000 build-debian43: output: + FILE_URL=https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz
+2024-04-19 22:05:09.667547 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.667564 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.667581 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:05:09.667611 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:09.667628 +0000 build-debian43: output: + shift
+2024-04-19 22:05:09.668023 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:05:09.668063 +0000 build-debian43: output: + '[' -z https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz ']'
+2024-04-19 22:05:09.668088 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 22:05:09.668156 +0000 build-debian43: output: + '[' -z scrypt-1.3.2.tgz ']'
+2024-04-19 22:05:09.668179 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_scrypt-1.3.2.tgz
+2024-04-19 22:05:09.668199 +0000 build-debian43: output: + '[' -n /builder/linux-scrypt ']'
+2024-04-19 22:05:09.668218 +0000 build-debian43: output: + mkdir -p /builder/linux-scrypt
+2024-04-19 22:05:09.669741 +0000 build-debian43: output: + cd /builder/linux-scrypt
+2024-04-19 22:05:09.669799 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_scrypt-1.3.2.tgz -- https://www.tarsnap.com/scrypt/scrypt-1.3.2.tgz
+2024-04-19 22:05:16.987004 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 22:05:16.987094 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:05:16.997258 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp587 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt-2Funtrusted_scrypt--1.3.2.tgz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b
+2024-04-19 22:05:19.820061 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256'.
+2024-04-19 22:05:19.823919 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 22:05:19.824415 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256
+2024-04-19 22:05:19.826833 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp5n05cg6b'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256'\'' --'
+2024-04-19 22:05:19.826900 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp5n05cg6b'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256'\'' --'
+2024-04-19 22:05:19.826931 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 --
+2024-04-19 22:05:19.826945 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 22:05:19.826957 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 22:05:19.826967 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:19.826980 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp5n05cg6b
+2024-04-19 22:05:19.826991 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.827007 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.827018 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:05:19.827031 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:19.827151 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz
+2024-04-19 22:05:19.827229 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.827458 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.827952 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:05:19.828026 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:19.828075 +0000 build-debian43: output: + CHECKSUM_CMD=sha256sum
+2024-04-19 22:05:19.828266 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.828281 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.828415 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:05:19.828540 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:19.828634 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256
+2024-04-19 22:05:19.829188 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.829235 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.829259 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:05:19.829279 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:05:19.829299 +0000 build-debian43: output: + shift
+2024-04-19 22:05:19.829319 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:05:19.829353 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz ']'
+2024-04-19 22:05:19.829379 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b ']'
+2024-04-19 22:05:19.829402 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b
+2024-04-19 22:05:19.829919 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz
+2024-04-19 22:05:19.831616 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_scrypt-1.3.2.tgz
+2024-04-19 22:05:19.831658 +0000 build-debian43: output: + FILE_NAME=scrypt-1.3.2.tgz
+2024-04-19 22:05:19.831689 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-19 22:05:19.831716 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-19 22:05:19.831741 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-19 22:05:19.831778 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:05:19.831799 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 22:05:19.831817 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:05:19.831837 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:05:19.831862 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256 ']'
+2024-04-19 22:05:19.831883 +0000 build-debian43: output: + '[' -z sha256sum ']'
+2024-04-19 22:05:19.831905 +0000 build-debian43: output: + sha256sum --status -c /dev/fd/63
+2024-04-19 22:05:19.831931 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/linux-scrypt/scrypt-1.3.2.tgz.sha256
+2024-04-19 22:05:19.832438 +0000 build-debian43: output: ++ printf '%s  -\n' d632c1193420ac6faebf9482e65e33d3a5664eccd643b09a509d21d1c1f29be2
+2024-04-19 22:05:19.834663 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/untrusted_scrypt-1.3.2.tgz /home/user/builder-r4.3-debian/tmp/tmp5n05cg6b/scrypt-1.3.2.tgz
+2024-04-19 22:05:19.863537 +0000 build-debian43: ['rm -f -- /builder/linux-scrypt/hash /builder/linux-scrypt/vtags', 'cd -- /builder', "git -C /builder/linux-scrypt rev-parse 'HEAD^{}' >> /builder/linux-scrypt/hash", "git -C /builder/linux-scrypt tag --points-at HEAD --list 'v*' >> /builder/linux-scrypt/vtags"]
+2024-04-19 22:05:35.331283 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8109 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--scrypt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-scrypt
+2024-04-19 22:05:35.559391 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8109 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/linux-scrypt/hash /builder/linux-scrypt/vtags && cd -- /builder && git -C /builder/linux-scrypt rev-parse '"'"'HEAD^{}'"'"' >> /builder/linux-scrypt/hash && git -C /builder/linux-scrypt tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/linux-scrypt/vtags''.
+2024-04-19 22:05:35.749735 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8109 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpw53i4rg_
+2024-04-19 22:05:35.931889 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8109 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--scrypt-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpw53i4rg_
+2024-04-19 22:05:38.576171 +0000 build-debian43: > done
+2024-04-19 22:05:38.576241 +0000 > closing log
