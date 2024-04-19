@@ -1,0 +1,111 @@
+2024-04-19 14:27:18.277131 +0000 > starting log
+2024-04-19 14:27:18.277355 +0000 build-debian43: > starting build with log
+2024-04-19 14:27:18.277373 +0000 build-debian43: >> args:
+2024-04-19 14:27:18.277382 +0000 build-debian43: >>   ()
+2024-04-19 14:27:18.277389 +0000 build-debian43: >> component:
+2024-04-19 14:27:18.277398 +0000 build-debian43: >>   seabios
+2024-04-19 14:27:18.277406 +0000 build-debian43: >> distributions:
+2024-04-19 14:27:18.277415 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 14:27:34.073722 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4269 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:27:34.508673 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4269 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-seabios.git /builder/seabios /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 14:27:41.135576 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 14:27:41.135650 +0000 build-debian43: output: ---> Good tag 3688e75835b091e137a0a59973e46b5d4bec4b09.
+2024-04-19 14:27:41.135667 +0000 build-debian43: output: ---> Good tag 40f3fbce9f21f57f0edd52b660287389eaf3855a.
+2024-04-19 14:27:41.135676 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 14:27:41.135683 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 14:27:41.143379 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4269 qubesbuilder.FileCopyOut+-2Fbuilder-2Fseabios /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 14:28:00.748099 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9624 qubesbuilder.FileCopyIn+-2Fbuilder-2Fseabios /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/seabios
+2024-04-19 14:28:00.995909 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9624 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:28:01.287388 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9624 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz''.
+2024-04-19 14:28:01.566183 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 14:28:01.566901 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2024-04-19 14:28:01.570112 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/seabios'\'' --file-name '\''seabios-1.16.2.tar.gz'\'' --file-url '\''https://www.seabios.org/downloads/seabios-1.16.2.tar.gz'\'' --'
+2024-04-19 14:28:01.570148 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/seabios'\'' --file-name '\''seabios-1.16.2.tar.gz'\'' --file-url '\''https://www.seabios.org/downloads/seabios-1.16.2.tar.gz'\'' --'
+2024-04-19 14:28:01.570159 +0000 build-debian43: output: ++ set -- --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz --
+2024-04-19 14:28:01.570166 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:28:01.570173 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:01.570204 +0000 build-debian43: output: + OUTPUT_DIR=/builder/seabios
+2024-04-19 14:28:01.570214 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570221 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570227 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:28:01.570234 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:01.570241 +0000 build-debian43: output: + FILE_NAME=seabios-1.16.2.tar.gz
+2024-04-19 14:28:01.570247 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570253 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570259 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:28:01.570266 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:01.570279 +0000 build-debian43: output: + FILE_URL=https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2024-04-19 14:28:01.570286 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570292 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570299 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:28:01.570308 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:01.570314 +0000 build-debian43: output: + shift
+2024-04-19 14:28:01.570320 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:28:01.570328 +0000 build-debian43: output: + '[' -z https://www.seabios.org/downloads/seabios-1.16.2.tar.gz ']'
+2024-04-19 14:28:01.570337 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 14:28:01.570344 +0000 build-debian43: output: + '[' -z seabios-1.16.2.tar.gz ']'
+2024-04-19 14:28:01.570351 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_seabios-1.16.2.tar.gz
+2024-04-19 14:28:01.570358 +0000 build-debian43: output: + '[' -n /builder/seabios ']'
+2024-04-19 14:28:01.570365 +0000 build-debian43: output: + mkdir -p /builder/seabios
+2024-04-19 14:28:01.570488 +0000 build-debian43: output: + cd /builder/seabios
+2024-04-19 14:28:01.570518 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_seabios-1.16.2.tar.gz -- https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2024-04-19 14:28:12.420861 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 14:28:12.420916 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:28:12.426901 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9624 qubesbuilder.FileCopyOut+-2Fbuilder-2Fseabios-2Funtrusted_seabios--1.16.2.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpfkoct_03
+2024-04-19 14:28:15.571494 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpfkoct_03 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512'.
+2024-04-19 14:28:15.571555 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 14:28:15.571596 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpfkoct_03 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512
+2024-04-19 14:28:15.573323 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpfkoct_03'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512'\'' --'
+2024-04-19 14:28:15.573389 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpfkoct_03'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512'\'' --'
+2024-04-19 14:28:15.573415 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpfkoct_03 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512 --
+2024-04-19 14:28:15.573426 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 14:28:15.573436 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:28:15.573445 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:15.573457 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpfkoct_03
+2024-04-19 14:28:15.573467 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573476 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573486 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:28:15.573495 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:15.573510 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz
+2024-04-19 14:28:15.573519 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573528 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573537 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:28:15.573546 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:15.573557 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 14:28:15.573566 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573575 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573585 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:28:15.573594 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:15.573607 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512
+2024-04-19 14:28:15.573617 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573626 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573636 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:28:15.573645 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:28:15.573654 +0000 build-debian43: output: + shift
+2024-04-19 14:28:15.573664 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:28:15.573677 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz ']'
+2024-04-19 14:28:15.573688 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpfkoct_03 ']'
+2024-04-19 14:28:15.573700 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpfkoct_03
+2024-04-19 14:28:15.573713 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz
+2024-04-19 14:28:15.575026 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_seabios-1.16.2.tar.gz
+2024-04-19 14:28:15.575060 +0000 build-debian43: output: + FILE_NAME=seabios-1.16.2.tar.gz
+2024-04-19 14:28:15.575078 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2024-04-19 14:28:15.575094 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2024-04-19 14:28:15.575109 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2024-04-19 14:28:15.575139 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:28:15.575152 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 14:28:15.575164 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:28:15.575176 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:28:15.575192 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2024-04-19 14:28:15.575204 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 14:28:15.575218 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 14:28:15.575234 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/seabios/seabios-1.16.2.tar.gz.sha512
+2024-04-19 14:28:15.575710 +0000 build-debian43: output: ++ printf '%s  -\n' 46786f0dd50cc533610adab268313bf66ebf0ad16cd6919c29f8a80e8f908e641206e2b1559e8722e2e780ec817917dcdb6781d6ecd402287228db4038003b7a
+2024-04-19 14:28:15.581407 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/untrusted_seabios-1.16.2.tar.gz /home/user/builder-r4.3-debian/tmp/tmpfkoct_03/seabios-1.16.2.tar.gz
+2024-04-19 14:28:15.599873 +0000 build-debian43: ['rm -f -- /builder/seabios/hash /builder/seabios/vtags', 'cd -- /builder', "git -C /builder/seabios rev-parse 'HEAD^{}' >> /builder/seabios/hash", "git -C /builder/seabios tag --points-at HEAD --list 'v*' >> /builder/seabios/vtags"]
+2024-04-19 14:28:31.495962 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2786 qubesbuilder.FileCopyIn+-2Fbuilder-2Fseabios /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/seabios
+2024-04-19 14:28:31.737474 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2786 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/seabios/hash /builder/seabios/vtags && cd -- /builder && git -C /builder/seabios rev-parse '"'"'HEAD^{}'"'"' >> /builder/seabios/hash && git -C /builder/seabios tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/seabios/vtags''.
+2024-04-19 14:28:32.044974 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2786 qubesbuilder.FileCopyOut+-2Fbuilder-2Fseabios-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpcj8h0a_2
+2024-04-19 14:28:32.279416 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2786 qubesbuilder.FileCopyOut+-2Fbuilder-2Fseabios-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpcj8h0a_2
+2024-04-19 14:28:35.881285 +0000 build-debian43: > done
+2024-04-19 14:28:35.881337 +0000 > closing log
