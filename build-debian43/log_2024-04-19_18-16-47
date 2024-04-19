@@ -1,0 +1,110 @@
+2024-04-19 18:16:47.133854 +0000 > starting log
+2024-04-19 18:16:47.134126 +0000 build-debian43: > starting build with log
+2024-04-19 18:16:47.134143 +0000 build-debian43: >> args:
+2024-04-19 18:16:47.134151 +0000 build-debian43: >>   ()
+2024-04-19 18:16:47.134158 +0000 build-debian43: >> component:
+2024-04-19 18:16:47.134164 +0000 build-debian43: >>   python-looseversion
+2024-04-19 18:16:47.134172 +0000 build-debian43: >> distributions:
+2024-04-19 18:16:47.134180 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 18:17:01.892633 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2527 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:17:02.151570 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2527 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-looseversion.git /builder/python-looseversion /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 18:17:06.864493 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 18:17:06.864551 +0000 build-debian43: output: ---> Good tag c3784317fc16506871d773ad1b0875329e367e3b.
+2024-04-19 18:17:06.864568 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 18:17:06.864580 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 18:17:06.881377 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2527 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 18:17:25.075750 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3936 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--looseversion /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-looseversion
+2024-04-19 18:17:25.462187 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3936 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:17:25.663947 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3936 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-looseversion --file-name python-looseversion-1.3.0.tar.gz --file-url '"'"'https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz'"'"'''.
+2024-04-19 18:17:25.995270 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 18:17:25.995327 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-looseversion --file-name python-looseversion-1.3.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:25.997414 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/python-looseversion'\'' --file-name '\''python-looseversion-1.3.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz'\'' --'
+2024-04-19 18:17:25.997451 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/python-looseversion'\'' --file-name '\''python-looseversion-1.3.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz'\'' --'
+2024-04-19 18:17:25.997481 +0000 build-debian43: output: ++ set -- --output-dir /builder/python-looseversion --file-name python-looseversion-1.3.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz --
+2024-04-19 18:17:25.997489 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:17:25.997496 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:25.997504 +0000 build-debian43: output: + OUTPUT_DIR=/builder/python-looseversion
+2024-04-19 18:17:25.997510 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997517 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997524 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:17:25.997529 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:25.997537 +0000 build-debian43: output: + FILE_NAME=python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:25.997543 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997548 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997555 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:17:25.997560 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:25.997570 +0000 build-debian43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:25.997576 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997581 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997587 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:17:25.997599 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:25.997605 +0000 build-debian43: output: + shift
+2024-04-19 18:17:25.997611 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:17:25.997620 +0000 build-debian43: output: + '[' -z https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz ']'
+2024-04-19 18:17:25.997630 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 18:17:25.997637 +0000 build-debian43: output: + '[' -z python-looseversion-1.3.0.tar.gz ']'
+2024-04-19 18:17:25.997645 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:25.997651 +0000 build-debian43: output: + '[' -n /builder/python-looseversion ']'
+2024-04-19 18:17:25.997658 +0000 build-debian43: output: + mkdir -p /builder/python-looseversion
+2024-04-19 18:17:25.999036 +0000 build-debian43: output: + cd /builder/python-looseversion
+2024-04-19 18:17:25.999064 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_python-looseversion-1.3.0.tar.gz -- https://files.pythonhosted.org/packages/source/l/looseversion/looseversion-1.3.0.tar.gz#/python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:28.478613 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 18:17:28.478662 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 18:17:28.486500 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3936 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion-2Funtrusted_python--looseversion--1.3.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr
+2024-04-19 18:17:31.593049 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256'.
+2024-04-19 18:17:31.597633 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 18:17:31.598288 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256
+2024-04-19 18:17:31.602373 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp6pvq10gr'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256'\'' --'
+2024-04-19 18:17:31.602448 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp6pvq10gr'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256'\'' --'
+2024-04-19 18:17:31.602507 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 --
+2024-04-19 18:17:31.602527 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 18:17:31.602546 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 18:17:31.602562 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:31.602583 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp6pvq10gr
+2024-04-19 18:17:31.602600 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602616 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602632 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:17:31.602648 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:31.602671 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:31.602688 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602704 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602723 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:17:31.602739 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:31.602756 +0000 build-debian43: output: + CHECKSUM_CMD=sha256sum
+2024-04-19 18:17:31.602772 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602788 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602804 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:17:31.602820 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:31.602845 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256
+2024-04-19 18:17:31.602862 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602878 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602894 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:17:31.602927 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:17:31.602944 +0000 build-debian43: output: + shift
+2024-04-19 18:17:31.602960 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:17:31.602985 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz ']'
+2024-04-19 18:17:31.603007 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr ']'
+2024-04-19 18:17:31.603028 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr
+2024-04-19 18:17:31.603828 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:31.606711 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:31.606748 +0000 build-debian43: output: + FILE_NAME=python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:31.606773 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-19 18:17:31.606797 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-19 18:17:31.606820 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-19 18:17:31.606837 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 18:17:31.606854 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 18:17:31.606870 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 18:17:31.606889 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 18:17:31.606914 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256 ']'
+2024-04-19 18:17:31.606932 +0000 build-debian43: output: + '[' -z sha256sum ']'
+2024-04-19 18:17:31.606952 +0000 build-debian43: output: + sha256sum --status -c /dev/fd/63
+2024-04-19 18:17:31.607924 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/python-looseversion/looseversion-1.3.0.tar.gz.sha256
+2024-04-19 18:17:31.610434 +0000 build-debian43: output: ++ printf '%s  -\n' ebde65f3f6bb9531a81016c6fef3eb95a61181adc47b7f949e9c0ea47911669e
+2024-04-19 18:17:31.611411 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/untrusted_python-looseversion-1.3.0.tar.gz /home/user/builder-r4.3-debian/tmp/tmp6pvq10gr/python-looseversion-1.3.0.tar.gz
+2024-04-19 18:17:31.641468 +0000 build-debian43: ['rm -f -- /builder/python-looseversion/hash /builder/python-looseversion/vtags', 'cd -- /builder', "git -C /builder/python-looseversion rev-parse 'HEAD^{}' >> /builder/python-looseversion/hash", "git -C /builder/python-looseversion tag --points-at HEAD --list 'v*' >> /builder/python-looseversion/vtags"]
+2024-04-19 18:17:46.566780 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4731 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--looseversion /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-looseversion
+2024-04-19 18:17:46.926670 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4731 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-looseversion/hash /builder/python-looseversion/vtags && cd -- /builder && git -C /builder/python-looseversion rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-looseversion/hash && git -C /builder/python-looseversion tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-looseversion/vtags''.
+2024-04-19 18:17:47.167368 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4731 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp411uztmn
+2024-04-19 18:17:47.458898 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4731 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--looseversion-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp411uztmn
+2024-04-19 18:17:50.608454 +0000 build-debian43: > done
+2024-04-19 18:17:50.608501 +0000 > closing log
