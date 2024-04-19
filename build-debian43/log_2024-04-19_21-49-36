@@ -1,0 +1,23 @@
+2024-04-19 21:49:36.103936 +0000 > starting log
+2024-04-19 21:49:36.104724 +0000 build-debian43: > starting build with log
+2024-04-19 21:49:36.104745 +0000 build-debian43: >> args:
+2024-04-19 21:49:36.104856 +0000 build-debian43: >>   ()
+2024-04-19 21:49:36.104864 +0000 build-debian43: >> component:
+2024-04-19 21:49:36.104871 +0000 build-debian43: >>   dummy-psu
+2024-04-19 21:49:36.104877 +0000 build-debian43: >> distributions:
+2024-04-19 21:49:36.104885 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 21:49:50.980257 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7288 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 21:49:51.262646 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7288 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-dummy-psu.git /builder/dummy-psu /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 21:49:58.128810 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 21:49:58.128887 +0000 build-debian43: output: ---> Good tag 3d94ff6d1375f31fc178d348899d0075db055582.
+2024-04-19 21:49:58.128917 +0000 build-debian43: output: ---> Good tag bf6f70c9cabda3a5c875f2ce26d3f2926c481649.
+2024-04-19 21:49:58.128941 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 21:49:58.128961 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 21:49:58.147788 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7288 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdummy--psu /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 21:50:01.293314 +0000 build-debian43: ['rm -f -- /builder/dummy-psu/hash /builder/dummy-psu/vtags', 'cd -- /builder', "git -C /builder/dummy-psu rev-parse 'HEAD^{}' >> /builder/dummy-psu/hash", "git -C /builder/dummy-psu tag --points-at HEAD --list 'v*' >> /builder/dummy-psu/vtags"]
+2024-04-19 21:50:16.627226 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp188 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdummy--psu /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/dummy-psu
+2024-04-19 21:50:16.990348 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp188 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/dummy-psu/hash /builder/dummy-psu/vtags && cd -- /builder && git -C /builder/dummy-psu rev-parse '"'"'HEAD^{}'"'"' >> /builder/dummy-psu/hash && git -C /builder/dummy-psu tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/dummy-psu/vtags''.
+2024-04-19 21:50:17.274847 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp188 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdummy--psu-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp9enz9cel
+2024-04-19 21:50:17.448287 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp188 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdummy--psu-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp9enz9cel
+2024-04-19 21:50:20.242243 +0000 build-debian43: > done
+2024-04-19 21:50:20.242287 +0000 > closing log
