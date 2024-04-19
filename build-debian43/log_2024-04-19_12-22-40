@@ -1,0 +1,199 @@
+2024-04-19 12:22:40.191031 +0000 > starting log
+2024-04-19 12:22:40.191229 +0000 build-debian43: > starting build with log
+2024-04-19 12:22:40.191245 +0000 build-debian43: >> args:
+2024-04-19 12:22:40.191253 +0000 build-debian43: >>   ()
+2024-04-19 12:22:40.191260 +0000 build-debian43: >> component:
+2024-04-19 12:22:40.191719 +0000 build-debian43: >>   dracut
+2024-04-19 12:22:40.191734 +0000 build-debian43: >> distributions:
+2024-04-19 12:22:40.191743 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 12:22:57.691512 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2801 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:22:57.865602 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2801 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-dracut.git /builder/dracut /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 12:23:02.901253 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 12:23:02.910178 +0000 build-debian43: output: ---> Good tag 495f2465561196a78205a8ee27652aa17387712b.
+2024-04-19 12:23:02.910715 +0000 build-debian43: output: ---> Good tag e2db7afb227de7f6c7528f43521ccd3929b14a38.
+2024-04-19 12:23:02.911118 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 12:23:02.911158 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 12:23:02.915618 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2801 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 12:23:21.038297 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6219 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/dracut
+2024-04-19 12:23:21.270468 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6219 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:23:21.463737 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6219 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/dracut --file-name 059.tar.gz --file-url https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz''.
+2024-04-19 12:23:21.718183 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 12:23:21.718602 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/dracut --file-name 059.tar.gz --file-url https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz
+2024-04-19 12:23:21.720502 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/dracut'\'' --file-name '\''059.tar.gz'\'' --file-url '\''https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz'\'' --'
+2024-04-19 12:23:21.720525 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/dracut'\'' --file-name '\''059.tar.gz'\'' --file-url '\''https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz'\'' --'
+2024-04-19 12:23:21.720537 +0000 build-debian43: output: ++ set -- --output-dir /builder/dracut --file-name 059.tar.gz --file-url https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz --
+2024-04-19 12:23:21.720545 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:23:21.720626 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:21.720652 +0000 build-debian43: output: + OUTPUT_DIR=/builder/dracut
+2024-04-19 12:23:21.720736 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.720748 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.720948 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:23:21.721216 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:21.721249 +0000 build-debian43: output: + FILE_NAME=059.tar.gz
+2024-04-19 12:23:21.721267 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.721283 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.721299 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:23:21.721314 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:21.721334 +0000 build-debian43: output: + FILE_URL=https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz
+2024-04-19 12:23:21.721351 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.721532 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.721557 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:23:21.721564 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:21.721571 +0000 build-debian43: output: + shift
+2024-04-19 12:23:21.721577 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:23:21.721586 +0000 build-debian43: output: + '[' -z https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz ']'
+2024-04-19 12:23:21.721594 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 12:23:21.721601 +0000 build-debian43: output: + '[' -z 059.tar.gz ']'
+2024-04-19 12:23:21.721608 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_059.tar.gz
+2024-04-19 12:23:21.721615 +0000 build-debian43: output: + '[' -n /builder/dracut ']'
+2024-04-19 12:23:21.721621 +0000 build-debian43: output: + mkdir -p /builder/dracut
+2024-04-19 12:23:21.724102 +0000 build-debian43: output: + cd /builder/dracut
+2024-04-19 12:23:21.724124 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_059.tar.gz -- https://github.com/dracutdevs/dracut/archive/refs/tags/059.tar.gz
+2024-04-19 12:23:31.565574 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 12:23:31.565657 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:23:31.576861 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6219 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Funtrusted_059.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_8d6efea
+2024-04-19 12:23:34.835509 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp_8d6efea --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512'.
+2024-04-19 12:23:34.837900 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 12:23:34.837948 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp_8d6efea --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512
+2024-04-19 12:23:34.838578 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp_8d6efea'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512'\'' --'
+2024-04-19 12:23:34.838615 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp_8d6efea'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512'\'' --'
+2024-04-19 12:23:34.838632 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp_8d6efea --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512 --
+2024-04-19 12:23:34.838639 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 12:23:34.838647 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 12:23:34.838653 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:34.838661 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp_8d6efea
+2024-04-19 12:23:34.838668 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.838677 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.838684 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:23:34.838690 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:34.838698 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz
+2024-04-19 12:23:34.838704 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.838715 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.838725 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:23:34.838826 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:34.838852 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 12:23:34.838928 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.838937 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.838943 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:23:34.838949 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:34.838979 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512
+2024-04-19 12:23:34.838987 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.839020 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.839028 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:23:34.839065 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:34.839092 +0000 build-debian43: output: + shift
+2024-04-19 12:23:34.839199 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:23:34.840102 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz ']'
+2024-04-19 12:23:34.840116 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp_8d6efea ']'
+2024-04-19 12:23:34.840124 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp_8d6efea
+2024-04-19 12:23:34.840783 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz
+2024-04-19 12:23:34.841487 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_059.tar.gz
+2024-04-19 12:23:34.841506 +0000 build-debian43: output: + FILE_NAME=059.tar.gz
+2024-04-19 12:23:34.841515 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-19 12:23:34.841524 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-19 12:23:34.841532 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-19 12:23:34.841538 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:23:34.841554 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 12:23:34.841595 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:23:34.841603 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:23:34.841617 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512 ']'
+2024-04-19 12:23:34.841624 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 12:23:34.841647 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 12:23:34.842038 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/dracut/059.tar.gz.sha512
+2024-04-19 12:23:34.843609 +0000 build-debian43: output: ++ printf '%s  -\n' 196bc8bf18703c72bffb51a7e0493719c58173ad2da7d121eb42f9a8de47e953af36d109214dc4a10b2dc2d3bd19e844f7f51c2bdec087e064ea11f75124032d
+2024-04-19 12:23:34.845028 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/untrusted_059.tar.gz /home/user/builder-r4.3-debian/tmp/tmp_8d6efea/059.tar.gz
+2024-04-19 12:23:50.073368 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1432 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/dracut
+2024-04-19 12:23:50.418775 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1432 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:23:50.638227 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1432 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/dracut --file-name lgpl-2.1.txt --file-url https://www.gnu.org/licenses/lgpl-2.1.txt''.
+2024-04-19 12:23:50.851196 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 12:23:50.851782 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/dracut --file-name lgpl-2.1.txt --file-url https://www.gnu.org/licenses/lgpl-2.1.txt
+2024-04-19 12:23:50.854323 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/dracut'\'' --file-name '\''lgpl-2.1.txt'\'' --file-url '\''https://www.gnu.org/licenses/lgpl-2.1.txt'\'' --'
+2024-04-19 12:23:50.854364 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/dracut'\'' --file-name '\''lgpl-2.1.txt'\'' --file-url '\''https://www.gnu.org/licenses/lgpl-2.1.txt'\'' --'
+2024-04-19 12:23:50.854376 +0000 build-debian43: output: ++ set -- --output-dir /builder/dracut --file-name lgpl-2.1.txt --file-url https://www.gnu.org/licenses/lgpl-2.1.txt --
+2024-04-19 12:23:50.854383 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:23:50.854390 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:50.854397 +0000 build-debian43: output: + OUTPUT_DIR=/builder/dracut
+2024-04-19 12:23:50.854404 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854409 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854416 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:23:50.854429 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:50.854436 +0000 build-debian43: output: + FILE_NAME=lgpl-2.1.txt
+2024-04-19 12:23:50.854441 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854449 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854455 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:23:50.854461 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:50.854469 +0000 build-debian43: output: + FILE_URL=https://www.gnu.org/licenses/lgpl-2.1.txt
+2024-04-19 12:23:50.854474 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854480 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854486 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:23:50.854506 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:23:50.854512 +0000 build-debian43: output: + shift
+2024-04-19 12:23:50.854518 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:23:50.854526 +0000 build-debian43: output: + '[' -z https://www.gnu.org/licenses/lgpl-2.1.txt ']'
+2024-04-19 12:23:50.854534 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 12:23:50.854541 +0000 build-debian43: output: + '[' -z lgpl-2.1.txt ']'
+2024-04-19 12:23:50.854548 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_lgpl-2.1.txt
+2024-04-19 12:23:50.854554 +0000 build-debian43: output: + '[' -n /builder/dracut ']'
+2024-04-19 12:23:50.854560 +0000 build-debian43: output: + mkdir -p /builder/dracut
+2024-04-19 12:23:50.855237 +0000 build-debian43: output: + cd /builder/dracut
+2024-04-19 12:23:50.855277 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_lgpl-2.1.txt -- https://www.gnu.org/licenses/lgpl-2.1.txt
+2024-04-19 12:23:57.460892 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 12:23:57.460942 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:23:57.469576 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1432 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Funtrusted_lgpl--2.1.txt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp
+2024-04-19 12:24:00.942349 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512'.
+2024-04-19 12:24:00.946838 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 12:24:00.947369 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512
+2024-04-19 12:24:00.950840 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpyvdfhinp'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512'\'' --'
+2024-04-19 12:24:00.950898 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpyvdfhinp'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512'\'' --'
+2024-04-19 12:24:00.950914 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512 --
+2024-04-19 12:24:00.950921 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 12:24:00.950928 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 12:24:00.950935 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:24:00.950943 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpyvdfhinp
+2024-04-19 12:24:00.950949 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.950973 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.950980 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:24:00.950986 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:24:00.950995 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt
+2024-04-19 12:24:00.951001 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951011 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951017 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:24:00.951023 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:24:00.951029 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 12:24:00.951035 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951041 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951047 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:24:00.951053 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:24:00.951061 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512
+2024-04-19 12:24:00.951067 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951072 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951078 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:24:00.951084 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:24:00.951090 +0000 build-debian43: output: + shift
+2024-04-19 12:24:00.951096 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:24:00.951104 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt ']'
+2024-04-19 12:24:00.951111 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp ']'
+2024-04-19 12:24:00.951118 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp
+2024-04-19 12:24:00.951126 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt
+2024-04-19 12:24:00.953571 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_lgpl-2.1.txt
+2024-04-19 12:24:00.953598 +0000 build-debian43: output: + FILE_NAME=lgpl-2.1.txt
+2024-04-19 12:24:00.953608 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-19 12:24:00.953617 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-19 12:24:00.953625 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-19 12:24:00.953632 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:24:00.953639 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 12:24:00.953646 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:24:00.953652 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:24:00.953660 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512 ']'
+2024-04-19 12:24:00.953666 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 12:24:00.953673 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 12:24:00.955004 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/dracut/lgpl-2.1.txt.sha512
+2024-04-19 12:24:00.955643 +0000 build-debian43: output: ++ printf '%s  -\n' 1bca76c9f2f559a7851c278650125cd4f44a7ae4a96ceee6a6ba81d34d28fe7d6125c5ee459fef729b6a2a0eba3075c0841c8a156b3a26f66194f77f7d49151c
+2024-04-19 12:24:00.956697 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/untrusted_lgpl-2.1.txt /home/user/builder-r4.3-debian/tmp/tmpyvdfhinp/lgpl-2.1.txt
+2024-04-19 12:24:00.970088 +0000 build-debian43: ['rm -f -- /builder/dracut/hash /builder/dracut/vtags', 'cd -- /builder', "git -C /builder/dracut rev-parse 'HEAD^{}' >> /builder/dracut/hash", "git -C /builder/dracut tag --points-at HEAD --list 'v*' >> /builder/dracut/vtags"]
+2024-04-19 12:24:17.061754 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp354 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdracut /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/dracut
+2024-04-19 12:24:17.261578 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp354 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/dracut/hash /builder/dracut/vtags && cd -- /builder && git -C /builder/dracut rev-parse '"'"'HEAD^{}'"'"' >> /builder/dracut/hash && git -C /builder/dracut tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/dracut/vtags''.
+2024-04-19 12:24:17.522556 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp354 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpz74lx440
+2024-04-19 12:24:17.714817 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp354 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdracut-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpz74lx440
+2024-04-19 12:24:21.008063 +0000 build-debian43: > done
+2024-04-19 12:24:21.008141 +0000 > closing log
