@@ -1,0 +1,111 @@
+2024-04-19 21:47:31.618157 +0000 > starting log
+2024-04-19 21:47:31.618367 +0000 build-debian43: > starting build with log
+2024-04-19 21:47:31.618385 +0000 build-debian43: >> args:
+2024-04-19 21:47:31.618393 +0000 build-debian43: >>   ()
+2024-04-19 21:47:31.618400 +0000 build-debian43: >> component:
+2024-04-19 21:47:31.618406 +0000 build-debian43: >>   flashrom
+2024-04-19 21:47:31.618414 +0000 build-debian43: >> distributions:
+2024-04-19 21:47:31.618423 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 21:47:45.870509 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3588 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 21:47:46.187741 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3588 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-flashrom.git /builder/flashrom /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 21:47:54.036419 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 21:47:54.036497 +0000 build-debian43: output: ---> Good tag 317095b0ff100460e6484dfcbbf8d28b9cf5f8fd.
+2024-04-19 21:47:54.036527 +0000 build-debian43: output: ---> Good tag 4a3eb823380d68db7a46dec59687c673ada6ca9f.
+2024-04-19 21:47:54.036550 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 21:47:54.036570 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 21:47:54.052025 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3588 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 21:48:11.794047 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8509 qubesbuilder.FileCopyIn+-2Fbuilder-2Fflashrom /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/flashrom
+2024-04-19 21:48:12.074693 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8509 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 21:48:12.309272 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8509 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2''.
+2024-04-19 21:48:12.495581 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 21:48:12.495638 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:12.496372 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/flashrom'\'' --file-name '\''flashrom-v1.3.0.tar.bz2'\'' --file-url '\''https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2'\'' --'
+2024-04-19 21:48:12.496438 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/flashrom'\'' --file-name '\''flashrom-v1.3.0.tar.bz2'\'' --file-url '\''https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2'\'' --'
+2024-04-19 21:48:12.496470 +0000 build-debian43: output: ++ set -- --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2 --
+2024-04-19 21:48:12.496489 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 21:48:12.496526 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:12.496546 +0000 build-debian43: output: + OUTPUT_DIR=/builder/flashrom
+2024-04-19 21:48:12.496565 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.496582 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.496598 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 21:48:12.496910 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:12.496946 +0000 build-debian43: output: + FILE_NAME=flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:12.496963 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.496979 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.496995 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 21:48:12.497011 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:12.497032 +0000 build-debian43: output: + FILE_URL=https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:12.497048 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.497064 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.497089 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 21:48:12.497141 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:12.497160 +0000 build-debian43: output: + shift
+2024-04-19 21:48:12.497177 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 21:48:12.497198 +0000 build-debian43: output: + '[' -z https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2 ']'
+2024-04-19 21:48:12.497220 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 21:48:12.497239 +0000 build-debian43: output: + '[' -z flashrom-v1.3.0.tar.bz2 ']'
+2024-04-19 21:48:12.497259 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:12.497276 +0000 build-debian43: output: + '[' -n /builder/flashrom ']'
+2024-04-19 21:48:12.497293 +0000 build-debian43: output: + mkdir -p /builder/flashrom
+2024-04-19 21:48:12.497775 +0000 build-debian43: output: + cd /builder/flashrom
+2024-04-19 21:48:12.497800 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_flashrom-v1.3.0.tar.bz2 -- https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:19.880213 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 21:48:19.880298 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:48:19.886857 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8509 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom-2Funtrusted_flashrom--v1.3.0.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz
+2024-04-19 21:48:22.939250 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'.
+2024-04-19 21:48:22.943295 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 21:48:22.944042 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2024-04-19 21:48:22.945642 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp7hpwihiz'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'\'' --'
+2024-04-19 21:48:22.945691 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp7hpwihiz'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'\'' --'
+2024-04-19 21:48:22.945709 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 --
+2024-04-19 21:48:22.945716 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 21:48:22.945723 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 21:48:22.945729 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:22.945737 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp7hpwihiz
+2024-04-19 21:48:22.945743 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945749 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945755 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 21:48:22.945761 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:22.945769 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:22.945775 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945781 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945791 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 21:48:22.945797 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:22.945803 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 21:48:22.945809 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945815 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945821 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 21:48:22.945826 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:22.945835 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2024-04-19 21:48:22.945841 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945847 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945853 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 21:48:22.945859 +0000 build-debian43: output: + case "$1" in
+2024-04-19 21:48:22.945865 +0000 build-debian43: output: + shift
+2024-04-19 21:48:22.945873 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 21:48:22.945881 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2 ']'
+2024-04-19 21:48:22.945888 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz ']'
+2024-04-19 21:48:22.945895 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz
+2024-04-19 21:48:22.946157 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:22.948023 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:22.948042 +0000 build-debian43: output: + FILE_NAME=flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:22.948052 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-19 21:48:22.948061 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-19 21:48:22.948076 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-19 21:48:22.948083 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:48:22.948089 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 21:48:22.948095 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:48:22.948101 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 21:48:22.948123 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2024-04-19 21:48:22.948129 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 21:48:22.948136 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 21:48:22.948144 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2024-04-19 21:48:22.948389 +0000 build-debian43: output: ++ printf '%s  -\n' 73b6e00bd3bc66c98d4ad53966a65b19d3d92f07d7b210d69e041d6f5788605b9791a9bf7aec0a52e13d19fcb62c4bdaf4bab9f805fc31468393ca313129a77b
+2024-04-19 21:48:22.949364 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/untrusted_flashrom-v1.3.0.tar.bz2 /home/user/builder-r4.3-debian/tmp/tmp7hpwihiz/flashrom-v1.3.0.tar.bz2
+2024-04-19 21:48:22.961639 +0000 build-debian43: ['rm -f -- /builder/flashrom/hash /builder/flashrom/vtags', 'cd -- /builder', "git -C /builder/flashrom rev-parse 'HEAD^{}' >> /builder/flashrom/hash", "git -C /builder/flashrom tag --points-at HEAD --list 'v*' >> /builder/flashrom/vtags"]
+2024-04-19 21:48:37.478515 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1678 qubesbuilder.FileCopyIn+-2Fbuilder-2Fflashrom /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/flashrom
+2024-04-19 21:48:37.756551 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1678 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/flashrom/hash /builder/flashrom/vtags && cd -- /builder && git -C /builder/flashrom rev-parse '"'"'HEAD^{}'"'"' >> /builder/flashrom/hash && git -C /builder/flashrom tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/flashrom/vtags''.
+2024-04-19 21:48:37.965442 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1678 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmplq0xevyr
+2024-04-19 21:48:38.147914 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1678 qubesbuilder.FileCopyOut+-2Fbuilder-2Fflashrom-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmplq0xevyr
+2024-04-19 21:48:40.975756 +0000 build-debian43: > done
+2024-04-19 21:48:40.975835 +0000 > closing log
