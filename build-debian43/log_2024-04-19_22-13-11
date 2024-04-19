@@ -1,0 +1,111 @@
+2024-04-19 22:13:11.838131 +0000 > starting log
+2024-04-19 22:13:11.838359 +0000 build-debian43: > starting build with log
+2024-04-19 22:13:11.838379 +0000 build-debian43: >> args:
+2024-04-19 22:13:11.838388 +0000 build-debian43: >>   ()
+2024-04-19 22:13:11.838395 +0000 build-debian43: >> component:
+2024-04-19 22:13:11.838401 +0000 build-debian43: >>   anaconda
+2024-04-19 22:13:11.838408 +0000 build-debian43: >> distributions:
+2024-04-19 22:13:11.838416 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 22:13:26.557529 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2890 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:13:26.781149 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2890 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-anaconda.git /builder/anaconda /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 22:14:09.607097 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 22:14:09.607214 +0000 build-debian43: output: ---> Good tag 9c209baae8fda30b23d53bf52269ff8a9015add3.
+2024-04-19 22:14:09.607243 +0000 build-debian43: output: ---> Good tag a787ce10307120d15235b4c97c33e65ff96cf87b.
+2024-04-19 22:14:09.607267 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 22:14:09.607287 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 22:14:09.623871 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2890 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 22:14:27.175358 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4056 qubesbuilder.FileCopyIn+-2Fbuilder-2Fanaconda /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/anaconda
+2024-04-19 22:14:27.451293 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4056 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:14:27.644207 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4056 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2''.
+2024-04-19 22:14:27.846697 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 22:14:27.846814 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:27.849045 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/anaconda'\'' --file-name '\''anaconda-37.12.6.tar.bz2'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2'\'' --'
+2024-04-19 22:14:27.849470 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/anaconda'\'' --file-name '\''anaconda-37.12.6.tar.bz2'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2'\'' --'
+2024-04-19 22:14:27.849518 +0000 build-debian43: output: ++ set -- --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2 --
+2024-04-19 22:14:27.849538 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:14:27.849577 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:27.849598 +0000 build-debian43: output: + OUTPUT_DIR=/builder/anaconda
+2024-04-19 22:14:27.849617 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.849968 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.850014 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:14:27.850034 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:27.850054 +0000 build-debian43: output: + FILE_NAME=anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:27.850071 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.850088 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.850131 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:14:27.850822 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:27.850868 +0000 build-debian43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:27.850888 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.850905 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.850922 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:14:27.850939 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:27.850955 +0000 build-debian43: output: + shift
+2024-04-19 22:14:27.850972 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:14:27.851327 +0000 build-debian43: output: + '[' -z https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2 ']'
+2024-04-19 22:14:27.851374 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 22:14:27.851396 +0000 build-debian43: output: + '[' -z anaconda-37.12.6.tar.bz2 ']'
+2024-04-19 22:14:27.851417 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:27.851435 +0000 build-debian43: output: + '[' -n /builder/anaconda ']'
+2024-04-19 22:14:27.851453 +0000 build-debian43: output: + mkdir -p /builder/anaconda
+2024-04-19 22:14:27.851470 +0000 build-debian43: output: + cd /builder/anaconda
+2024-04-19 22:14:27.851500 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_anaconda-37.12.6.tar.bz2 -- https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:40.115323 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 22:14:40.115367 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:14:40.122060 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4056 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda-2Funtrusted_anaconda--37.12.6.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn
+2024-04-19 22:14:43.203698 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'.
+2024-04-19 22:14:43.208621 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 22:14:43.209436 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2024-04-19 22:14:43.211597 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpy5smvyzn'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'\'' --'
+2024-04-19 22:14:43.211708 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpy5smvyzn'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'\'' --'
+2024-04-19 22:14:43.213575 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 --
+2024-04-19 22:14:43.213631 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 22:14:43.213653 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 22:14:43.213671 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:43.213703 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpy5smvyzn
+2024-04-19 22:14:43.213721 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.213738 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.213756 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:14:43.213773 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:43.213797 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:43.213814 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.213830 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.213847 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:14:43.213864 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:43.213882 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 22:14:43.213898 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.213914 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.213931 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:14:43.213948 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:43.213971 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2024-04-19 22:14:43.213987 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.214003 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.214020 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:14:43.214036 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:14:43.214052 +0000 build-debian43: output: + shift
+2024-04-19 22:14:43.214069 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:14:43.214092 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2 ']'
+2024-04-19 22:14:43.214152 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn ']'
+2024-04-19 22:14:43.214175 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn
+2024-04-19 22:14:43.214693 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:43.217414 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:43.217464 +0000 build-debian43: output: + FILE_NAME=anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:43.217490 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-19 22:14:43.217514 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-19 22:14:43.217561 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-19 22:14:43.217580 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:14:43.217600 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 22:14:43.217618 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:14:43.217635 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:14:43.217658 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2024-04-19 22:14:43.217677 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 22:14:43.217696 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 22:14:43.218693 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2024-04-19 22:14:43.220910 +0000 build-debian43: output: ++ printf '%s  -\n' 6f4b3c13f7ecbd64501a1aff9ba1d8fde867b52df8a517821c1a70a4ab2af81ef6a22c8534afba8239a5c608f4c06fdd505e6d4c7a58a23fa8d852e54a79694a
+2024-04-19 22:14:43.238578 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/untrusted_anaconda-37.12.6.tar.bz2 /home/user/builder-r4.3-debian/tmp/tmpy5smvyzn/anaconda-37.12.6.tar.bz2
+2024-04-19 22:14:43.266988 +0000 build-debian43: ['rm -f -- /builder/anaconda/hash /builder/anaconda/vtags', 'cd -- /builder', "git -C /builder/anaconda rev-parse 'HEAD^{}' >> /builder/anaconda/hash", "git -C /builder/anaconda tag --points-at HEAD --list 'v*' >> /builder/anaconda/vtags"]
+2024-04-19 22:14:58.106377 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2532 qubesbuilder.FileCopyIn+-2Fbuilder-2Fanaconda /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/anaconda
+2024-04-19 22:14:58.462647 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2532 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/anaconda/hash /builder/anaconda/vtags && cd -- /builder && git -C /builder/anaconda rev-parse '"'"'HEAD^{}'"'"' >> /builder/anaconda/hash && git -C /builder/anaconda tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/anaconda/vtags''.
+2024-04-19 22:14:58.712765 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2532 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpgh0s1dio
+2024-04-19 22:14:58.948501 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2532 qubesbuilder.FileCopyOut+-2Fbuilder-2Fanaconda-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpgh0s1dio
+2024-04-19 22:15:01.745918 +0000 build-debian43: > done
+2024-04-19 22:15:01.745998 +0000 > closing log
