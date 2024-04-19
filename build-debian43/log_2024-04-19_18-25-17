@@ -1,0 +1,131 @@
+2024-04-19 18:25:17.240825 +0000 > starting log
+2024-04-19 18:25:17.241426 +0000 build-debian43: > starting build with log
+2024-04-19 18:25:17.241451 +0000 build-debian43: >> args:
+2024-04-19 18:25:17.241459 +0000 build-debian43: >>   ()
+2024-04-19 18:25:17.241466 +0000 build-debian43: >> component:
+2024-04-19 18:25:17.241472 +0000 build-debian43: >>   salt
+2024-04-19 18:25:17.241481 +0000 build-debian43: >> distributions:
+2024-04-19 18:25:17.241489 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 18:25:32.665815 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2967 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:25:32.919375 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2967 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-salt.git /builder/salt /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 18:25:41.019245 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 18:25:41.019314 +0000 build-debian43: output: ---> Good tag efe8677b3493f372fa0c03e5dba294e5810f8d3d.
+2024-04-19 18:25:41.019327 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 18:25:41.019336 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 18:25:41.041549 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2967 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsalt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 18:25:59.155395 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2135 qubesbuilder.FileCopyIn+-2Fbuilder-2Fsalt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/salt
+2024-04-19 18:25:59.655772 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2135 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 18:25:59.887556 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2135 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/salt --file-name salt-3006.5.tar.gz --file-url https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz --signature-url https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc''.
+2024-04-19 18:26:00.068585 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 18:26:00.068698 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/salt --file-name salt-3006.5.tar.gz --file-url https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz --signature-url https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc
+2024-04-19 18:26:00.072451 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/salt'\'' --file-name '\''salt-3006.5.tar.gz'\'' --file-url '\''https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz'\'' --signature-url '\''https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc'\'' --'
+2024-04-19 18:26:00.072552 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/salt'\'' --file-name '\''salt-3006.5.tar.gz'\'' --file-url '\''https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz'\'' --signature-url '\''https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc'\'' --'
+2024-04-19 18:26:00.072622 +0000 build-debian43: output: ++ set -- --output-dir /builder/salt --file-name salt-3006.5.tar.gz --file-url https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz --signature-url https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc --
+2024-04-19 18:26:00.072652 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 18:26:00.072676 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:26:00.073572 +0000 build-debian43: output: + OUTPUT_DIR=/builder/salt
+2024-04-19 18:26:00.073615 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.073635 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.073652 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:26:00.073668 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:26:00.073925 +0000 build-debian43: output: + FILE_NAME=salt-3006.5.tar.gz
+2024-04-19 18:26:00.073962 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.073984 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.074192 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:26:00.074227 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:26:00.074254 +0000 build-debian43: output: + FILE_URL=https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz
+2024-04-19 18:26:00.074684 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.074705 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.074819 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:26:00.074836 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:26:00.074847 +0000 build-debian43: output: + SIGNATURE_URL=https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc
+2024-04-19 18:26:00.074853 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.074967 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.074980 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:26:00.074988 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:26:00.074994 +0000 build-debian43: output: + shift
+2024-04-19 18:26:00.075000 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:26:00.075009 +0000 build-debian43: output: + '[' -z https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz ']'
+2024-04-19 18:26:00.075021 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 18:26:00.075029 +0000 build-debian43: output: + '[' -z salt-3006.5.tar.gz ']'
+2024-04-19 18:26:00.075038 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_salt-3006.5.tar.gz
+2024-04-19 18:26:00.075044 +0000 build-debian43: output: + '[' -n /builder/salt ']'
+2024-04-19 18:26:00.075051 +0000 build-debian43: output: + mkdir -p /builder/salt
+2024-04-19 18:26:00.075066 +0000 build-debian43: output: + cd /builder/salt
+2024-04-19 18:26:00.075152 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_salt-3006.5.tar.gz -- https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz
+2024-04-19 18:26:57.068670 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 18:26:57.068767 +0000 build-debian43: output: + '[' -n https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc ']'
+2024-04-19 18:26:57.070019 +0000 build-debian43: output: ++ basename https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc
+2024-04-19 18:26:57.072510 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=salt-3006.5.tar.gz.asc
+2024-04-19 18:26:57.072582 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_salt-3006.5.tar.gz.asc
+2024-04-19 18:26:57.072655 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_salt-3006.5.tar.gz.asc https://github.com/saltstack/salt/releases/download/v3006.5/salt-3006.5.tar.gz.asc
+2024-04-19 18:27:02.050757 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2135 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsalt-2Funtrusted_salt--3006.5.tar.gz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_15qswxd
+2024-04-19 18:27:02.296113 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2135 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsalt-2Funtrusted_salt--3006.5.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_15qswxd
+2024-04-19 18:27:05.523146 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp_15qswxd --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc --pubkey-file /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub'.
+2024-04-19 18:27:05.528347 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 18:27:05.528816 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp_15qswxd --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc --pubkey-file /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub
+2024-04-19 18:27:05.529583 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp_15qswxd'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub'\'' --'
+2024-04-19 18:27:05.529665 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp_15qswxd'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub'\'' --'
+2024-04-19 18:27:05.529895 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp_15qswxd --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc --pubkey-file /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub --
+2024-04-19 18:27:05.529932 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 18:27:05.529953 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 18:27:05.529982 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:27:05.530274 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp_15qswxd
+2024-04-19 18:27:05.530310 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530331 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530350 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 18:27:05.530368 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:27:05.530412 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz
+2024-04-19 18:27:05.530432 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530449 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530467 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 18:27:05.530742 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:27:05.530798 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc
+2024-04-19 18:27:05.530821 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530839 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530857 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 18:27:05.530874 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:27:05.530892 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 18:27:05.530909 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530925 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530942 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 18:27:05.530960 +0000 build-debian43: output: + case "$1" in
+2024-04-19 18:27:05.530976 +0000 build-debian43: output: + shift
+2024-04-19 18:27:05.530993 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 18:27:05.531245 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz ']'
+2024-04-19 18:27:05.531287 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp_15qswxd ']'
+2024-04-19 18:27:05.531432 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp_15qswxd
+2024-04-19 18:27:05.533808 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz
+2024-04-19 18:27:05.534423 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_salt-3006.5.tar.gz
+2024-04-19 18:27:05.534497 +0000 build-debian43: output: + FILE_NAME=salt-3006.5.tar.gz
+2024-04-19 18:27:05.534582 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 18:27:05.534679 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc ']'
+2024-04-19 18:27:05.534747 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 18:27:05.534827 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc ']'
+2024-04-19 18:27:05.534906 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub ']'
+2024-04-19 18:27:05.534998 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc ']'
+2024-04-19 18:27:05.535072 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc ']'
+2024-04-19 18:27:05.535149 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub ']'
+2024-04-19 18:27:05.535251 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 18:27:05.535335 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc ']'
+2024-04-19 18:27:05.535350 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub ']'
+2024-04-19 18:27:05.535443 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc
+2024-04-19 18:27:05.535846 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_salt-3006.5.tar.gz.asc
+2024-04-19 18:27:05.535912 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=salt-3006.5.tar.gz.asc
+2024-04-19 18:27:05.536090 +0000 build-debian43: output: ++ mktemp -u
+2024-04-19 18:27:05.536817 +0000 build-debian43: output: + keyring=/tmp/tmp.OUoZ1HHSqG
+2024-04-19 18:27:05.537027 +0000 build-debian43: output: + grep -q toolbox
+2024-04-19 18:27:05.537150 +0000 build-debian43: output: + sq help
+2024-04-19 18:27:05.548789 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.OUoZ1HHSqG /home/user/builder-r4.3-debian/sources/salt/SALT-PROJECT-GPG-PUBKEY-2023.pub
+2024-04-19 18:27:05.553233 +0000 build-debian43: output: + sqv --keyring /tmp/tmp.OUoZ1HHSqG /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz
+2024-04-19 18:27:05.608320 +0000 build-debian43: output: 10857FFDD3F91EAE577A21D664CBBC8173D76B3F
+2024-04-19 18:27:05.608366 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz.asc /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/salt-3006.5.tar.gz.asc
+2024-04-19 18:27:05.609718 +0000 build-debian43: output: + rm -rf /tmp/tmp.OUoZ1HHSqG
+2024-04-19 18:27:05.611207 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/untrusted_salt-3006.5.tar.gz /home/user/builder-r4.3-debian/tmp/tmp_15qswxd/salt-3006.5.tar.gz
+2024-04-19 18:27:05.646503 +0000 build-debian43: ['rm -f -- /builder/salt/hash /builder/salt/vtags', 'cd -- /builder', "git -C /builder/salt rev-parse 'HEAD^{}' >> /builder/salt/hash", "git -C /builder/salt tag --points-at HEAD --list 'v*' >> /builder/salt/vtags"]
+2024-04-19 18:27:20.926475 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2590 qubesbuilder.FileCopyIn+-2Fbuilder-2Fsalt /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/salt
+2024-04-19 18:27:21.302134 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2590 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/salt/hash /builder/salt/vtags && cd -- /builder && git -C /builder/salt rev-parse '"'"'HEAD^{}'"'"' >> /builder/salt/hash && git -C /builder/salt tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/salt/vtags''.
+2024-04-19 18:27:21.508942 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2590 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsalt-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpsq96swuu
+2024-04-19 18:27:21.779102 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2590 qubesbuilder.FileCopyOut+-2Fbuilder-2Fsalt-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpsq96swuu
+2024-04-19 18:27:25.197971 +0000 build-debian43: > done
+2024-04-19 18:27:25.198049 +0000 > closing log
