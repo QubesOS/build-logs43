@@ -1,0 +1,519 @@
+2024-04-19 14:28:39.360840 +0000 > starting log
+2024-04-19 14:28:39.361651 +0000 build-debian43: > starting build with log
+2024-04-19 14:28:39.361673 +0000 build-debian43: >> args:
+2024-04-19 14:28:39.361682 +0000 build-debian43: >>   ()
+2024-04-19 14:28:39.361689 +0000 build-debian43: >> component:
+2024-04-19 14:28:39.361697 +0000 build-debian43: >>   vmm-xen-stubdom-linux
+2024-04-19 14:28:39.361703 +0000 build-debian43: >> distributions:
+2024-04-19 14:28:39.361712 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 14:28:55.866355 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6769 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:28:56.209456 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6769 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git /builder/vmm-xen-stubdom-linux /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 14:29:35.753939 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 14:29:35.753996 +0000 build-debian43: output: ---> Good tag 6d7fab142b2ec1cac4965fbbb07db2a9dc8b37f3.
+2024-04-19 14:29:35.754018 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 14:29:35.754033 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 14:29:35.754044 +0000 build-debian43: output: --> Updating submodules
+2024-04-19 14:29:35.765772 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6769 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 14:29:54.898645 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3337 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-04-19 14:29:56.182402 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3337 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:29:56.378404 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3337 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-8.1.2.tar.xz --file-url https://download.qemu.org/qemu-8.1.2.tar.xz --signature-url https://download.qemu.org/qemu-8.1.2.tar.xz.sig''.
+2024-04-19 14:29:56.612705 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 14:29:56.612935 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-8.1.2.tar.xz --file-url https://download.qemu.org/qemu-8.1.2.tar.xz --signature-url https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-19 14:29:56.613003 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''qemu-8.1.2.tar.xz'\'' --file-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz'\'' --signature-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz.sig'\'' --'
+2024-04-19 14:29:56.613029 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''qemu-8.1.2.tar.xz'\'' --file-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz'\'' --signature-url '\''https://download.qemu.org/qemu-8.1.2.tar.xz.sig'\'' --'
+2024-04-19 14:29:56.613085 +0000 build-debian43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-8.1.2.tar.xz --file-url https://download.qemu.org/qemu-8.1.2.tar.xz --signature-url https://download.qemu.org/qemu-8.1.2.tar.xz.sig --
+2024-04-19 14:29:56.613100 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:29:56.613115 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:29:56.613134 +0000 build-debian43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-19 14:29:56.613151 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613165 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613181 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:29:56.613195 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:29:56.613211 +0000 build-debian43: output: + FILE_NAME=qemu-8.1.2.tar.xz
+2024-04-19 14:29:56.613227 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613239 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613252 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:29:56.613266 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:29:56.613282 +0000 build-debian43: output: + FILE_URL=https://download.qemu.org/qemu-8.1.2.tar.xz
+2024-04-19 14:29:56.613294 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613308 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613314 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:29:56.613322 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:29:56.613342 +0000 build-debian43: output: + SIGNATURE_URL=https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-19 14:29:56.613356 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613371 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613386 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:29:56.613400 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:29:56.613410 +0000 build-debian43: output: + shift
+2024-04-19 14:29:56.613423 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:29:56.613443 +0000 build-debian43: output: + '[' -z https://download.qemu.org/qemu-8.1.2.tar.xz ']'
+2024-04-19 14:29:56.613458 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 14:29:56.613472 +0000 build-debian43: output: + '[' -z qemu-8.1.2.tar.xz ']'
+2024-04-19 14:29:56.613489 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_qemu-8.1.2.tar.xz
+2024-04-19 14:29:56.613500 +0000 build-debian43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-19 14:29:56.613512 +0000 build-debian43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-19 14:29:56.613530 +0000 build-debian43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-19 14:29:56.613554 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qemu-8.1.2.tar.xz -- https://download.qemu.org/qemu-8.1.2.tar.xz
+2024-04-19 14:38:24.143519 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 14:38:24.143574 +0000 build-debian43: output: + '[' -n https://download.qemu.org/qemu-8.1.2.tar.xz.sig ']'
+2024-04-19 14:38:24.143585 +0000 build-debian43: output: ++ basename https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:24.145708 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:24.145738 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:24.145749 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qemu-8.1.2.tar.xz.sig https://download.qemu.org/qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:26.003579 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3337 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_qemu--8.1.2.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5
+2024-04-19 14:38:27.177605 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3337 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_qemu--8.1.2.tar.xz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5
+2024-04-19 14:38:30.679732 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'.
+2024-04-19 14:38:30.684068 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 14:38:30.684177 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc
+2024-04-19 14:38:30.689867 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'\'' --'
+2024-04-19 14:38:30.689926 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'\'' --'
+2024-04-19 14:38:30.689951 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc --
+2024-04-19 14:38:30.689958 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 14:38:30.689972 +0000 build-debian43: output: + [[ 11 -gt 0 ]]
+2024-04-19 14:38:30.689979 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:30.689987 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5
+2024-04-19 14:38:30.689993 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690021 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690028 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:38:30.690034 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:30.690043 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz
+2024-04-19 14:38:30.690049 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690055 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690061 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:38:30.690067 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:30.690076 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:30.690082 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690088 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690094 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:38:30.690100 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:30.690107 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 14:38:30.690112 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690118 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690124 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:38:30.690130 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:30.690136 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 14:38:30.690142 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690148 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690154 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:38:30.690160 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:30.690166 +0000 build-debian43: output: + shift
+2024-04-19 14:38:30.690172 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:38:30.690180 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz ']'
+2024-04-19 14:38:30.690188 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5 ']'
+2024-04-19 14:38:30.690195 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5
+2024-04-19 14:38:30.690203 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz
+2024-04-19 14:38:30.690210 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_qemu-8.1.2.tar.xz
+2024-04-19 14:38:30.690217 +0000 build-debian43: output: + FILE_NAME=qemu-8.1.2.tar.xz
+2024-04-19 14:38:30.690223 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 14:38:30.690231 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-19 14:38:30.690237 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:38:30.690246 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-19 14:38:30.690254 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2024-04-19 14:38:30.690262 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-19 14:38:30.690270 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-19 14:38:30.690278 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2024-04-19 14:38:30.690284 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:38:30.690292 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig ']'
+2024-04-19 14:38:30.690300 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2024-04-19 14:38:30.690310 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:30.690318 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:30.690325 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:30.690331 +0000 build-debian43: output: ++ mktemp -u
+2024-04-19 14:38:30.690340 +0000 build-debian43: output: + keyring=/tmp/tmp.cmzXwEseji
+2024-04-19 14:38:30.690346 +0000 build-debian43: output: + grep -q toolbox
+2024-04-19 14:38:30.690352 +0000 build-debian43: output: + sq help
+2024-04-19 14:38:30.696541 +0000 build-debian43: output: thread 'main' panicked at library/std/src/io/stdio.rs:1030:9:
+2024-04-19 14:38:30.696584 +0000 build-debian43: output: failed printing to stdout: Broken pipe (os error 32)
+2024-04-19 14:38:30.696593 +0000 build-debian43: output: note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+2024-04-19 14:38:30.720876 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.cmzXwEseji /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc
+2024-04-19 14:38:30.727671 +0000 build-debian43: output: + sqv --keyring /tmp/tmp.cmzXwEseji /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz
+2024-04-19 14:38:31.001537 +0000 build-debian43: output: CEACC9E15534EBABB82D3FA03353C9CEF108B584
+2024-04-19 14:38:31.001944 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz.sig /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/qemu-8.1.2.tar.xz.sig
+2024-04-19 14:38:31.003239 +0000 build-debian43: output: + rm -rf /tmp/tmp.cmzXwEseji
+2024-04-19 14:38:31.005484 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/untrusted_qemu-8.1.2.tar.xz /home/user/builder-r4.3-debian/tmp/tmpn81xuhv5/qemu-8.1.2.tar.xz
+2024-04-19 14:38:45.452997 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9997 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-04-19 14:38:46.394321 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9997 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:38:46.596158 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9997 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.200.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign --uncompress''.
+2024-04-19 14:38:46.950489 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 14:38:46.950547 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.200.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign --uncompress
+2024-04-19 14:38:46.955280 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''linux-5.10.200.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign'\'' --uncompress --'
+2024-04-19 14:38:46.955358 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''linux-5.10.200.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign'\'' --uncompress --'
+2024-04-19 14:38:46.955374 +0000 build-debian43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.200.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign --uncompress --
+2024-04-19 14:38:46.955381 +0000 build-debian43: output: + [[ 10 -gt 0 ]]
+2024-04-19 14:38:46.955389 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:46.955397 +0000 build-debian43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-19 14:38:46.955404 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955410 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955503 +0000 build-debian43: output: + [[ 8 -gt 0 ]]
+2024-04-19 14:38:46.955515 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:46.955523 +0000 build-debian43: output: + FILE_NAME=linux-5.10.200.tar.xz
+2024-04-19 14:38:46.955530 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955536 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955543 +0000 build-debian43: output: + [[ 6 -gt 0 ]]
+2024-04-19 14:38:46.955549 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:46.955557 +0000 build-debian43: output: + FILE_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz
+2024-04-19 14:38:46.955564 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955573 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955579 +0000 build-debian43: output: + [[ 4 -gt 0 ]]
+2024-04-19 14:38:46.955585 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:46.955595 +0000 build-debian43: output: + SIGNATURE_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign
+2024-04-19 14:38:46.955601 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955828 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955852 +0000 build-debian43: output: + [[ 2 -gt 0 ]]
+2024-04-19 14:38:46.955861 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:38:46.955867 +0000 build-debian43: output: + UNCOMPRESS=1
+2024-04-19 14:38:46.955892 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955898 +0000 build-debian43: output: + shift
+2024-04-19 14:38:46.955904 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:38:46.956791 +0000 build-debian43: output: + '[' -z https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz ']'
+2024-04-19 14:38:46.956814 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 14:38:46.956822 +0000 build-debian43: output: + '[' -z linux-5.10.200.tar.xz ']'
+2024-04-19 14:38:46.956843 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.200.tar.xz
+2024-04-19 14:38:46.956852 +0000 build-debian43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-19 14:38:46.956858 +0000 build-debian43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-19 14:38:46.959931 +0000 build-debian43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-19 14:38:46.959980 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-5.10.200.tar.xz -- https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.xz
+2024-04-19 14:48:02.886881 +0000 build-debian43: output: + '[' 1 == 1 ']'
+2024-04-19 14:48:02.886983 +0000 build-debian43: output: + '[' linux-5.10.200.tar.xz '!=' linux-5.10.200.tar.xz ']'
+2024-04-19 14:48:02.887012 +0000 build-debian43: output: + '[' linux-5.10.200.tar '!=' linux-5.10.200.tar.xz ']'
+2024-04-19 14:48:02.887033 +0000 build-debian43: output: + unxz untrusted_linux-5.10.200.tar.xz
+2024-04-19 14:48:12.247810 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.200.tar
+2024-04-19 14:48:12.247857 +0000 build-debian43: output: + '[' -n https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign ']'
+2024-04-19 14:48:12.247867 +0000 build-debian43: output: ++ basename https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign
+2024-04-19 14:48:12.249551 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=linux-5.10.200.tar.sign
+2024-04-19 14:48:12.249589 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-5.10.200.tar.sign
+2024-04-19 14:48:12.249602 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-5.10.200.tar.sign https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.200.tar.sign
+2024-04-19 14:48:14.394474 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9997 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_linux--5.10.200.tar /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpxay4j56j
+2024-04-19 14:48:31.866024 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9997 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_linux--5.10.200.tar.sign /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpxay4j56j
+2024-04-19 14:48:39.844937 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpxay4j56j --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'.
+2024-04-19 14:48:39.879829 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 14:48:39.880738 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpxay4j56j --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc
+2024-04-19 14:48:39.884860 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpxay4j56j'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'\'' --'
+2024-04-19 14:48:39.884957 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpxay4j56j'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'\'' --'
+2024-04-19 14:48:39.885010 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpxay4j56j --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign --pubkey-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc --
+2024-04-19 14:48:39.885048 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 14:48:39.885073 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:48:39.885089 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:48:39.885109 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpxay4j56j
+2024-04-19 14:48:39.885126 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885143 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885160 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:48:39.885177 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:48:39.885200 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar
+2024-04-19 14:48:39.885248 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885266 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885282 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:48:39.885298 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:48:39.885321 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign
+2024-04-19 14:48:39.885338 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885354 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885370 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:48:39.885388 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:48:39.885404 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-04-19 14:48:39.885420 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885435 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885451 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:48:39.885467 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:48:39.885483 +0000 build-debian43: output: + shift
+2024-04-19 14:48:39.885499 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:48:39.885521 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar ']'
+2024-04-19 14:48:39.885541 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpxay4j56j ']'
+2024-04-19 14:48:39.885560 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpxay4j56j
+2024-04-19 14:48:39.887339 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar
+2024-04-19 14:48:39.890639 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.200.tar
+2024-04-19 14:48:39.890695 +0000 build-debian43: output: + FILE_NAME=linux-5.10.200.tar
+2024-04-19 14:48:39.890715 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 14:48:39.890740 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-19 14:48:39.890759 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:48:39.890783 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-19 14:48:39.890805 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2024-04-19 14:48:39.890827 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-19 14:48:39.890849 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-19 14:48:39.890871 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2024-04-19 14:48:39.890909 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:48:39.890933 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign ']'
+2024-04-19 14:48:39.890961 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2024-04-19 14:48:39.890983 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign
+2024-04-19 14:48:39.896898 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-5.10.200.tar.sign
+2024-04-19 14:48:39.896935 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=linux-5.10.200.tar.sign
+2024-04-19 14:48:39.896946 +0000 build-debian43: output: ++ mktemp -u
+2024-04-19 14:48:39.904180 +0000 build-debian43: output: + keyring=/tmp/tmp.HUtF6Lk7c7
+2024-04-19 14:48:39.904274 +0000 build-debian43: output: + sq help
+2024-04-19 14:48:39.906607 +0000 build-debian43: output: + grep -q toolbox
+2024-04-19 14:48:39.917827 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.HUtF6Lk7c7 /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc
+2024-04-19 14:48:39.923571 +0000 build-debian43: output: + sqv --keyring /tmp/tmp.HUtF6Lk7c7 /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar
+2024-04-19 14:48:40.925044 +0000 build-debian43: output: 647F28654894E3BD457199BE38DBBDC86092693E
+2024-04-19 14:48:40.925101 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar.sign /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/linux-5.10.200.tar.sign
+2024-04-19 14:48:40.925111 +0000 build-debian43: output: + rm -rf /tmp/tmp.HUtF6Lk7c7
+2024-04-19 14:48:40.925122 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/untrusted_linux-5.10.200.tar /home/user/builder-r4.3-debian/tmp/tmpxay4j56j/linux-5.10.200.tar
+2024-04-19 14:49:09.789766 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7365 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-04-19 14:49:13.056348 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7365 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:49:13.282159 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7365 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2''.
+2024-04-19 14:49:13.414916 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 14:49:13.415272 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2024-04-19 14:49:13.419022 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''busybox-1.31.1.tar.bz2'\'' --file-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2'\'' --'
+2024-04-19 14:49:13.419063 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''busybox-1.31.1.tar.bz2'\'' --file-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2'\'' --'
+2024-04-19 14:49:13.419076 +0000 build-debian43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2 --
+2024-04-19 14:49:13.419098 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:49:13.419105 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:13.419114 +0000 build-debian43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-19 14:49:13.419121 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419127 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419133 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:49:13.419140 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:13.419147 +0000 build-debian43: output: + FILE_NAME=busybox-1.31.1.tar.bz2
+2024-04-19 14:49:13.419153 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419158 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419164 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:49:13.419170 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:13.419177 +0000 build-debian43: output: + FILE_URL=https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2024-04-19 14:49:13.419184 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419189 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419195 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:49:13.419201 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:13.419207 +0000 build-debian43: output: + shift
+2024-04-19 14:49:13.419232 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:49:13.419241 +0000 build-debian43: output: + '[' -z https://busybox.net/downloads/busybox-1.31.1.tar.bz2 ']'
+2024-04-19 14:49:13.419249 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 14:49:13.419256 +0000 build-debian43: output: + '[' -z busybox-1.31.1.tar.bz2 ']'
+2024-04-19 14:49:13.419263 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2
+2024-04-19 14:49:13.419270 +0000 build-debian43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-19 14:49:13.419277 +0000 build-debian43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-19 14:49:13.419283 +0000 build-debian43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-19 14:49:13.419293 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_busybox-1.31.1.tar.bz2 -- https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2024-04-19 14:49:36.927133 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 14:49:36.927177 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:49:36.933902 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7365 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_busybox--1.31.1.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka
+2024-04-19 14:49:40.404672 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512'.
+2024-04-19 14:49:40.407153 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 14:49:40.407200 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512
+2024-04-19 14:49:40.408831 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp3lc7ddka'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512'\'' --'
+2024-04-19 14:49:40.408866 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp3lc7ddka'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512'\'' --'
+2024-04-19 14:49:40.408883 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 --
+2024-04-19 14:49:40.408890 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 14:49:40.408897 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:49:40.408903 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:40.408911 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp3lc7ddka
+2024-04-19 14:49:40.408917 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.408923 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.408928 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:49:40.408934 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:40.408942 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2
+2024-04-19 14:49:40.408949 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.408955 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.408960 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:49:40.408966 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:40.408973 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 14:49:40.408978 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.408984 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.408990 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:49:40.408996 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:40.409004 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512
+2024-04-19 14:49:40.409010 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.409016 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.409022 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:49:40.409028 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:49:40.409034 +0000 build-debian43: output: + shift
+2024-04-19 14:49:40.409040 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:49:40.409048 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2 ']'
+2024-04-19 14:49:40.409055 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka ']'
+2024-04-19 14:49:40.409063 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka
+2024-04-19 14:49:40.412017 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2
+2024-04-19 14:49:40.412037 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2
+2024-04-19 14:49:40.412044 +0000 build-debian43: output: + FILE_NAME=busybox-1.31.1.tar.bz2
+2024-04-19 14:49:40.412053 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-19 14:49:40.412062 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-19 14:49:40.412071 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-19 14:49:40.412077 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:49:40.412083 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 14:49:40.412089 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:49:40.412095 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:49:40.412103 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512 ']'
+2024-04-19 14:49:40.412109 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 14:49:40.412116 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 14:49:40.412450 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/busybox-1.31.1.tar.bz2.sha512
+2024-04-19 14:49:40.413928 +0000 build-debian43: output: ++ printf '%s  -\n' 0d1197c25d963d7f95ef21e08c06c0d6124ac7b59c99989e891f744ffee4878a3b1fe44a247241a9da39fa5de0ba87f1b6d862401b591f277e66e89c02764bbf
+2024-04-19 14:49:40.418001 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/untrusted_busybox-1.31.1.tar.bz2 /home/user/builder-r4.3-debian/tmp/tmp3lc7ddka/busybox-1.31.1.tar.bz2
+2024-04-19 14:50:01.179678 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9943 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-04-19 14:50:02.275978 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9943 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:50:02.734609 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9943 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz''.
+2024-04-19 14:50:02.965322 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 14:50:02.965976 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2024-04-19 14:50:02.992765 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''pulseaudio-14.2.tar.xz'\'' --file-url '\''https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz'\'' --'
+2024-04-19 14:50:02.992816 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''pulseaudio-14.2.tar.xz'\'' --file-url '\''https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz'\'' --'
+2024-04-19 14:50:02.992852 +0000 build-debian43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz --
+2024-04-19 14:50:02.992860 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:50:02.992867 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:02.992874 +0000 build-debian43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-19 14:50:02.992881 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992887 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992893 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:50:02.992900 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:02.992906 +0000 build-debian43: output: + FILE_NAME=pulseaudio-14.2.tar.xz
+2024-04-19 14:50:02.992912 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992918 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992924 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:50:02.992929 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:02.992938 +0000 build-debian43: output: + FILE_URL=https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2024-04-19 14:50:02.992944 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992950 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992955 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:50:02.992961 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:02.992967 +0000 build-debian43: output: + shift
+2024-04-19 14:50:02.992973 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:50:02.992981 +0000 build-debian43: output: + '[' -z https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz ']'
+2024-04-19 14:50:02.992991 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 14:50:02.993001 +0000 build-debian43: output: + '[' -z pulseaudio-14.2.tar.xz ']'
+2024-04-19 14:50:02.993015 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_pulseaudio-14.2.tar.xz
+2024-04-19 14:50:02.993028 +0000 build-debian43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-19 14:50:02.993037 +0000 build-debian43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-19 14:50:02.993047 +0000 build-debian43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-19 14:50:02.993067 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_pulseaudio-14.2.tar.xz -- https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2024-04-19 14:50:09.862869 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 14:50:09.862944 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:09.878063 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9943 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_pulseaudio--14.2.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpyzvrnges
+2024-04-19 14:50:15.038491 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpyzvrnges --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'.
+2024-04-19 14:50:15.043074 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 14:50:15.044125 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpyzvrnges --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2024-04-19 14:50:15.046350 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpyzvrnges'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'\'' --'
+2024-04-19 14:50:15.046434 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpyzvrnges'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'\'' --'
+2024-04-19 14:50:15.046955 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpyzvrnges --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 --
+2024-04-19 14:50:15.047002 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 14:50:15.047023 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:50:15.047264 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:15.047326 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpyzvrnges
+2024-04-19 14:50:15.047675 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.047708 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.048000 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:50:15.048034 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:15.048061 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz
+2024-04-19 14:50:15.048079 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.048285 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.048317 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:50:15.048539 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:15.048572 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 14:50:15.048590 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.048839 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.048872 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:50:15.048891 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:15.049159 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2024-04-19 14:50:15.049204 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.049508 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.049543 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:50:15.049562 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:15.049769 +0000 build-debian43: output: + shift
+2024-04-19 14:50:15.049801 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:50:15.050185 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz ']'
+2024-04-19 14:50:15.050253 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpyzvrnges ']'
+2024-04-19 14:50:15.050276 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpyzvrnges
+2024-04-19 14:50:15.053320 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz
+2024-04-19 14:50:15.055409 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_pulseaudio-14.2.tar.xz
+2024-04-19 14:50:15.055433 +0000 build-debian43: output: + FILE_NAME=pulseaudio-14.2.tar.xz
+2024-04-19 14:50:15.055445 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-19 14:50:15.055455 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-19 14:50:15.055464 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-19 14:50:15.055470 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:15.055476 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 14:50:15.055482 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:15.055488 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:15.055497 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2024-04-19 14:50:15.055504 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 14:50:15.055510 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 14:50:15.055519 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2024-04-19 14:50:15.055770 +0000 build-debian43: output: ++ printf '%s  -\n' 196338cbb26c542301b6d0579070dfbcc42e76dc17405f3e216af70519bec2003089b80c573a32d5f96bdab078631ca09ce89998ab7a0a8ffa26955a9bcb3c4a
+2024-04-19 14:50:15.060233 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/untrusted_pulseaudio-14.2.tar.xz /home/user/builder-r4.3-debian/tmp/tmpyzvrnges/pulseaudio-14.2.tar.xz
+2024-04-19 14:50:34.573167 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1340 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-04-19 14:50:35.535346 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1340 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 14:50:35.961821 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1340 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2''.
+2024-04-19 14:50:36.313345 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 14:50:36.313551 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2024-04-19 14:50:36.317026 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''libusb-1.0.23.tar.bz2'\'' --file-url '\''https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2'\'' --'
+2024-04-19 14:50:36.317071 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''libusb-1.0.23.tar.bz2'\'' --file-url '\''https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2'\'' --'
+2024-04-19 14:50:36.317106 +0000 build-debian43: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2 --
+2024-04-19 14:50:36.317115 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:50:36.317123 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:36.317130 +0000 build-debian43: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2024-04-19 14:50:36.317138 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317145 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317151 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:50:36.317158 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:36.317165 +0000 build-debian43: output: + FILE_NAME=libusb-1.0.23.tar.bz2
+2024-04-19 14:50:36.317171 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317177 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317184 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:50:36.317190 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:36.317199 +0000 build-debian43: output: + FILE_URL=https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2024-04-19 14:50:36.317205 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317211 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317240 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:50:36.317247 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:36.317253 +0000 build-debian43: output: + shift
+2024-04-19 14:50:36.317259 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:50:36.317268 +0000 build-debian43: output: + '[' -z https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2 ']'
+2024-04-19 14:50:36.317277 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 14:50:36.317284 +0000 build-debian43: output: + '[' -z libusb-1.0.23.tar.bz2 ']'
+2024-04-19 14:50:36.317292 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_libusb-1.0.23.tar.bz2
+2024-04-19 14:50:36.317325 +0000 build-debian43: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2024-04-19 14:50:36.317334 +0000 build-debian43: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2024-04-19 14:50:36.317341 +0000 build-debian43: output: + cd /builder/vmm-xen-stubdom-linux
+2024-04-19 14:50:36.317353 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libusb-1.0.23.tar.bz2 -- https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2024-04-19 14:50:40.577195 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 14:50:40.577262 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:40.586844 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1340 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Funtrusted_libusb--1.0.23.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od
+2024-04-19 14:50:44.094858 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'.
+2024-04-19 14:50:44.094909 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 14:50:44.094937 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2024-04-19 14:50:44.095949 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpsfx5k0od'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'\'' --'
+2024-04-19 14:50:44.095995 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpsfx5k0od'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'\'' --'
+2024-04-19 14:50:44.096014 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 --
+2024-04-19 14:50:44.098082 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 14:50:44.098107 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 14:50:44.098116 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:44.098124 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpsfx5k0od
+2024-04-19 14:50:44.098131 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098137 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098143 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 14:50:44.098150 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:44.098158 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2
+2024-04-19 14:50:44.098165 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098171 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098177 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 14:50:44.098183 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:44.098189 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 14:50:44.098195 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098201 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098207 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 14:50:44.098236 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:44.098247 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2024-04-19 14:50:44.098254 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098259 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098266 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 14:50:44.098272 +0000 build-debian43: output: + case "$1" in
+2024-04-19 14:50:44.098278 +0000 build-debian43: output: + shift
+2024-04-19 14:50:44.098284 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 14:50:44.098292 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2 ']'
+2024-04-19 14:50:44.098300 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od ']'
+2024-04-19 14:50:44.098308 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od
+2024-04-19 14:50:44.098335 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2
+2024-04-19 14:50:44.099235 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_libusb-1.0.23.tar.bz2
+2024-04-19 14:50:44.099252 +0000 build-debian43: output: + FILE_NAME=libusb-1.0.23.tar.bz2
+2024-04-19 14:50:44.099262 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-19 14:50:44.099272 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-19 14:50:44.099281 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-19 14:50:44.099287 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:44.099306 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 14:50:44.099314 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:44.099320 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 14:50:44.099329 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2024-04-19 14:50:44.099336 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 14:50:44.099343 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 14:50:44.099633 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2024-04-19 14:50:44.100679 +0000 build-debian43: output: ++ printf '%s  -\n' 73430ad31dd405e76a9c6c55086961003989c44964e2735b5076f9ca849e3f6fe71d10a66b74b111f0c34a0d2cb744b9ca105863c552123fce4ec0bbdd2ec15b
+2024-04-19 14:50:44.103014 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/untrusted_libusb-1.0.23.tar.bz2 /home/user/builder-r4.3-debian/tmp/tmpsfx5k0od/libusb-1.0.23.tar.bz2
+2024-04-19 14:50:44.285463 +0000 build-debian43: ['rm -f -- /builder/vmm-xen-stubdom-linux/hash /builder/vmm-xen-stubdom-linux/vtags', 'cd -- /builder', "git -C /builder/vmm-xen-stubdom-linux rev-parse 'HEAD^{}' >> /builder/vmm-xen-stubdom-linux/hash", "git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list 'v*' >> /builder/vmm-xen-stubdom-linux/vtags"]
+2024-04-19 14:50:59.601008 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3850 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-04-19 14:51:00.475936 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3850 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/vmm-xen-stubdom-linux/hash /builder/vmm-xen-stubdom-linux/vtags && cd -- /builder && git -C /builder/vmm-xen-stubdom-linux rev-parse '"'"'HEAD^{}'"'"' >> /builder/vmm-xen-stubdom-linux/hash && git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/vmm-xen-stubdom-linux/vtags''.
+2024-04-19 14:51:01.023067 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3850 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmphn_l3l1p
+2024-04-19 14:51:01.225618 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3850 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmphn_l3l1p
+2024-04-19 14:51:04.954071 +0000 build-debian43: > done
+2024-04-19 14:51:04.954270 +0000 > closing log
