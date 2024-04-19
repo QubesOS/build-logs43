@@ -1,0 +1,110 @@
+2024-04-19 11:35:22.265653 +0000 > starting log
+2024-04-19 11:35:22.265913 +0000 build-debian43: > starting build with log
+2024-04-19 11:35:22.265931 +0000 build-debian43: >> args:
+2024-04-19 11:35:22.265940 +0000 build-debian43: >>   ()
+2024-04-19 11:35:22.265946 +0000 build-debian43: >> component:
+2024-04-19 11:35:22.265955 +0000 build-debian43: >>   vmm-xen
+2024-04-19 11:35:22.265961 +0000 build-debian43: >> distributions:
+2024-04-19 11:35:22.265969 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 11:35:40.215101 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8000 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 11:35:40.386939 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8000 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-vmm-xen.git /builder/vmm-xen /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 11:35:50.570919 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 11:35:50.570965 +0000 build-debian43: output: ---> Good tag 9fb1e2666fe7a3b85fb82f378161a5d7603e8413.
+2024-04-19 11:35:50.570977 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 11:35:50.570985 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 11:35:50.581606 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8000 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 11:36:11.773499 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9485 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen
+2024-04-19 11:36:12.232718 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9485 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 11:36:12.735682 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9485 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen --file-name xen-4.17.3.tar.gz --file-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz''.
+2024-04-19 11:36:12.948880 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 11:36:12.949544 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen --file-name xen-4.17.3.tar.gz --file-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz
+2024-04-19 11:36:12.954611 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/vmm-xen'\'' --file-name '\''xen-4.17.3.tar.gz'\'' --file-url '\''https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz'\'' --'
+2024-04-19 11:36:12.954671 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/vmm-xen'\'' --file-name '\''xen-4.17.3.tar.gz'\'' --file-url '\''https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz'\'' --'
+2024-04-19 11:36:12.954687 +0000 build-debian43: output: ++ set -- --output-dir /builder/vmm-xen --file-name xen-4.17.3.tar.gz --file-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz --
+2024-04-19 11:36:12.954698 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 11:36:12.954705 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:36:12.954730 +0000 build-debian43: output: + OUTPUT_DIR=/builder/vmm-xen
+2024-04-19 11:36:12.954737 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954744 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954751 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 11:36:12.954757 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:36:12.954763 +0000 build-debian43: output: + FILE_NAME=xen-4.17.3.tar.gz
+2024-04-19 11:36:12.954769 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954774 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954780 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 11:36:12.954786 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:36:12.954814 +0000 build-debian43: output: + FILE_URL=https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz
+2024-04-19 11:36:12.954821 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954832 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954838 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 11:36:12.954844 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:36:12.954850 +0000 build-debian43: output: + shift
+2024-04-19 11:36:12.954856 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 11:36:12.954865 +0000 build-debian43: output: + '[' -z https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz ']'
+2024-04-19 11:36:12.954873 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 11:36:12.954882 +0000 build-debian43: output: + '[' -z xen-4.17.3.tar.gz ']'
+2024-04-19 11:36:12.954889 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_xen-4.17.3.tar.gz
+2024-04-19 11:36:12.954895 +0000 build-debian43: output: + '[' -n /builder/vmm-xen ']'
+2024-04-19 11:36:12.954902 +0000 build-debian43: output: + mkdir -p /builder/vmm-xen
+2024-04-19 11:36:12.955781 +0000 build-debian43: output: + cd /builder/vmm-xen
+2024-04-19 11:36:12.955811 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_xen-4.17.3.tar.gz -- https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz
+2024-04-19 11:37:19.536969 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 11:37:19.537014 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 11:37:19.559401 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9485 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Funtrusted_xen--4.17.3.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2
+2024-04-19 11:37:23.205887 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512'.
+2024-04-19 11:37:23.210780 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 11:37:23.210856 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512
+2024-04-19 11:37:23.210875 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512'\'' --'
+2024-04-19 11:37:23.210913 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512'\'' --'
+2024-04-19 11:37:23.210929 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512 --
+2024-04-19 11:37:23.210937 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 11:37:23.210943 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 11:37:23.210949 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:37:23.210957 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2
+2024-04-19 11:37:23.210963 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.210969 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.210975 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 11:37:23.210981 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:37:23.210989 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz
+2024-04-19 11:37:23.210995 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211005 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211011 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 11:37:23.211017 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:37:23.211025 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 11:37:23.211031 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211037 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211043 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 11:37:23.211049 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:37:23.211058 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512
+2024-04-19 11:37:23.211063 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211069 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211076 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 11:37:23.211082 +0000 build-debian43: output: + case "$1" in
+2024-04-19 11:37:23.211088 +0000 build-debian43: output: + shift
+2024-04-19 11:37:23.211094 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 11:37:23.211102 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz ']'
+2024-04-19 11:37:23.211109 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2 ']'
+2024-04-19 11:37:23.211117 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2
+2024-04-19 11:37:23.211125 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz
+2024-04-19 11:37:23.211133 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_xen-4.17.3.tar.gz
+2024-04-19 11:37:23.211139 +0000 build-debian43: output: + FILE_NAME=xen-4.17.3.tar.gz
+2024-04-19 11:37:23.211147 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512 ']'
+2024-04-19 11:37:23.211155 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512 ']'
+2024-04-19 11:37:23.211163 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512 ']'
+2024-04-19 11:37:23.211171 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 11:37:23.211177 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 11:37:23.211183 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 11:37:23.211189 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 11:37:23.211197 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512 ']'
+2024-04-19 11:37:23.211204 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 11:37:23.211210 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 11:37:23.211218 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/vmm-xen/xen-4.17.3.tar.gz.sha512
+2024-04-19 11:37:23.212429 +0000 build-debian43: output: ++ printf '%s  -\n' 56ead90af00b4c1aa452b5edba980a2873e4c76e8c518220a88089a2771cd76fe2478e15a41abf5d247e4bc5af8415d53614dff7eb028ced80701c1a1263f91f
+2024-04-19 11:37:23.292234 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/untrusted_xen-4.17.3.tar.gz /home/user/builder-r4.3-debian/tmp/tmpq4dlyrd2/xen-4.17.3.tar.gz
+2024-04-19 11:37:23.348547 +0000 build-debian43: ['rm -f -- /builder/vmm-xen/hash /builder/vmm-xen/vtags', 'cd -- /builder', "git -C /builder/vmm-xen rev-parse 'HEAD^{}' >> /builder/vmm-xen/hash", "git -C /builder/vmm-xen tag --points-at HEAD --list 'v*' >> /builder/vmm-xen/vtags"]
+2024-04-19 11:37:38.157871 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp679 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen
+2024-04-19 11:37:38.723154 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp679 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/vmm-xen/hash /builder/vmm-xen/vtags && cd -- /builder && git -C /builder/vmm-xen rev-parse '"'"'HEAD^{}'"'"' >> /builder/vmm-xen/hash && git -C /builder/vmm-xen tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/vmm-xen/vtags''.
+2024-04-19 11:37:39.057857 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp679 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpvmt6k1pt
+2024-04-19 11:37:39.348527 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp679 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpvmt6k1pt
+2024-04-19 11:37:43.597041 +0000 build-debian43: > done
+2024-04-19 11:37:43.597120 +0000 > closing log
