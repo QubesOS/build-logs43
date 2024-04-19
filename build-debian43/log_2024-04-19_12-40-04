@@ -1,0 +1,34 @@
+2024-04-19 12:40:04.866035 +0000 > starting log
+2024-04-19 12:40:04.867165 +0000 build-debian43: > starting build with log
+2024-04-19 12:40:04.867311 +0000 build-debian43: >> args:
+2024-04-19 12:40:04.867324 +0000 build-debian43: >>   ()
+2024-04-19 12:40:04.867331 +0000 build-debian43: >> component:
+2024-04-19 12:40:04.867338 +0000 build-debian43: >>   python-panflute
+2024-04-19 12:40:04.867345 +0000 build-debian43: >> distributions:
+2024-04-19 12:40:04.867354 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 12:40:23.356139 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9876 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:40:23.549125 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9876 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-panflute.git /builder/python-panflute /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 12:40:28.307078 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 12:40:28.307181 +0000 build-debian43: output: ---> Good tag 66ef1a6ca0eb4570917cf3278b669d784a00910f.
+2024-04-19 12:40:28.307223 +0000 build-debian43: output: ERROR: CalledProcessError(1, ['git', '-c', 'gpg.program=/usr/bin/gpg-sq', '-c', 'gpg.minTrustLevel=fully', 'verify-tag', '--raw', '--', '4398b8af5100e70fa6cc55c36c2ad79837e364da']); stderr: [GNUPG:] NEWSIG
+2024-04-19 12:40:28.307264 +0000 build-debian43: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2024-04-19 12:40:28.307289 +0000 build-debian43: output: [GNUPG:] ERRSIG 063938BA42CFA724 1 8 00 1634177680 6 0064428F455451B3EBE78A7F063938BA42CFA724
+2024-04-19 12:40:28.307306 +0000 build-debian43: output: 
+2024-04-19 12:40:28.307343 +0000 build-debian43: output: ---> Invalid tag 4398b8af5100e70fa6cc55c36c2ad79837e364da.
+2024-04-19 12:40:28.307364 +0000 build-debian43: output: ---> Good tag e5d1d75dc895e808d34aa52af554dcff21c12e63.
+2024-04-19 12:40:28.307384 +0000 build-debian43: output: ---> Good tag e6e43bbd31b39de36d92481b9a95b924a32d324e.
+2024-04-19 12:40:28.307434 +0000 build-debian43: output: ERROR: CalledProcessError(1, ['git', '-c', 'gpg.program=/usr/bin/gpg-sq', '-c', 'gpg.minTrustLevel=fully', 'verify-tag', '--raw', '--', '09077c010eece17390f1b2fe93953fbea112d3f6']); stderr: [GNUPG:] NEWSIG
+2024-04-19 12:40:28.307456 +0000 build-debian43: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2024-04-19 12:40:28.307495 +0000 build-debian43: output: [GNUPG:] ERRSIG 063938BA42CFA724 1 8 00 1601784142 6 0064428F455451B3EBE78A7F063938BA42CFA724
+2024-04-19 12:40:28.307512 +0000 build-debian43: output: 
+2024-04-19 12:40:28.307533 +0000 build-debian43: output: ---> Invalid tag 09077c010eece17390f1b2fe93953fbea112d3f6.
+2024-04-19 12:40:28.307553 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 12:40:28.307572 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 12:40:28.325387 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9876 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 12:40:31.299691 +0000 build-debian43: ['rm -f -- /builder/python-panflute/hash /builder/python-panflute/vtags', 'cd -- /builder', "git -C /builder/python-panflute rev-parse 'HEAD^{}' >> /builder/python-panflute/hash", "git -C /builder/python-panflute tag --points-at HEAD --list 'v*' >> /builder/python-panflute/vtags"]
+2024-04-19 12:40:46.219866 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1791 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--panflute /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-panflute
+2024-04-19 12:40:46.526343 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1791 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-panflute/hash /builder/python-panflute/vtags && cd -- /builder && git -C /builder/python-panflute rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-panflute/hash && git -C /builder/python-panflute tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-panflute/vtags''.
+2024-04-19 12:40:46.793408 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1791 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_roezy9t
+2024-04-19 12:40:47.002026 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1791 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp_roezy9t
+2024-04-19 12:40:50.529454 +0000 build-debian43: > done
+2024-04-19 12:40:50.529535 +0000 > closing log
