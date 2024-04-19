@@ -1,0 +1,199 @@
+2024-04-19 22:09:15.849377 +0000 > starting log
+2024-04-19 22:09:15.849912 +0000 build-debian43: > starting build with log
+2024-04-19 22:09:15.849930 +0000 build-debian43: >> args:
+2024-04-19 22:09:15.849938 +0000 build-debian43: >>   ()
+2024-04-19 22:09:15.849945 +0000 build-debian43: >> component:
+2024-04-19 22:09:15.849953 +0000 build-debian43: >>   blivet
+2024-04-19 22:09:15.849959 +0000 build-debian43: >> distributions:
+2024-04-19 22:09:15.849968 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 22:09:30.022550 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7126 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:09:30.329685 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7126 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-blivet.git /builder/blivet /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 22:09:54.402838 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 22:09:54.403249 +0000 build-debian43: output: ---> Good tag 26ecbff9b9043d55718f1c098b9fa7fb3910361e.
+2024-04-19 22:09:54.403316 +0000 build-debian43: output: ---> Good tag da1a0eb4618d244d0e119b69e9ae6c465363accc.
+2024-04-19 22:09:54.403344 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 22:09:54.403370 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 22:09:54.416508 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7126 qubesbuilder.FileCopyOut+-2Fbuilder-2Fblivet /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 22:10:12.471633 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5422 qubesbuilder.FileCopyIn+-2Fbuilder-2Fblivet /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/blivet
+2024-04-19 22:10:12.823250 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5422 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:10:12.987502 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp5422 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/blivet --file-name blivet-3.5.0-tests.tar.gz --file-url https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz''.
+2024-04-19 22:10:13.254557 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 22:10:13.255746 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/blivet --file-name blivet-3.5.0-tests.tar.gz --file-url https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:13.258446 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/blivet'\'' --file-name '\''blivet-3.5.0-tests.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz'\'' --'
+2024-04-19 22:10:13.258512 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/blivet'\'' --file-name '\''blivet-3.5.0-tests.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz'\'' --'
+2024-04-19 22:10:13.258547 +0000 build-debian43: output: ++ set -- --output-dir /builder/blivet --file-name blivet-3.5.0-tests.tar.gz --file-url https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz --
+2024-04-19 22:10:13.258790 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:10:13.258843 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:13.258866 +0000 build-debian43: output: + OUTPUT_DIR=/builder/blivet
+2024-04-19 22:10:13.258886 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.259191 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.259242 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:10:13.259262 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:13.259282 +0000 build-debian43: output: + FILE_NAME=blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:13.259298 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.260229 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.260271 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:10:13.260290 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:13.260322 +0000 build-debian43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:13.260340 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.260357 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.260379 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:10:13.260395 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:13.260411 +0000 build-debian43: output: + shift
+2024-04-19 22:10:13.260428 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:10:13.260451 +0000 build-debian43: output: + '[' -z https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz ']'
+2024-04-19 22:10:13.261082 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 22:10:13.261159 +0000 build-debian43: output: + '[' -z blivet-3.5.0-tests.tar.gz ']'
+2024-04-19 22:10:13.261186 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:13.261472 +0000 build-debian43: output: + '[' -n /builder/blivet ']'
+2024-04-19 22:10:13.261511 +0000 build-debian43: output: + mkdir -p /builder/blivet
+2024-04-19 22:10:13.261530 +0000 build-debian43: output: + cd /builder/blivet
+2024-04-19 22:10:13.261563 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_blivet-3.5.0-tests.tar.gz -- https://ftp.qubes-os.org/distfiles/blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:26.611892 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 22:10:26.611985 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:10:26.623361 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5422 qubesbuilder.FileCopyOut+-2Fbuilder-2Fblivet-2Funtrusted_blivet--3.5.0--tests.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpb3gohysw
+2024-04-19 22:10:29.515893 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpb3gohysw --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512'.
+2024-04-19 22:10:29.520379 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 22:10:29.520961 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpb3gohysw --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512
+2024-04-19 22:10:29.524900 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpb3gohysw'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512'\'' --'
+2024-04-19 22:10:29.525016 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpb3gohysw'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512'\'' --'
+2024-04-19 22:10:29.525074 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpb3gohysw --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512 --
+2024-04-19 22:10:29.525095 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 22:10:29.525160 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 22:10:29.525179 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:29.525203 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpb3gohysw
+2024-04-19 22:10:29.525222 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525239 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525257 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:10:29.525274 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:29.525310 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:29.525328 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525345 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525363 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:10:29.525380 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:29.525399 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 22:10:29.525417 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525436 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525453 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:10:29.525470 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:29.525495 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512
+2024-04-19 22:10:29.525511 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525528 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525545 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:10:29.525561 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:29.525577 +0000 build-debian43: output: + shift
+2024-04-19 22:10:29.525594 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:10:29.525619 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz ']'
+2024-04-19 22:10:29.525640 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpb3gohysw ']'
+2024-04-19 22:10:29.525661 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpb3gohysw
+2024-04-19 22:10:29.525923 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:29.528680 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:29.528733 +0000 build-debian43: output: + FILE_NAME=blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:29.528760 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512 ']'
+2024-04-19 22:10:29.528785 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512 ']'
+2024-04-19 22:10:29.528825 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512 ']'
+2024-04-19 22:10:29.528844 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:10:29.528861 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 22:10:29.528879 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:10:29.528895 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:10:29.528920 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512 ']'
+2024-04-19 22:10:29.528939 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 22:10:29.528958 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 22:10:29.529896 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0-tests.tar.gz.sha512
+2024-04-19 22:10:29.532335 +0000 build-debian43: output: ++ printf '%s  -\n' 9b09785173256fac4ce57d448f1522fa0253a4e13b306f48679709277ac60f013c6938498b5303212cb5c1526841dd9eeda8241287617234655e30e75fe41620
+2024-04-19 22:10:29.533400 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/untrusted_blivet-3.5.0-tests.tar.gz /home/user/builder-r4.3-debian/tmp/tmpb3gohysw/blivet-3.5.0-tests.tar.gz
+2024-04-19 22:10:43.921936 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7806 qubesbuilder.FileCopyIn+-2Fbuilder-2Fblivet /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/blivet
+2024-04-19 22:10:44.269502 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7806 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 22:10:44.530778 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7806 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/blivet --file-name blivet-3.5.0.tar.gz --file-url https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz''.
+2024-04-19 22:10:44.718932 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 22:10:44.718985 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/blivet --file-name blivet-3.5.0.tar.gz --file-url https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz
+2024-04-19 22:10:44.721318 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/blivet'\'' --file-name '\''blivet-3.5.0.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz'\'' --'
+2024-04-19 22:10:44.724384 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/blivet'\'' --file-name '\''blivet-3.5.0.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz'\'' --'
+2024-04-19 22:10:44.724415 +0000 build-debian43: output: ++ set -- --output-dir /builder/blivet --file-name blivet-3.5.0.tar.gz --file-url https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz --
+2024-04-19 22:10:44.724425 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:10:44.724432 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:44.724439 +0000 build-debian43: output: + OUTPUT_DIR=/builder/blivet
+2024-04-19 22:10:44.724446 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724452 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724458 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:10:44.724464 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:44.724472 +0000 build-debian43: output: + FILE_NAME=blivet-3.5.0.tar.gz
+2024-04-19 22:10:44.724478 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724485 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724504 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:10:44.724511 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:44.724519 +0000 build-debian43: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz
+2024-04-19 22:10:44.724525 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724531 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724537 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:10:44.724548 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:10:44.724554 +0000 build-debian43: output: + shift
+2024-04-19 22:10:44.724627 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:10:44.724654 +0000 build-debian43: output: + '[' -z https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz ']'
+2024-04-19 22:10:44.724774 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 22:10:44.724789 +0000 build-debian43: output: + '[' -z blivet-3.5.0.tar.gz ']'
+2024-04-19 22:10:44.724877 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_blivet-3.5.0.tar.gz
+2024-04-19 22:10:44.724963 +0000 build-debian43: output: + '[' -n /builder/blivet ']'
+2024-04-19 22:10:44.724976 +0000 build-debian43: output: + mkdir -p /builder/blivet
+2024-04-19 22:10:44.725057 +0000 build-debian43: output: + cd /builder/blivet
+2024-04-19 22:10:44.725074 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_blivet-3.5.0.tar.gz -- https://ftp.qubes-os.org/distfiles/blivet-3.5.0.tar.gz
+2024-04-19 22:11:03.636685 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 22:11:03.637100 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:11:03.647302 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7806 qubesbuilder.FileCopyOut+-2Fbuilder-2Fblivet-2Funtrusted_blivet--3.5.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp7x7magl3
+2024-04-19 22:11:06.599099 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp7x7magl3 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512'.
+2024-04-19 22:11:06.601088 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 22:11:06.601743 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp7x7magl3 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512
+2024-04-19 22:11:06.603352 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp7x7magl3'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512'\'' --'
+2024-04-19 22:11:06.603535 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp7x7magl3'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512'\'' --'
+2024-04-19 22:11:06.603733 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp7x7magl3 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512 --
+2024-04-19 22:11:06.603784 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 22:11:06.603805 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 22:11:06.603823 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:11:06.603845 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp7x7magl3
+2024-04-19 22:11:06.603862 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.603878 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.603902 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 22:11:06.604009 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:11:06.604038 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz
+2024-04-19 22:11:06.604062 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604080 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604096 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 22:11:06.604147 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:11:06.604174 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-04-19 22:11:06.604221 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604229 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604235 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 22:11:06.604243 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:11:06.604252 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512
+2024-04-19 22:11:06.604258 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604264 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604270 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 22:11:06.604276 +0000 build-debian43: output: + case "$1" in
+2024-04-19 22:11:06.604282 +0000 build-debian43: output: + shift
+2024-04-19 22:11:06.604307 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 22:11:06.604482 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz ']'
+2024-04-19 22:11:06.604575 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp7x7magl3 ']'
+2024-04-19 22:11:06.604653 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp7x7magl3
+2024-04-19 22:11:06.605934 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz
+2024-04-19 22:11:06.606513 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_blivet-3.5.0.tar.gz
+2024-04-19 22:11:06.606588 +0000 build-debian43: output: + FILE_NAME=blivet-3.5.0.tar.gz
+2024-04-19 22:11:06.606739 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512 ']'
+2024-04-19 22:11:06.606861 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512 ']'
+2024-04-19 22:11:06.606890 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512 ']'
+2024-04-19 22:11:06.606960 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:11:06.607046 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 22:11:06.607131 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:11:06.607207 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 22:11:06.607379 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512 ']'
+2024-04-19 22:11:06.607461 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-04-19 22:11:06.607745 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-04-19 22:11:06.608029 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/blivet/blivet-3.5.0.tar.gz.sha512
+2024-04-19 22:11:06.608749 +0000 build-debian43: output: ++ printf '%s  -\n' 62d7e4aeadd4c8957795b149d205f05bca2caee559312f397bb7c17f18384963907d7b155431e0b6c5fa1587ad4ede66e38380a9448aa4551ef6676a1415c874
+2024-04-19 22:11:06.612394 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/untrusted_blivet-3.5.0.tar.gz /home/user/builder-r4.3-debian/tmp/tmp7x7magl3/blivet-3.5.0.tar.gz
+2024-04-19 22:11:06.626231 +0000 build-debian43: ['rm -f -- /builder/blivet/hash /builder/blivet/vtags', 'cd -- /builder', "git -C /builder/blivet rev-parse 'HEAD^{}' >> /builder/blivet/hash", "git -C /builder/blivet tag --points-at HEAD --list 'v*' >> /builder/blivet/vtags"]
+2024-04-19 22:11:21.056963 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1486 qubesbuilder.FileCopyIn+-2Fbuilder-2Fblivet /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/blivet
+2024-04-19 22:11:21.364420 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1486 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/blivet/hash /builder/blivet/vtags && cd -- /builder && git -C /builder/blivet rev-parse '"'"'HEAD^{}'"'"' >> /builder/blivet/hash && git -C /builder/blivet tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/blivet/vtags''.
+2024-04-19 22:11:21.609587 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1486 qubesbuilder.FileCopyOut+-2Fbuilder-2Fblivet-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpm5gjvigd
+2024-04-19 22:11:21.849398 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1486 qubesbuilder.FileCopyOut+-2Fbuilder-2Fblivet-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpm5gjvigd
+2024-04-19 22:11:24.655266 +0000 build-debian43: > done
+2024-04-19 22:11:24.655348 +0000 > closing log
