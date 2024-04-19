@@ -1,0 +1,111 @@
+2024-04-19 12:26:50.523436 +0000 > starting log
+2024-04-19 12:26:50.523764 +0000 build-debian43: > starting build with log
+2024-04-19 12:26:50.523782 +0000 build-debian43: >> args:
+2024-04-19 12:26:50.523790 +0000 build-debian43: >>   ()
+2024-04-19 12:26:50.523817 +0000 build-debian43: >> component:
+2024-04-19 12:26:50.523824 +0000 build-debian43: >>   python-qasync
+2024-04-19 12:26:50.523833 +0000 build-debian43: >> distributions:
+2024-04-19 12:26:50.523841 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 12:27:08.761802 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8374 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:27:08.965097 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8374 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-qasync.git /builder/python-qasync /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-19 12:27:12.982863 +0000 build-debian43: output: --> Verifying tags...
+2024-04-19 12:27:12.982976 +0000 build-debian43: output: ---> Good tag 31b4e8744c981e004d6313a82059bada3015dd27.
+2024-04-19 12:27:12.983004 +0000 build-debian43: output: ---> Good tag c339adc4af2d0946a1ba653b60174f03554d7e12.
+2024-04-19 12:27:12.983025 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-19 12:27:12.983043 +0000 build-debian43: output: --> Switching branch from main branch to main
+2024-04-19 12:27:12.994347 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8374 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-19 12:27:31.972624 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1718 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--qasync /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-qasync
+2024-04-19 12:27:32.251659 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1718 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 12:27:32.519601 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1718 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-qasync --file-name qasync-0.23.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz''.
+2024-04-19 12:27:32.732320 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-19 12:27:32.732374 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-qasync --file-name qasync-0.23.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz
+2024-04-19 12:27:32.735094 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/python-qasync'\'' --file-name '\''qasync-0.23.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz'\'' --'
+2024-04-19 12:27:32.735126 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/python-qasync'\'' --file-name '\''qasync-0.23.0.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz'\'' --'
+2024-04-19 12:27:32.735139 +0000 build-debian43: output: ++ set -- --output-dir /builder/python-qasync --file-name qasync-0.23.0.tar.gz --file-url https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz --
+2024-04-19 12:27:32.735161 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:27:32.735168 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:32.735176 +0000 build-debian43: output: + OUTPUT_DIR=/builder/python-qasync
+2024-04-19 12:27:32.735183 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735189 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735196 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:27:32.735201 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:32.735208 +0000 build-debian43: output: + FILE_NAME=qasync-0.23.0.tar.gz
+2024-04-19 12:27:32.735214 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735220 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735226 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:27:32.735231 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:32.735239 +0000 build-debian43: output: + FILE_URL=https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz
+2024-04-19 12:27:32.735245 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735251 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735264 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:27:32.735270 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:32.735276 +0000 build-debian43: output: + shift
+2024-04-19 12:27:32.735282 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:27:32.735290 +0000 build-debian43: output: + '[' -z https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz ']'
+2024-04-19 12:27:32.735302 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-19 12:27:32.735638 +0000 build-debian43: output: + '[' -z qasync-0.23.0.tar.gz ']'
+2024-04-19 12:27:32.735686 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_qasync-0.23.0.tar.gz
+2024-04-19 12:27:32.735706 +0000 build-debian43: output: + '[' -n /builder/python-qasync ']'
+2024-04-19 12:27:32.735724 +0000 build-debian43: output: + mkdir -p /builder/python-qasync
+2024-04-19 12:27:32.735742 +0000 build-debian43: output: + cd /builder/python-qasync
+2024-04-19 12:27:32.736059 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qasync-0.23.0.tar.gz -- https://files.pythonhosted.org/packages/source/q/qasync/qasync-0.23.0.tar.gz
+2024-04-19 12:27:34.108997 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-19 12:27:34.109076 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:27:34.115430 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1718 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync-2Funtrusted_qasync--0.23.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw
+2024-04-19 12:27:37.292654 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256'.
+2024-04-19 12:27:37.297028 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-19 12:27:37.297931 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256
+2024-04-19 12:27:37.302203 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256'\'' --'
+2024-04-19 12:27:37.302268 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz'\'' --checksum-cmd '\''sha256sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256'\'' --'
+2024-04-19 12:27:37.302303 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz --checksum-cmd sha256sum --checksum-file /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 --
+2024-04-19 12:27:37.302319 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-19 12:27:37.302333 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-19 12:27:37.302346 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:37.302362 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw
+2024-04-19 12:27:37.302375 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302387 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302400 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-19 12:27:37.302413 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:37.302430 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz
+2024-04-19 12:27:37.302444 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302456 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302476 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-19 12:27:37.302489 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:37.302503 +0000 build-debian43: output: + CHECKSUM_CMD=sha256sum
+2024-04-19 12:27:37.302516 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302528 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302541 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-19 12:27:37.302554 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:37.302572 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256
+2024-04-19 12:27:37.302585 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302597 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.302610 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-19 12:27:37.302622 +0000 build-debian43: output: + case "$1" in
+2024-04-19 12:27:37.303190 +0000 build-debian43: output: + shift
+2024-04-19 12:27:37.303224 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-19 12:27:37.303243 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz ']'
+2024-04-19 12:27:37.303259 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw ']'
+2024-04-19 12:27:37.303275 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw
+2024-04-19 12:27:37.304210 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz
+2024-04-19 12:27:37.306378 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_qasync-0.23.0.tar.gz
+2024-04-19 12:27:37.307674 +0000 build-debian43: output: + FILE_NAME=qasync-0.23.0.tar.gz
+2024-04-19 12:27:37.307727 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-19 12:27:37.307753 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-19 12:27:37.307781 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-19 12:27:37.307819 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:27:37.307840 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-19 12:27:37.307856 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:27:37.307873 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-19 12:27:37.307896 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256 ']'
+2024-04-19 12:27:37.307913 +0000 build-debian43: output: + '[' -z sha256sum ']'
+2024-04-19 12:27:37.307932 +0000 build-debian43: output: + sha256sum --status -c /dev/fd/63
+2024-04-19 12:27:37.307955 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/python-qasync/qasync-0.23.0.tar.gz.sha256
+2024-04-19 12:27:37.309382 +0000 build-debian43: output: ++ printf '%s  -\n' 8965ec313e0107148d98e8ac1e77a77dce74de3cd97055a1aa62d513a3793a14
+2024-04-19 12:27:37.311317 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/untrusted_qasync-0.23.0.tar.gz /home/user/builder-r4.3-debian/tmp/tmp8wnk3jrw/qasync-0.23.0.tar.gz
+2024-04-19 12:27:37.378929 +0000 build-debian43: ['rm -f -- /builder/python-qasync/hash /builder/python-qasync/vtags', 'cd -- /builder', "git -C /builder/python-qasync rev-parse 'HEAD^{}' >> /builder/python-qasync/hash", "git -C /builder/python-qasync tag --points-at HEAD --list 'v*' >> /builder/python-qasync/vtags"]
+2024-04-19 12:27:55.805094 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1887 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--qasync /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-qasync
+2024-04-19 12:27:55.998095 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1887 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/python-qasync/hash /builder/python-qasync/vtags && cd -- /builder && git -C /builder/python-qasync rev-parse '"'"'HEAD^{}'"'"' >> /builder/python-qasync/hash && git -C /builder/python-qasync tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/python-qasync/vtags''.
+2024-04-19 12:27:56.219737 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1887 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpevi_222z
+2024-04-19 12:27:56.391424 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1887 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--qasync-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpevi_222z
+2024-04-19 12:27:59.418173 +0000 build-debian43: > done
+2024-04-19 12:27:59.418245 +0000 > closing log
