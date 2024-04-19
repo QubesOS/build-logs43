@@ -1,0 +1,800 @@
+2024-04-19 19:04:49.405038 +0000 > starting log
+2024-04-19 19:04:49.405273 +0000 build-debian43: > starting build with log
+2024-04-19 19:04:49.405522 +0000 build-debian43: >> args:
+2024-04-19 19:04:49.405531 +0000 build-debian43: >>   ()
+2024-04-19 19:04:49.405538 +0000 build-debian43: >> component:
+2024-04-19 19:04:49.405547 +0000 build-debian43: >>   mgmt-salt-base
+2024-04-19 19:04:49.405555 +0000 build-debian43: >>     commit-hash: 6eeccbd0f4dc82cdcc7af707e207e2864f866340
+2024-04-19 19:04:49.405565 +0000 build-debian43: >>     source-hash: 89c779d52b9d179612dcbb444e0ca3c76d907ad3b8e83ad41d920e0b67cd71763a59df39e1cfab17dc3b724995ec831f7c9c5a71c2d5da7e61b939d05a82c7e7
+2024-04-19 19:04:49.405572 +0000 build-debian43: >> distributions:
+2024-04-19 19:04:49.405581 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-19 19:05:05.503379 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2081 qubesbuilder.FileCopyIn+-2Fbuilder-2Fmgmt--salt--base /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/mgmt-salt-base
+2024-04-19 19:05:05.985634 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2081 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 19:05:06.257084 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2081 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source
+2024-04-19 19:05:06.499010 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2081 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source_deb
+2024-04-19 19:05:10.591481 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2081 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=bookworm LC_ALL=C DEBFULLNAME=Builder DEBEMAIL=user@localhost bash -c '/builder/plugins/source_deb/scripts/modify-changelog-for-build /builder/mgmt-salt-base debian bookworm deb12u  && /builder/plugins/source_deb/scripts/get-source-info /builder/mgmt-salt-base debian''.
+2024-04-19 19:05:10.751998 +0000 build-debian43: output: + test 4 -lt 4
+2024-04-19 19:05:10.752055 +0000 build-debian43: output: + SOURCE_DIR=/builder/mgmt-salt-base
+2024-04-19 19:05:10.752069 +0000 build-debian43: output: + DEBIAN_DIRECTORY=debian
+2024-04-19 19:05:10.752081 +0000 build-debian43: output: + DIST_NAME=bookworm
+2024-04-19 19:05:10.752092 +0000 build-debian43: output: + DIST_TAG=deb12u
+2024-04-19 19:05:10.752102 +0000 build-debian43: output: + DEVEL_VERSION=
+2024-04-19 19:05:10.752493 +0000 build-debian43: output: ++ dirname /builder/plugins/source_deb/scripts/modify-changelog-for-build
+2024-04-19 19:05:10.754353 +0000 build-debian43: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2024-04-19 19:05:10.754371 +0000 build-debian43: output: + cd /builder/mgmt-salt-base
+2024-04-19 19:05:10.754379 +0000 build-debian43: output: + '[' 0 -gt 0 ']'
+2024-04-19 19:05:10.754387 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-changelog --verify
+2024-04-19 19:05:10.911503 +0000 build-debian43: output: + debchange -t -l+deb12u 'Build for bookworm'
+2024-04-19 19:05:11.105761 +0000 build-debian43: output: + debchange -t --force-distribution -r -D bookworm bookworm
+2024-04-19 19:05:11.194288 +0000 build-debian43: output: libdistro-info-perl is not installed, Debian release names are not known.
+2024-04-19 19:05:11.194335 +0000 build-debian43: output: libdistro-info-perl is not installed, Ubuntu release names are not known.
+2024-04-19 19:05:11.198335 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/clamp-changelog-entry-date /builder/mgmt-salt-base/debian/changelog
+2024-04-19 19:05:11.213705 +0000 build-debian43: output: + test 2 -ne 2
+2024-04-19 19:05:11.213743 +0000 build-debian43: output: + SOURCE_DIR=/builder/mgmt-salt-base
+2024-04-19 19:05:11.213751 +0000 build-debian43: output: + DEBIAN_DIRECTORY=debian
+2024-04-19 19:05:11.218655 +0000 build-debian43: output: ++ basename debian
+2024-04-19 19:05:11.218688 +0000 build-debian43: output: + DIRECTORY_BN=debian
+2024-04-19 19:05:11.218785 +0000 build-debian43: output: + DIRECTORY_MANGLE_PATH=debian
+2024-04-19 19:05:11.218810 +0000 build-debian43: output: + DIRECTORY_MANGLE_PATH=debian
+2024-04-19 19:05:11.218819 +0000 build-debian43: output: ++ dirname /builder/plugins/source_deb/scripts/get-source-info
+2024-04-19 19:05:11.218827 +0000 build-debian43: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2024-04-19 19:05:11.218836 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-parser changelog --package-release-name /builder/mgmt-salt-base/debian/changelog
+2024-04-19 19:05:11.275727 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-parser changelog --package-release-name-full /builder/mgmt-salt-base/debian/changelog
+2024-04-19 19:05:11.322357 +0000 build-debian43: output: + grep -Po '(?<=^3.0 \()\w+'
+2024-04-19 19:05:11.331069 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2081 qubesbuilder.FileCopyOut+-2Fbuilder-2Fmgmt--salt--base-2Fdebian_package_release_name /usr/lib/qubes/qfile-unpacker 1000 /tmp/tmpgjrhpn70
+2024-04-19 19:05:34.458491 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2369 qubesbuilder.FileCopyIn+-2Fbuilder-2Fmgmt--salt--base /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/mgmt-salt-base
+2024-04-19 19:05:34.687505 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2369 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdistfiles-2Fmgmt--salt--base /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/distfiles/mgmt-salt-base
+2024-04-19 19:05:34.893937 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2369 qubesbuilder.FileCopyIn+-2Fbuilder-2Fmgmt--salt--base-2FMakefile.install /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source/salt/Makefile.install
+2024-04-19 19:05:35.089193 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2369 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source_deb
+2024-04-19 19:05:35.416517 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2369 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-19 19:05:35.598697 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2369 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source
+2024-04-19 19:05:35.929165 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2369 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=bookworm LC_ALL=C DEBFULLNAME=Builder DEBEMAIL=user@localhost bash -c '/builder/plugins/source/salt/yaml-dumper --env VERBOSE --outfile /builder/mgmt-salt-base/Makefile.vars -- /builder/plugins/source/salt/FORMULA-DEFAULTS /builder/mgmt-salt-base/FORMULA && /builder/plugins/fetch/scripts/create-archive /builder/mgmt-salt-base qubes-mgmt-salt-base_4.1.5.orig.tar.gz && mv /builder/mgmt-salt-base/qubes-mgmt-salt-base_4.1.5.orig.tar.gz /builder && /builder/plugins/source_deb/scripts/modify-changelog-for-build /builder/mgmt-salt-base debian bookworm deb12u  && mkdir -p /builder/build && cd /builder/build && cp -a /builder/mgmt-salt-base/debian . && chmod -R -- u+rwX,g+rX-w,o+rX-w . && chmod +x debian/rules && dpkg-source -b . && /builder/plugins/source_deb/scripts/debian-get-packages-list /builder/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc >/builder/debian_packages.list''.
+2024-04-19 19:05:36.228177 +0000 build-debian43: output: ++ head -1
+2024-04-19 19:05:36.228900 +0000 build-debian43: output: ++ awk '{print $4}'
+2024-04-19 19:05:36.228928 +0000 build-debian43: output: ++ tar --version
+2024-04-19 19:05:36.262538 +0000 build-debian43: output: + TAR_VERSION=1.35
+2024-04-19 19:05:36.262615 +0000 build-debian43: output: ++ readlink -f /builder/mgmt-salt-base
+2024-04-19 19:05:36.262640 +0000 build-debian43: output: + GIT_ARCHIVE_SRC=/builder/mgmt-salt-base
+2024-04-19 19:05:36.262660 +0000 build-debian43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-19 19:05:36.262684 +0000 build-debian43: output: + GIT_TARBALL_NAME=qubes-mgmt-salt-base_4.1.5.orig.tar
+2024-04-19 19:05:36.262702 +0000 build-debian43: output: + '[' x '!=' x ']'
+2024-04-19 19:05:36.262727 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-mgmt-salt-base_4.1.5.orig.tar
+2024-04-19 19:05:36.262747 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-mgmt-salt-base_4.1.5.orig
+2024-04-19 19:05:36.262766 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-mgmt-salt-base_4.1.5
+2024-04-19 19:05:36.263037 +0000 build-debian43: output: /builder/mgmt-salt-base ~
+2024-04-19 19:05:36.264474 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-mgmt-salt-base_4.1.5/
+2024-04-19 19:05:36.264523 +0000 build-debian43: output: + pushd /builder/mgmt-salt-base
+2024-04-19 19:05:36.264542 +0000 build-debian43: output: ++ git log -1 --format=%ct
+2024-04-19 19:05:36.360197 +0000 build-debian43: output: + SOURCE_DATE_EPOCH=1670195829
+2024-04-19 19:05:36.360260 +0000 build-debian43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-19 19:05:36.360276 +0000 build-debian43: output: ++ sort -V
+2024-04-19 19:05:36.360284 +0000 build-debian43: output: ++ head -n1
+2024-04-19 19:05:36.364803 +0000 build-debian43: output: + '[' 1.28 == 1.28 ']'
+2024-04-19 19:05:36.364855 +0000 build-debian43: output: + tar --sort=name --mtime=@1670195829 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-mgmt-salt-base_4.1.5/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-mgmt-salt-base_4.1.5.orig.tar -cf qubes-mgmt-salt-base_4.1.5.orig.tar .
+2024-04-19 19:05:36.367730 +0000 build-debian43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-19 19:05:36.367768 +0000 build-debian43: output: + gzip -fn qubes-mgmt-salt-base_4.1.5.orig.tar
+2024-04-19 19:05:36.379457 +0000 build-debian43: output: + popd
+2024-04-19 19:05:36.379507 +0000 build-debian43: output: ~
+2024-04-19 19:05:36.393846 +0000 build-debian43: output: + test 4 -lt 4
+2024-04-19 19:05:36.393890 +0000 build-debian43: output: + SOURCE_DIR=/builder/mgmt-salt-base
+2024-04-19 19:05:36.393899 +0000 build-debian43: output: + DEBIAN_DIRECTORY=debian
+2024-04-19 19:05:36.393906 +0000 build-debian43: output: + DIST_NAME=bookworm
+2024-04-19 19:05:36.393912 +0000 build-debian43: output: + DIST_TAG=deb12u
+2024-04-19 19:05:36.393924 +0000 build-debian43: output: + DEVEL_VERSION=
+2024-04-19 19:05:36.393933 +0000 build-debian43: output: ++ dirname /builder/plugins/source_deb/scripts/modify-changelog-for-build
+2024-04-19 19:05:36.396809 +0000 build-debian43: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2024-04-19 19:05:36.396859 +0000 build-debian43: output: + cd /builder/mgmt-salt-base
+2024-04-19 19:05:36.396873 +0000 build-debian43: output: + '[' 0 -gt 0 ']'
+2024-04-19 19:05:36.396888 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-changelog --verify
+2024-04-19 19:05:36.619497 +0000 build-debian43: output: + debchange -t -l+deb12u 'Build for bookworm'
+2024-04-19 19:05:36.898288 +0000 build-debian43: output: + debchange -t --force-distribution -r -D bookworm bookworm
+2024-04-19 19:05:36.973127 +0000 build-debian43: output: libdistro-info-perl is not installed, Debian release names are not known.
+2024-04-19 19:05:36.973201 +0000 build-debian43: output: libdistro-info-perl is not installed, Ubuntu release names are not known.
+2024-04-19 19:05:36.976618 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/clamp-changelog-entry-date /builder/mgmt-salt-base/debian/changelog
+2024-04-19 19:05:37.124349 +0000 build-debian43: output: dpkg-source: info: using options from build/debian/source/options: --extend-diff-ignore=(^|/)(.git/.*)$ --extend-diff-ignore=(^|/)(pkgs/.*)$ --extend-diff-ignore=(^|/)(rpm_spec/.*)$ --extend-diff-ignore=(^|/)(debian.*)$ --extend-diff-ignore=(^|/)(.*[.]vm)(/.*|)$ --extend-diff-ignore=(^|/)(.*[.]dom0)(/.*|)$
+2024-04-19 19:05:37.124411 +0000 build-debian43: output: dpkg-source: info: using source format '3.0 (quilt)'
+2024-04-19 19:05:37.124429 +0000 build-debian43: output: dpkg-source: info: building qubes-mgmt-salt-base using existing ./qubes-mgmt-salt-base_4.1.5.orig.tar.gz
+2024-04-19 19:05:37.136369 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file README.rst, use --include-removal to override
+2024-04-19 19:05:37.136410 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .pylintrc, use --include-removal to override
+2024-04-19 19:05:37.136420 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file version, use --include-removal to override
+2024-04-19 19:05:37.136429 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Makefile.install, use --include-removal to override
+2024-04-19 19:05:37.136437 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Makefile, use --include-removal to override
+2024-04-19 19:05:37.136446 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .gitlab-ci.yml, use --include-removal to override
+2024-04-19 19:05:37.136454 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Makefile.vars, use --include-removal to override
+2024-04-19 19:05:37.136462 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file LICENSE, use --include-removal to override
+2024-04-19 19:05:37.136470 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Makefile.builder, use --include-removal to override
+2024-04-19 19:05:37.136478 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file FORMULA, use --include-removal to override
+2024-04-19 19:05:37.136487 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .qubesbuilder, use --include-removal to override
+2024-04-19 19:05:37.136494 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory _pillar
+2024-04-19 19:05:37.136503 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _pillar/qvm_prefs.py, use --include-removal to override
+2024-04-19 19:05:37.136511 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory _grains
+2024-04-19 19:05:37.136519 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _grains/redefined_dom0_grains.py, use --include-removal to override
+2024-04-19 19:05:37.136528 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _grains/boot_mode.py, use --include-removal to override
+2024-04-19 19:05:37.136536 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _grains/pci_devs.py, use --include-removal to override
+2024-04-19 19:05:37.136544 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _grains/whonix.py, use --include-removal to override
+2024-04-19 19:05:37.136551 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory _states
+2024-04-19 19:05:37.136560 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _states/debug.py, use --include-removal to override
+2024-04-19 19:05:37.136596 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _states/status.py, use --include-removal to override
+2024-04-19 19:05:37.136605 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory _utils
+2024-04-19 19:05:37.136619 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _utils/qubes_utils.py, use --include-removal to override
+2024-04-19 19:05:37.136628 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _utils/__init__.py, use --include-removal to override
+2024-04-19 19:05:37.136665 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _utils/nulltype.py, use --include-removal to override
+2024-04-19 19:05:37.136797 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory etc
+2024-04-19 19:05:37.136814 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory etc/salt
+2024-04-19 19:05:37.137928 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory etc/salt/minion.d
+2024-04-19 19:05:37.137955 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file etc/salt/minion.d/qubes_ext_pillar.conf, use --include-removal to override
+2024-04-19 19:05:37.137965 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory rpm_spec
+2024-04-19 19:05:37.137972 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory _modules
+2024-04-19 19:05:37.137981 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _modules/debug.py, use --include-removal to override
+2024-04-19 19:05:37.137990 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _modules/module_utils.py, use --include-removal to override
+2024-04-19 19:05:37.137998 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file _modules/qubes.py, use --include-removal to override
+2024-04-19 19:05:37.138007 +0000 build-debian43: output: dpkg-source: info: building qubes-mgmt-salt-base in qubes-mgmt-salt-base_4.1.5-1+deb12u1.debian.tar.xz
+2024-04-19 19:05:37.150436 +0000 build-debian43: output: dpkg-source: info: building qubes-mgmt-salt-base in qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc
+2024-04-19 19:05:37.273978 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2369 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1.debian.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/prep
+2024-04-19 19:05:37.446104 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2369 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1.dsc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/prep
+2024-04-19 19:05:37.601916 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2369 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--mgmt--salt--base_4.1.5.orig.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/prep
+2024-04-19 19:05:37.750633 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2369 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdebian_packages.list /usr/lib/qubes/qfile-unpacker 1000 /tmp/tmpgjrhpn70
+2024-04-19 19:05:58.181376 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb/pbuilder
+2024-04-19 19:05:58.444938 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1.debian.tar.xz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/prep/qubes-mgmt-salt-base_4.1.5-1+deb12u1.debian.tar.xz
+2024-04-19 19:05:58.661115 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--mgmt--salt--base_4.1.5.orig.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/prep/qubes-mgmt-salt-base_4.1.5.orig.tar.gz
+2024-04-19 19:05:58.824559 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1.dsc /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/prep/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc
+2024-04-19 19:05:59.007235 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder-2Fbase.tgz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/cache/chroot/bookworm/pbuilder/base.tgz
+2024-04-19 19:06:02.417788 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb
+2024-04-19 19:06:02.568847 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-04-19 19:06:02.728393 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_deb
+2024-04-19 19:06:02.913019 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5226 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--bookworm /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/repository/vm-bookworm
+2024-04-19 19:06:03.566625 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp5226 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'mkdir -p /builder/cache/aptcache && /builder/plugins/build_deb/scripts/create-local-repo /builder/repository debian bookworm && sudo -E pbuilder update --distribution bookworm --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb bookworm main" && sudo -E pbuilder build --override-config --distribution bookworm --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb bookworm main" /builder/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc && /builder/plugins/build_deb/scripts/patch-changes /builder/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc /builder/pbuilder/results/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo /builder/pbuilder/results/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes''.
+2024-04-19 19:06:03.722480 +0000 build-debian43: output: + '[' 3 -lt 2 ']'
+2024-04-19 19:06:03.722522 +0000 build-debian43: output: + REPO_DIR=/builder/repository
+2024-04-19 19:06:03.722531 +0000 build-debian43: output: + DISTRIBUTION=debian
+2024-04-19 19:06:03.722538 +0000 build-debian43: output: + SUITE=bookworm
+2024-04-19 19:06:03.722545 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-04-19 19:06:03.722552 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-04-19 19:06:03.722559 +0000 build-debian43: output: + cd /builder/repository
+2024-04-19 19:06:03.722565 +0000 build-debian43: output: + cat
+2024-04-19 19:06:03.722572 +0000 build-debian43: output: + mkdir -p dists/bookworm/main/binary-amd64
+2024-04-19 19:06:03.722579 +0000 build-debian43: output: + dpkg-scanpackages --multiversion .
+2024-04-19 19:06:04.609179 +0000 build-debian43: output: dpkg-scanpackages: info: Wrote 100 entries to output Packages file.
+2024-04-19 19:06:04.610606 +0000 build-debian43: output: + gzip -9c dists/bookworm/main/binary-amd64/Packages
+2024-04-19 19:06:04.623500 +0000 build-debian43: output: ++ LC_ALL=C
+2024-04-19 19:06:04.623564 +0000 build-debian43: output: ++ date -u '+%a, %d %b %Y %H:%M:%S %Z'
+2024-04-19 19:06:04.624487 +0000 build-debian43: output: + DATE='Fri, 19 Apr 2024 19:06:03 UTC'
+2024-04-19 19:06:04.624513 +0000 build-debian43: output: + cat
+2024-04-19 19:06:04.626148 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages
+2024-04-19 19:06:04.626191 +0000 build-debian43: output: + f=dists/bookworm/main/binary-amd64/Packages
+2024-04-19 19:06:04.626210 +0000 build-debian43: output: + echo -n ' '
+2024-04-19 19:06:04.626509 +0000 build-debian43: output: ++ sha256sum dists/bookworm/main/binary-amd64/Packages
+2024-04-19 19:06:04.626699 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-04-19 19:06:04.630859 +0000 build-debian43: output: + echo -n 4e2710d39615d6589cd3fff36cb302a869db13fb3a9e65f851b3f8b73852db38 ''
+2024-04-19 19:06:04.630880 +0000 build-debian43: output: ++ stat -c %s dists/bookworm/main/binary-amd64/Packages
+2024-04-19 19:06:04.634066 +0000 build-debian43: output: + echo -n 81834 ''
+2024-04-19 19:06:04.634082 +0000 build-debian43: output: + echo main/binary-amd64/Packages
+2024-04-19 19:06:04.634090 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages.gz
+2024-04-19 19:06:04.634097 +0000 build-debian43: output: + f=dists/bookworm/main/binary-amd64/Packages.gz
+2024-04-19 19:06:04.634104 +0000 build-debian43: output: + echo -n ' '
+2024-04-19 19:06:04.634182 +0000 build-debian43: output: ++ sha256sum dists/bookworm/main/binary-amd64/Packages.gz
+2024-04-19 19:06:04.634550 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-04-19 19:06:04.638030 +0000 build-debian43: output: + echo -n e2b679fc08bcefa97719bbf452641b695c1cedfd8d82d356df53001c0a827dc8 ''
+2024-04-19 19:06:04.638074 +0000 build-debian43: output: ++ stat -c %s dists/bookworm/main/binary-amd64/Packages.gz
+2024-04-19 19:06:04.640701 +0000 build-debian43: output: + echo -n 22070 ''
+2024-04-19 19:06:04.640742 +0000 build-debian43: output: + echo main/binary-amd64/Packages.gz
+2024-04-19 19:06:04.640762 +0000 build-debian43: output: + mapfile -d '' changes_files
+2024-04-19 19:06:04.640789 +0000 build-debian43: output: ++ find /builder/repository -name '*.changes' -not -path /builder/repository/dists -not -path /builder/repository/pool -print0
+2024-04-19 19:06:04.646741 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:04.646831 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/salt_3006.5/salt_3006.5-1+deb12u1_amd64.changes
+2024-04-19 19:06:04.942887 +0000 build-debian43: output: 'salt_3006.5-1+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:06:04.942980 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:06:05.424789 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.424947 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.424996 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-vchan-xen_4.2.3/libvchan-xen_4.2.3-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.484824 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.485628 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.485658 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-pdf-converter_2.1.19/qubes-pdf-converter_2.1.19-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.537007 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.537790 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.537839 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-gpg-sign_1.0.0/qubes-gpg-sign_1.0.0-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.606381 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.607278 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.607424 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-u2f_2.0.5/qubes-ctap_2.0.5+deb12u1_amd64.changes
+2024-04-19 19:06:05.630675 +0000 build-debian43: output: 'qubes-ctap_2.0.5+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:06:05.630795 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:06:05.684971 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.685843 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.685872 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-admin-client_4.2.11/qubes-core-admin-client_4.2.11-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.752020 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.752623 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.752847 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/mgmt-salt_4.2.2/qubes-mgmt-salt_4.2.2-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.778701 +0000 build-debian43: output: 'qubes-mgmt-salt_4.2.2-1+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:06:05.778770 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:06:05.838081 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.838804 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.838941 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-shutdown-idle_1.0.10/qubes-app-shutdown-idle_1.0.10-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.907456 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.908793 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.908907 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/video-companion_1.0.6/qubes-video-companion_1.0.6-1+deb12u1_amd64.changes
+2024-04-19 19:06:05.924013 +0000 build-debian43: output: 'qubes-video-companion_1.0.6-1+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:06:05.924082 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:06:05.960240 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:05.961724 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:05.961755 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-qubesdb_4.2.4/qubesdb_4.2.4-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.051661 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.052314 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.052429 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/rpm-oxide_0.2.7/qubes-rpm-oxide_0.2.7-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.080901 +0000 build-debian43: output: 'qubes-rpm-oxide_0.2.7-1+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:06:06.080978 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:06:06.161132 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.161462 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.161537 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-usb-proxy_1.2.1/qubes-usb-proxy_1.2.1+deb12u1_amd64.changes
+2024-04-19 19:06:06.214834 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.215549 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.215593 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/desktop-linux-menu_1.1.5/qubes-desktop-linux-menu_1.1.5-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.296481 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.297284 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.297312 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/gui-daemon_4.2.6/qubes-gui-daemon_4.2.6-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.386154 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.386690 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.386794 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/python-qasync_0.23.0/python-qasync_0.23.0-2+deb12u1_amd64.changes
+2024-04-19 19:06:06.401023 +0000 build-debian43: output: 'python-qasync_0.23.0-2+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:06:06.401088 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:06:06.448601 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.449850 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.449922 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-qrexec_4.2.18/qubes-core-qrexec_4.2.18-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.537223 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.538472 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.538502 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-thunderbird_2.0.8/thunderbird-qubes_2.0.8-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.601060 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.602076 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.602181 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/gui-agent-linux_4.2.13/qubes-gui-agent_4.2.13-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.776784 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.777828 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.778038 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/core-agent-linux_4.2.29/qubes-core-agent_4.2.29-1+deb12u1_amd64.changes
+2024-04-19 19:06:06.892730 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.893865 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.894192 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/gui-common_4.2.4/qubes-gui-common_4.2.4+deb12u1_amd64.changes
+2024-04-19 19:06:06.982027 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:06.982720 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:06.982751 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-split-gpg_2.0.70/qubes-gpg-split_2.0.70-1+deb12u1_amd64.changes
+2024-04-19 19:06:07.068482 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.068561 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.068596 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-split-gpg2_1.0.0/split-gpg2_1.0.0+deb12u1_amd64.changes
+2024-04-19 19:06:07.120074 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.120366 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.120400 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/python-looseversion_1.3.0/python-looseversion_1.3.0-1+deb12u1_amd64.changes
+2024-04-19 19:06:07.233582 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.233747 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.233791 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-snapd-helper_1.0.4/qubes-snapd-helper_1.0.4-1+deb12u1_amd64.changes
+2024-04-19 19:06:07.312749 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.314104 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.314195 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/linux-utils_4.2.15/qubes-utils_4.2.15+deb12u1_amd64.changes
+2024-04-19 19:06:07.437559 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.438784 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.438816 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-input-proxy_1.0.35/qubes-input-proxy_1.0.35-1+deb12u1_amd64.changes
+2024-04-19 19:06:07.534400 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.534976 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.535006 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/app-linux-img-converter_1.2.16/qubes-img-converter_1.2.16-1+deb12u1_amd64.changes
+2024-04-19 19:06:07.618499 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.619652 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-19 19:06:07.619874 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include bookworm /builder/repository/vm-bookworm/vmm-xen-guest_5.0.0/xen-guest_5.0.0-1+deb12u1_amd64.changes
+2024-04-19 19:06:07.689780 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:06:07.718641 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-04-19 19:06:07.763148 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-04-19 19:06:07.767118 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-04-19 19:06:07.771949 +0000 build-debian43: output: I: Current time: Fri Apr 19 19:06:06 GMT 2024
+2024-04-19 19:06:07.773278 +0000 build-debian43: output: I: pbuilder-time-stamp: 1713553566
+2024-04-19 19:06:07.774225 +0000 build-debian43: output: I: Building the build Environment
+2024-04-19 19:06:07.775615 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-04-19 19:06:11.247059 +0000 build-debian43: output: I: copying local configuration
+2024-04-19 19:06:11.261822 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/2565/etc/hostname to be correct
+2024-04-19 19:06:11.261867 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/2565/etc/mailname to be correct
+2024-04-19 19:06:11.271428 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-04-19 19:06:11.271472 +0000 build-debian43: output: W: --override-config is not set; not updating apt.conf Read the manpage for details.
+2024-04-19 19:06:11.280617 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-04-19 19:06:11.285403 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-04-19 19:06:11.297349 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-04-19 19:06:11.306645 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-04-19 19:06:11.314580 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-04-19 19:06:11.316173 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-04-19 19:06:11.320000 +0000 build-debian43: output: I: Refreshing the base.tgz
+2024-04-19 19:06:11.320031 +0000 build-debian43: output: I: upgrading packages
+2024-04-19 19:06:19.917435 +0000 build-debian43: output: Hit:1 https://deb.debian.org/debian bookworm InRelease
+2024-04-19 19:06:20.413926 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:06:20.451853 +0000 build-debian43: output: I: Obtaining the cached apt archive contents
+2024-04-19 19:06:20.468943 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:06:20.570341 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 19:06:20.570382 +0000 build-debian43: output: Reading state information...
+2024-04-19 19:06:20.631892 +0000 build-debian43: output: Calculating upgrade...
+2024-04-19 19:06:20.710443 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 19:06:20.722416 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:06:20.827282 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 19:06:20.827324 +0000 build-debian43: output: Reading state information...
+2024-04-19 19:06:20.930463 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 19:06:20.944838 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:06:21.046884 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 19:06:21.046924 +0000 build-debian43: output: Reading state information...
+2024-04-19 19:06:21.191420 +0000 build-debian43: output: build-essential is already the newest version (12.9).
+2024-04-19 19:06:21.191466 +0000 build-debian43: output: dpkg-dev is already the newest version (1.21.22).
+2024-04-19 19:06:21.191475 +0000 build-debian43: output: aptitude is already the newest version (0.8.13-5).
+2024-04-19 19:06:21.191483 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 19:06:21.192475 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-04-19 19:06:21.197068 +0000 build-debian43: output: I: user script /builder/pbuilder/build/2565/tmp/hooks/E30origin starting
+2024-04-19 19:06:21.201487 +0000 build-debian43: output: I: user script /builder/pbuilder/build/2565/tmp/hooks/E30origin finished
+2024-04-19 19:06:21.201522 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-04-19 19:06:21.215421 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-04-19 19:06:21.228711 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-04-19 19:06:21.305035 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-04-19 19:06:21.312590 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-04-19 19:06:21.317170 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-04-19 19:06:21.342937 +0000 build-debian43: output: I: creating base tarball [/builder/pbuilder/base.tgz]
+2024-04-19 19:06:42.618552 +0000 build-debian43: output: I: cleaning the build env
+2024-04-19 19:06:42.618598 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/2565 and its subdirectories
+2024-04-19 19:06:42.921580 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-04-19 19:06:43.029546 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-04-19 19:06:43.038447 +0000 build-debian43: output: dpkg-query: no packages found matching systemd
+2024-04-19 19:06:43.040319 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-04-19 19:06:43.078165 +0000 build-debian43: output: I: pbuilder: network access will be disabled during build
+2024-04-19 19:06:43.079094 +0000 build-debian43: output: I: Current time: Fri Apr 19 19:06:41 GMT 2024
+2024-04-19 19:06:43.079906 +0000 build-debian43: output: I: pbuilder-time-stamp: 1713553601
+2024-04-19 19:06:43.080857 +0000 build-debian43: output: I: Building the build Environment
+2024-04-19 19:06:43.082074 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-04-19 19:06:46.795727 +0000 build-debian43: output: I: copying local configuration
+2024-04-19 19:06:46.799559 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/2778/etc/hostname to be correct
+2024-04-19 19:06:46.799603 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/2778/etc/mailname to be correct
+2024-04-19 19:06:46.805287 +0000 build-debian43: output: I: Installing apt-lines
+2024-04-19 19:06:47.005984 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-04-19 19:06:47.013044 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-04-19 19:06:47.019883 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-04-19 19:06:47.032347 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-04-19 19:06:47.039526 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-04-19 19:06:47.045016 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-04-19 19:06:47.047076 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-04-19 19:06:47.055507 +0000 build-debian43: output: I: created buildresult dir: /builder/pbuilder/results
+2024-04-19 19:06:47.055548 +0000 build-debian43: output: I: Obtaining the cached apt archive contents
+2024-04-19 19:06:47.098001 +0000 build-debian43: output: I: Copying source file
+2024-04-19 19:06:47.198573 +0000 build-debian43: output: I: copying [/builder/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc]
+2024-04-19 19:06:47.201971 +0000 build-debian43: output: I: copying [/builder/build/qubes-mgmt-salt-base_4.1.5.orig.tar.gz]
+2024-04-19 19:06:47.208785 +0000 build-debian43: output: I: copying [/builder/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.debian.tar.xz]
+2024-04-19 19:06:47.226624 +0000 build-debian43: output: I: Extracting source
+2024-04-19 19:06:47.358565 +0000 build-debian43: output: dpkg-source: warning: extracting unsigned source package (qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc)
+2024-04-19 19:06:47.366840 +0000 build-debian43: output: dpkg-source: info: extracting qubes-mgmt-salt-base in qubes-mgmt-salt-base-4.1.5
+2024-04-19 19:06:47.366887 +0000 build-debian43: output: dpkg-source: info: unpacking qubes-mgmt-salt-base_4.1.5.orig.tar.gz
+2024-04-19 19:06:47.375351 +0000 build-debian43: output: dpkg-source: info: unpacking qubes-mgmt-salt-base_4.1.5-1+deb12u1.debian.tar.xz
+2024-04-19 19:06:47.393914 +0000 build-debian43: output: I: using fakeroot in build.
+2024-04-19 19:06:47.393959 +0000 build-debian43: output: I: Installing the build-deps
+2024-04-19 19:06:47.393971 +0000 build-debian43: output: I: user script /builder/pbuilder/build/2778/tmp/hooks/D30update starting
+2024-04-19 19:06:47.431140 +0000 build-debian43: output: Get:1 file:/tmp/qubes-deb bookworm InRelease
+2024-04-19 19:06:47.431183 +0000 build-debian43: output: Ign:1 file:/tmp/qubes-deb bookworm InRelease
+2024-04-19 19:06:47.432826 +0000 build-debian43: output: Get:2 file:/tmp/qubes-deb bookworm Release [2595 B]
+2024-04-19 19:06:47.437504 +0000 build-debian43: output: Get:2 file:/tmp/qubes-deb bookworm Release [2595 B]
+2024-04-19 19:06:47.437935 +0000 build-debian43: output: Get:3 file:/tmp/qubes-deb bookworm Release.gpg
+2024-04-19 19:06:47.437960 +0000 build-debian43: output: Ign:3 file:/tmp/qubes-deb bookworm Release.gpg
+2024-04-19 19:06:47.438737 +0000 build-debian43: output: Get:4 file:/tmp/qubes-deb bookworm/main amd64 Packages [30.3 kB]
+2024-04-19 19:06:49.782012 +0000 build-debian43: output: Hit:5 https://deb.debian.org/debian bookworm InRelease
+2024-04-19 19:06:50.369859 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:06:50.391648 +0000 build-debian43: output: I: user script /builder/pbuilder/build/2778/tmp/hooks/D30update finished
+2024-04-19 19:06:50.495349 +0000 build-debian43: output:  -> Attempting to satisfy build-dependencies
+2024-04-19 19:06:50.548094 +0000 build-debian43: output:  -> Creating pbuilder-satisfydepends-dummy package
+2024-04-19 19:06:50.558053 +0000 build-debian43: output: Package: pbuilder-satisfydepends-dummy
+2024-04-19 19:06:50.558095 +0000 build-debian43: output: Version: 0.invalid.0
+2024-04-19 19:06:50.558104 +0000 build-debian43: output: Architecture: amd64
+2024-04-19 19:06:50.558112 +0000 build-debian43: output: Maintainer: Debian Pbuilder Team <pbuilder-maint@lists.alioth.debian.org>
+2024-04-19 19:06:50.558122 +0000 build-debian43: output: Description: Dummy package to satisfy dependencies with aptitude - created by pbuilder
+2024-04-19 19:06:50.558130 +0000 build-debian43: output:  This package was created automatically by pbuilder to satisfy the
+2024-04-19 19:06:50.558139 +0000 build-debian43: output:  build-dependencies of the package being currently built.
+2024-04-19 19:06:50.558146 +0000 build-debian43: output: Depends: debhelper (>= 9~), quilt
+2024-04-19 19:06:50.561331 +0000 build-debian43: output: dpkg-deb: building package 'pbuilder-satisfydepends-dummy' in '/tmp/satisfydepends-aptitude/pbuilder-satisfydepends-dummy.deb'.
+2024-04-19 19:06:50.655626 +0000 build-debian43: output: Selecting previously unselected package pbuilder-satisfydepends-dummy.
+2024-04-19 19:06:50.664720 +0000 build-debian43: output: (Reading database ... 12915 files and directories currently installed.)
+2024-04-19 19:06:50.664776 +0000 build-debian43: output: Preparing to unpack .../pbuilder-satisfydepends-dummy.deb ...
+2024-04-19 19:06:50.726740 +0000 build-debian43: output: Unpacking pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2024-04-19 19:06:51.048471 +0000 build-debian43: output: dpkg: pbuilder-satisfydepends-dummy: dependency problems, but configuring anyway as you requested:
+2024-04-19 19:06:51.048526 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on debhelper (>= 9~); however:
+2024-04-19 19:06:51.048540 +0000 build-debian43: output:   Package debhelper is not installed.
+2024-04-19 19:06:51.048552 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on quilt; however:
+2024-04-19 19:06:51.048563 +0000 build-debian43: output:   Package quilt is not installed.
+2024-04-19 19:06:51.048572 +0000 build-debian43: output: 
+2024-04-19 19:06:51.048585 +0000 build-debian43: output: Setting up pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2024-04-19 19:06:51.556015 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:06:51.679950 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 19:06:51.679995 +0000 build-debian43: output: Reading state information...
+2024-04-19 19:06:51.710031 +0000 build-debian43: output: Initializing package states...
+2024-04-19 19:06:51.917782 +0000 build-debian43: output: Writing extended state information...
+2024-04-19 19:06:52.033004 +0000 build-debian43: output: Building tag database...
+2024-04-19 19:06:52.773351 +0000 build-debian43: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2024-04-19 19:06:52.773395 +0000 build-debian43: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2024-04-19 19:06:52.773404 +0000 build-debian43: output: The following NEW packages will be installed:
+2024-04-19 19:06:52.773429 +0000 build-debian43: output:   autoconf{a} automake{a} autopoint{a} autotools-dev{a} bsdextrautils{a} debhelper{a} dh-autoreconf{a} dh-strip-nondeterminism{a} diffstat{a} dwz{a} ed{a} file{a} gettext{a} gettext-base{a} groff-base{a} intltool-debian{a} libarchive-zip-perl{a} libdebhelper-perl{a} libelf1{a} libfile-stripnondeterminism-perl{a} libicu72{a} libmagic-mgc{a} libmagic1{a} libpipeline1{a} libsub-override-perl{a} libtool{a} libuchardet0{a} libxml2{a} m4{a} man-db{a} po-debconf{a} quilt{a} sensible-utils{a}
+2024-04-19 19:06:52.773437 +0000 build-debian43: output: The following packages are RECOMMENDED but will NOT be installed:
+2024-04-19 19:06:52.773445 +0000 build-debian43: output:   curl less libarchive-cpio-perl libltdl-dev libmail-sendmail-perl lynx wget
+2024-04-19 19:06:52.773453 +0000 build-debian43: output: 0 packages upgraded, 33 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 19:06:52.773461 +0000 build-debian43: output: Need to get 19.1 MB of archives. After unpacking 73.4 MB will be used.
+2024-04-19 19:06:52.773468 +0000 build-debian43: output: Writing extended state information...
+2024-04-19 19:06:53.833138 +0000 build-debian43: output: Get: 1 https://deb.debian.org/debian bookworm/main amd64 sensible-utils all 0.0.17+nmu1 [19.0 kB]
+2024-04-19 19:06:54.843641 +0000 build-debian43: output: Get: 2 https://deb.debian.org/debian bookworm/main amd64 libmagic-mgc amd64 1:5.44-3 [305 kB]
+2024-04-19 19:06:55.802591 +0000 build-debian43: output: Get: 3 https://deb.debian.org/debian bookworm/main amd64 libmagic1 amd64 1:5.44-3 [104 kB]
+2024-04-19 19:06:56.475259 +0000 build-debian43: output: Get: 4 https://deb.debian.org/debian bookworm/main amd64 file amd64 1:5.44-3 [42.5 kB]
+2024-04-19 19:06:56.695656 +0000 build-debian43: output: Get: 5 https://deb.debian.org/debian bookworm/main amd64 gettext-base amd64 0.21-12 [160 kB]
+2024-04-19 19:06:57.123780 +0000 build-debian43: output: Get: 6 https://deb.debian.org/debian bookworm/main amd64 libuchardet0 amd64 0.0.7-1 [67.8 kB]
+2024-04-19 19:06:57.262039 +0000 build-debian43: output: Get: 7 https://deb.debian.org/debian bookworm/main amd64 groff-base amd64 1.22.4-10 [916 kB]
+2024-04-19 19:06:58.484825 +0000 build-debian43: output: Get: 8 https://deb.debian.org/debian bookworm/main amd64 bsdextrautils amd64 2.38.1-5+b1 [86.6 kB]
+2024-04-19 19:06:58.531606 +0000 build-debian43: output: Get: 9 https://deb.debian.org/debian bookworm/main amd64 libpipeline1 amd64 1.5.7-1 [38.5 kB]
+2024-04-19 19:06:58.595838 +0000 build-debian43: output: Get: 10 https://deb.debian.org/debian bookworm/main amd64 man-db amd64 2.11.2-2 [1386 kB]
+2024-04-19 19:07:03.501109 +0000 build-debian43: output: Get: 11 https://deb.debian.org/debian bookworm/main amd64 m4 amd64 1.4.19-3 [287 kB]
+2024-04-19 19:07:07.132671 +0000 build-debian43: output: Get: 12 https://deb.debian.org/debian bookworm/main amd64 autoconf all 2.71-3 [332 kB]
+2024-04-19 19:07:10.403310 +0000 build-debian43: output: Get: 13 https://deb.debian.org/debian bookworm/main amd64 autotools-dev all 20220109.1 [51.6 kB]
+2024-04-19 19:07:10.714113 +0000 build-debian43: output: Get: 14 https://deb.debian.org/debian bookworm/main amd64 automake all 1:1.16.5-1.3 [823 kB]
+2024-04-19 19:07:17.236086 +0000 build-debian43: output: Get: 15 https://deb.debian.org/debian bookworm/main amd64 autopoint all 0.21-12 [495 kB]
+2024-04-19 19:07:18.113303 +0000 build-debian43: output: Get: 16 https://deb.debian.org/debian bookworm/main amd64 libdebhelper-perl all 13.11.4 [81.2 kB]
+2024-04-19 19:07:18.218784 +0000 build-debian43: output: Get: 17 https://deb.debian.org/debian bookworm/main amd64 libtool all 2.4.7-5 [517 kB]
+2024-04-19 19:07:23.492402 +0000 build-debian43: output: Get: 18 https://deb.debian.org/debian bookworm/main amd64 dh-autoreconf all 20 [17.1 kB]
+2024-04-19 19:07:24.626838 +0000 build-debian43: output: Get: 19 https://deb.debian.org/debian bookworm/main amd64 libarchive-zip-perl all 1.68-1 [104 kB]
+2024-04-19 19:07:25.478318 +0000 build-debian43: output: Get: 20 https://deb.debian.org/debian bookworm/main amd64 libsub-override-perl all 0.09-4 [9304 B]
+2024-04-19 19:07:25.479727 +0000 build-debian43: output: Get: 21 https://deb.debian.org/debian bookworm/main amd64 libfile-stripnondeterminism-perl all 1.13.1-1 [19.4 kB]
+2024-04-19 19:07:25.543870 +0000 build-debian43: output: Get: 22 https://deb.debian.org/debian bookworm/main amd64 dh-strip-nondeterminism all 1.13.1-1 [8620 B]
+2024-04-19 19:07:25.576826 +0000 build-debian43: output: Get: 23 https://deb.debian.org/debian bookworm/main amd64 libelf1 amd64 0.188-2.1 [174 kB]
+2024-04-19 19:07:26.366675 +0000 build-debian43: output: Get: 24 https://deb.debian.org/debian bookworm/main amd64 dwz amd64 0.15-1 [109 kB]
+2024-04-19 19:07:26.582441 +0000 build-debian43: output: Get: 25 https://deb.debian.org/debian bookworm/main amd64 libicu72 amd64 72.1-3 [9376 kB]
+2024-04-19 19:07:47.924676 +0000 build-debian43: output: Get: 26 https://deb.debian.org/debian bookworm/main amd64 libxml2 amd64 2.9.14+dfsg-1.3~deb12u1 [687 kB]
+2024-04-19 19:07:48.344257 +0000 build-debian43: output: Get: 27 https://deb.debian.org/debian bookworm/main amd64 gettext amd64 0.21-12 [1300 kB]
+2024-04-19 19:07:52.187769 +0000 build-debian43: output: Get: 28 https://deb.debian.org/debian bookworm/main amd64 intltool-debian all 0.35.0+20060710.6 [22.9 kB]
+2024-04-19 19:07:52.252133 +0000 build-debian43: output: Get: 29 https://deb.debian.org/debian bookworm/main amd64 po-debconf all 1.0.21+nmu1 [248 kB]
+2024-04-19 19:07:52.802946 +0000 build-debian43: output: Get: 30 https://deb.debian.org/debian bookworm/main amd64 debhelper all 13.11.4 [942 kB]
+2024-04-19 19:07:54.017316 +0000 build-debian43: output: Get: 31 https://deb.debian.org/debian bookworm/main amd64 diffstat amd64 1.65-1 [33.3 kB]
+2024-04-19 19:07:54.021106 +0000 build-debian43: output: Get: 32 https://deb.debian.org/debian bookworm/main amd64 ed amd64 1.19-1 [58.1 kB]
+2024-04-19 19:07:54.128788 +0000 build-debian43: output: Get: 33 https://deb.debian.org/debian bookworm/main amd64 quilt all 0.67+really0.66-1 [303 kB]
+2024-04-19 19:07:54.442672 +0000 build-debian43: output: Fetched 19.1 MB in 1min 2s (310 kB/s)
+2024-04-19 19:07:54.535527 +0000 build-debian43: output: debconf: delaying package configuration, since apt-utils is not installed
+2024-04-19 19:07:54.571477 +0000 build-debian43: output: Selecting previously unselected package sensible-utils..
+2024-04-19 19:07:54.576252 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 12915 files and directories currently installed.).
+2024-04-19 19:07:54.577364 +0000 build-debian43: output: Preparing to unpack .../00-sensible-utils_0.0.17+nmu1_all.deb ....
+2024-04-19 19:07:54.595358 +0000 build-debian43: output: Unpacking sensible-utils (0.0.17+nmu1) ....
+2024-04-19 19:07:54.699352 +0000 build-debian43: output: Selecting previously unselected package libmagic-mgc..
+2024-04-19 19:07:54.701456 +0000 build-debian43: output: Preparing to unpack .../01-libmagic-mgc_1%3a5.44-3_amd64.deb ....
+2024-04-19 19:07:54.708356 +0000 build-debian43: output: Unpacking libmagic-mgc (1:5.44-3) ....
+2024-04-19 19:07:54.892055 +0000 build-debian43: output: Selecting previously unselected package libmagic1:amd64..
+2024-04-19 19:07:54.894318 +0000 build-debian43: output: Preparing to unpack .../02-libmagic1_1%3a5.44-3_amd64.deb ....
+2024-04-19 19:07:54.924248 +0000 build-debian43: output: Unpacking libmagic1:amd64 (1:5.44-3) ....
+2024-04-19 19:07:54.999413 +0000 build-debian43: output: Selecting previously unselected package file..
+2024-04-19 19:07:54.999841 +0000 build-debian43: output: Preparing to unpack .../03-file_1%3a5.44-3_amd64.deb ....
+2024-04-19 19:07:55.011521 +0000 build-debian43: output: Unpacking file (1:5.44-3) ....
+2024-04-19 19:07:55.079430 +0000 build-debian43: output: Selecting previously unselected package gettext-base..
+2024-04-19 19:07:55.081451 +0000 build-debian43: output: Preparing to unpack .../04-gettext-base_0.21-12_amd64.deb ....
+2024-04-19 19:07:55.097829 +0000 build-debian43: output: Unpacking gettext-base (0.21-12) ....
+2024-04-19 19:07:55.224336 +0000 build-debian43: output: Selecting previously unselected package libuchardet0:amd64..
+2024-04-19 19:07:55.225972 +0000 build-debian43: output: Preparing to unpack .../05-libuchardet0_0.0.7-1_amd64.deb ....
+2024-04-19 19:07:55.234255 +0000 build-debian43: output: Unpacking libuchardet0:amd64 (0.0.7-1) ....
+2024-04-19 19:07:55.329391 +0000 build-debian43: output: Selecting previously unselected package groff-base..
+2024-04-19 19:07:55.329902 +0000 build-debian43: output: Preparing to unpack .../06-groff-base_1.22.4-10_amd64.deb ....
+2024-04-19 19:07:55.341996 +0000 build-debian43: output: Unpacking groff-base (1.22.4-10) ....
+2024-04-19 19:07:55.561160 +0000 build-debian43: output: Selecting previously unselected package bsdextrautils..
+2024-04-19 19:07:55.562504 +0000 build-debian43: output: Preparing to unpack .../07-bsdextrautils_2.38.1-5+b1_amd64.deb ....
+2024-04-19 19:07:55.573576 +0000 build-debian43: output: Unpacking bsdextrautils (2.38.1-5+b1) ....
+2024-04-19 19:07:55.673390 +0000 build-debian43: output: Selecting previously unselected package libpipeline1:amd64..
+2024-04-19 19:07:55.674978 +0000 build-debian43: output: Preparing to unpack .../08-libpipeline1_1.5.7-1_amd64.deb ....
+2024-04-19 19:07:55.685261 +0000 build-debian43: output: Unpacking libpipeline1:amd64 (1.5.7-1) ....
+2024-04-19 19:07:55.793825 +0000 build-debian43: output: Selecting previously unselected package man-db..
+2024-04-19 19:07:55.795058 +0000 build-debian43: output: Preparing to unpack .../09-man-db_2.11.2-2_amd64.deb ....
+2024-04-19 19:07:55.807947 +0000 build-debian43: output: Unpacking man-db (2.11.2-2) ....
+2024-04-19 19:07:56.127901 +0000 build-debian43: output: Selecting previously unselected package m4..
+2024-04-19 19:07:56.130153 +0000 build-debian43: output: Preparing to unpack .../10-m4_1.4.19-3_amd64.deb ....
+2024-04-19 19:07:56.141377 +0000 build-debian43: output: Unpacking m4 (1.4.19-3) ....
+2024-04-19 19:07:56.249461 +0000 build-debian43: output: Selecting previously unselected package autoconf..
+2024-04-19 19:07:56.250214 +0000 build-debian43: output: Preparing to unpack .../11-autoconf_2.71-3_all.deb ....
+2024-04-19 19:07:56.259320 +0000 build-debian43: output: Unpacking autoconf (2.71-3) ....
+2024-04-19 19:07:56.402397 +0000 build-debian43: output: Selecting previously unselected package autotools-dev..
+2024-04-19 19:07:56.403127 +0000 build-debian43: output: Preparing to unpack .../12-autotools-dev_20220109.1_all.deb ....
+2024-04-19 19:07:56.410707 +0000 build-debian43: output: Unpacking autotools-dev (20220109.1) ....
+2024-04-19 19:07:56.507605 +0000 build-debian43: output: Selecting previously unselected package automake..
+2024-04-19 19:07:56.509744 +0000 build-debian43: output: Preparing to unpack .../13-automake_1%3a1.16.5-1.3_all.deb ....
+2024-04-19 19:07:56.525119 +0000 build-debian43: output: Unpacking automake (1:1.16.5-1.3) ....
+2024-04-19 19:07:56.701589 +0000 build-debian43: output: Selecting previously unselected package autopoint..
+2024-04-19 19:07:56.703277 +0000 build-debian43: output: Preparing to unpack .../14-autopoint_0.21-12_all.deb ....
+2024-04-19 19:07:56.710818 +0000 build-debian43: output: Unpacking autopoint (0.21-12) ....
+2024-04-19 19:07:56.791923 +0000 build-debian43: output: Selecting previously unselected package libdebhelper-perl..
+2024-04-19 19:07:56.793809 +0000 build-debian43: output: Preparing to unpack .../15-libdebhelper-perl_13.11.4_all.deb ....
+2024-04-19 19:07:56.802383 +0000 build-debian43: output: Unpacking libdebhelper-perl (13.11.4) ....
+2024-04-19 19:07:56.922808 +0000 build-debian43: output: Selecting previously unselected package libtool..
+2024-04-19 19:07:56.924598 +0000 build-debian43: output: Preparing to unpack .../16-libtool_2.4.7-5_all.deb ....
+2024-04-19 19:07:56.929676 +0000 build-debian43: output: Unpacking libtool (2.4.7-5) ....
+2024-04-19 19:07:57.031862 +0000 build-debian43: output: Selecting previously unselected package dh-autoreconf..
+2024-04-19 19:07:57.033732 +0000 build-debian43: output: Preparing to unpack .../17-dh-autoreconf_20_all.deb ....
+2024-04-19 19:07:57.042292 +0000 build-debian43: output: Unpacking dh-autoreconf (20) ....
+2024-04-19 19:07:57.113265 +0000 build-debian43: output: Selecting previously unselected package libarchive-zip-perl..
+2024-04-19 19:07:57.115505 +0000 build-debian43: output: Preparing to unpack .../18-libarchive-zip-perl_1.68-1_all.deb ....
+2024-04-19 19:07:57.125046 +0000 build-debian43: output: Unpacking libarchive-zip-perl (1.68-1) ....
+2024-04-19 19:07:57.216651 +0000 build-debian43: output: Selecting previously unselected package libsub-override-perl..
+2024-04-19 19:07:57.218708 +0000 build-debian43: output: Preparing to unpack .../19-libsub-override-perl_0.09-4_all.deb ....
+2024-04-19 19:07:57.227685 +0000 build-debian43: output: Unpacking libsub-override-perl (0.09-4) ....
+2024-04-19 19:07:57.304628 +0000 build-debian43: output: Selecting previously unselected package libfile-stripnondeterminism-perl..
+2024-04-19 19:07:57.307131 +0000 build-debian43: output: Preparing to unpack .../20-libfile-stripnondeterminism-perl_1.13.1-1_all.deb ....
+2024-04-19 19:07:57.316906 +0000 build-debian43: output: Unpacking libfile-stripnondeterminism-perl (1.13.1-1) ....
+2024-04-19 19:07:57.387429 +0000 build-debian43: output: Selecting previously unselected package dh-strip-nondeterminism..
+2024-04-19 19:07:57.389342 +0000 build-debian43: output: Preparing to unpack .../21-dh-strip-nondeterminism_1.13.1-1_all.deb ....
+2024-04-19 19:07:57.400944 +0000 build-debian43: output: Unpacking dh-strip-nondeterminism (1.13.1-1) ....
+2024-04-19 19:07:57.474635 +0000 build-debian43: output: Selecting previously unselected package libelf1:amd64..
+2024-04-19 19:07:57.475932 +0000 build-debian43: output: Preparing to unpack .../22-libelf1_0.188-2.1_amd64.deb ....
+2024-04-19 19:07:57.484693 +0000 build-debian43: output: Unpacking libelf1:amd64 (0.188-2.1) ....
+2024-04-19 19:07:57.571970 +0000 build-debian43: output: Selecting previously unselected package dwz..
+2024-04-19 19:07:57.573947 +0000 build-debian43: output: Preparing to unpack .../23-dwz_0.15-1_amd64.deb ....
+2024-04-19 19:07:57.581721 +0000 build-debian43: output: Unpacking dwz (0.15-1) ....
+2024-04-19 19:07:57.684550 +0000 build-debian43: output: Selecting previously unselected package libicu72:amd64..
+2024-04-19 19:07:57.685040 +0000 build-debian43: output: Preparing to unpack .../24-libicu72_72.1-3_amd64.deb ....
+2024-04-19 19:07:57.696856 +0000 build-debian43: output: Unpacking libicu72:amd64 (72.1-3) ....
+2024-04-19 19:07:58.534494 +0000 build-debian43: output: Selecting previously unselected package libxml2:amd64..
+2024-04-19 19:07:58.534556 +0000 build-debian43: output: Preparing to unpack .../25-libxml2_2.9.14+dfsg-1.3~deb12u1_amd64.deb ....
+2024-04-19 19:07:58.552277 +0000 build-debian43: output: Unpacking libxml2:amd64 (2.9.14+dfsg-1.3~deb12u1) ....
+2024-04-19 19:07:58.738739 +0000 build-debian43: output: Selecting previously unselected package gettext..
+2024-04-19 19:07:58.740920 +0000 build-debian43: output: Preparing to unpack .../26-gettext_0.21-12_amd64.deb ....
+2024-04-19 19:07:58.756280 +0000 build-debian43: output: Unpacking gettext (0.21-12) ....
+2024-04-19 19:07:59.012607 +0000 build-debian43: output: Selecting previously unselected package intltool-debian..
+2024-04-19 19:07:59.014447 +0000 build-debian43: output: Preparing to unpack .../27-intltool-debian_0.35.0+20060710.6_all.deb ....
+2024-04-19 19:07:59.034033 +0000 build-debian43: output: Unpacking intltool-debian (0.35.0+20060710.6) ....
+2024-04-19 19:07:59.096385 +0000 build-debian43: output: Selecting previously unselected package po-debconf..
+2024-04-19 19:07:59.096829 +0000 build-debian43: output: Preparing to unpack .../28-po-debconf_1.0.21+nmu1_all.deb ....
+2024-04-19 19:07:59.108191 +0000 build-debian43: output: Unpacking po-debconf (1.0.21+nmu1) ....
+2024-04-19 19:07:59.242851 +0000 build-debian43: output: Selecting previously unselected package debhelper..
+2024-04-19 19:07:59.243279 +0000 build-debian43: output: Preparing to unpack .../29-debhelper_13.11.4_all.deb ....
+2024-04-19 19:07:59.255007 +0000 build-debian43: output: Unpacking debhelper (13.11.4) ....
+2024-04-19 19:07:59.554292 +0000 build-debian43: output: Selecting previously unselected package diffstat..
+2024-04-19 19:07:59.555634 +0000 build-debian43: output: Preparing to unpack .../30-diffstat_1.65-1_amd64.deb ....
+2024-04-19 19:07:59.561137 +0000 build-debian43: output: Unpacking diffstat (1.65-1) ....
+2024-04-19 19:07:59.645110 +0000 build-debian43: output: Selecting previously unselected package ed..
+2024-04-19 19:07:59.646591 +0000 build-debian43: output: Preparing to unpack .../31-ed_1.19-1_amd64.deb ....
+2024-04-19 19:07:59.655274 +0000 build-debian43: output: Unpacking ed (1.19-1) ....
+2024-04-19 19:07:59.761442 +0000 build-debian43: output: Selecting previously unselected package quilt..
+2024-04-19 19:07:59.763113 +0000 build-debian43: output: Preparing to unpack .../32-quilt_0.67+really0.66-1_all.deb ....
+2024-04-19 19:07:59.778487 +0000 build-debian43: output: Unpacking quilt (0.67+really0.66-1) ....
+2024-04-19 19:07:59.927510 +0000 build-debian43: output: Setting up libpipeline1:amd64 (1.5.7-1) ....
+2024-04-19 19:07:59.955032 +0000 build-debian43: output: Setting up libicu72:amd64 (72.1-3) ....
+2024-04-19 19:07:59.982356 +0000 build-debian43: output: Setting up bsdextrautils (2.38.1-5+b1) ....
+2024-04-19 19:08:00.009690 +0000 build-debian43: output: Setting up libmagic-mgc (1:5.44-3) ....
+2024-04-19 19:08:00.037648 +0000 build-debian43: output: Setting up libarchive-zip-perl (1.68-1) ....
+2024-04-19 19:08:00.069892 +0000 build-debian43: output: Setting up libdebhelper-perl (13.11.4) ....
+2024-04-19 19:08:00.105074 +0000 build-debian43: output: Setting up libmagic1:amd64 (1:5.44-3) ....
+2024-04-19 19:08:00.147961 +0000 build-debian43: output: Setting up gettext-base (0.21-12) ....
+2024-04-19 19:08:00.179708 +0000 build-debian43: output: Setting up m4 (1.4.19-3) ....
+2024-04-19 19:08:00.210694 +0000 build-debian43: output: Setting up file (1:5.44-3) ....
+2024-04-19 19:08:00.243819 +0000 build-debian43: output: Setting up autotools-dev (20220109.1) ....
+2024-04-19 19:08:00.286679 +0000 build-debian43: output: Setting up ed (1.19-1) ....
+2024-04-19 19:08:00.333767 +0000 build-debian43: output: Setting up diffstat (1.65-1) ....
+2024-04-19 19:08:00.366294 +0000 build-debian43: output: Setting up autopoint (0.21-12) ....
+2024-04-19 19:08:00.399123 +0000 build-debian43: output: Setting up autoconf (2.71-3) ....
+2024-04-19 19:08:00.442551 +0000 build-debian43: output: Setting up sensible-utils (0.0.17+nmu1) ....
+2024-04-19 19:08:00.474480 +0000 build-debian43: output: Setting up libuchardet0:amd64 (0.0.7-1) ....
+2024-04-19 19:08:00.503600 +0000 build-debian43: output: Setting up libsub-override-perl (0.09-4) ....
+2024-04-19 19:08:00.533392 +0000 build-debian43: output: Setting up libelf1:amd64 (0.188-2.1) ....
+2024-04-19 19:08:00.564958 +0000 build-debian43: output: Setting up libxml2:amd64 (2.9.14+dfsg-1.3~deb12u1) ....
+2024-04-19 19:08:00.589452 +0000 build-debian43: output: Setting up automake (1:1.16.5-1.3) ....
+2024-04-19 19:08:00.614743 +0000 build-debian43: output: update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode.
+2024-04-19 19:08:00.641002 +0000 build-debian43: output: Setting up libfile-stripnondeterminism-perl (1.13.1-1) ....
+2024-04-19 19:08:00.667903 +0000 build-debian43: output: Setting up gettext (0.21-12) ....
+2024-04-19 19:08:00.696098 +0000 build-debian43: output: Setting up libtool (2.4.7-5) ....
+2024-04-19 19:08:00.731965 +0000 build-debian43: output: Setting up quilt (0.67+really0.66-1) ....
+2024-04-19 19:08:00.776720 +0000 build-debian43: output: Setting up intltool-debian (0.35.0+20060710.6) ....
+2024-04-19 19:08:00.806290 +0000 build-debian43: output: Setting up dh-autoreconf (20) ....
+2024-04-19 19:08:00.835028 +0000 build-debian43: output: Setting up dh-strip-nondeterminism (1.13.1-1) ....
+2024-04-19 19:08:00.861401 +0000 build-debian43: output: Setting up dwz (0.15-1) ....
+2024-04-19 19:08:00.889573 +0000 build-debian43: output: Setting up groff-base (1.22.4-10) ....
+2024-04-19 19:08:00.942588 +0000 build-debian43: output: Setting up po-debconf (1.0.21+nmu1) ....
+2024-04-19 19:08:00.973313 +0000 build-debian43: output: Setting up man-db (2.11.2-2) ....
+2024-04-19 19:08:01.091071 +0000 build-debian43: output: Not building database; man-db/auto-update is not 'true'..
+2024-04-19 19:08:01.212053 +0000 build-debian43: output: Setting up debhelper (13.11.4) ....
+2024-04-19 19:08:01.241116 +0000 build-debian43: output: Processing triggers for libc-bin (2.36-9+deb12u4) ....
+2024-04-19 19:08:01.455851 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:08:01.670611 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 19:08:01.670689 +0000 build-debian43: output: Reading state information...
+2024-04-19 19:08:01.757144 +0000 build-debian43: output: Reading extended state information...
+2024-04-19 19:08:01.764873 +0000 build-debian43: output: Initializing package states...
+2024-04-19 19:08:01.874101 +0000 build-debian43: output: Writing extended state information...
+2024-04-19 19:08:01.996451 +0000 build-debian43: output: Building tag database...
+2024-04-19 19:08:02.043204 +0000 build-debian43: output:  -> Finished parsing the build-deps
+2024-04-19 19:08:02.084586 +0000 build-debian43: output: Reading package lists...
+2024-04-19 19:08:02.325668 +0000 build-debian43: output: Building dependency tree...
+2024-04-19 19:08:02.325737 +0000 build-debian43: output: Reading state information...
+2024-04-19 19:08:02.424131 +0000 build-debian43: output: The following additional packages will be installed:
+2024-04-19 19:08:02.424173 +0000 build-debian43: output:   libfakeroot
+2024-04-19 19:08:02.438256 +0000 build-debian43: output: The following NEW packages will be installed:
+2024-04-19 19:08:02.438809 +0000 build-debian43: output:   fakeroot libfakeroot
+2024-04-19 19:08:03.073813 +0000 build-debian43: output: 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+2024-04-19 19:08:03.073896 +0000 build-debian43: output: Need to get 95.2 kB of archives.
+2024-04-19 19:08:03.073923 +0000 build-debian43: output: After this operation, 360 kB of additional disk space will be used.
+2024-04-19 19:08:03.073949 +0000 build-debian43: output: Get:1 https://deb.debian.org/debian bookworm/main amd64 libfakeroot amd64 1.31-1.2 [28.3 kB]
+2024-04-19 19:08:03.276549 +0000 build-debian43: output: Get:2 https://deb.debian.org/debian bookworm/main amd64 fakeroot amd64 1.31-1.2 [66.9 kB]
+2024-04-19 19:08:04.277748 +0000 build-debian43: output: debconf: delaying package configuration, since apt-utils is not installed
+2024-04-19 19:08:04.294209 +0000 build-debian43: output: Fetched 95.2 kB in 2s (54.8 kB/s)
+2024-04-19 19:08:04.382157 +0000 build-debian43: output: Selecting previously unselected package libfakeroot:amd64..
+2024-04-19 19:08:04.395140 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 14933 files and directories currently installed.).
+2024-04-19 19:08:04.395832 +0000 build-debian43: output: Preparing to unpack .../libfakeroot_1.31-1.2_amd64.deb ....
+2024-04-19 19:08:04.417556 +0000 build-debian43: output: Unpacking libfakeroot:amd64 (1.31-1.2) ....
+2024-04-19 19:08:04.490802 +0000 build-debian43: output: Selecting previously unselected package fakeroot..
+2024-04-19 19:08:04.493085 +0000 build-debian43: output: Preparing to unpack .../fakeroot_1.31-1.2_amd64.deb ....
+2024-04-19 19:08:04.501218 +0000 build-debian43: output: Unpacking fakeroot (1.31-1.2) ....
+2024-04-19 19:08:04.626407 +0000 build-debian43: output: Setting up libfakeroot:amd64 (1.31-1.2) ....
+2024-04-19 19:08:04.663834 +0000 build-debian43: output: Setting up fakeroot (1.31-1.2) ....
+2024-04-19 19:08:04.684521 +0000 build-debian43: output: update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode.
+2024-04-19 19:08:04.713869 +0000 build-debian43: output: Processing triggers for man-db (2.11.2-2) ....
+2024-04-19 19:08:04.724701 +0000 build-debian43: output: Not building database; man-db/auto-update is not 'true'..
+2024-04-19 19:08:04.734388 +0000 build-debian43: output: Processing triggers for libc-bin (2.36-9+deb12u4) ....
+2024-04-19 19:08:04.901516 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-04-19 19:08:04.906712 +0000 build-debian43: output: I: new cache content 'intltool-debian_0.35.0+20060710.6_all.deb' added
+2024-04-19 19:08:04.908628 +0000 build-debian43: output: I: new cache content 'libmagic1_1%3a5.44-3_amd64.deb' added
+2024-04-19 19:08:04.910645 +0000 build-debian43: output: I: new cache content 'autopoint_0.21-12_all.deb' added
+2024-04-19 19:08:04.912656 +0000 build-debian43: output: I: new cache content 'diffstat_1.65-1_amd64.deb' added
+2024-04-19 19:08:04.914844 +0000 build-debian43: output: I: new cache content 'gettext-base_0.21-12_amd64.deb' added
+2024-04-19 19:08:04.916716 +0000 build-debian43: output: I: new cache content 'po-debconf_1.0.21+nmu1_all.deb' added
+2024-04-19 19:08:04.918825 +0000 build-debian43: output: I: new cache content 'libfile-stripnondeterminism-perl_1.13.1-1_all.deb' added
+2024-04-19 19:08:04.921808 +0000 build-debian43: output: I: new cache content 'libdebhelper-perl_13.11.4_all.deb' added
+2024-04-19 19:08:04.923822 +0000 build-debian43: output: I: new cache content 'libicu72_72.1-3_amd64.deb' added
+2024-04-19 19:08:04.925879 +0000 build-debian43: output: I: new cache content 'man-db_2.11.2-2_amd64.deb' added
+2024-04-19 19:08:04.927733 +0000 build-debian43: output: I: new cache content 'libtool_2.4.7-5_all.deb' added
+2024-04-19 19:08:04.943829 +0000 build-debian43: output: I: new cache content 'automake_1%3a1.16.5-1.3_all.deb' added
+2024-04-19 19:08:04.945206 +0000 build-debian43: output: I: new cache content 'bsdextrautils_2.38.1-5+b1_amd64.deb' added
+2024-04-19 19:08:04.950798 +0000 build-debian43: output: I: new cache content 'quilt_0.67+really0.66-1_all.deb' added
+2024-04-19 19:08:04.956847 +0000 build-debian43: output: I: new cache content 'libuchardet0_0.0.7-1_amd64.deb' added
+2024-04-19 19:08:04.962039 +0000 build-debian43: output: I: new cache content 'm4_1.4.19-3_amd64.deb' added
+2024-04-19 19:08:04.966141 +0000 build-debian43: output: I: new cache content 'ed_1.19-1_amd64.deb' added
+2024-04-19 19:08:04.967839 +0000 build-debian43: output: I: new cache content 'dh-autoreconf_20_all.deb' added
+2024-04-19 19:08:04.972999 +0000 build-debian43: output: I: new cache content 'libxml2_2.9.14+dfsg-1.3~deb12u1_amd64.deb' added
+2024-04-19 19:08:04.978366 +0000 build-debian43: output: I: new cache content 'sensible-utils_0.0.17+nmu1_all.deb' added
+2024-04-19 19:08:04.981011 +0000 build-debian43: output: I: new cache content 'libmagic-mgc_1%3a5.44-3_amd64.deb' added
+2024-04-19 19:08:04.986798 +0000 build-debian43: output: I: new cache content 'libfakeroot_1.31-1.2_amd64.deb' added
+2024-04-19 19:08:04.991179 +0000 build-debian43: output: I: new cache content 'libsub-override-perl_0.09-4_all.deb' added
+2024-04-19 19:08:04.991255 +0000 build-debian43: output: I: new cache content 'autotools-dev_20220109.1_all.deb' added
+2024-04-19 19:08:04.993972 +0000 build-debian43: output: I: new cache content 'autoconf_2.71-3_all.deb' added
+2024-04-19 19:08:04.998165 +0000 build-debian43: output: I: new cache content 'debhelper_13.11.4_all.deb' added
+2024-04-19 19:08:05.001499 +0000 build-debian43: output: I: new cache content 'fakeroot_1.31-1.2_amd64.deb' added
+2024-04-19 19:08:05.005782 +0000 build-debian43: output: I: new cache content 'dh-strip-nondeterminism_1.13.1-1_all.deb' added
+2024-04-19 19:08:05.009848 +0000 build-debian43: output: I: new cache content 'groff-base_1.22.4-10_amd64.deb' added
+2024-04-19 19:08:05.015293 +0000 build-debian43: output: I: new cache content 'gettext_0.21-12_amd64.deb' added
+2024-04-19 19:08:05.022358 +0000 build-debian43: output: I: new cache content 'libarchive-zip-perl_1.68-1_all.deb' added
+2024-04-19 19:08:05.026607 +0000 build-debian43: output: I: new cache content 'file_1%3a5.44-3_amd64.deb' added
+2024-04-19 19:08:05.033657 +0000 build-debian43: output: I: new cache content 'libelf1_0.188-2.1_amd64.deb' added
+2024-04-19 19:08:05.037263 +0000 build-debian43: output: I: new cache content 'libpipeline1_1.5.7-1_amd64.deb' added
+2024-04-19 19:08:05.051022 +0000 build-debian43: output: I: new cache content 'dwz_0.15-1_amd64.deb' added
+2024-04-19 19:08:05.063726 +0000 build-debian43: output: I: Building the package
+2024-04-19 19:08:05.070040 +0000 build-debian43: output: I: Running cd /build/qubes-mgmt-salt-base-4.1.5/ && env PATH="/usr/sbin:/usr/bin:/sbin:/bin" HOME="/nonexistent" dpkg-buildpackage -us -uc -sa
+2024-04-19 19:08:05.191953 +0000 build-debian43: output: dpkg-buildpackage: info: source package qubes-mgmt-salt-base
+2024-04-19 19:08:05.192024 +0000 build-debian43: output: dpkg-buildpackage: info: source version 4.1.5-1+deb12u1
+2024-04-19 19:08:05.192048 +0000 build-debian43: output: dpkg-buildpackage: info: source distribution bookworm
+2024-04-19 19:08:05.192068 +0000 build-debian43: output: dpkg-buildpackage: info: source changed by Builder <user@localhost>
+2024-04-19 19:08:05.228356 +0000 build-debian43: output:  dpkg-source --before-build .
+2024-04-19 19:08:05.228400 +0000 build-debian43: output: dpkg-buildpackage: info: host architecture amd64
+2024-04-19 19:08:05.320950 +0000 build-debian43: output: dpkg-source: info: using options from qubes-mgmt-salt-base-4.1.5/debian/source/options: --extend-diff-ignore=(^|/)(.git/.*)$ --extend-diff-ignore=(^|/)(pkgs/.*)$ --extend-diff-ignore=(^|/)(rpm_spec/.*)$ --extend-diff-ignore=(^|/)(debian.*)$ --extend-diff-ignore=(^|/)(.*[.]vm)(/.*|)$ --extend-diff-ignore=(^|/)(.*[.]dom0)(/.*|)$
+2024-04-19 19:08:05.358436 +0000 build-debian43: output:  fakeroot debian/rules clean
+2024-04-19 19:08:05.374514 +0000 build-debian43: output: dh clean
+2024-04-19 19:08:05.398748 +0000 build-debian43: output: dh: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.433103 +0000 build-debian43: output:    dh_auto_clean
+2024-04-19 19:08:05.461362 +0000 build-debian43: output: dh_auto_clean: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.479002 +0000 build-debian43: output:    dh_clean
+2024-04-19 19:08:05.519475 +0000 build-debian43: output: dh_clean: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.536109 +0000 build-debian43: output:  dpkg-source -b .
+2024-04-19 19:08:05.603513 +0000 build-debian43: output: dpkg-source: info: using options from qubes-mgmt-salt-base-4.1.5/debian/source/options: --extend-diff-ignore=(^|/)(.git/.*)$ --extend-diff-ignore=(^|/)(pkgs/.*)$ --extend-diff-ignore=(^|/)(rpm_spec/.*)$ --extend-diff-ignore=(^|/)(debian.*)$ --extend-diff-ignore=(^|/)(.*[.]vm)(/.*|)$ --extend-diff-ignore=(^|/)(.*[.]dom0)(/.*|)$
+2024-04-19 19:08:05.603586 +0000 build-debian43: output: dpkg-source: info: using source format '3.0 (quilt)'
+2024-04-19 19:08:05.603622 +0000 build-debian43: output: dpkg-source: info: building qubes-mgmt-salt-base using existing ./qubes-mgmt-salt-base_4.1.5.orig.tar.gz
+2024-04-19 19:08:05.622491 +0000 build-debian43: output: dpkg-source: info: building qubes-mgmt-salt-base in qubes-mgmt-salt-base_4.1.5-1+deb12u1.debian.tar.xz
+2024-04-19 19:08:05.634181 +0000 build-debian43: output: dpkg-source: info: building qubes-mgmt-salt-base in qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc
+2024-04-19 19:08:05.644372 +0000 build-debian43: output:  debian/rules build
+2024-04-19 19:08:05.644437 +0000 build-debian43: output: dh build
+2024-04-19 19:08:05.680131 +0000 build-debian43: output: dh: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.698569 +0000 build-debian43: output:    dh_update_autotools_config
+2024-04-19 19:08:05.742815 +0000 build-debian43: output:    dh_auto_configure
+2024-04-19 19:08:05.782560 +0000 build-debian43: output: dh_auto_configure: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.788912 +0000 build-debian43: output:    debian/rules override_dh_auto_build
+2024-04-19 19:08:05.789973 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-mgmt-salt-base-4.1.5'
+2024-04-19 19:08:05.790087 +0000 build-debian43: output: dh_clean --keep
+2024-04-19 19:08:05.816917 +0000 build-debian43: output: dh_clean: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.816984 +0000 build-debian43: output: dh_clean: warning: dh_clean -k is deprecated; use dh_prep instead
+2024-04-19 19:08:05.817068 +0000 build-debian43: output: dh_clean: warning: This feature will be removed in compat 12.
+2024-04-19 19:08:05.826715 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-mgmt-salt-base-4.1.5'
+2024-04-19 19:08:05.827746 +0000 build-debian43: output:    dh_auto_test
+2024-04-19 19:08:05.853376 +0000 build-debian43: output: dh_auto_test: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.872177 +0000 build-debian43: output:  fakeroot debian/rules binary
+2024-04-19 19:08:05.880254 +0000 build-debian43: output: dh binary
+2024-04-19 19:08:05.925139 +0000 build-debian43: output: dh: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:05.947392 +0000 build-debian43: output:    dh_testroot
+2024-04-19 19:08:05.969330 +0000 build-debian43: output:    dh_prep
+2024-04-19 19:08:05.998170 +0000 build-debian43: output:    debian/rules override_dh_auto_install
+2024-04-19 19:08:06.000350 +0000 build-debian43: output: make[1]: Entering directory '/build/qubes-mgmt-salt-base-4.1.5'
+2024-04-19 19:08:06.001780 +0000 build-debian43: output: make install DESTDIR=/build/qubes-mgmt-salt-base-4.1.5/debian/qubes-mgmt-salt-base BINDIR=/usr/bin SYSCONFDIR=/etc
+2024-04-19 19:08:06.006778 +0000 build-debian43: output: make[2]: Entering directory '/build/qubes-mgmt-salt-base-4.1.5'
+2024-04-19 19:08:06.006856 +0000 build-debian43: output: install -d /build/qubes-mgmt-salt-base-4.1.5/debian/qubes-mgmt-salt-base/srv/salt
+2024-04-19 19:08:06.009512 +0000 build-debian43: output: cp -r _modules _states _grains _utils _pillar /build/qubes-mgmt-salt-base-4.1.5/debian/qubes-mgmt-salt-base/srv/salt/
+2024-04-19 19:08:06.013790 +0000 build-debian43: output: # Place README and LICENSE in each non _* subdirectory only if in main /srv/salt tree
+2024-04-19 19:08:06.020636 +0000 build-debian43: output: # Install /etc/salt/*
+2024-04-19 19:08:06.021199 +0000 build-debian43: output: cp -Tr etc /build/qubes-mgmt-salt-base-4.1.5/debian/qubes-mgmt-salt-base/etc
+2024-04-19 19:08:06.024222 +0000 build-debian43: output: make[2]: Leaving directory '/build/qubes-mgmt-salt-base-4.1.5'
+2024-04-19 19:08:06.024440 +0000 build-debian43: output: make[1]: Leaving directory '/build/qubes-mgmt-salt-base-4.1.5'
+2024-04-19 19:08:06.025330 +0000 build-debian43: output:    dh_installdocs
+2024-04-19 19:08:06.051547 +0000 build-debian43: output: dh_installdocs: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:06.061607 +0000 build-debian43: output:    dh_installchangelogs
+2024-04-19 19:08:06.114089 +0000 build-debian43: output: dh_installchangelogs: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:06.145978 +0000 build-debian43: output:    dh_perl
+2024-04-19 19:08:06.177387 +0000 build-debian43: output:    dh_link
+2024-04-19 19:08:06.201592 +0000 build-debian43: output:    dh_strip_nondeterminism
+2024-04-19 19:08:06.350150 +0000 build-debian43: output:    dh_compress
+2024-04-19 19:08:06.378154 +0000 build-debian43: output: dh_compress: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:06.395001 +0000 build-debian43: output:    dh_fixperms
+2024-04-19 19:08:06.447659 +0000 build-debian43: output:    dh_missing
+2024-04-19 19:08:06.476863 +0000 build-debian43: output: dh_missing: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:06.478073 +0000 build-debian43: output:    dh_installdeb
+2024-04-19 19:08:06.503859 +0000 build-debian43: output: dh_installdeb: warning: Compatibility levels before 10 are deprecated (level 9 in use)
+2024-04-19 19:08:06.511266 +0000 build-debian43: output:    dh_gencontrol
+2024-04-19 19:08:06.620443 +0000 build-debian43: output:    dh_md5sums
+2024-04-19 19:08:06.661466 +0000 build-debian43: output:    dh_builddeb
+2024-04-19 19:08:06.683645 +0000 build-debian43: output: dpkg-deb: building package 'qubes-mgmt-salt-base' in '../qubes-mgmt-salt-base_4.1.5-1+deb12u1_all.deb'.
+2024-04-19 19:08:06.792817 +0000 build-debian43: output:  dpkg-genbuildinfo -O../qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo
+2024-04-19 19:08:06.882632 +0000 build-debian43: output:  dpkg-genchanges -sa -O../qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes
+2024-04-19 19:08:06.982334 +0000 build-debian43: output: dpkg-genchanges: info: including full source code in upload
+2024-04-19 19:08:06.987848 +0000 build-debian43: output:  dpkg-source --after-build .
+2024-04-19 19:08:07.128897 +0000 build-debian43: output: dpkg-source: info: using options from qubes-mgmt-salt-base-4.1.5/debian/source/options: --extend-diff-ignore=(^|/)(.git/.*)$ --extend-diff-ignore=(^|/)(pkgs/.*)$ --extend-diff-ignore=(^|/)(rpm_spec/.*)$ --extend-diff-ignore=(^|/)(debian.*)$ --extend-diff-ignore=(^|/)(.*[.]vm)(/.*|)$ --extend-diff-ignore=(^|/)(.*[.]dom0)(/.*|)$
+2024-04-19 19:08:07.134746 +0000 build-debian43: output: dpkg-buildpackage: info: full upload (original source is included)
+2024-04-19 19:08:07.142055 +0000 build-debian43: output: I: copying local configuration
+2024-04-19 19:08:07.173946 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-04-19 19:08:07.211345 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-04-19 19:08:07.230508 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-04-19 19:08:07.235780 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-04-19 19:08:07.238201 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-04-19 19:08:07.240783 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-04-19 19:08:07.243354 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-04-19 19:08:07.247212 +0000 build-debian43: output: I: cleaning the build env
+2024-04-19 19:08:07.247278 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/2778 and its subdirectories
+2024-04-19 19:08:07.695266 +0000 build-debian43: output: I: Current time: Fri Apr 19 19:08:06 GMT 2024
+2024-04-19 19:08:07.696488 +0000 build-debian43: output: I: pbuilder-time-stamp: 1713553686
+2024-04-19 19:08:08.027850 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5226 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--mgmt--salt--base--dbgsym_4.1.5--1-2Bdeb12u1_all.ddeb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build
+2024-04-19 19:08:08.306439 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/qubes-mgmt-salt-base-dbgsym_4.1.5-1+deb12u1_all.ddeb.
+2024-04-19 19:08:08.306491 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5226 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--mgmt--salt--base--dbgsym_4.1.5--1-2Bdeb12u1_all.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build
+2024-04-19 19:08:08.469758 +0000 build-debian43: File not found inside container: /builder/pbuilder/results/qubes-mgmt-salt-base-dbgsym_4.1.5-1+deb12u1_all.deb.
+2024-04-19 19:08:08.469845 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5226 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1_all.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build
+2024-04-19 19:08:08.612481 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5226 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1_amd64.buildinfo /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build
+2024-04-19 19:08:08.767428 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5226 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpbuilder-2Fresults-2Fqubes--mgmt--salt--base_4.1.5--1-2Bdeb12u1_amd64.changes /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build
+2024-04-19 19:08:12.788856 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64:debian: Provisioning local repository '/home/user/builder-r4.3-debian/repository/vm-bookworm'.
+2024-04-19 19:08:12.801585 +0000 build-debian43: Executing 'bash -c qubes-gpg-client-wrapper --armor --export 1B496066C096FE93D4CF0A6E720415900AB8C804 > /tmp/tmpi73gg3xt/1B496066C096FE93D4CF0A6E720415900AB8C804.asc&&gpg2 --homedir /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/sign/keyring --import /tmp/tmpi73gg3xt/1B496066C096FE93D4CF0A6E720415900AB8C804.asc'.
+2024-04-19 19:08:12.982954 +0000 build-debian43: output: gpg: keybox '/home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/sign/keyring/pubring.kbx' created
+2024-04-19 19:08:12.983707 +0000 build-debian43: output: gpg: /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/sign/keyring/trustdb.gpg: trustdb created
+2024-04-19 19:08:12.983744 +0000 build-debian43: output: gpg: key 720415900AB8C804: public key "Qubes OS 4.3 Debian Packages Signing Key" imported
+2024-04-19 19:08:12.990315 +0000 build-debian43: output: gpg: Total number processed: 1
+2024-04-19 19:08:12.990364 +0000 build-debian43: output: gpg:               imported: 1
+2024-04-19 19:08:13.003474 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64:debian: Signing from 'qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes' info.
+2024-04-19 19:08:13.003554 +0000 build-debian43: Executing 'bash -c debsign -k1B496066C096FE93D4CF0A6E720415900AB8C804 -pqubes-gpg-client-wrapper --no-re-sign /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes'.
+2024-04-19 19:08:13.023721 +0000 build-debian43: output:  signfile dsc /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 19:08:13.272276 +0000 build-debian43: output: 
+2024-04-19 19:08:13.291676 +0000 build-debian43: output:  fixup_buildinfo /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo
+2024-04-19 19:08:13.293853 +0000 build-debian43: output:  signfile buildinfo /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 19:08:13.548628 +0000 build-debian43: output: 
+2024-04-19 19:08:13.560465 +0000 build-debian43: output:  fixup_changes dsc /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes
+2024-04-19 19:08:13.571865 +0000 build-debian43: output:  fixup_changes buildinfo /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes
+2024-04-19 19:08:13.573531 +0000 build-debian43: output:  signfile changes /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 19:08:13.818764 +0000 build-debian43: output: 
+2024-04-19 19:08:13.820754 +0000 build-debian43: output: Successfully signed dsc, buildinfo, changes files
+2024-04-19 19:08:13.835743 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64:debian: Provisioning local repository '/home/user/builder-r4.3-debian/repository/vm-bookworm'.
+2024-04-19 19:08:13.838064 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/publish_deb/scripts/create-skeleton r4.3 debian /home/user/builder-r4.3-debian/repository-publish/deb'.
+2024-04-19 19:08:13.892948 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64:debian: Publishing packages.
+2024-04-19 19:08:13.893022 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64:debian: Verifying signatures.
+2024-04-19 19:08:13.893525 +0000 build-debian43: Executing 'bash -c gpg2 -q --homedir /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/sign/keyring --verify /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1.dsc&&gpg2 -q --homedir /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/sign/keyring --verify /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes&&gpg2 -q --homedir /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/sign/keyring --verify /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo'.
+2024-04-19 19:08:13.898013 +0000 build-debian43: output: gpg: Signature made Fri Apr 19 19:08:12 2024 GMT
+2024-04-19 19:08:13.898095 +0000 build-debian43: output: gpg:                using RSA key 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 19:08:13.898263 +0000 build-debian43: output: gpg: Good signature from "Qubes OS 4.3 Debian Packages Signing Key" [unknown]
+2024-04-19 19:08:13.898536 +0000 build-debian43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-04-19 19:08:13.898713 +0000 build-debian43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-04-19 19:08:13.898916 +0000 build-debian43: output: Primary key fingerprint: 1B49 6066 C096 FE93 D4CF  0A6E 7204 1590 0AB8 C804
+2024-04-19 19:08:13.903475 +0000 build-debian43: output: gpg: Signature made Fri Apr 19 19:08:13 2024 GMT
+2024-04-19 19:08:13.903542 +0000 build-debian43: output: gpg:                using RSA key 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 19:08:13.904399 +0000 build-debian43: output: gpg: Good signature from "Qubes OS 4.3 Debian Packages Signing Key" [unknown]
+2024-04-19 19:08:13.904437 +0000 build-debian43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-04-19 19:08:13.904594 +0000 build-debian43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-04-19 19:08:13.904715 +0000 build-debian43: output: Primary key fingerprint: 1B49 6066 C096 FE93 D4CF  0A6E 7204 1590 0AB8 C804
+2024-04-19 19:08:13.909820 +0000 build-debian43: output: gpg: Signature made Fri Apr 19 19:08:13 2024 GMT
+2024-04-19 19:08:13.909868 +0000 build-debian43: output: gpg:                using RSA key 1B496066C096FE93D4CF0A6E720415900AB8C804
+2024-04-19 19:08:13.909988 +0000 build-debian43: output: gpg: Good signature from "Qubes OS 4.3 Debian Packages Signing Key" [unknown]
+2024-04-19 19:08:13.910060 +0000 build-debian43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-04-19 19:08:13.910171 +0000 build-debian43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-04-19 19:08:13.910276 +0000 build-debian43: output: Primary key fingerprint: 1B49 6066 C096 FE93 D4CF  0A6E 7204 1590 0AB8 C804
+2024-04-19 19:08:13.920197 +0000 build-debian43: Executing 'bash -c reprepro --ignore=surprisingbinary --ignore=surprisingarch --keepunreferencedfiles -b /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm include bookworm-testing /home/user/builder-r4.3-debian/components/mgmt-salt-base/4.1.5-1/vm-bookworm/build/qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.changes'.
+2024-04-19 19:08:13.937104 +0000 build-debian43: output: 'qubes-mgmt-salt-base_4.1.5-1+deb12u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-19 19:08:13.937158 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-19 19:08:13.987308 +0000 build-debian43: output: Exporting indices...
+2024-04-19 19:08:14.013909 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64: Signing metadata (Release.gpg).
+2024-04-19 19:08:14.014004 +0000 build-debian43: Executing 'bash -c qubes-gpg-client-wrapper --detach-sign --armor --local-user 1B496066C096FE93D4CF0A6E720415900AB8C804 --batch --no-tty --output /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/Release.gpg /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/Release'.
+2024-04-19 19:08:14.160503 +0000 build-debian43: mgmt-salt-base:vm-debian-12.amd64: Signing metadata (InRelease).
+2024-04-19 19:08:14.160572 +0000 build-debian43: Executing 'bash -c qubes-gpg-client-wrapper --clearsign --armor --local-user 1B496066C096FE93D4CF0A6E720415900AB8C804 --batch --no-tty --output /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/InRelease /home/user/builder-r4.3-debian/repository-publish/deb/r4.3/vm/dists/bookworm-testing/Release'.
+2024-04-19 19:08:14.326334 +0000 build-debian43: > done
+2024-04-19 19:08:14.326407 +0000 > closing log
