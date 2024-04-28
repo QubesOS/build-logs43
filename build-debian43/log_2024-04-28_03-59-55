@@ -1,0 +1,605 @@
+2024-04-28 03:59:55.850928 +0000 > starting log
+2024-04-28 03:59:55.853979 +0000 build-debian43: > starting build with log
+2024-04-28 03:59:55.854005 +0000 build-debian43: >> args:
+2024-04-28 03:59:55.854014 +0000 build-debian43: >>   ()
+2024-04-28 03:59:55.854022 +0000 build-debian43: >> component:
+2024-04-28 03:59:55.854030 +0000 build-debian43: >>   desktop-linux-manager
+2024-04-28 03:59:55.854039 +0000 build-debian43: >>     commit-hash: a442f92137b2c37fd6402cd05e76269f0864c1b7
+2024-04-28 03:59:55.854051 +0000 build-debian43: >>     source-hash: fdb856eb99b839e713156f83d0cce77c8e504eb5c98f855df2c1c1a0fc2c8f9adc40f69f77594845eb407b22e638d0310a5798e5e39e55eaccc1020f717f720d
+2024-04-28 03:59:55.854059 +0000 build-debian43: >> distributions:
+2024-04-28 03:59:55.854068 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-28 04:00:19.285641 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3942 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--manager /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/desktop-linux-manager
+2024-04-28 04:00:20.047850 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3942 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-28 04:00:20.440109 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3942 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source
+2024-04-28 04:00:20.708562 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3942 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source_deb
+2024-04-28 04:00:21.008763 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3942 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=trixie LC_ALL=C DEBFULLNAME=Builder DEBEMAIL=user@localhost bash -c '/builder/plugins/source_deb/scripts/modify-changelog-for-build /builder/desktop-linux-manager debian trixie deb13u  && /builder/plugins/source_deb/scripts/get-source-info /builder/desktop-linux-manager debian''.
+2024-04-28 04:00:21.299746 +0000 build-debian43: output: + test 4 -lt 4
+2024-04-28 04:00:21.299795 +0000 build-debian43: output: + SOURCE_DIR=/builder/desktop-linux-manager
+2024-04-28 04:00:21.299805 +0000 build-debian43: output: + DEBIAN_DIRECTORY=debian
+2024-04-28 04:00:21.299813 +0000 build-debian43: output: + DIST_NAME=trixie
+2024-04-28 04:00:21.299820 +0000 build-debian43: output: + DIST_TAG=deb13u
+2024-04-28 04:00:21.299827 +0000 build-debian43: output: + DEVEL_VERSION=
+2024-04-28 04:00:21.299837 +0000 build-debian43: output: ++ dirname /builder/plugins/source_deb/scripts/modify-changelog-for-build
+2024-04-28 04:00:21.305010 +0000 build-debian43: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2024-04-28 04:00:21.305059 +0000 build-debian43: output: + cd /builder/desktop-linux-manager
+2024-04-28 04:00:21.305069 +0000 build-debian43: output: + '[' 0 -gt 0 ']'
+2024-04-28 04:00:21.305079 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-changelog --verify
+2024-04-28 04:00:21.724104 +0000 build-debian43: output: + debchange -t -l+deb13u 'Build for trixie'
+2024-04-28 04:00:22.107505 +0000 build-debian43: output: + debchange -t --force-distribution -r -D trixie trixie
+2024-04-28 04:00:22.222260 +0000 build-debian43: output: libdistro-info-perl is not installed, Debian release names are not known.
+2024-04-28 04:00:22.222313 +0000 build-debian43: output: libdistro-info-perl is not installed, Ubuntu release names are not known.
+2024-04-28 04:00:22.227696 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/clamp-changelog-entry-date /builder/desktop-linux-manager/debian/changelog
+2024-04-28 04:00:22.261375 +0000 build-debian43: output: + test 2 -ne 2
+2024-04-28 04:00:22.261426 +0000 build-debian43: output: + SOURCE_DIR=/builder/desktop-linux-manager
+2024-04-28 04:00:22.261467 +0000 build-debian43: output: + DEBIAN_DIRECTORY=debian
+2024-04-28 04:00:22.262429 +0000 build-debian43: output: ++ basename debian
+2024-04-28 04:00:22.262784 +0000 build-debian43: output: + DIRECTORY_BN=debian
+2024-04-28 04:00:22.262804 +0000 build-debian43: output: + DIRECTORY_MANGLE_PATH=debian
+2024-04-28 04:00:22.262813 +0000 build-debian43: output: + DIRECTORY_MANGLE_PATH=debian
+2024-04-28 04:00:22.263090 +0000 build-debian43: output: ++ dirname /builder/plugins/source_deb/scripts/get-source-info
+2024-04-28 04:00:22.264695 +0000 build-debian43: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2024-04-28 04:00:22.264726 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-parser changelog --package-release-name /builder/desktop-linux-manager/debian/changelog
+2024-04-28 04:00:22.328983 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-parser changelog --package-release-name-full /builder/desktop-linux-manager/debian/changelog
+2024-04-28 04:00:22.393197 +0000 build-debian43: output: + grep -Po '(?<=^3.0 \()\w+'
+2024-04-28 04:00:22.427622 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3942 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--manager-2Fdebian_package_release_name /usr/lib/qubes/qfile-unpacker 1000 /tmp/tmp1mrv9cjn
+2024-04-28 04:00:55.830015 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--manager /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/desktop-linux-manager
+2024-04-28 04:00:56.903293 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdistfiles-2Fdesktop--linux--manager /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/distfiles/desktop-linux-manager
+2024-04-28 04:00:57.354970 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source
+2024-04-28 04:00:57.815621 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-28 04:00:58.235714 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5059 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fsource_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source_deb
+2024-04-28 04:00:58.693109 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp5059 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=trixie LC_ALL=C DEBFULLNAME=Builder DEBEMAIL=user@localhost bash -c '/builder/plugins/fetch/scripts/create-archive /builder/desktop-linux-manager qubes-desktop-linux-manager_4.2.21.orig.tar.gz && mv /builder/desktop-linux-manager/qubes-desktop-linux-manager_4.2.21.orig.tar.gz /builder && /builder/plugins/source_deb/scripts/modify-changelog-for-build /builder/desktop-linux-manager debian trixie deb13u  && mkdir -p /builder/build && cd /builder/build && cp -a /builder/desktop-linux-manager/debian . && chmod -R -- u+rwX,g+rX-w,o+rX-w . && chmod +x debian/rules && dpkg-source -b . && /builder/plugins/source_deb/scripts/debian-get-packages-list /builder/qubes-desktop-linux-manager_4.2.21-1+deb13u1.dsc >/builder/debian_packages.list''.
+2024-04-28 04:00:59.001050 +0000 build-debian43: output: ++ head -1
+2024-04-28 04:00:59.001106 +0000 build-debian43: output: ++ tar --version
+2024-04-28 04:00:59.001117 +0000 build-debian43: output: ++ awk '{print $4}'
+2024-04-28 04:00:59.078992 +0000 build-debian43: output: + TAR_VERSION=1.35
+2024-04-28 04:00:59.079046 +0000 build-debian43: output: ++ readlink -f /builder/desktop-linux-manager
+2024-04-28 04:00:59.079057 +0000 build-debian43: output: + GIT_ARCHIVE_SRC=/builder/desktop-linux-manager
+2024-04-28 04:00:59.079083 +0000 build-debian43: output: + GIT_ARCHIVE_TYPE=gz
+2024-04-28 04:00:59.079093 +0000 build-debian43: output: + GIT_TARBALL_NAME=qubes-desktop-linux-manager_4.2.21.orig.tar
+2024-04-28 04:00:59.079102 +0000 build-debian43: output: + '[' x '!=' x ']'
+2024-04-28 04:00:59.079116 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-desktop-linux-manager_4.2.21.orig.tar
+2024-04-28 04:00:59.079125 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-desktop-linux-manager_4.2.21.orig
+2024-04-28 04:00:59.079134 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-desktop-linux-manager_4.2.21
+2024-04-28 04:00:59.079143 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=qubes-desktop-linux-manager_4.2.21/
+2024-04-28 04:00:59.079151 +0000 build-debian43: output: + pushd /builder/desktop-linux-manager
+2024-04-28 04:00:59.079158 +0000 build-debian43: output: ++ git log -1 --format=%ct
+2024-04-28 04:00:59.079166 +0000 build-debian43: output: /builder/desktop-linux-manager ~
+2024-04-28 04:00:59.174986 +0000 build-debian43: output: + SOURCE_DATE_EPOCH=1714270856
+2024-04-28 04:00:59.175080 +0000 build-debian43: output: ++ head -n1
+2024-04-28 04:00:59.175106 +0000 build-debian43: output: ++ printf '%s\n' 1.35 1.28
+2024-04-28 04:00:59.175132 +0000 build-debian43: output: ++ sort -V
+2024-04-28 04:00:59.193259 +0000 build-debian43: output: + '[' 1.28 == 1.28 ']'
+2024-04-28 04:00:59.193365 +0000 build-debian43: output: + tar --sort=name --mtime=@1714270856 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-desktop-linux-manager_4.2.21/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-desktop-linux-manager_4.2.21.orig.tar -cf qubes-desktop-linux-manager_4.2.21.orig.tar .
+2024-04-28 04:00:59.211677 +0000 build-debian43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-04-28 04:00:59.211728 +0000 build-debian43: output: + gzip -fn qubes-desktop-linux-manager_4.2.21.orig.tar
+2024-04-28 04:00:59.447559 +0000 build-debian43: output: + popd
+2024-04-28 04:00:59.447608 +0000 build-debian43: output: ~
+2024-04-28 04:00:59.452612 +0000 build-debian43: output: + test 4 -lt 4
+2024-04-28 04:00:59.452654 +0000 build-debian43: output: + SOURCE_DIR=/builder/desktop-linux-manager
+2024-04-28 04:00:59.452664 +0000 build-debian43: output: + DEBIAN_DIRECTORY=debian
+2024-04-28 04:00:59.452671 +0000 build-debian43: output: + DIST_NAME=trixie
+2024-04-28 04:00:59.452679 +0000 build-debian43: output: + DIST_TAG=deb13u
+2024-04-28 04:00:59.452686 +0000 build-debian43: output: + DEVEL_VERSION=
+2024-04-28 04:00:59.452957 +0000 build-debian43: output: ++ dirname /builder/plugins/source_deb/scripts/modify-changelog-for-build
+2024-04-28 04:00:59.456627 +0000 build-debian43: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2024-04-28 04:00:59.456659 +0000 build-debian43: output: + cd /builder/desktop-linux-manager
+2024-04-28 04:00:59.456669 +0000 build-debian43: output: + '[' 0 -gt 0 ']'
+2024-04-28 04:00:59.456679 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/debian-changelog --verify
+2024-04-28 04:01:00.005495 +0000 build-debian43: output: + debchange -t -l+deb13u 'Build for trixie'
+2024-04-28 04:01:00.570794 +0000 build-debian43: output: + debchange -t --force-distribution -r -D trixie trixie
+2024-04-28 04:01:00.657273 +0000 build-debian43: output: libdistro-info-perl is not installed, Debian release names are not known.
+2024-04-28 04:01:00.657323 +0000 build-debian43: output: libdistro-info-perl is not installed, Ubuntu release names are not known.
+2024-04-28 04:01:00.661741 +0000 build-debian43: output: + /builder/plugins/source_deb/scripts/clamp-changelog-entry-date /builder/desktop-linux-manager/debian/changelog
+2024-04-28 04:01:01.235786 +0000 build-debian43: output: dpkg-source: info: using source format '3.0 (quilt)'
+2024-04-28 04:01:01.235838 +0000 build-debian43: output: dpkg-source: info: building qubes-desktop-linux-manager using existing ./qubes-desktop-linux-manager_4.2.21.orig.tar.gz
+2024-04-28 04:01:01.377029 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file update_translations.sh, use --include-removal to override
+2024-04-28 04:01:01.377080 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file setup.py, use --include-removal to override
+2024-04-28 04:01:01.377092 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .pylintrc, use --include-removal to override
+2024-04-28 04:01:01.377102 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file version, use --include-removal to override
+2024-04-28 04:01:01.377112 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file run-tests.sh, use --include-removal to override
+2024-04-28 04:01:01.377121 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file mypy.ini, use --include-removal to override
+2024-04-28 04:01:01.377130 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file setup.cfg, use --include-removal to override
+2024-04-28 04:01:01.377139 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Makefile, use --include-removal to override
+2024-04-28 04:01:01.377150 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file TODOs.org, use --include-removal to override
+2024-04-28 04:01:01.377159 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .gitlab-ci.yml, use --include-removal to override
+2024-04-28 04:01:01.377169 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Makefile.builder, use --include-removal to override
+2024-04-28 04:01:01.377178 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file README.md, use --include-removal to override
+2024-04-28 04:01:01.377189 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file Development_documentation.md, use --include-removal to override
+2024-04-28 04:01:01.377199 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .qubesbuilder, use --include-removal to override
+2024-04-28 04:01:01.377207 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons
+2024-04-28 04:01:01.377217 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/outdated.png, use --include-removal to override
+2024-04-28 04:01:01.377225 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/128x128
+2024-04-28 04:01:01.377235 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/128x128/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.377244 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/scalable
+2024-04-28 04:01:01.377254 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/edit-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377264 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-ok.svg, use --include-removal to override
+2024-04-28 04:01:01.377274 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-delete.svg, use --include-removal to override
+2024-04-28 04:01:01.377293 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/camera-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.377304 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qui-domains-scalable.svg, use --include-removal to override
+2024-04-28 04:01:01.377315 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/edit-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.377325 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/settings-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377348 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/detach-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377361 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-this-device.svg, use --include-removal to override
+2024-04-28 04:01:01.377371 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/mic-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377381 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/help-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.377392 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-expander-hidden-black.svg, use --include-removal to override
+2024-04-28 04:01:01.377403 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-padlock.svg, use --include-removal to override
+2024-04-28 04:01:01.377415 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-global-config.svg, use --include-removal to override
+2024-04-28 04:01:01.377426 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-expander-hidden-white.svg, use --include-removal to override
+2024-04-28 04:01:01.377437 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-expander-shown-black.svg, use --include-removal to override
+2024-04-28 04:01:01.377503 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/key-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.377535 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/check_no.svg, use --include-removal to override
+2024-04-28 04:01:01.377547 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/smartphone-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377672 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-ask.svg, use --include-removal to override
+2024-04-28 04:01:01.377690 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-delete-x.svg, use --include-removal to override
+2024-04-28 04:01:01.377700 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/smartphone-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.377711 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/arrow-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377721 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/camera-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377731 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-info.svg, use --include-removal to override
+2024-04-28 04:01:01.377741 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/detach-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.377858 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-devices.svg, use --include-removal to override
+2024-04-28 04:01:01.377876 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-question-light.svg, use --include-removal to override
+2024-04-28 04:01:01.377887 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-new-qube.svg, use --include-removal to override
+2024-04-28 04:01:01.377897 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-question.svg, use --include-removal to override
+2024-04-28 04:01:01.377914 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-customize.svg, use --include-removal to override
+2024-04-28 04:01:01.377924 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-key.svg, use --include-removal to override
+2024-04-28 04:01:01.378034 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-check-maybe.svg, use --include-removal to override
+2024-04-28 04:01:01.378059 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/help-light.svg, use --include-removal to override
+2024-04-28 04:01:01.378071 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/mouse-light.svg, use --include-removal to override
+2024-04-28 04:01:01.378082 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/arrow-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.378092 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/mouse-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.379087 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-logo.svg, use --include-removal to override
+2024-04-28 04:01:01.379108 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/settings-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.379119 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/check_yes.svg, use --include-removal to override
+2024-04-28 04:01:01.379129 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/harddrive-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.379139 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-policy-editor.svg, use --include-removal to override
+2024-04-28 04:01:01.379150 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/harddrive-light.svg, use --include-removal to override
+2024-04-28 04:01:01.379160 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-check-yes.svg, use --include-removal to override
+2024-04-28 04:01:01.379170 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/key-light.svg, use --include-removal to override
+2024-04-28 04:01:01.379181 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/qubes-expander-shown-white.svg, use --include-removal to override
+2024-04-28 04:01:01.379191 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/check_maybe.svg, use --include-removal to override
+2024-04-28 04:01:01.379201 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/scalable/mic-dark.svg, use --include-removal to override
+2024-04-28 04:01:01.379209 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/40x40
+2024-04-28 04:01:01.379221 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/40x40/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379230 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/32x32
+2024-04-28 04:01:01.379240 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/32x32/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379270 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/16x16
+2024-04-28 04:01:01.379281 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/16x16/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379298 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/96x96
+2024-04-28 04:01:01.379309 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/96x96/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379317 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/48x48
+2024-04-28 04:01:01.379327 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/48x48/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379336 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/24x24
+2024-04-28 04:01:01.379346 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/24x24/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379354 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/72x72
+2024-04-28 04:01:01.379364 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/72x72/qui-domains.png, use --include-removal to override
+2024-04-28 04:01:01.379373 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory icons/22x22
+2024-04-28 04:01:01.379386 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file icons/22x22/generic-usb.png, use --include-removal to override
+2024-04-28 04:01:01.379394 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory images
+2024-04-28 04:01:01.379404 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_disposable.png, use --include-removal to override
+2024-04-28 04:01:01.379415 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_app.png, use --include-removal to override
+2024-04-28 04:01:01.379424 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/bmbf.jpg, use --include-removal to override
+2024-04-28 04:01:01.379435 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_app_advanced.png, use --include-removal to override
+2024-04-28 04:01:01.379445 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_basics_2.png, use --include-removal to override
+2024-04-28 04:01:01.381021 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_updates_2.png, use --include-removal to override
+2024-04-28 04:01:01.381053 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_app_apps.png, use --include-removal to override
+2024-04-28 04:01:01.381064 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_template.png, use --include-removal to override
+2024-04-28 04:01:01.381075 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_file_2.png, use --include-removal to override
+2024-04-28 04:01:01.381085 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_device.png, use --include-removal to override
+2024-04-28 04:01:01.381095 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_url.png, use --include-removal to override
+2024-04-28 04:01:01.381105 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_clipboard.png, use --include-removal to override
+2024-04-28 04:01:01.381115 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_usb_2.png, use --include-removal to override
+2024-04-28 04:01:01.381125 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_basics.png, use --include-removal to override
+2024-04-28 04:01:01.381144 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/policy_editor.png, use --include-removal to override
+2024-04-28 04:01:01.381155 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_file_1.png, use --include-removal to override
+2024-04-28 04:01:01.381165 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_standalone.png, use --include-removal to override
+2024-04-28 04:01:01.381282 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_split_gpg.png, use --include-removal to override
+2024-04-28 04:01:01.381299 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_updates_1.png, use --include-removal to override
+2024-04-28 04:01:01.381309 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/pf.png, use --include-removal to override
+2024-04-28 04:01:01.381320 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/global_settings_usb_1.png, use --include-removal to override
+2024-04-28 04:01:01.381330 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file images/new_qube_app_network.png, use --include-removal to override
+2024-04-28 04:01:01.381338 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs
+2024-04-28 04:01:01.381348 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/unittest.pyi, use --include-removal to override
+2024-04-28 04:01:01.381356 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/docutils
+2024-04-28 04:01:01.381366 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/docutils/io.pyi, use --include-removal to override
+2024-04-28 04:01:01.381376 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/docutils/core.pyi, use --include-removal to override
+2024-04-28 04:01:01.381386 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/docutils/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.381481 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/dbus
+2024-04-28 04:01:01.381497 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/proxies.pyi, use --include-removal to override
+2024-04-28 04:01:01.381508 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/connection.pyi, use --include-removal to override
+2024-04-28 04:01:01.381518 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/_dbus.pyi, use --include-removal to override
+2024-04-28 04:01:01.381528 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/service.pyi, use --include-removal to override
+2024-04-28 04:01:01.381538 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/bus.pyi, use --include-removal to override
+2024-04-28 04:01:01.381561 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.382974 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/dbus/mainloop
+2024-04-28 04:01:01.382999 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/mainloop/glib.pyi, use --include-removal to override
+2024-04-28 04:01:01.383011 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/dbus/mainloop/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.383862 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/pkg_resources
+2024-04-28 04:01:01.383890 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/pkg_resources/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.383901 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/systemd
+2024-04-28 04:01:01.383911 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/systemd/journal.pyi, use --include-removal to override
+2024-04-28 04:01:01.383921 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/systemd/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.383929 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/xml
+2024-04-28 04:01:01.383939 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/xml/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.383947 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/xml/parsers
+2024-04-28 04:01:01.383957 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/xml/parsers/expat.pyi, use --include-removal to override
+2024-04-28 04:01:01.383968 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/xml/parsers/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.383976 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/xml/dom
+2024-04-28 04:01:01.383986 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/xml/dom/minidom.pyi, use --include-removal to override
+2024-04-28 04:01:01.383996 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/xml/dom/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.384004 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/gi
+2024-04-28 04:01:01.384014 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/gi/repository.pyi, use --include-removal to override
+2024-04-28 04:01:01.384024 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/gi/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.384032 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory stubs/lxml
+2024-04-28 04:01:01.384042 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/lxml/etree.pyi, use --include-removal to override
+2024-04-28 04:01:01.384051 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file stubs/lxml/__init__.pyi, use --include-removal to override
+2024-04-28 04:01:01.384060 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory .tx
+2024-04-28 04:01:01.384069 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file .tx/config, use --include-removal to override
+2024-04-28 04:01:01.384079 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui
+2024-04-28 04:01:01.384181 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/clipboard.py, use --include-removal to override
+2024-04-28 04:01:01.384202 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/eol.json, use --include-removal to override
+2024-04-28 04:01:01.384211 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/utils.py, use --include-removal to override
+2024-04-28 04:01:01.384221 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/qubes-devices-dark.css, use --include-removal to override
+2024-04-28 04:01:01.384232 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/qubes-updater-base.css, use --include-removal to override
+2024-04-28 04:01:01.384241 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.384258 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/qubes-updater-dark.css, use --include-removal to override
+2024-04-28 04:01:01.384268 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/widget-wrapper, use --include-removal to override
+2024-04-28 04:01:01.384278 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater.glade, use --include-removal to override
+2024-04-28 04:01:01.384288 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/qubes-devices-light.css, use --include-removal to override
+2024-04-28 04:01:01.384299 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/qubes-updater-light.css, use --include-removal to override
+2024-04-28 04:01:01.385464 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/decorators.py, use --include-removal to override
+2024-04-28 04:01:01.385485 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater_settings.glade, use --include-removal to override
+2024-04-28 04:01:01.385494 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui/tests
+2024-04-28 04:01:01.385505 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/tests/tests_domains.py, use --include-removal to override
+2024-04-28 04:01:01.385513 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui/devices
+2024-04-28 04:01:01.385523 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/devices/backend.py, use --include-removal to override
+2024-04-28 04:01:01.385647 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/devices/device_widget.py, use --include-removal to override
+2024-04-28 04:01:01.385664 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/devices/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.385674 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/devices/actionable_widgets.py, use --include-removal to override
+2024-04-28 04:01:01.385683 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui/tray
+2024-04-28 04:01:01.385693 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/tray/domains.py, use --include-removal to override
+2024-04-28 04:01:01.385703 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/tray/disk_space.py, use --include-removal to override
+2024-04-28 04:01:01.385713 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/tray/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.386028 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/tray/updates.py, use --include-removal to override
+2024-04-28 04:01:01.386047 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui/updater
+2024-04-28 04:01:01.386057 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/utils.py, use --include-removal to override
+2024-04-28 04:01:01.386067 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.386077 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/intro_page.py, use --include-removal to override
+2024-04-28 04:01:01.386087 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/updater.py, use --include-removal to override
+2024-04-28 04:01:01.386097 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/updater_settings.py, use --include-removal to override
+2024-04-28 04:01:01.386107 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/summary_page.py, use --include-removal to override
+2024-04-28 04:01:01.386125 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/progress_page.py, use --include-removal to override
+2024-04-28 04:01:01.386134 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui/updater/tests
+2024-04-28 04:01:01.386145 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/tests/test_progress_page.py, use --include-removal to override
+2024-04-28 04:01:01.386155 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/tests/conftest.py, use --include-removal to override
+2024-04-28 04:01:01.386166 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/tests/test_summary_page.py, use --include-removal to override
+2024-04-28 04:01:01.386305 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/tests/test_updater.py, use --include-removal to override
+2024-04-28 04:01:01.386328 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/tests/test_updater_settings.py, use --include-removal to override
+2024-04-28 04:01:01.386339 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/updater/tests/test_intro_page.py, use --include-removal to override
+2024-04-28 04:01:01.386347 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qui/styles
+2024-04-28 04:01:01.386358 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/styles/qubes-widgets-base.css, use --include-removal to override
+2024-04-28 04:01:01.386368 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/styles/qubes-colors-dark.css, use --include-removal to override
+2024-04-28 04:01:01.386378 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qui/styles/qubes-colors-light.css, use --include-removal to override
+2024-04-28 04:01:01.386387 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config
+2024-04-28 04:01:01.386397 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-new-qube-dark.css, use --include-removal to override
+2024-04-28 04:01:01.387629 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-policy-editor-dark.css, use --include-removal to override
+2024-04-28 04:01:01.387654 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-policy-editor-base.css, use --include-removal to override
+2024-04-28 04:01:01.387666 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-global-config-dark.css, use --include-removal to override
+2024-04-28 04:01:01.387677 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.387688 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-new-qube-light.css, use --include-removal to override
+2024-04-28 04:01:01.387803 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-policy-editor-light.css, use --include-removal to override
+2024-04-28 04:01:01.387821 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-global-config-base.css, use --include-removal to override
+2024-04-28 04:01:01.387833 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-new-qube-base.css, use --include-removal to override
+2024-04-28 04:01:01.387844 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/policy_editor.glade, use --include-removal to override
+2024-04-28 04:01:01.387855 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/qubes-global-config-light.css, use --include-removal to override
+2024-04-28 04:01:01.387873 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config.glade, use --include-removal to override
+2024-04-28 04:01:01.388258 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube.glade, use --include-removal to override
+2024-04-28 04:01:01.388284 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config/widgets
+2024-04-28 04:01:01.388295 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/widgets/utils.py, use --include-removal to override
+2024-04-28 04:01:01.388305 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/widgets/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.388316 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/widgets/gtk_widgets.py, use --include-removal to override
+2024-04-28 04:01:01.388326 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/widgets/gtk_utils.py, use --include-removal to override
+2024-04-28 04:01:01.388335 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config/tests
+2024-04-28 04:01:01.388346 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_policy_exceptions_handler.py, use --include-removal to override
+2024-04-28 04:01:01.388357 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_policy_manager.py, use --include-removal to override
+2024-04-28 04:01:01.388367 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_conflict_handler.py, use --include-removal to override
+2024-04-28 04:01:01.388377 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/conftest.py, use --include-removal to override
+2024-04-28 04:01:01.388388 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_vm_flowbox.py, use --include-removal to override
+2024-04-28 04:01:01.388398 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_basics_handler.py, use --include-removal to override
+2024-04-28 04:01:01.388408 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_gtk_widgets.py, use --include-removal to override
+2024-04-28 04:01:01.388580 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.388604 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_gtk_utils.py, use --include-removal to override
+2024-04-28 04:01:01.388616 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_global_config.py, use --include-removal to override
+2024-04-28 04:01:01.388627 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_update_handler.py, use --include-removal to override
+2024-04-28 04:01:01.388652 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_policy_handler.py, use --include-removal to override
+2024-04-28 04:01:01.388664 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_usb_devices.py, use --include-removal to override
+2024-04-28 04:01:01.388674 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_policy_rules.py, use --include-removal to override
+2024-04-28 04:01:01.388684 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test.glade, use --include-removal to override
+2024-04-28 04:01:01.388701 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_policy_editor.py, use --include-removal to override
+2024-04-28 04:01:01.388713 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_utils.py, use --include-removal to override
+2024-04-28 04:01:01.388724 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_rule_list_widgets.py, use --include-removal to override
+2024-04-28 04:01:01.388734 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config/tests/test_new_qube
+2024-04-28 04:01:01.390871 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_new_qube/test_template_handlers.py, use --include-removal to override
+2024-04-28 04:01:01.390908 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_new_qube/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.390920 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_new_qube/test_advanced_handler.py, use --include-removal to override
+2024-04-28 04:01:01.390931 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_new_qube/test_network_selector.py, use --include-removal to override
+2024-04-28 04:01:01.390942 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_new_qube/test_new_qube.py, use --include-removal to override
+2024-04-28 04:01:01.390954 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/tests/test_new_qube/test_application_selector.py, use --include-removal to override
+2024-04-28 04:01:01.390964 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config/policy_editor
+2024-04-28 04:01:01.390974 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/policy_editor/policy_editor.py, use --include-removal to override
+2024-04-28 04:01:01.390991 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/policy_editor/qubes-rpc.lang, use --include-removal to override
+2024-04-28 04:01:01.391002 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/policy_editor/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.391012 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/policy_editor/policy_help.txt, use --include-removal to override
+2024-04-28 04:01:01.391021 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config/new_qube
+2024-04-28 04:01:01.391032 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube/advanced_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391042 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.391053 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube/network_selector.py, use --include-removal to override
+2024-04-28 04:01:01.391064 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube/template_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391075 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube/application_selector.py, use --include-removal to override
+2024-04-28 04:01:01.391085 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/new_qube/new_qube_app.py, use --include-removal to override
+2024-04-28 04:01:01.391109 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory qubes_config/global_config
+2024-04-28 04:01:01.391314 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/policy_manager.py, use --include-removal to override
+2024-04-28 04:01:01.391341 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/usb_devices.py, use --include-removal to override
+2024-04-28 04:01:01.391352 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/__init__.py, use --include-removal to override
+2024-04-28 04:01:01.391363 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/global_config.py, use --include-removal to override
+2024-04-28 04:01:01.391374 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/policy_exceptions_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391385 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/basics_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391396 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/rule_list_widgets.py, use --include-removal to override
+2024-04-28 04:01:01.391407 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/page_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391418 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/thisdevice_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391429 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/conflict_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391440 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/policy_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391450 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/updates_handler.py, use --include-removal to override
+2024-04-28 04:01:01.391461 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/policy_rules.py, use --include-removal to override
+2024-04-28 04:01:01.391472 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file qubes_config/global_config/vm_flowbox.py, use --include-removal to override
+2024-04-28 04:01:01.391480 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory desktop
+2024-04-28 04:01:01.391491 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file desktop/qubes-update-gui.desktop, use --include-removal to override
+2024-04-28 04:01:01.393796 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file desktop/qubes-global-config.desktop, use --include-removal to override
+2024-04-28 04:01:01.393836 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file desktop/qubes-new-qube.desktop, use --include-removal to override
+2024-04-28 04:01:01.393849 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file desktop/qubes-policy-editor-gui.desktop, use --include-removal to override
+2024-04-28 04:01:01.393858 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory linux-systemd
+2024-04-28 04:01:01.393868 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file linux-systemd/qubes-widget@.service, use --include-removal to override
+2024-04-28 04:01:01.393876 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory autostart
+2024-04-28 04:01:01.393900 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file autostart/qui-updates.desktop, use --include-removal to override
+2024-04-28 04:01:01.393910 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file autostart/qui-devices.desktop, use --include-removal to override
+2024-04-28 04:01:01.393920 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file autostart/qui-domains.desktop, use --include-removal to override
+2024-04-28 04:01:01.393930 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file autostart/qui-disk-space.desktop, use --include-removal to override
+2024-04-28 04:01:01.393941 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file autostart/qui-clipboard.desktop, use --include-removal to override
+2024-04-28 04:01:01.393949 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory ci
+2024-04-28 04:01:01.393959 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file ci/codecov-keys.asc, use --include-removal to override
+2024-04-28 04:01:01.393969 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file ci/requirements.txt, use --include-removal to override
+2024-04-28 04:01:01.393978 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file ci/codecov-wrapper, use --include-removal to override
+2024-04-28 04:01:01.393987 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory locale
+2024-04-28 04:01:01.393995 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory locale/en
+2024-04-28 04:01:01.394003 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory locale/en/LC_MESSAGES
+2024-04-28 04:01:01.394014 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file locale/en/LC_MESSAGES/desktop-linux-manager.po, use --include-removal to override
+2024-04-28 04:01:01.394023 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory locale/pl
+2024-04-28 04:01:01.394031 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory locale/pl/LC_MESSAGES
+2024-04-28 04:01:01.394042 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file locale/pl/LC_MESSAGES/desktop-linux-manager.po, use --include-removal to override
+2024-04-28 04:01:01.394050 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of directory rpm_spec
+2024-04-28 04:01:01.394060 +0000 build-debian43: output: dpkg-source: warning: ignoring deletion of file rpm_spec/qubes-desktop-linux-manager.spec.in, use --include-removal to override
+2024-04-28 04:01:01.401274 +0000 build-debian43: output: dpkg-source: info: building qubes-desktop-linux-manager in qubes-desktop-linux-manager_4.2.21-1+deb13u1.debian.tar.xz
+2024-04-28 04:01:01.450524 +0000 build-debian43: output: dpkg-source: info: building qubes-desktop-linux-manager in qubes-desktop-linux-manager_4.2.21-1+deb13u1.dsc
+2024-04-28 04:01:02.569149 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5059 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--desktop--linux--manager_4.2.21--1-2Bdeb13u1.debian.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/desktop-linux-manager/4.2.21-1/vm-trixie/prep
+2024-04-28 04:01:03.062984 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5059 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--desktop--linux--manager_4.2.21--1-2Bdeb13u1.dsc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/desktop-linux-manager/4.2.21-1/vm-trixie/prep
+2024-04-28 04:01:03.374659 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5059 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--desktop--linux--manager_4.2.21.orig.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/components/desktop-linux-manager/4.2.21-1/vm-trixie/prep
+2024-04-28 04:01:03.752368 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5059 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdebian_packages.list /usr/lib/qubes/qfile-unpacker 1000 /tmp/tmp1mrv9cjn
+2024-04-28 04:01:29.034758 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb/pbuilder
+2024-04-28 04:01:29.798397 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--desktop--linux--manager_4.2.21--1-2Bdeb13u1.dsc /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/desktop-linux-manager/4.2.21-1/vm-trixie/prep/qubes-desktop-linux-manager_4.2.21-1+deb13u1.dsc
+2024-04-28 04:01:30.111396 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--desktop--linux--manager_4.2.21.orig.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/desktop-linux-manager/4.2.21-1/vm-trixie/prep/qubes-desktop-linux-manager_4.2.21.orig.tar.gz
+2024-04-28 04:01:30.403044 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--desktop--linux--manager_4.2.21--1-2Bdeb13u1.debian.tar.xz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/desktop-linux-manager/4.2.21-1/vm-trixie/prep/qubes-desktop-linux-manager_4.2.21-1+deb13u1.debian.tar.xz
+2024-04-28 04:01:30.652563 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder-2Fbase.tgz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/cache/chroot/trixie/pbuilder/base.tgz
+2024-04-28 04:01:34.988525 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_deb
+2024-04-28 04:01:35.228127 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-04-28 04:01:35.663465 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb
+2024-04-28 04:01:36.007330 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7886 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--trixie /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/repository/vm-trixie
+2024-04-28 04:01:37.613081 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7886 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'mkdir -p /builder/cache/aptcache && /builder/plugins/build_deb/scripts/create-local-repo /builder/repository debian trixie && sudo -E pbuilder update --distribution trixie --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb trixie main" && sudo -E pbuilder build --override-config --distribution trixie --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb trixie main" /builder/build/qubes-desktop-linux-manager_4.2.21-1+deb13u1.dsc && /builder/plugins/build_deb/scripts/patch-changes /builder/build/qubes-desktop-linux-manager_4.2.21-1+deb13u1.dsc /builder/pbuilder/results/qubes-desktop-linux-manager_4.2.21-1+deb13u1_amd64.buildinfo /builder/pbuilder/results/qubes-desktop-linux-manager_4.2.21-1+deb13u1_amd64.changes''.
+2024-04-28 04:01:37.801856 +0000 build-debian43: output: + '[' 3 -lt 2 ']'
+2024-04-28 04:01:37.801904 +0000 build-debian43: output: + REPO_DIR=/builder/repository
+2024-04-28 04:01:37.801914 +0000 build-debian43: output: + DISTRIBUTION=debian
+2024-04-28 04:01:37.801921 +0000 build-debian43: output: + SUITE=trixie
+2024-04-28 04:01:37.801929 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-04-28 04:01:37.802795 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-04-28 04:01:37.804042 +0000 build-debian43: output: + cd /builder/repository
+2024-04-28 04:01:37.804067 +0000 build-debian43: output: + cat
+2024-04-28 04:01:37.804816 +0000 build-debian43: output: + mkdir -p dists/trixie/main/binary-amd64
+2024-04-28 04:01:37.805537 +0000 build-debian43: output: + dpkg-scanpackages --multiversion .
+2024-04-28 04:01:38.891294 +0000 build-debian43: output: dpkg-scanpackages: info: Wrote 110 entries to output Packages file.
+2024-04-28 04:01:38.894030 +0000 build-debian43: output: + gzip -9c dists/trixie/main/binary-amd64/Packages
+2024-04-28 04:01:38.929787 +0000 build-debian43: output: ++ LC_ALL=C
+2024-04-28 04:01:38.929840 +0000 build-debian43: output: ++ date -u '+%a, %d %b %Y %H:%M:%S %Z'
+2024-04-28 04:01:38.931230 +0000 build-debian43: output: + DATE='Sun, 28 Apr 2024 04:01:39 UTC'
+2024-04-28 04:01:38.931268 +0000 build-debian43: output: + cat
+2024-04-28 04:01:38.932652 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages
+2024-04-28 04:01:38.932692 +0000 build-debian43: output: + f=dists/trixie/main/binary-amd64/Packages
+2024-04-28 04:01:38.932705 +0000 build-debian43: output: + echo -n ' '
+2024-04-28 04:01:38.933864 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-04-28 04:01:38.933900 +0000 build-debian43: output: ++ sha256sum dists/trixie/main/binary-amd64/Packages
+2024-04-28 04:01:38.938111 +0000 build-debian43: output: + echo -n 8a17c1845ab6f6491223ed8905c694c9e9cd02713bb253eaa6859d4b184936d0 ''
+2024-04-28 04:01:38.939170 +0000 build-debian43: output: ++ stat -c %s dists/trixie/main/binary-amd64/Packages
+2024-04-28 04:01:38.943398 +0000 build-debian43: output: + echo -n 85541 ''
+2024-04-28 04:01:38.943448 +0000 build-debian43: output: + echo main/binary-amd64/Packages
+2024-04-28 04:01:38.943463 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages.gz
+2024-04-28 04:01:38.943476 +0000 build-debian43: output: + f=dists/trixie/main/binary-amd64/Packages.gz
+2024-04-28 04:01:38.943487 +0000 build-debian43: output: + echo -n ' '
+2024-04-28 04:01:38.943500 +0000 build-debian43: output: ++ sha256sum dists/trixie/main/binary-amd64/Packages.gz
+2024-04-28 04:01:38.944946 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-04-28 04:01:38.946231 +0000 build-debian43: output: + echo -n 2dbb086bc9f7126d9a175930cc1379d0bb1ea2d43dd4920cc25275b640045263 ''
+2024-04-28 04:01:38.946259 +0000 build-debian43: output: ++ stat -c %s dists/trixie/main/binary-amd64/Packages.gz
+2024-04-28 04:01:38.947750 +0000 build-debian43: output: + echo -n 24749 ''
+2024-04-28 04:01:38.947799 +0000 build-debian43: output: + echo main/binary-amd64/Packages.gz
+2024-04-28 04:01:38.947824 +0000 build-debian43: output: + mapfile -d '' changes_files
+2024-04-28 04:01:38.947839 +0000 build-debian43: output: ++ find /builder/repository -name '*.changes' -not -path /builder/repository/dists -not -path /builder/repository/pool -print0
+2024-04-28 04:01:38.953603 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:38.953651 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/repo-templates_4.2.2/qubes-repo-templates_4.2.2-1+deb13u1_amd64.changes
+2024-04-28 04:01:40.947907 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:40.947961 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/meta-packages_4.2.11/qubes-meta-packages_4.2.11-1+deb13u1_amd64.changes
+2024-04-28 04:01:40.947970 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:41.316614 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:41.317937 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:41.317978 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-split-gpg_2.0.71/qubes-gpg-split_2.0.71-1+deb13u1_amd64.changes
+2024-04-28 04:01:41.531942 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:41.534005 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:41.534043 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-vchan-xen_4.2.3/libvchan-xen_4.2.3-1+deb13u1_amd64.changes
+2024-04-28 04:01:41.740468 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:41.740520 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-pdf-converter_2.1.19/qubes-pdf-converter_2.1.19-1+deb13u1_amd64.changes
+2024-04-28 04:01:41.740555 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:41.882146 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:41.884378 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:41.884421 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-gpg-sign_1.0.0/qubes-gpg-sign_1.0.0-1+deb13u1_amd64.changes
+2024-04-28 04:01:42.140626 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:42.142848 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:42.142895 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-u2f_2.0.5/qubes-ctap_2.0.5+deb13u1_amd64.changes
+2024-04-28 04:01:42.156316 +0000 build-debian43: output: 'qubes-ctap_2.0.5+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:42.156363 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:42.345566 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:42.347119 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:42.347162 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-xfce4-xfwm4_4.16.1/xfwm4_4.16.1-4+deb13u1_amd64.changes
+2024-04-28 04:01:42.597073 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:42.597489 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:42.597556 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt-base-topd_4.2.1/qubes-mgmt-salt-base-topd_4.2.1-1+deb13u1_amd64.changes
+2024-04-28 04:01:42.616931 +0000 build-debian43: output: 'qubes-mgmt-salt-base-topd_4.2.1-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:42.616975 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:42.844875 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:42.846328 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:42.846366 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-admin-client_4.2.11/qubes-core-admin-client_4.2.11-1+deb13u1_amd64.changes
+2024-04-28 04:01:43.051319 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:43.053813 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:43.053886 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/disk-password-gui_1.0.0/disk-password-gui_1.0.0-1+deb13u1_amd64.changes
+2024-04-28 04:01:43.250371 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:43.252763 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:43.252797 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/gui-daemon_4.2.7/qubes-gui-daemon_4.2.7-1+deb13u1_amd64.changes
+2024-04-28 04:01:43.714757 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:43.715395 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:43.715440 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt_4.2.2/qubes-mgmt-salt_4.2.2-1+deb13u1_amd64.changes
+2024-04-28 04:01:43.735766 +0000 build-debian43: output: 'qubes-mgmt-salt_4.2.2-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:43.735812 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:44.147056 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:44.148566 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:44.148632 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-i3-settings-qubes_1.10/i3-settings-qubes_1.10-1+deb13u1_amd64.changes
+2024-04-28 04:01:44.525295 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:44.526902 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:44.526942 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-shutdown-idle_1.0.10/qubes-app-shutdown-idle_1.0.10-1+deb13u1_amd64.changes
+2024-04-28 04:01:44.723922 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:44.725103 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:44.725130 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-qubesdb_4.2.4/qubesdb_4.2.4-1+deb13u1_amd64.changes
+2024-04-28 04:01:45.046660 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:45.047608 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:45.047655 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/rpm-oxide_0.2.7/qubes-rpm-oxide_0.2.7-1+deb13u1_amd64.changes
+2024-04-28 04:01:45.063444 +0000 build-debian43: output: 'qubes-rpm-oxide_0.2.7-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:45.063499 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:45.430632 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:45.433691 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:45.433741 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-usb-proxy_1.2.1/qubes-usb-proxy_1.2.1+deb13u1_amd64.changes
+2024-04-28 04:01:45.663565 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:45.664473 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:45.664510 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-agent-linux_4.2.30/qubes-core-agent_4.2.30-1+deb13u1_amd64.changes
+2024-04-28 04:01:46.068121 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:46.068725 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:46.068773 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-menu_1.1.5/qubes-desktop-linux-menu_1.1.5-1+deb13u1_amd64.changes
+2024-04-28 04:01:46.323920 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:46.332693 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/python-qasync_0.23.0/python-qasync_0.23.0-2+deb13u1_amd64.changes
+2024-04-28 04:01:46.332745 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:46.340120 +0000 build-debian43: output: 'python-qasync_0.23.0-2+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:46.340170 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:46.601657 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:46.601712 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt-base_4.1.6/qubes-mgmt-salt-base_4.1.6-1+deb13u1_amd64.changes
+2024-04-28 04:01:46.601725 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:46.618735 +0000 build-debian43: output: 'qubes-mgmt-salt-base_4.1.6-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:46.618783 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:46.764161 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:46.764217 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/gui-agent-linux_4.2.14/qubes-gui-agent_4.2.14-1+deb13u1_amd64.changes
+2024-04-28 04:01:46.764227 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:51.487907 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:51.496841 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:51.496887 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-qrexec_4.2.18/qubes-core-qrexec_4.2.18-1+deb13u1_amd64.changes
+2024-04-28 04:01:58.413780 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:58.415008 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:58.415044 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-thunderbird_2.0.8/thunderbird-qubes_2.0.8-1+deb13u1_amd64.changes
+2024-04-28 04:01:58.649044 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:58.649095 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/gui-common_4.2.4/qubes-gui-common_4.2.4+deb13u1_amd64.changes
+2024-04-28 04:01:58.649105 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:58.801017 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:58.802071 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:58.802116 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/video-companion_1.0.7/qubes-video-companion_1.0.7-1+deb13u1_amd64.changes
+2024-04-28 04:01:58.830404 +0000 build-debian43: output: 'qubes-video-companion_1.0.7-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:58.830452 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:58.982653 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:58.983552 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:58.983606 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/python-looseversion_1.3.0/python-looseversion_1.3.0-1+deb13u1_amd64.changes
+2024-04-28 04:01:59.115245 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:59.115731 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:59.115759 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/linux-gbulb_0.6.3/python3-gbulb_0.6.3-2+deb13u1_amd64.changes
+2024-04-28 04:01:59.131704 +0000 build-debian43: output: 'python3-gbulb_0.6.3-2+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:01:59.131753 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:01:59.251941 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:59.252521 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:59.252548 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-snapd-helper_1.0.4/qubes-snapd-helper_1.0.4-1+deb13u1_amd64.changes
+2024-04-28 04:01:59.418403 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:59.420198 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:59.420234 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-i3_4.22/i3-wm_4.22-1+deb13u1_amd64.changes
+2024-04-28 04:01:59.706226 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:59.706275 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:59.706291 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-xfce4_4.2.2/xfce4-settings-qubes_4.2.2-1+deb13u1_amd64.changes
+2024-04-28 04:01:59.918848 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:01:59.919566 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:01:59.919593 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/linux-utils_4.2.15/qubes-utils_4.2.15+deb13u1_amd64.changes
+2024-04-28 04:02:00.243926 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:00.245845 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:00.245894 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-input-proxy_1.0.35/qubes-input-proxy_1.0.35-1+deb13u1_amd64.changes
+2024-04-28 04:02:00.576727 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:00.577703 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:00.577739 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/manager_4.2.8/qubes-manager_4.2.8-1+deb13u1_amd64.changes
+2024-04-28 04:02:00.783452 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:00.784721 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:00.784765 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-common_4.2.7/qubes-desktop-linux-common_4.2.7-1+deb13u1_amd64.changes
+2024-04-28 04:02:01.012742 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:01.012790 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:01.012805 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/notification-proxy_1.0.1/notification-proxy_1.0.1-1+deb13u1_amd64.changes
+2024-04-28 04:02:01.535865 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:01.536671 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:01.536708 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt-base-config_4.1.2/qubes-mgmt-salt-base-config_4.1.2-1+deb13u1_amd64.changes
+2024-04-28 04:02:01.551689 +0000 build-debian43: output: 'qubes-mgmt-salt-base-config_4.1.2-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-04-28 04:02:01.551739 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-04-28 04:02:01.741977 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:01.742447 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:01.742567 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-img-converter_1.2.16/qubes-img-converter_1.2.16-1+deb13u1_amd64.changes
+2024-04-28 04:02:01.914692 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:01.914764 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-04-28 04:02:01.914780 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/vmm-xen-guest_5.0.0/xen-guest_5.0.0-1+deb13u1_amd64.changes
+2024-04-28 04:02:02.068745 +0000 build-debian43: output: Exporting indices...
+2024-04-28 04:02:02.145990 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-04-28 04:02:02.226053 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-04-28 04:02:02.240947 +0000 build-debian43: output: dpkg-query: no packages found matching systemd
+2024-04-28 04:02:02.243080 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-04-28 04:02:02.251205 +0000 build-debian43: output: I: Current time: Sun Apr 28 04:02:02 GMT 2024
+2024-04-28 04:02:02.251249 +0000 build-debian43: output: I: pbuilder-time-stamp: 1714276922
+2024-04-28 04:02:02.253329 +0000 build-debian43: output: I: Building the build Environment
+2024-04-28 04:02:02.256264 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-04-28 04:02:08.086778 +0000 build-debian43: output: I: copying local configuration
+2024-04-28 04:02:08.103813 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/2835/etc/hostname to be correct
+2024-04-28 04:02:08.103863 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/2835/etc/mailname to be correct
+2024-04-28 04:02:08.121867 +0000 build-debian43: output: W: --override-config is not set; not updating apt.conf Read the manpage for details.
+2024-04-28 04:02:08.123139 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-04-28 04:02:08.132890 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-04-28 04:02:08.137903 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-04-28 04:02:08.152827 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-04-28 04:02:08.161218 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-04-28 04:02:08.188820 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-04-28 04:02:08.191142 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-04-28 04:02:08.199275 +0000 build-debian43: output: I: Refreshing the base.tgz
+2024-04-28 04:02:08.199325 +0000 build-debian43: output: I: upgrading packages
+2024-04-28 04:02:10.447840 +0000 build-debian43: output: Ign:1 https://deb.debian.org/debian trixie InRelease
+2024-04-28 04:02:10.659711 +0000 build-debian43: output: Err:2 https://deb.debian.org/debian trixie Release
+2024-04-28 04:02:10.659767 +0000 build-debian43: output:   Cannot initiate the connection to deb.debian.org:443 (2a04:4e42:8d::644). - connect (101: Network is unreachable)
+2024-04-28 04:02:11.504994 +0000 build-debian43: output: Reading package lists...
+2024-04-28 04:02:11.526135 +0000 build-debian43: output: E: The repository 'https://deb.debian.org/debian trixie Release' no longer has a Release file.
+2024-04-28 04:02:11.526187 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-04-28 04:02:11.550168 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-04-28 04:02:11.559665 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-04-28 04:02:11.566043 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-04-28 04:02:11.575360 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-04-28 04:02:11.582265 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-04-28 04:02:11.598162 +0000 build-debian43: output: I: cleaning the build env
+2024-04-28 04:02:11.598218 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/2835 and its subdirectories
+2024-04-28 04:02:18.141258 +0000 > closing log
