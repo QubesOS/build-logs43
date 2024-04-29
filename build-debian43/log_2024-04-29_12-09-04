@@ -1,0 +1,139 @@
+2024-04-29 12:09:04.917549 +0000 > starting log
+2024-04-29 12:09:04.917834 +0000 build-debian43: > starting build with log
+2024-04-29 12:09:04.917852 +0000 build-debian43: >> args:
+2024-04-29 12:09:04.917860 +0000 build-debian43: >>   ()
+2024-04-29 12:09:04.917867 +0000 build-debian43: >> component:
+2024-04-29 12:09:04.917875 +0000 build-debian43: >>   fwupd
+2024-04-29 12:09:04.917882 +0000 build-debian43: >>     commit-hash: 5bbe56195518ca32a2e5371c1963f960ccc0a0a2
+2024-04-29 12:09:04.917893 +0000 build-debian43: >>     source-hash: 97b741b3d5e3910fab9f8211231ba7ef710758b32cfc1a837331e86534dcd737d8e43091cf4ee338c37e149fa0b2201389805cf51f3512e3897d4077667cc43c
+2024-04-29 12:09:04.917899 +0000 build-debian43: >> distributions:
+2024-04-29 12:09:04.917908 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-04-29 12:09:04.917915 +0000 build-debian43: fwupd: source already fetched. Updating.
+2024-04-29 12:09:27.132204 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9773 qubesbuilder.FileCopyIn+-2Fbuilder-2Ffwupd /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/fwupd
+2024-04-29 12:09:27.427063 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9773 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-29 12:09:27.658056 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9773 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-fwupd.git /builder/fwupd /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-04-29 12:09:33.510856 +0000 build-debian43: output: --> Verifying tags...
+2024-04-29 12:09:33.510901 +0000 build-debian43: output: ---> Good tag 599cba202dfc41c83d7b444ce3c92fc23bba668e.
+2024-04-29 12:09:33.510911 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-04-29 12:09:33.510917 +0000 build-debian43: output: --> Merging...
+2024-04-29 12:09:33.523371 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9773 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-04-29 12:10:03.468034 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8095 qubesbuilder.FileCopyIn+-2Fbuilder-2Ffwupd /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/fwupd
+2024-04-29 12:10:04.387404 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8095 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-04-29 12:10:05.418811 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8095 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/fwupd --file-name fwupd-1.8.17.tar.xz --file-url https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz --signature-url https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc''.
+2024-04-29 12:10:05.724281 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-04-29 12:10:05.724344 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/fwupd --file-name fwupd-1.8.17.tar.xz --file-url https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz --signature-url https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:05.730301 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/fwupd'\'' --file-name '\''fwupd-1.8.17.tar.xz'\'' --file-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz'\'' --signature-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc'\'' --'
+2024-04-29 12:10:05.730371 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/fwupd'\'' --file-name '\''fwupd-1.8.17.tar.xz'\'' --file-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz'\'' --signature-url '\''https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc'\'' --'
+2024-04-29 12:10:05.730392 +0000 build-debian43: output: ++ set -- --output-dir /builder/fwupd --file-name fwupd-1.8.17.tar.xz --file-url https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz --signature-url https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc --
+2024-04-29 12:10:05.730401 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-29 12:10:05.730409 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:05.730416 +0000 build-debian43: output: + OUTPUT_DIR=/builder/fwupd
+2024-04-29 12:10:05.731939 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.731969 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.731976 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-29 12:10:05.731982 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:05.731989 +0000 build-debian43: output: + FILE_NAME=fwupd-1.8.17.tar.xz
+2024-04-29 12:10:05.731996 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732011 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732018 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-29 12:10:05.732024 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:05.732034 +0000 build-debian43: output: + FILE_URL=https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz
+2024-04-29 12:10:05.732040 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732046 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732052 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-29 12:10:05.732058 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:05.732067 +0000 build-debian43: output: + SIGNATURE_URL=https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:05.732076 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732084 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732090 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-29 12:10:05.732098 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:05.732104 +0000 build-debian43: output: + shift
+2024-04-29 12:10:05.732110 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-29 12:10:05.732118 +0000 build-debian43: output: + '[' -z https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz ']'
+2024-04-29 12:10:05.732128 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-04-29 12:10:05.732135 +0000 build-debian43: output: + '[' -z fwupd-1.8.17.tar.xz ']'
+2024-04-29 12:10:05.732143 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_fwupd-1.8.17.tar.xz
+2024-04-29 12:10:05.732149 +0000 build-debian43: output: + '[' -n /builder/fwupd ']'
+2024-04-29 12:10:05.732156 +0000 build-debian43: output: + mkdir -p /builder/fwupd
+2024-04-29 12:10:05.733128 +0000 build-debian43: output: + cd /builder/fwupd
+2024-04-29 12:10:05.733160 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fwupd-1.8.17.tar.xz -- https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz
+2024-04-29 12:10:23.847691 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-04-29 12:10:23.847773 +0000 build-debian43: output: + '[' -n https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc ']'
+2024-04-29 12:10:23.847803 +0000 build-debian43: output: ++ basename https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:23.849750 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:23.849823 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:23.849861 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fwupd-1.8.17.tar.xz.asc https://github.com/fwupd/fwupd/releases/download/1.8.17/fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:28.259284 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8095 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd-2Funtrusted_fwupd--1.8.17.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt
+2024-04-29 12:10:28.459111 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8095 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd-2Funtrusted_fwupd--1.8.17.tar.xz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt
+2024-04-29 12:10:34.166464 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc --pubkey-file /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub'.
+2024-04-29 12:10:34.174686 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-04-29 12:10:34.174840 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc --pubkey-file /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub
+2024-04-29 12:10:34.174897 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub'\'' --'
+2024-04-29 12:10:34.174950 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub'\'' --'
+2024-04-29 12:10:34.174997 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc --pubkey-file /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub --
+2024-04-29 12:10:34.175015 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-04-29 12:10:34.175033 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-04-29 12:10:34.175049 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:34.175070 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt
+2024-04-29 12:10:34.175087 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175104 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175139 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-04-29 12:10:34.175157 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:34.175180 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz
+2024-04-29 12:10:34.175197 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175212 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175229 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-04-29 12:10:34.175245 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:34.175273 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:34.175290 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175306 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175322 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-04-29 12:10:34.175338 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:34.175355 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-04-29 12:10:34.175370 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175386 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175402 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-04-29 12:10:34.175418 +0000 build-debian43: output: + case "$1" in
+2024-04-29 12:10:34.175434 +0000 build-debian43: output: + shift
+2024-04-29 12:10:34.175450 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-04-29 12:10:34.175478 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz ']'
+2024-04-29 12:10:34.175499 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt ']'
+2024-04-29 12:10:34.175518 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt
+2024-04-29 12:10:34.175540 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz
+2024-04-29 12:10:34.175560 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_fwupd-1.8.17.tar.xz
+2024-04-29 12:10:34.175578 +0000 build-debian43: output: + FILE_NAME=fwupd-1.8.17.tar.xz
+2024-04-29 12:10:34.175595 +0000 build-debian43: output: + '[' -z '' ']'
+2024-04-29 12:10:34.175618 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc ']'
+2024-04-29 12:10:34.175657 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-29 12:10:34.175685 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc ']'
+2024-04-29 12:10:34.175707 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub ']'
+2024-04-29 12:10:34.175728 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc ']'
+2024-04-29 12:10:34.175749 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc ']'
+2024-04-29 12:10:34.175769 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub ']'
+2024-04-29 12:10:34.175784 +0000 build-debian43: output: + '[' -n '' ']'
+2024-04-29 12:10:34.175805 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc ']'
+2024-04-29 12:10:34.175824 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub ']'
+2024-04-29 12:10:34.175844 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:34.175863 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:34.175881 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:34.175896 +0000 build-debian43: output: ++ mktemp -d
+2024-04-29 12:10:34.175925 +0000 build-debian43: output: + keyring_dir=/tmp/tmp.pJtp8sUZZf
+2024-04-29 12:10:34.175948 +0000 build-debian43: output: + sq toolbox keyring merge
+2024-04-29 12:10:34.247610 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.pJtp8sUZZf/keyring /home/user/builder-r4.3-debian/sources/fwupd/hughsie.pub
+2024-04-29 12:10:34.250594 +0000 build-debian43: output: + sq toolbox dearmor --output /tmp/tmp.pJtp8sUZZf/keyring.gpg /tmp/tmp.pJtp8sUZZf/keyring
+2024-04-29 12:10:34.258795 +0000 build-debian43: output: + gpgv --keyring /tmp/tmp.pJtp8sUZZf/keyring.gpg /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz
+2024-04-29 12:10:34.265920 +0000 build-debian43: output: gpgv: Signature made Sun Jul  9 20:32:30 2023 GMT
+2024-04-29 12:10:34.265976 +0000 build-debian43: output: gpgv:                using RSA key 163EB50119225DB3DF8F49EA17ACBA8DFA970E17
+2024-04-29 12:10:34.265991 +0000 build-debian43: output: gpgv: Good signature from "Richard Hughes <richard@hughsie.com>"
+2024-04-29 12:10:34.266004 +0000 build-debian43: output: gpgv:                 aka "[invalid image]"
+2024-04-29 12:10:34.266016 +0000 build-debian43: output: gpgv:                 aka "[invalid image]"
+2024-04-29 12:10:34.266605 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz.asc /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/fwupd-1.8.17.tar.xz.asc
+2024-04-29 12:10:34.268083 +0000 build-debian43: output: + rm -rf /tmp/tmp.pJtp8sUZZf
+2024-04-29 12:10:34.268376 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/untrusted_fwupd-1.8.17.tar.xz /home/user/builder-r4.3-debian/tmp/tmpo2qnwfjt/fwupd-1.8.17.tar.xz
+2024-04-29 12:10:34.339319 +0000 build-debian43: ['rm -f -- /builder/fwupd/hash /builder/fwupd/vtags', 'cd -- /builder', "git -C /builder/fwupd rev-parse 'HEAD^{}' >> /builder/fwupd/hash", "git -C /builder/fwupd tag --points-at HEAD --list 'v*' >> /builder/fwupd/vtags"]
+2024-04-29 12:10:53.328570 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7848 qubesbuilder.FileCopyIn+-2Fbuilder-2Ffwupd /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/fwupd
+2024-04-29 12:10:53.911824 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7848 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/fwupd/hash /builder/fwupd/vtags && cd -- /builder && git -C /builder/fwupd rev-parse '"'"'HEAD^{}'"'"' >> /builder/fwupd/hash && git -C /builder/fwupd tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/fwupd/vtags''.
+2024-04-29 12:10:54.161744 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7848 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpioxcgm_1
+2024-04-29 12:10:54.384799 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7848 qubesbuilder.FileCopyOut+-2Fbuilder-2Ffwupd-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpioxcgm_1
+2024-04-29 12:10:58.343548 +0000 build-debian43: > done
+2024-04-29 12:10:58.343671 +0000 > closing log
