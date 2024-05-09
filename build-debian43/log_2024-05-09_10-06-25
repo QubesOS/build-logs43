@@ -1,0 +1,534 @@
+2024-05-09 10:06:25.428572 +0000 > starting log
+2024-05-09 10:06:25.429107 +0000 build-debian43: > starting build with log
+2024-05-09 10:06:25.429133 +0000 build-debian43: >> args:
+2024-05-09 10:06:25.429142 +0000 build-debian43: >>   ()
+2024-05-09 10:06:25.429148 +0000 build-debian43: >> component:
+2024-05-09 10:06:25.429154 +0000 build-debian43: >>   salt
+2024-05-09 10:06:25.429165 +0000 build-debian43: >>     commit-hash: 8a26a9e59dd234fdc74a280c888dc2c889a9e6f4
+2024-05-09 10:06:25.429175 +0000 build-debian43: >>     source-hash: cdd6eccd858dc8462d012f1826bf849ca761e810315cc43aeec9ce32f07c9073b2a7436c9d294d7a63fb2f41946153ffa4fd4c8cb39b32ba537c877c15c2fa23
+2024-05-09 10:06:25.429181 +0000 build-debian43: >> distributions:
+2024-05-09 10:06:25.429189 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-05-09 10:06:25.429197 +0000 build-debian43: salt:vm-debian-13.amd64: Source hash is the same than already prepared source. Skipping.
+2024-05-09 10:06:43.002311 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb/pbuilder
+2024-05-09 10:06:43.296443 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fsalt_3006.5--1-2Bdeb13u1.dsc /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/salt/3006.5-1/vm-trixie/prep/salt_3006.5-1+deb13u1.dsc
+2024-05-09 10:06:43.529144 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fsalt_3006.5--1-2Bdeb13u1.debian.tar.xz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/salt/3006.5-1/vm-trixie/prep/salt_3006.5-1+deb13u1.debian.tar.xz
+2024-05-09 10:06:43.762476 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fsalt_3006.5.orig.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/components/salt/3006.5-1/vm-trixie/prep/salt_3006.5.orig.tar.gz
+2024-05-09 10:06:44.192452 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpbuilder-2Fbase.tgz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/cache/chroot/trixie/pbuilder/base.tgz
+2024-05-09 10:06:48.782760 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-05-09 10:06:49.350122 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_deb
+2024-05-09 10:06:49.653096 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_deb /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb
+2024-05-09 10:06:50.455389 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7149 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--trixie /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/repository/vm-trixie
+2024-05-09 10:06:51.417039 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7149 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'mkdir -p /builder/cache/aptcache && /builder/plugins/build_deb/scripts/create-local-repo /builder/repository debian trixie && sudo -E pbuilder update --distribution trixie --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb trixie main" && sudo -E pbuilder build --override-config --distribution trixie --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb trixie main" /builder/build/salt_3006.5-1+deb13u1.dsc && /builder/plugins/build_deb/scripts/patch-changes /builder/build/salt_3006.5-1+deb13u1.dsc /builder/pbuilder/results/salt_3006.5-1+deb13u1_amd64.buildinfo /builder/pbuilder/results/salt_3006.5-1+deb13u1_amd64.changes''.
+2024-05-09 10:06:51.577637 +0000 build-debian43: output: + '[' 3 -lt 2 ']'
+2024-05-09 10:06:51.577699 +0000 build-debian43: output: + REPO_DIR=/builder/repository
+2024-05-09 10:06:51.577708 +0000 build-debian43: output: + DISTRIBUTION=debian
+2024-05-09 10:06:51.577715 +0000 build-debian43: output: + SUITE=trixie
+2024-05-09 10:06:51.577723 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-05-09 10:06:51.578262 +0000 build-debian43: output: + mkdir -p /builder/repository/conf
+2024-05-09 10:06:51.579542 +0000 build-debian43: output: + cd /builder/repository
+2024-05-09 10:06:51.581278 +0000 build-debian43: output: ++ LC_ALL=C
+2024-05-09 10:06:51.581338 +0000 build-debian43: output: ++ reprepro --version
+2024-05-09 10:06:51.594028 +0000 build-debian43: output: + reprepro_version='reprepro: This is reprepro version 5.4.2'
+2024-05-09 10:06:51.594076 +0000 build-debian43: output: + reprepro_version=5.4.2
+2024-05-09 10:06:51.594084 +0000 build-debian43: output: + append_components=
+2024-05-09 10:06:51.594964 +0000 build-debian43: output: ++ sort -V
+2024-05-09 10:06:51.594988 +0000 build-debian43: output: ++ head -n1
+2024-05-09 10:06:51.594999 +0000 build-debian43: output: ++ printf '%s\n' 5.4.2 5.4.0
+2024-05-09 10:06:51.600593 +0000 build-debian43: output: + '[' 5.4.0 = 5.4.0 ']'
+2024-05-09 10:06:51.600636 +0000 build-debian43: output: + append_components='
+2024-05-09 10:06:51.600653 +0000 build-debian43: output: DDebComponents: main'
+2024-05-09 10:06:51.600659 +0000 build-debian43: output: + cat
+2024-05-09 10:06:51.600922 +0000 build-debian43: output: + mkdir -p dists/trixie/main/binary-amd64
+2024-05-09 10:06:51.603803 +0000 build-debian43: output: + dpkg-scanpackages --multiversion .
+2024-05-09 10:06:52.763386 +0000 build-debian43: output: dpkg-scanpackages: info: Wrote 113 entries to output Packages file.
+2024-05-09 10:06:52.766535 +0000 build-debian43: output: + gzip -9c dists/trixie/main/binary-amd64/Packages
+2024-05-09 10:06:52.771731 +0000 build-debian43: output: ++ LC_ALL=C
+2024-05-09 10:06:52.771773 +0000 build-debian43: output: ++ date -u '+%a, %d %b %Y %H:%M:%S %Z'
+2024-05-09 10:06:52.773926 +0000 build-debian43: output: + DATE='Thu, 09 May 2024 10:06:53 UTC'
+2024-05-09 10:06:52.773957 +0000 build-debian43: output: + cat
+2024-05-09 10:06:52.773966 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages
+2024-05-09 10:06:52.773974 +0000 build-debian43: output: + f=dists/trixie/main/binary-amd64/Packages
+2024-05-09 10:06:52.773980 +0000 build-debian43: output: + echo -n ' '
+2024-05-09 10:06:52.773987 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-05-09 10:06:52.773994 +0000 build-debian43: output: ++ sha256sum dists/trixie/main/binary-amd64/Packages
+2024-05-09 10:06:52.778627 +0000 build-debian43: output: + echo -n 20e776af44be077e5973467ea86ccdcb8d358afe8ee516bb87e93ecda50f7b53 ''
+2024-05-09 10:06:52.779070 +0000 build-debian43: output: ++ stat -c %s dists/trixie/main/binary-amd64/Packages
+2024-05-09 10:06:52.783792 +0000 build-debian43: output: + echo -n 87498 ''
+2024-05-09 10:06:52.783850 +0000 build-debian43: output: + echo main/binary-amd64/Packages
+2024-05-09 10:06:52.783859 +0000 build-debian43: output: + calc_sha1 main/binary-amd64/Packages.gz
+2024-05-09 10:06:52.783889 +0000 build-debian43: output: + f=dists/trixie/main/binary-amd64/Packages.gz
+2024-05-09 10:06:52.783896 +0000 build-debian43: output: + echo -n ' '
+2024-05-09 10:06:52.783904 +0000 build-debian43: output: ++ sha256sum dists/trixie/main/binary-amd64/Packages.gz
+2024-05-09 10:06:52.783911 +0000 build-debian43: output: ++ cut '-d ' -f 1
+2024-05-09 10:06:52.785263 +0000 build-debian43: output: + echo -n 975da11314cd640dfcccfe4c9670be40488b172e5e8c6895a969aa8ef6da71ba ''
+2024-05-09 10:06:52.785327 +0000 build-debian43: output: ++ stat -c %s dists/trixie/main/binary-amd64/Packages.gz
+2024-05-09 10:06:52.786453 +0000 build-debian43: output: + echo -n 25215 ''
+2024-05-09 10:06:52.786489 +0000 build-debian43: output: + echo main/binary-amd64/Packages.gz
+2024-05-09 10:06:52.786520 +0000 build-debian43: output: + mapfile -d '' changes_files
+2024-05-09 10:06:52.786531 +0000 build-debian43: output: ++ find /builder/repository -name '*.changes' -not -path /builder/repository/dists -not -path /builder/repository/pool -print0
+2024-05-09 10:06:52.791885 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:52.791935 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-agent-linux_4.2.32/qubes-core-agent_4.2.32-1+deb13u1_amd64.changes
+2024-05-09 10:06:53.465779 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.466695 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.466736 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/repo-templates_4.2.2/qubes-repo-templates_4.2.2-1+deb13u1_amd64.changes
+2024-05-09 10:06:53.525319 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.526321 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.526436 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/linux-utils_4.2.16/qubes-utils_4.2.16+deb13u1_amd64.changes
+2024-05-09 10:06:53.639058 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.640637 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.640662 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/meta-packages_4.2.11/qubes-meta-packages_4.2.11-1+deb13u1_amd64.changes
+2024-05-09 10:06:53.721286 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.721434 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.721476 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-split-gpg_2.0.71/qubes-gpg-split_2.0.71-1+deb13u1_amd64.changes
+2024-05-09 10:06:53.813131 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.813598 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.813626 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-vchan-xen_4.2.3/libvchan-xen_4.2.3-1+deb13u1_amd64.changes
+2024-05-09 10:06:53.917109 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.917182 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.917246 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-pdf-converter_2.1.19/qubes-pdf-converter_2.1.19-1+deb13u1_amd64.changes
+2024-05-09 10:06:53.965308 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:53.965801 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:53.965864 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-gpg-sign_1.0.0/qubes-gpg-sign_1.0.0-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.073688 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.073762 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-qrexec_4.2.19/qubes-core-qrexec_4.2.19-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.073779 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.167584 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.167782 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.167833 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-u2f_2.0.5/qubes-ctap_2.0.5+deb13u1_amd64.changes
+2024-05-09 10:06:54.186769 +0000 build-debian43: output: 'qubes-ctap_2.0.5+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:54.186814 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:54.366003 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.366049 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.366065 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-xfce4-xfwm4_4.16.1/xfwm4_4.16.1-4+deb13u1_amd64.changes
+2024-05-09 10:06:54.511258 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.511677 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.511716 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt-base-topd_4.2.1/qubes-mgmt-salt-base-topd_4.2.1-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.528704 +0000 build-debian43: output: 'qubes-mgmt-salt-base-topd_4.2.1-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:54.528749 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:54.578873 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.579532 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.579567 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-menu_1.2.0/qubes-desktop-linux-menu_1.2.0-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.640864 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.640925 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-admin-client_4.2.12/qubes-core-admin-client_4.2.12-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.640937 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.705177 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.706045 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.706107 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-input-proxy_1.0.36/qubes-input-proxy_1.0.36-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.830389 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.831519 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.831598 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/disk-password-gui_1.0.0/disk-password-gui_1.0.0-1+deb13u1_amd64.changes
+2024-05-09 10:06:54.893121 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:54.893926 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:54.893967 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/gui-daemon_4.2.7/qubes-gui-daemon_4.2.7-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.006032 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.006790 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.006827 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt_4.2.2/qubes-mgmt-salt_4.2.2-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.027420 +0000 build-debian43: output: 'qubes-mgmt-salt_4.2.2-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:55.027464 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:55.079422 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.080478 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.080518 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-i3-settings-qubes_1.10/i3-settings-qubes_1.10-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.159651 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.159709 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.159742 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-manager_4.2.21/qubes-desktop-linux-manager_4.2.21-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.313664 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.313750 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-shutdown-idle_1.0.10/qubes-app-shutdown-idle_1.0.10-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.313777 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.389255 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.390344 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.390386 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/rpm-oxide_0.2.7/qubes-rpm-oxide_0.2.7-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.407700 +0000 build-debian43: output: 'qubes-rpm-oxide_0.2.7-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:55.407747 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:55.518922 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.519526 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.519774 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-usb-proxy_1.2.1/qubes-usb-proxy_1.2.1+deb13u1_amd64.changes
+2024-05-09 10:06:55.670584 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.671407 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.671448 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/python-qasync_0.23.0/python-qasync_0.23.0-2+deb13u1_amd64.changes
+2024-05-09 10:06:55.689310 +0000 build-debian43: output: 'python-qasync_0.23.0-2+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:55.689359 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:55.750874 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.751630 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.751665 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt-base_4.1.6/qubes-mgmt-salt-base_4.1.6-1+deb13u1_amd64.changes
+2024-05-09 10:06:55.783577 +0000 build-debian43: output: 'qubes-mgmt-salt-base_4.1.6-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:55.783623 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:55.923342 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:55.924513 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:55.924550 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/gui-agent-linux_4.2.14/qubes-gui-agent_4.2.14-1+deb13u1_amd64.changes
+2024-05-09 10:06:56.295321 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.296556 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.296606 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-thunderbird_2.0.8/thunderbird-qubes_2.0.8-1+deb13u1_amd64.changes
+2024-05-09 10:06:56.371983 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.373056 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.373137 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/gui-common_4.2.4/qubes-gui-common_4.2.4+deb13u1_amd64.changes
+2024-05-09 10:06:56.445164 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.445570 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.445629 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/fwupd_1.8.17/fwupd-qubes_1.8.17-2+deb13u1_amd64.changes
+2024-05-09 10:06:56.569155 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.570244 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.570312 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/video-companion_1.0.7/qubes-video-companion_1.0.7-1+deb13u1_amd64.changes
+2024-05-09 10:06:56.592493 +0000 build-debian43: output: 'qubes-video-companion_1.0.7-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:56.592569 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:56.642873 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.643575 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.643666 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/python-looseversion_1.3.0/python-looseversion_1.3.0-1+deb13u1_amd64.changes
+2024-05-09 10:06:56.726246 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.726318 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.726333 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/linux-gbulb_0.6.3/python3-gbulb_0.6.3-2+deb13u1_amd64.changes
+2024-05-09 10:06:56.747469 +0000 build-debian43: output: 'python3-gbulb_0.6.3-2+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:56.747522 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:56.793828 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.794715 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.794751 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-snapd-helper_1.0.4/qubes-snapd-helper_1.0.4-1+deb13u1_amd64.changes
+2024-05-09 10:06:56.866118 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.866848 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.866903 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-i3_4.22/i3-wm_4.22-1+deb13u1_amd64.changes
+2024-05-09 10:06:56.999382 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:56.999461 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:56.999492 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-xfce4_4.2.2/xfce4-settings-qubes_4.2.2-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.083184 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.084274 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.084404 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/core-qubesdb_4.2.5/qubesdb_4.2.5-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.182970 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.184750 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.184839 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/manager_4.2.8/qubes-manager_4.2.8-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.283031 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.283673 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.283709 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/desktop-linux-common_4.2.7/qubes-desktop-linux-common_4.2.7-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.382537 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.383090 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.383197 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/notification-proxy_1.0.1/notification-proxy_1.0.1-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.708772 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.709580 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.709705 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/mgmt-salt-base-config_4.1.2/qubes-mgmt-salt-base-config_4.1.2-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.728982 +0000 build-debian43: output: 'qubes-mgmt-salt-base-config_4.1.2-1+deb13u1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2024-05-09 10:06:57.729059 +0000 build-debian43: output: Ignoring as --ignore=surprisingarch given.
+2024-05-09 10:06:57.803969 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.805954 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.806002 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/app-linux-img-converter_1.2.16/qubes-img-converter_1.2.16-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.881045 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.881481 +0000 build-debian43: output: + for changes in "${changes_files[@]}"
+2024-05-09 10:06:57.881539 +0000 build-debian43: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include trixie /builder/repository/vm-trixie/vmm-xen-guest_5.0.0/xen-guest_5.0.0-1+deb13u1_amd64.changes
+2024-05-09 10:06:57.957255 +0000 build-debian43: output: Exporting indices...
+2024-05-09 10:06:57.990154 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-05-09 10:06:58.049209 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-05-09 10:06:58.055989 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-05-09 10:06:58.063118 +0000 build-debian43: output: I: Current time: Thu May  9 10:06:58 GMT 2024
+2024-05-09 10:06:58.063748 +0000 build-debian43: output: I: pbuilder-time-stamp: 1715249218
+2024-05-09 10:06:58.064468 +0000 build-debian43: output: I: Building the build Environment
+2024-05-09 10:06:58.065836 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-05-09 10:07:03.467038 +0000 build-debian43: output: I: copying local configuration
+2024-05-09 10:07:04.539101 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/2863/etc/hostname to be correct
+2024-05-09 10:07:04.539148 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/2863/etc/mailname to be correct
+2024-05-09 10:07:04.558591 +0000 build-debian43: output: W: --override-config is not set; not updating apt.conf Read the manpage for details.
+2024-05-09 10:07:04.558636 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-05-09 10:07:04.592937 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-05-09 10:07:04.600931 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-05-09 10:07:04.611019 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-05-09 10:07:04.621438 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-05-09 10:07:04.636657 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-05-09 10:07:04.642798 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-05-09 10:07:04.669305 +0000 build-debian43: output: I: Refreshing the base.tgz
+2024-05-09 10:07:04.669353 +0000 build-debian43: output: I: upgrading packages
+2024-05-09 10:07:11.335496 +0000 build-debian43: output: Get:1 https://deb.debian.org/debian trixie InRelease [158 kB]
+2024-05-09 10:07:15.387541 +0000 build-debian43: output: Get:2 https://deb.debian.org/debian trixie/main amd64 Packages.diff/Index [27.9 kB]
+2024-05-09 10:07:17.182716 +0000 build-debian43: output: Get:3 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-08-0205.19.pdiff [21.8 kB]
+2024-05-09 10:07:18.991245 +0000 build-debian43: output: Get:4 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-08-0804.07.pdiff [25.5 kB]
+2024-05-09 10:07:19.259991 +0000 build-debian43: output: Get:5 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-08-1404.24.pdiff [20.5 kB]
+2024-05-09 10:07:19.507176 +0000 build-debian43: output: Get:6 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-08-2024.36.pdiff [30.6 kB]
+2024-05-09 10:07:20.307105 +0000 build-debian43: output: Get:7 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-09-0207.01.pdiff [26.3 kB]
+2024-05-09 10:07:20.723343 +0000 build-debian43: output: Get:8 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-09-0816.02.pdiff [5293 B]
+2024-05-09 10:07:20.921943 +0000 build-debian43: output: Get:8 https://deb.debian.org/debian trixie/main amd64 Packages 2024-05-09-0816.02.pdiff [5293 B]
+2024-05-09 10:07:21.252693 +0000 build-debian43: output: Fetched 316 kB in 17s (19.1 kB/s)
+2024-05-09 10:07:21.918206 +0000 build-debian43: output: Reading package lists...
+2024-05-09 10:07:22.020021 +0000 build-debian43: output: I: Obtaining the cached apt archive contents
+2024-05-09 10:07:22.275159 +0000 build-debian43: output: Reading package lists...
+2024-05-09 10:07:22.628804 +0000 build-debian43: output: Building dependency tree...
+2024-05-09 10:07:22.628853 +0000 build-debian43: output: Reading state information...
+2024-05-09 10:07:22.821261 +0000 build-debian43: output: Calculating upgrade...
+2024-05-09 10:07:22.997437 +0000 build-debian43: output: The following packages will be upgraded:
+2024-05-09 10:07:22.998595 +0000 build-debian43: output:   base-files
+2024-05-09 10:07:26.649118 +0000 build-debian43: output: 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-05-09 10:07:26.649176 +0000 build-debian43: output: Need to get 71.6 kB of archives.
+2024-05-09 10:07:26.649192 +0000 build-debian43: output: After this operation, 1024 B of additional disk space will be used.
+2024-05-09 10:07:26.649246 +0000 build-debian43: output: Get:1 https://deb.debian.org/debian trixie/main amd64 base-files amd64 13.2 [71.6 kB]
+2024-05-09 10:07:28.061808 +0000 build-debian43: output: debconf: delaying package configuration, since apt-utils is not installed
+2024-05-09 10:07:28.078897 +0000 build-debian43: output: Fetched 71.6 kB in 5s (15.1 kB/s)
+2024-05-09 10:07:28.398805 +0000 build-debian43: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 12606 files and directories currently installed.).
+2024-05-09 10:07:28.399673 +0000 build-debian43: output: Preparing to unpack .../base-files_13.2_amd64.deb ....
+2024-05-09 10:07:28.849370 +0000 build-debian43: output: Unpacking base-files (13.2) over (13.1) ....
+2024-05-09 10:07:29.269206 +0000 build-debian43: output: Setting up base-files (13.2) ....
+2024-05-09 10:07:30.927500 +0000 build-debian43: output: Updating /etc/profile to current default..
+2024-05-09 10:07:31.347075 +0000 build-debian43: output: Reading package lists...
+2024-05-09 10:07:31.508277 +0000 build-debian43: output: Building dependency tree...
+2024-05-09 10:07:31.508323 +0000 build-debian43: output: Reading state information...
+2024-05-09 10:07:31.778033 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-05-09 10:07:31.791940 +0000 build-debian43: output: Reading package lists...
+2024-05-09 10:07:31.956787 +0000 build-debian43: output: Building dependency tree...
+2024-05-09 10:07:31.956852 +0000 build-debian43: output: Reading state information...
+2024-05-09 10:07:32.177066 +0000 build-debian43: output: build-essential is already the newest version (12.10).
+2024-05-09 10:07:32.177116 +0000 build-debian43: output: dpkg-dev is already the newest version (1.22.6).
+2024-05-09 10:07:32.177125 +0000 build-debian43: output: aptitude is already the newest version (0.8.13-6).
+2024-05-09 10:07:32.177133 +0000 build-debian43: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2024-05-09 10:07:32.177838 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-05-09 10:07:32.183298 +0000 build-debian43: output: I: new cache content 'base-files_13.2_amd64.deb' added
+2024-05-09 10:07:32.183967 +0000 build-debian43: output: I: user script /builder/pbuilder/build/2863/tmp/hooks/E30origin starting
+2024-05-09 10:07:32.190866 +0000 build-debian43: output: I: user script /builder/pbuilder/build/2863/tmp/hooks/E30origin finished
+2024-05-09 10:07:32.191614 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-05-09 10:07:32.203817 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-05-09 10:07:32.207464 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-05-09 10:07:32.211142 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-05-09 10:07:32.214499 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-05-09 10:07:32.217469 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-05-09 10:07:32.247055 +0000 build-debian43: output: I: creating base tarball [/builder/pbuilder/base.tgz]
+2024-05-09 10:08:00.849055 +0000 build-debian43: output: I: cleaning the build env
+2024-05-09 10:08:00.849103 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/2863 and its subdirectories
+2024-05-09 10:08:01.326864 +0000 build-debian43: output: W: /root/.pbuilderrc does not exist
+2024-05-09 10:08:01.420171 +0000 build-debian43: output: W: libeatmydata is not installed on the host, not using it.
+2024-05-09 10:08:01.434994 +0000 build-debian43: output: dpkg-query: no packages found matching systemd
+2024-05-09 10:08:01.437042 +0000 build-debian43: output: W: cgroups are not available on the host, not using them.
+2024-05-09 10:08:01.538520 +0000 build-debian43: output: I: pbuilder: network access will be disabled during build
+2024-05-09 10:08:01.546750 +0000 build-debian43: output: I: Current time: Thu May  9 10:08:01 GMT 2024
+2024-05-09 10:08:01.548889 +0000 build-debian43: output: I: pbuilder-time-stamp: 1715249281
+2024-05-09 10:08:01.549896 +0000 build-debian43: output: I: Building the build Environment
+2024-05-09 10:08:01.557178 +0000 build-debian43: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2024-05-09 10:08:11.400773 +0000 build-debian43: output: I: copying local configuration
+2024-05-09 10:08:11.471416 +0000 build-debian43: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/3123/etc/hostname to be correct
+2024-05-09 10:08:11.471501 +0000 build-debian43: output: W: No local /etc/mailname to copy, relying on /builder/pbuilder/build/3123/etc/mailname to be correct
+2024-05-09 10:08:11.487079 +0000 build-debian43: output: I: Installing apt-lines
+2024-05-09 10:08:11.941514 +0000 build-debian43: output: I: mounting /proc filesystem
+2024-05-09 10:08:11.969038 +0000 build-debian43: output: I: mounting /sys filesystem
+2024-05-09 10:08:11.974264 +0000 build-debian43: output: I: creating /{dev,run}/shm
+2024-05-09 10:08:11.991370 +0000 build-debian43: output: I: mounting /dev/pts filesystem
+2024-05-09 10:08:12.002518 +0000 build-debian43: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2024-05-09 10:08:12.012721 +0000 build-debian43: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2024-05-09 10:08:12.018116 +0000 build-debian43: output: I: policy-rc.d already exists
+2024-05-09 10:08:12.026791 +0000 build-debian43: output: I: created buildresult dir: /builder/pbuilder/results
+2024-05-09 10:08:12.026855 +0000 build-debian43: output: I: Obtaining the cached apt archive contents
+2024-05-09 10:08:12.072929 +0000 build-debian43: output: I: Copying source file
+2024-05-09 10:08:12.126563 +0000 build-debian43: output: I: copying [/builder/build/salt_3006.5-1+deb13u1.dsc]
+2024-05-09 10:08:12.132781 +0000 build-debian43: output: I: copying [/builder/build/salt_3006.5.orig.tar.gz]
+2024-05-09 10:08:12.244211 +0000 build-debian43: output: I: copying [/builder/build/salt_3006.5-1+deb13u1.debian.tar.xz]
+2024-05-09 10:08:12.283877 +0000 build-debian43: output: I: Extracting source
+2024-05-09 10:08:12.458174 +0000 build-debian43: output: dpkg-source: warning: extracting unsigned source package (salt_3006.5-1+deb13u1.dsc)
+2024-05-09 10:08:12.655783 +0000 build-debian43: output: dpkg-source: info: extracting salt in salt-3006.5
+2024-05-09 10:08:12.655842 +0000 build-debian43: output: dpkg-source: info: unpacking salt_3006.5.orig.tar.gz
+2024-05-09 10:08:13.421312 +0000 build-debian43: output: dpkg-source: info: unpacking salt_3006.5-1+deb13u1.debian.tar.xz
+2024-05-09 10:08:13.457330 +0000 build-debian43: output: dpkg-source: info: using patch list from debian/patches/series
+2024-05-09 10:08:13.457380 +0000 build-debian43: output: dpkg-source: info: applying Make-the-Salt-Proxy-environment-aware.patch
+2024-05-09 10:08:13.658102 +0000 build-debian43: output: dpkg-source: info: applying doc-Exclude-documentation_options.js-from-default-th.patch
+2024-05-09 10:08:13.716573 +0000 build-debian43: output: dpkg-source: info: applying remove-privacy-breach.patch
+2024-05-09 10:08:13.752972 +0000 build-debian43: output: dpkg-source: info: applying doc-fix-logo-link.patch
+2024-05-09 10:08:13.765000 +0000 build-debian43: output: dpkg-source: info: applying Use-jquery.js-from-sphinx.patch
+2024-05-09 10:08:13.833102 +0000 build-debian43: output: dpkg-source: info: applying ensure-searchtools.js-gets-included.patch
+2024-05-09 10:08:13.838629 +0000 build-debian43: output: dpkg-source: info: applying dpkg_lowpkg-Do-not-access-var-lib-dpkg-info-package-.patch
+2024-05-09 10:08:13.844916 +0000 build-debian43: output: dpkg-source: info: applying dpkg_lowpkg-Drop-reading-var-lib-dpkg-available-dire.patch
+2024-05-09 10:08:13.848469 +0000 build-debian43: output: dpkg-source: info: applying 0002-Hide-known-DeprecationWarning-related-to-PEP-594.patch
+2024-05-09 10:08:13.913847 +0000 build-debian43: output: I: using fakeroot in build.
+2024-05-09 10:08:13.913902 +0000 build-debian43: output: I: Installing the build-deps
+2024-05-09 10:08:13.913912 +0000 build-debian43: output: I: user script /builder/pbuilder/build/3123/tmp/hooks/D30update starting
+2024-05-09 10:08:14.034457 +0000 build-debian43: output: Get:1 file:/tmp/qubes-deb trixie InRelease
+2024-05-09 10:08:14.034506 +0000 build-debian43: output: Ign:1 file:/tmp/qubes-deb trixie InRelease
+2024-05-09 10:08:14.036351 +0000 build-debian43: output: Get:2 file:/tmp/qubes-deb trixie Release [3851 B]
+2024-05-09 10:08:14.043695 +0000 build-debian43: output: Get:2 file:/tmp/qubes-deb trixie Release [3851 B]
+2024-05-09 10:08:14.044572 +0000 build-debian43: output: Get:3 file:/tmp/qubes-deb trixie Release.gpg
+2024-05-09 10:08:14.044600 +0000 build-debian43: output: Ign:3 file:/tmp/qubes-deb trixie Release.gpg
+2024-05-09 10:08:14.046100 +0000 build-debian43: output: Get:4 file:/tmp/qubes-deb trixie/main amd64 Packages [34.8 kB]
+2024-05-09 10:08:18.228422 +0000 build-debian43: output: Hit:5 https://deb.debian.org/debian trixie InRelease
+2024-05-09 10:08:19.354414 +0000 build-debian43: output: Reading package lists...
+2024-05-09 10:08:19.379768 +0000 build-debian43: output: I: user script /builder/pbuilder/build/3123/tmp/hooks/D30update finished
+2024-05-09 10:08:19.593333 +0000 build-debian43: output:  -> Attempting to satisfy build-dependencies
+2024-05-09 10:08:20.416146 +0000 build-debian43: output:  -> Creating pbuilder-satisfydepends-dummy package
+2024-05-09 10:08:20.423190 +0000 build-debian43: output: Package: pbuilder-satisfydepends-dummy
+2024-05-09 10:08:20.423279 +0000 build-debian43: output: Version: 0.invalid.0
+2024-05-09 10:08:20.423288 +0000 build-debian43: output: Architecture: amd64
+2024-05-09 10:08:20.423296 +0000 build-debian43: output: Maintainer: Debian Pbuilder Team <pbuilder-maint@lists.alioth.debian.org>
+2024-05-09 10:08:20.423305 +0000 build-debian43: output: Description: Dummy package to satisfy dependencies with aptitude - created by pbuilder
+2024-05-09 10:08:20.423313 +0000 build-debian43: output:  This package was created automatically by pbuilder to satisfy the
+2024-05-09 10:08:20.423320 +0000 build-debian43: output:  build-dependencies of the package being currently built.
+2024-05-09 10:08:20.423384 +0000 build-debian43: output: Depends: bash-completion, bind9-dnsutils | dnsutils, debhelper-compat (= 13), dh-python, dpkg-dev (>= 1.16.2), file, iproute2, libjs-bootstrap, libjs-modernizr, openssh-client, python3, python3-apt, python3-attr (>= 19.1), python3-augeas, python3-boto, python3-boto3, python3-cheetah, python3-cherrypy3, python3-consul, python3-croniter, python3-dateutil, python3-distro, python3-dnspython, python3-docker, python3-elasticsearch, python3-etcd, python3-genshi, python3-git, python3-hglib, python3-isodate, python3-jinja2, python3-jsonschema, python3-keyring, python3-kubernetes, python3-ldap, python3-libcloud (>= 0.14.1), python3-linkify-it, python3-looseversion, python3-m2crypto | python3-pycryptodome | python3-crypto (>= 2.6), python3-mako, python3-mock, python3-msgpack, python3-myst-parser, python3-mysqldb, python3-openssl, python3-passlib, python3-pip, python3-psutil, python3-pygit2, python3-pyinotify, python3-pyroute2, python3-pytest (>= 6), python3-pytest-helpers-namespace (>= 2019.1.8), python3-pytest-skip-markers (>= 1.1.0-3~), python3-pytest-subtests, python3-pytest-tempdir (>= 2019.10.12), python3-sphinxcontrib.httpdomain, python3-sphinxcontrib.spelling, python3-toml, python3-requests (>= 1.0.0), python3-setuptools, python3-six, python3-yaml, python3-zmq (>= 13.1.0), sphinx-common, virtualenv, zip, python3-doc, python3-sphinx (>= 1.3.5)
+2024-05-09 10:08:20.427126 +0000 build-debian43: output: dpkg-deb: building package 'pbuilder-satisfydepends-dummy' in '/tmp/satisfydepends-aptitude/pbuilder-satisfydepends-dummy.deb'.
+2024-05-09 10:08:20.530013 +0000 build-debian43: output: Selecting previously unselected package pbuilder-satisfydepends-dummy.
+2024-05-09 10:08:20.536251 +0000 build-debian43: output: (Reading database ... 12607 files and directories currently installed.)
+2024-05-09 10:08:20.536875 +0000 build-debian43: output: Preparing to unpack .../pbuilder-satisfydepends-dummy.deb ...
+2024-05-09 10:08:20.602455 +0000 build-debian43: output: Unpacking pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2024-05-09 10:08:20.759708 +0000 build-debian43: output: dpkg: pbuilder-satisfydepends-dummy: dependency problems, but configuring anyway as you requested:
+2024-05-09 10:08:20.759755 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on bash-completion; however:
+2024-05-09 10:08:20.759763 +0000 build-debian43: output:   Package bash-completion is not installed.
+2024-05-09 10:08:20.759772 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on bind9-dnsutils | dnsutils; however:
+2024-05-09 10:08:20.759779 +0000 build-debian43: output:   Package bind9-dnsutils is not installed.
+2024-05-09 10:08:20.759786 +0000 build-debian43: output:   Package dnsutils is not installed.
+2024-05-09 10:08:20.759793 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on debhelper-compat (= 13); however:
+2024-05-09 10:08:20.759800 +0000 build-debian43: output:   Package debhelper-compat is not installed.
+2024-05-09 10:08:20.759808 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on dh-python; however:
+2024-05-09 10:08:20.759814 +0000 build-debian43: output:   Package dh-python is not installed.
+2024-05-09 10:08:20.759821 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on file; however:
+2024-05-09 10:08:20.759843 +0000 build-debian43: output:   Package file is not installed.
+2024-05-09 10:08:20.759852 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on iproute2; however:
+2024-05-09 10:08:20.759858 +0000 build-debian43: output:   Package iproute2 is not installed.
+2024-05-09 10:08:20.759866 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on libjs-bootstrap; however:
+2024-05-09 10:08:20.759872 +0000 build-debian43: output:   Package libjs-bootstrap is not installed.
+2024-05-09 10:08:20.759880 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on libjs-modernizr; however:
+2024-05-09 10:08:20.759886 +0000 build-debian43: output:   Package libjs-modernizr is not installed.
+2024-05-09 10:08:20.759894 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on openssh-client; however:
+2024-05-09 10:08:20.759900 +0000 build-debian43: output:   Package openssh-client is not installed.
+2024-05-09 10:08:20.759907 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3; however:
+2024-05-09 10:08:20.759914 +0000 build-debian43: output:   Package python3 is not installed.
+2024-05-09 10:08:20.759921 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-apt; however:
+2024-05-09 10:08:20.759927 +0000 build-debian43: output:   Package python3-apt is not installed.
+2024-05-09 10:08:20.759935 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-attr (>= 19.1); however:
+2024-05-09 10:08:20.759941 +0000 build-debian43: output:   Package python3-attr is not installed.
+2024-05-09 10:08:20.759948 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-augeas; however:
+2024-05-09 10:08:20.759955 +0000 build-debian43: output:   Package python3-augeas is not installed.
+2024-05-09 10:08:20.759962 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-boto; however:
+2024-05-09 10:08:20.759969 +0000 build-debian43: output:   Package python3-boto is not installed.
+2024-05-09 10:08:20.759976 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-boto3; however:
+2024-05-09 10:08:20.759982 +0000 build-debian43: output:   Package python3-boto3 is not installed.
+2024-05-09 10:08:20.759990 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-cheetah; however:
+2024-05-09 10:08:20.759996 +0000 build-debian43: output:   Package python3-cheetah is not installed.
+2024-05-09 10:08:20.760003 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-cherrypy3; however:
+2024-05-09 10:08:20.760010 +0000 build-debian43: output:   Package python3-cherrypy3 is not installed.
+2024-05-09 10:08:20.760017 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-consul; however:
+2024-05-09 10:08:20.760024 +0000 build-debian43: output:   Package python3-consul is not installed.
+2024-05-09 10:08:20.760031 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-croniter; however:
+2024-05-09 10:08:20.760038 +0000 build-debian43: output:   Package python3-croniter is not installed.
+2024-05-09 10:08:20.760045 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-dateutil; however:
+2024-05-09 10:08:20.760052 +0000 build-debian43: output:   Package python3-dateutil is not installed.
+2024-05-09 10:08:20.760059 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-distro; however:
+2024-05-09 10:08:20.760065 +0000 build-debian43: output:   Package python3-distro is not installed.
+2024-05-09 10:08:20.760073 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-dnspython; however:
+2024-05-09 10:08:20.760079 +0000 build-debian43: output:   Package python3-dnspython is not installed.
+2024-05-09 10:08:20.760086 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-docker; however:
+2024-05-09 10:08:20.760095 +0000 build-debian43: output:   Package python3-docker is not installed.
+2024-05-09 10:08:20.760103 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-elasticsearch; however:
+2024-05-09 10:08:20.760110 +0000 build-debian43: output:   Package python3-elasticsearch is not installed.
+2024-05-09 10:08:20.760117 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-etcd; however:
+2024-05-09 10:08:20.760124 +0000 build-debian43: output:   Package python3-etcd is not installed.
+2024-05-09 10:08:20.760131 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-genshi; however:
+2024-05-09 10:08:20.760138 +0000 build-debian43: output:   Package python3-genshi is not installed.
+2024-05-09 10:08:20.760145 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-git; however:
+2024-05-09 10:08:20.760151 +0000 build-debian43: output:   Package python3-git is not installed.
+2024-05-09 10:08:20.760159 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-hglib; however:
+2024-05-09 10:08:20.760165 +0000 build-debian43: output:   Package python3-hglib is not installed.
+2024-05-09 10:08:20.760172 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-isodate; however:
+2024-05-09 10:08:20.760179 +0000 build-debian43: output:   Package python3-isodate is not installed.
+2024-05-09 10:08:20.760186 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-jinja2; however:
+2024-05-09 10:08:20.760193 +0000 build-debian43: output:   Package python3-jinja2 is not installed.
+2024-05-09 10:08:20.760200 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-jsonschema; however:
+2024-05-09 10:08:20.760207 +0000 build-debian43: output:   Package python3-jsonschema is not installed.
+2024-05-09 10:08:20.760247 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-keyring; however:
+2024-05-09 10:08:20.760255 +0000 build-debian43: output:   Package python3-keyring is not installed.
+2024-05-09 10:08:20.760263 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-kubernetes; however:
+2024-05-09 10:08:20.760270 +0000 build-debian43: output:   Package python3-kubernetes is not installed.
+2024-05-09 10:08:20.760277 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-ldap; however:
+2024-05-09 10:08:20.760283 +0000 build-debian43: output:   Package python3-ldap is not installed.
+2024-05-09 10:08:20.760291 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-libcloud (>= 0.14.1); however:
+2024-05-09 10:08:20.760298 +0000 build-debian43: output:   Package python3-libcloud is not installed.
+2024-05-09 10:08:20.760305 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-linkify-it; however:
+2024-05-09 10:08:20.760312 +0000 build-debian43: output:   Package python3-linkify-it is not installed.
+2024-05-09 10:08:20.760319 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-looseversion; however:
+2024-05-09 10:08:20.760326 +0000 build-debian43: output:   Package python3-looseversion is not installed.
+2024-05-09 10:08:20.760335 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-m2crypto | python3-pycryptodome | python3-crypto (>= 2.6); however:
+2024-05-09 10:08:20.760342 +0000 build-debian43: output:   Package python3-m2crypto is not installed.
+2024-05-09 10:08:20.760349 +0000 build-debian43: output:   Package python3-pycryptodome is not installed.
+2024-05-09 10:08:20.760358 +0000 build-debian43: output:   Package python3-crypto is not installed.
+2024-05-09 10:08:20.760365 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-mako; however:
+2024-05-09 10:08:20.760373 +0000 build-debian43: output:   Package python3-mako is not installed.
+2024-05-09 10:08:20.760453 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-mock; however:
+2024-05-09 10:08:20.760504 +0000 build-debian43: output:   Package python3-mock is not installed.
+2024-05-09 10:08:20.760545 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-msgpack; however:
+2024-05-09 10:08:20.760592 +0000 build-debian43: output:   Package python3-msgpack is not installed.
+2024-05-09 10:08:20.760641 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-myst-parser; however:
+2024-05-09 10:08:20.760815 +0000 build-debian43: output:   Package python3-myst-parser is not installed.
+2024-05-09 10:08:20.760836 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-mysqldb; however:
+2024-05-09 10:08:20.760860 +0000 build-debian43: output:   Package python3-mysqldb is not installed.
+2024-05-09 10:08:20.760892 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-openssl; however:
+2024-05-09 10:08:20.760970 +0000 build-debian43: output:   Package python3-openssl is not installed.
+2024-05-09 10:08:20.761000 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-passlib; however:
+2024-05-09 10:08:20.761149 +0000 build-debian43: output:   Package python3-passlib is not installed.
+2024-05-09 10:08:20.761168 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pip; however:
+2024-05-09 10:08:20.761176 +0000 build-debian43: output:   Package python3-pip is not installed.
+2024-05-09 10:08:20.761184 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-psutil; however:
+2024-05-09 10:08:20.761224 +0000 build-debian43: output:   Package python3-psutil is not installed.
+2024-05-09 10:08:20.761249 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pygit2; however:
+2024-05-09 10:08:20.761278 +0000 build-debian43: output:   Package python3-pygit2 is not installed.
+2024-05-09 10:08:20.761351 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pyinotify; however:
+2024-05-09 10:08:20.761385 +0000 build-debian43: output:   Package python3-pyinotify is not installed.
+2024-05-09 10:08:20.761428 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pyroute2; however:
+2024-05-09 10:08:20.761485 +0000 build-debian43: output:   Package python3-pyroute2 is not installed.
+2024-05-09 10:08:20.761534 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pytest (>= 6); however:
+2024-05-09 10:08:20.761582 +0000 build-debian43: output:   Package python3-pytest is not installed.
+2024-05-09 10:08:20.761633 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pytest-helpers-namespace (>= 2019.1.8); however:
+2024-05-09 10:08:20.761681 +0000 build-debian43: output:   Package python3-pytest-helpers-namespace is not installed.
+2024-05-09 10:08:20.761731 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pytest-skip-markers (>= 1.1.0-3~); however:
+2024-05-09 10:08:20.761781 +0000 build-debian43: output:   Package python3-pytest-skip-markers is not installed.
+2024-05-09 10:08:20.761943 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pytest-subtests; however:
+2024-05-09 10:08:20.761964 +0000 build-debian43: output:   Package python3-pytest-subtests is not installed.
+2024-05-09 10:08:20.761975 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-pytest-tempdir (>= 2019.10.12); however:
+2024-05-09 10:08:20.762002 +0000 build-debian43: output:   Package python3-pytest-tempdir is not installed.
+2024-05-09 10:08:20.762017 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-sphinxcontrib.httpdomain; however:
+2024-05-09 10:08:20.762040 +0000 build-debian43: output:   Package python3-sphinxcontrib.httpdomain is not installed.
+2024-05-09 10:08:20.762089 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-sphinxcontrib.spelling; however:
+2024-05-09 10:08:20.762138 +0000 build-debian43: output:   Package python3-sphinxcontrib.spelling is not installed.
+2024-05-09 10:08:20.762186 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-toml; however:
+2024-05-09 10:08:20.762271 +0000 build-debian43: output:   Package python3-toml is not installed.
+2024-05-09 10:08:20.762299 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-requests (>= 1.0.0); however:
+2024-05-09 10:08:20.762422 +0000 build-debian43: output:   Package python3-requests is not installed.
+2024-05-09 10:08:20.762533 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-setuptools; however:
+2024-05-09 10:08:20.762567 +0000 build-debian43: output:   Package python3-setuptools is not installed.
+2024-05-09 10:08:20.762602 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-six; however:
+2024-05-09 10:08:20.762652 +0000 build-debian43: output:   Package python3-six is not installed.
+2024-05-09 10:08:20.762701 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-yaml; however:
+2024-05-09 10:08:20.762749 +0000 build-debian43: output:   Package python3-yaml is not installed.
+2024-05-09 10:08:20.762799 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-zmq (>= 13.1.0); however:
+2024-05-09 10:08:20.762849 +0000 build-debian43: output:   Package python3-zmq is not installed.
+2024-05-09 10:08:20.762898 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on sphinx-common; however:
+2024-05-09 10:08:20.762945 +0000 build-debian43: output:   Package sphinx-common is not installed.
+2024-05-09 10:08:20.762994 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on virtualenv; however:
+2024-05-09 10:08:20.763041 +0000 build-debian43: output:   Package virtualenv is not installed.
+2024-05-09 10:08:20.763089 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on zip; however:
+2024-05-09 10:08:20.763138 +0000 build-debian43: output:   Package zip is not installed.
+2024-05-09 10:08:20.763186 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-doc; however:
+2024-05-09 10:08:20.763238 +0000 build-debian43: output:   Package python3-doc is not installed.
+2024-05-09 10:08:20.763284 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy depends on python3-sphinx (>= 1.3.5); however:
+2024-05-09 10:08:20.763333 +0000 build-debian43: output:   Package python3-sphinx is not installed.
+2024-05-09 10:08:20.763455 +0000 build-debian43: output: 
+2024-05-09 10:08:20.763554 +0000 build-debian43: output: Setting up pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2024-05-09 10:08:21.367805 +0000 build-debian43: output: Reading package lists...
+2024-05-09 10:08:21.540610 +0000 build-debian43: output: Building dependency tree...
+2024-05-09 10:08:21.540691 +0000 build-debian43: output: Reading state information...
+2024-05-09 10:08:21.607387 +0000 build-debian43: output: Initializing package states...
+2024-05-09 10:08:21.808516 +0000 build-debian43: output: Writing extended state information...
+2024-05-09 10:08:21.904390 +0000 build-debian43: output: Building tag database...
+2024-05-09 10:08:23.144925 +0000 build-debian43: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2024-05-09 10:08:23.145006 +0000 build-debian43: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2024-05-09 10:08:23.145208 +0000 build-debian43: output: The following NEW packages will be installed:
+2024-05-09 10:08:23.745650 +0000 build-debian43: output:   adduser{a} augeas-lenses{a} autoconf{a} automake{a} autopoint{a} autotools-dev{a} bash-completion{a} bind9-dnsutils{a} bind9-host{a} bind9-libs{a} bsdextrautils{a} debhelper{a} dh-autoreconf{a} dh-python{a} dh-strip-nondeterminism{a} dictionaries-common{a} distro-info-data{a} docutils-common{a} dwz{a} emacsen-common{a} file{a} fonts-glyphicons-halflings{a} gettext{a} gettext-base{a} git{a} git-man{a} groff-base{a} hunspell-en-us{a} intltool-debian{a} iproute2{a} libarchive-zip-perl{a} libaspell15{a} libaugeas0{a} libbpf1{a} libbrotli1{a} libbsd0{a} libcap2-bin{a} libcbor0.10{a} libcom-err2{a} libcurl3t64-gnutls{a} libdebhelper-perl{a} libedit2{a} libelf1t64{a} libenchant-2-2{a} liberror-perl{a} libexpat1{a} libfido2-1{a} libfile-stripnondeterminism-perl{a} libfstrm0{a} libgit2-1.7{a} libglib2.0-0t64{a} libgssapi-krb5-2{a} libhttp-parser2.9{a} libhunspell-1.7-0{a} libicu72{a} libjemalloc2{a} libjs-bootstrap{a} libjs-jquery{a} libjs-modernizr{a} libjs-sphinxdoc{a} libjs-underscore{a} libjson-c5{a} libjson-perl{a} libk5crypto3{a} libkeyutils1{a} libkrb5-3{a} libkrb5support0{a} libldap-2.5-0{a} liblmdb0{a} libmagic-mgc{a} libmagic1t64{a} libmariadb3{a} libmaxminddb0{a} libmbedcrypto7t64{a} libmbedtls14t64{a} libmbedx509-1t64{a} libmnl0{a} libnghttp2-14{a} libnorm1t64{a} libpgm-5.3-0t64{a} libpipeline1{a} libprotobuf-c1{a} libpsl5t64{a} libpython3-stdlib{a} libpython3.11-minimal{a} libpython3.11-stdlib{a} libreadline8t64{a} librtmp1{a} libsasl2-2{a} libsasl2-modules-db{a} libsemanage-common{a} libsemanage2{a} libsepol2{a} libsodium23{a} libssh2-1t64{a} libsub-override-perl{a} libtext-iconv-perl{a} libtirpc-common{a} libtirpc3t64{a} libtool{a} libuchardet0{a} liburcu8t64{a} libuv1t64{a} libxml2{a} libxtables12{a} libyaml-0-2{a} libzmq5{a} lsb-release{a} m4{a} man-db{a} mariadb-common{a} media-types{a} mercurial{a} mercurial-common{a} mysql-common{a} netbase{a} openssh-client{a} passwd{a} po-debconf{a} python-apt-common{a} python-babel-localedata{a} python3{a} python3-aiohttp{a} python3-aiosignal{a} python3-alabaster{a} python3-apt{a} python3-async-timeout{a} python3-attr{a} python3-augeas{a} python3-autocommand{a} python3-babel{a} python3-blinker{a} python3-boto3{a} python3-botocore{a} python3-cachetools{a} python3-certifi{a} python3-cffi-backend{a} python3-chardet{a} python3-charset-normalizer{a} python3-cheetah{a} python3-cheroot{a} python3-cherrypy3{a} python3-consul{a} python3-croniter{a} python3-cryptography{a} python3-dateutil{a} python3-distlib{a} python3-distro{a} python3-distutils{a} python3-dnspython{a} python3-doc{a} python3-docker{a} python3-docutils{a} python3-elasticsearch{a} python3-enchant{a} python3-etcd{a} python3-filelock{a} python3-frozenlist{a} python3-genshi{a} python3-git{a} python3-gitdb{a} python3-google-auth{a} python3-hatch-vcs{a} python3-hatchling{a} python3-hglib{a} python3-idna{a} python3-imagesize{a} python3-importlib-metadata{a} python3-inflect{a} python3-iniconfig{a} python3-isodate{a} python3-jaraco.classes{a} python3-jaraco.collections{a} python3-jaraco.context{a} python3-jaraco.functools{a} python3-jaraco.text{a} python3-jeepney{a} python3-jinja2{a} python3-jmespath{a} python3-jsonschema{a} python3-jsonschema-specifications{a} python3-jwt{a} python3-keyring{a} python3-kubernetes{a} python3-ldap{a} python3-lib2to3{a} python3-linkify-it{a} python3-looseversion{a} python3-m2crypto{a} python3-mako{a} python3-markdown-it{a} python3-markupsafe{a} python3-mdit-py-plugins{a} python3-mdurl{a} python3-minimal{a} python3-mock{a} python3-more-itertools{a} python3-msgpack{a} python3-multidict{a} python3-mysqldb{a} python3-myst-parser{a} python3-oauthlib{a} python3-openssl{a} python3-packaging{a} python3-passlib{a} python3-pathspec{a} python3-pip{a} python3-pip-whl{a} python3-pkg-resources{a} python3-platformdirs{a} python3-pluggy{a} python3-portend{a} python3-psutil{a} python3-py{a} python3-pyasn1{a} python3-pyasn1-modules{a} python3-pygit2{a} python3-pygments{a} python3-pyinotify{a} python3-pyroute2{a} python3-pytest{a} python3-pytest-helpers-namespace{a} python3-pytest-skip-markers{a} python3-pytest-subtests{a} python3-pytest-tempdir{a} python3-pyu2f{a} python3-referencing{a} python3-requests{a} python3-requests-oauthlib{a} python3-responses{a} python3-roman{a} python3-rpds-py{a} python3-rsa{a} python3-s3transfer{a} python3-secretstorage{a} python3-setuptools{a} python3-setuptools-scm{a} python3-setuptools-whl{a} python3-six{a} python3-smmap{a} python3-snowballstemmer{a} python3-sphinx{a} python3-sphinxcontrib.httpdomain{a} python3-sphinxcontrib.spelling{a} python3-tempora{a} python3-toml{a} python3-trove-classifiers{a} python3-typeguard{a} python3-typing-extensions{a} python3-tz{a} python3-uc-micro{a} python3-urllib3{a} python3-virtualenv{a} python3-websocket{a} python3-wheel{a} python3-wheel-whl{a} python3-yaml{a} python3-yarl{a} python3-zc.lockfile{a} python3-zipp{a} python3-zmq{a} python3.11{a} python3.11-doc{a} python3.11-minimal{a} readline-common{a} sensible-utils{a} sgml-base{a} sphinx-common{a} tzdata{a} ucf{a} virtualenv{a} xml-core{a} zip{a}
+2024-05-09 10:08:23.745711 +0000 build-debian43: output: The following packages are RECOMMENDED but will NOT be installed:
+2024-05-09 10:08:23.745759 +0000 build-debian43: output:   aspell-am aspell-ar aspell-ar-large aspell-bg aspell-br aspell-ca aspell-cs aspell-cy aspell-da aspell-de aspell-de-1901 aspell-el aspell-en aspell-eo aspell-eo-cx7 aspell-es aspell-et aspell-eu aspell-fa aspell-fo aspell-fr aspell-ga aspell-gl-minimos aspell-he aspell-hr aspell-hsb aspell-hu aspell-hy aspell-is aspell-it aspell-kk aspell-ku aspell-lt aspell-lv aspell-nl aspell-no aspell-pl aspell-pt-br aspell-pt-pt aspell-ro aspell-ru aspell-sk aspell-sl aspell-sv aspell-tl aspell-uk aspell-uz curl enchant-2 iso-codes javascript-common krb5-locales less libarchive-cpio-perl libglib2.0-data libjson-xs-perl libldap-common libltdl-dev libmail-sendmail-perl libpam-cap libpaper-utils libsasl2-modules lynx publicsuffix python3-aiodns python3-dev python3-h2 python3-httpcore python3-httpx python3-json-pointer python3-pil python3-rfc3987 python3-routes python3-simplejson python3-uritemplate python3-webcolors shared-mime-info unzip wget xauth xdg-user-dirs
+2024-05-09 10:08:23.745769 +0000 build-debian43: output: 0 packages upgraded, 273 newly installed, 0 to remove and 0 not upgraded.
+2024-05-09 10:08:23.745809 +0000 build-debian43: output: Need to get 97.1 MB of archives. After unpacking 507 MB will be used.
+2024-05-09 10:08:23.745819 +0000 build-debian43: output: The following packages have unmet dependencies:
+2024-05-09 10:08:23.745828 +0000 build-debian43: output:  pbuilder-satisfydepends-dummy : Depends: python3-boto which is a virtual package and is not provided by any available package
+2024-05-09 10:08:23.745835 +0000 build-debian43: output: 
+2024-05-09 10:08:23.745845 +0000 build-debian43: output:                                  Depends: python3-libcloud (>= 0.14.1) which is a virtual package and is not provided by any available package
+2024-05-09 10:08:23.745851 +0000 build-debian43: output: 
+2024-05-09 10:08:23.745858 +0000 build-debian43: output: Unable to resolve dependencies!  Giving up...
+2024-05-09 10:08:23.836210 +0000 build-debian43: output: The following NEW packages will be installed:
+2024-05-09 10:08:23.867672 +0000 build-debian43: output:   adduser{a} augeas-lenses{a} autoconf{a} automake{a} autopoint{a} autotools-dev{a} bash-completion{a} bind9-dnsutils{a} bind9-host{a} bind9-libs{a} bsdextrautils{a} debhelper{a} dh-autoreconf{a} dh-python{a} dh-strip-nondeterminism{a} dictionaries-common{a} distro-info-data{a} docutils-common{a} dwz{a} emacsen-common{a} file{a} fonts-glyphicons-halflings{a} gettext{a} gettext-base{a} git{a} git-man{a} groff-base{a} hunspell-en-us{a} intltool-debian{a} iproute2{a} libarchive-zip-perl{a} libaspell15{a} libaugeas0{a} libbpf1{a} libbrotli1{a} libbsd0{a} libcap2-bin{a} libcbor0.10{a} libcom-err2{a} libcurl3t64-gnutls{a} libdebhelper-perl{a} libedit2{a} libelf1t64{a} libenchant-2-2{a} liberror-perl{a} libexpat1{a} libfido2-1{a} libfile-stripnondeterminism-perl{a} libfstrm0{a} libgit2-1.7{a} libglib2.0-0t64{a} libgssapi-krb5-2{a} libhttp-parser2.9{a} libhunspell-1.7-0{a} libicu72{a} libjemalloc2{a} libjs-bootstrap{a} libjs-jquery{a} libjs-modernizr{a} libjs-sphinxdoc{a} libjs-underscore{a} libjson-c5{a} libjson-perl{a} libk5crypto3{a} libkeyutils1{a} libkrb5-3{a} libkrb5support0{a} libldap-2.5-0{a} liblmdb0{a} libmagic-mgc{a} libmagic1t64{a} libmariadb3{a} libmaxminddb0{a} libmbedcrypto7t64{a} libmbedtls14t64{a} libmbedx509-1t64{a} libmnl0{a} libnghttp2-14{a} libnorm1t64{a} libpgm-5.3-0t64{a} libpipeline1{a} libprotobuf-c1{a} libpsl5t64{a} libpython3-stdlib{a} libpython3.11-minimal{a} libpython3.11-stdlib{a} libreadline8t64{a} librtmp1{a} libsasl2-2{a} libsasl2-modules-db{a} libsemanage-common{a} libsemanage2{a} libsepol2{a} libsodium23{a} libssh2-1t64{a} libsub-override-perl{a} libtext-iconv-perl{a} libtirpc-common{a} libtirpc3t64{a} libtool{a} libuchardet0{a} liburcu8t64{a} libuv1t64{a} libxml2{a} libxtables12{a} libyaml-0-2{a} libzmq5{a} lsb-release{a} m4{a} man-db{a} mariadb-common{a} media-types{a} mercurial{a} mercurial-common{a} mysql-common{a} netbase{a} openssh-client{a} passwd{a} po-debconf{a} python-apt-common{a} python-babel-localedata{a} python3{a} python3-aiohttp{a} python3-aiosignal{a} python3-alabaster{a} python3-apt{a} python3-async-timeout{a} python3-attr{a} python3-augeas{a} python3-autocommand{a} python3-babel{a} python3-blinker{a} python3-boto3{a} python3-botocore{a} python3-cachetools{a} python3-certifi{a} python3-cffi-backend{a} python3-chardet{a} python3-charset-normalizer{a} python3-cheetah{a} python3-cheroot{a} python3-cherrypy3{a} python3-consul{a} python3-croniter{a} python3-cryptography{a} python3-dateutil{a} python3-distlib{a} python3-distro{a} python3-distutils{a} python3-dnspython{a} python3-doc{a} python3-docker{a} python3-docutils{a} python3-elasticsearch{a} python3-enchant{a} python3-etcd{a} python3-filelock{a} python3-frozenlist{a} python3-genshi{a} python3-git{a} python3-gitdb{a} python3-google-auth{a} python3-hatch-vcs{a} python3-hatchling{a} python3-hglib{a} python3-idna{a} python3-imagesize{a} python3-importlib-metadata{a} python3-inflect{a} python3-iniconfig{a} python3-isodate{a} python3-jaraco.classes{a} python3-jaraco.collections{a} python3-jaraco.context{a} python3-jaraco.functools{a} python3-jaraco.text{a} python3-jeepney{a} python3-jinja2{a} python3-jmespath{a} python3-jsonschema{a} python3-jsonschema-specifications{a} python3-jwt{a} python3-keyring{a} python3-kubernetes{a} python3-ldap{a} python3-lib2to3{a} python3-linkify-it{a} python3-looseversion{a} python3-m2crypto{a} python3-mako{a} python3-markdown-it{a} python3-markupsafe{a} python3-mdit-py-plugins{a} python3-mdurl{a} python3-minimal{a} python3-mock{a} python3-more-itertools{a} python3-msgpack{a} python3-multidict{a} python3-mysqldb{a} python3-myst-parser{a} python3-oauthlib{a} python3-openssl{a} python3-packaging{a} python3-passlib{a} python3-pathspec{a} python3-pip{a} python3-pip-whl{a} python3-pkg-resources{a} python3-platformdirs{a} python3-pluggy{a} python3-portend{a} python3-psutil{a} python3-py{a} python3-pyasn1{a} python3-pyasn1-modules{a} python3-pygit2{a} python3-pygments{a} python3-pyinotify{a} python3-pyroute2{a} python3-pytest{a} python3-pytest-helpers-namespace{a} python3-pytest-skip-markers{a} python3-pytest-subtests{a} python3-pytest-tempdir{a} python3-pyu2f{a} python3-referencing{a} python3-requests{a} python3-requests-oauthlib{a} python3-responses{a} python3-roman{a} python3-rpds-py{a} python3-rsa{a} python3-s3transfer{a} python3-secretstorage{a} python3-setuptools{a} python3-setuptools-scm{a} python3-setuptools-whl{a} python3-six{a} python3-smmap{a} python3-snowballstemmer{a} python3-sphinx{a} python3-sphinxcontrib.httpdomain{a} python3-sphinxcontrib.spelling{a} python3-tempora{a} python3-toml{a} python3-trove-classifiers{a} python3-typeguard{a} python3-typing-extensions{a} python3-tz{a} python3-uc-micro{a} python3-urllib3{a} python3-virtualenv{a} python3-websocket{a} python3-wheel{a} python3-wheel-whl{a} python3-yaml{a} python3-yarl{a} python3-zc.lockfile{a} python3-zipp{a} python3-zmq{a} python3.11{a} python3.11-doc{a} python3.11-minimal{a} readline-common{a} sensible-utils{a} sgml-base{a} sphinx-common{a} tzdata{a} ucf{a} virtualenv{a} xml-core{a} zip{a}
+2024-05-09 10:08:23.867743 +0000 build-debian43: output: The following packages are RECOMMENDED but will NOT be installed:
+2024-05-09 10:08:23.867817 +0000 build-debian43: output:   aspell-am aspell-ar aspell-ar-large aspell-bg aspell-br aspell-ca aspell-cs aspell-cy aspell-da aspell-de aspell-de-1901 aspell-el aspell-en aspell-eo aspell-eo-cx7 aspell-es aspell-et aspell-eu aspell-fa aspell-fo aspell-fr aspell-ga aspell-gl-minimos aspell-he aspell-hr aspell-hsb aspell-hu aspell-hy aspell-is aspell-it aspell-kk aspell-ku aspell-lt aspell-lv aspell-nl aspell-no aspell-pl aspell-pt-br aspell-pt-pt aspell-ro aspell-ru aspell-sk aspell-sl aspell-sv aspell-tl aspell-uk aspell-uz curl enchant-2 iso-codes javascript-common krb5-locales less libarchive-cpio-perl libglib2.0-data libjson-xs-perl libldap-common libltdl-dev libmail-sendmail-perl libpam-cap libpaper-utils libsasl2-modules lynx publicsuffix python3-aiodns python3-dev python3-h2 python3-httpcore python3-httpx python3-json-pointer python3-pil python3-rfc3987 python3-routes python3-simplejson python3-uritemplate python3-webcolors shared-mime-info unzip wget xauth xdg-user-dirs
+2024-05-09 10:08:23.867828 +0000 build-debian43: output: 0 packages upgraded, 273 newly installed, 0 to remove and 0 not upgraded.
+2024-05-09 10:08:23.867837 +0000 build-debian43: output: Need to get 97.1 MB of archives. After unpacking 507 MB will be used.
+2024-05-09 10:08:23.867844 +0000 build-debian43: output: Abort.
+2024-05-09 10:08:23.872275 +0000 build-debian43: output: E: pbuilder-satisfydepends failed.
+2024-05-09 10:08:23.873175 +0000 build-debian43: output: I: Copying back the cached apt archive contents
+2024-05-09 10:08:23.875673 +0000 build-debian43: output: I: unmounting /tmp/qubes-deb filesystem
+2024-05-09 10:08:23.887120 +0000 build-debian43: output: I: unmounting dev/ptmx filesystem
+2024-05-09 10:08:23.891837 +0000 build-debian43: output: I: unmounting dev/pts filesystem
+2024-05-09 10:08:23.896667 +0000 build-debian43: output: I: unmounting dev/shm filesystem
+2024-05-09 10:08:23.901504 +0000 build-debian43: output: I: unmounting proc filesystem
+2024-05-09 10:08:23.904828 +0000 build-debian43: output: I: unmounting sys filesystem
+2024-05-09 10:08:23.911968 +0000 build-debian43: output: I: cleaning the build env
+2024-05-09 10:08:23.912006 +0000 build-debian43: output: I: removing directory /builder/pbuilder/build/3123 and its subdirectories
+2024-05-09 10:08:31.594000 +0000 > closing log
