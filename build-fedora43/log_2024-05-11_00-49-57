@@ -1,0 +1,652 @@
+2024-05-11 00:49:57.712407 +0000 > starting log
+2024-05-11 00:49:57.712655 +0000 build-fedora43: > starting build with log
+2024-05-11 00:49:57.712679 +0000 build-fedora43: >> args:
+2024-05-11 00:49:57.712688 +0000 build-fedora43: >>   ()
+2024-05-11 00:49:57.712694 +0000 build-fedora43: >> component:
+2024-05-11 00:49:57.712701 +0000 build-fedora43: >>   rpm-oxide
+2024-05-11 00:49:57.712709 +0000 build-fedora43: >>     commit-hash: 14424c843fb434856d8739e9c5def74174204115
+2024-05-11 00:49:57.712720 +0000 build-fedora43: >>     source-hash: 1b0da0b28cf88870237514afb475fbcf6df864241af6f096795c30616dbf3a71c2853f4cb5d755c01f7693bc64dc2736119e63737847d3ffc9e5eb8eb14a64f8
+2024-05-11 00:49:57.712726 +0000 build-fedora43: >> distributions:
+2024-05-11 00:49:57.712734 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-05-11 00:49:57.712743 +0000 build-fedora43: rpm-oxide:vm-fedora-40.x86_64: Source hash is the same than already prepared source. Skipping.
+2024-05-11 00:49:57.712752 +0000 build-fedora43: rpm-oxide:vm-fedora-40.x86_64: Cleaning local repository '/home/user/builder-r4.3-fedora/repository/vm-fc40' (all versions).
+2024-05-11 00:50:12.601903 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6700 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--rpm--oxide--0.2.7--1.fc40.src.rpm /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/components/rpm-oxide/0.2.7-1/vm-fc40/prep/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm
+2024-05-11 00:50:12.865919 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6700 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcache-2Fmock /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/cache/chroot/fc40/mock
+2024-05-11 00:50:15.925244 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6700 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_rpm /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_rpm
+2024-05-11 00:50:16.090961 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6700 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-05-11 00:50:16.254110 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6700 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_rpm /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_rpm
+2024-05-11 00:50:16.413795 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6700 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--fc40 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/repository/vm-fc40
+2024-05-11 00:50:18.083148 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp6700 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=fc40 PACKAGE_SET=vm BIND_MOUNT_ENABLE=True bash -c 'cd /builder/repository && createrepo_c . && sudo chown -R user:mock /builder/build && sudo chown -R root:mock /builder/cache/mock && sudo --preserve-env=DIST,PACKAGE_SET,USE_QUBES_REPO_VERSION /usr/libexec/mock/mock --no-cleanup-after --rebuild /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm --root /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg --resultdir=/builder/build --isolation=nspawn --verbose --plugin-option=root_cache:age_check=False --no-clean && sudo --preserve-env=DIST,PACKAGE_SET,USE_QUBES_REPO_VERSION,BIND_MOUNT_ENABLE /usr/libexec/mock/mock --root /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg --chroot /plugins/build_rpm/scripts/rpmbuildinfo /builddir/build/SRPMS/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm > /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.x86_64.buildinfo && /builder/plugins/build_rpm/scripts/filter-packages-by-dist-arch /builder/build /builder/build/rpm fc40 x86_64''.
+2024-05-11 00:50:18.513430 +0000 build-fedora43: output: Directory walk started
+2024-05-11 00:50:18.513502 +0000 build-fedora43: output: Directory walk done - 209 packages
+2024-05-11 00:50:18.513526 +0000 build-fedora43: output: Temporary output repo path: ./.repodata/
+2024-05-11 00:50:18.513570 +0000 build-fedora43: output: Pool started (with 5 workers)
+2024-05-11 00:50:18.513589 +0000 build-fedora43: output: Pool finished
+2024-05-11 00:50:19.463660 +0000 build-fedora43: output: INFO: mock.py version 5.5 starting (python version = 3.12.2, NVR = mock-5.5-1.fc39), args: /usr/libexec/mock/mock --no-cleanup-after --rebuild /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm --root /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg --resultdir=/builder/build --isolation=nspawn --verbose --plugin-option=root_cache:age_check=False --no-clean
+2024-05-11 00:50:19.521152 +0000 build-fedora43: output: Start: init plugins
+2024-05-11 00:50:19.542613 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/yum_cache
+2024-05-11 00:50:19.546490 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/dnf_cache
+2024-05-11 00:50:19.557369 +0000 build-fedora43: output: INFO: selinux disabled
+2024-05-11 00:50:19.561956 +0000 build-fedora43: output: Finish: init plugins
+2024-05-11 00:50:19.594326 +0000 build-fedora43: output: INFO: Signal handler active
+2024-05-11 00:50:19.600719 +0000 build-fedora43: output: Start: run
+2024-05-11 00:50:19.600762 +0000 build-fedora43: output: DEBUG: mock final configuration:
+2024-05-11 00:50:19.655962 +0000 build-fedora43: output: DEBUG:     _aliases:  {'yum.conf': 'dnf.conf', 'dnf5.conf': 'dnf.conf'}
+2024-05-11 00:50:19.656388 +0000 build-fedora43: output: DEBUG:     config_paths:  ['/etc/mock/site-defaults.cfg', '/builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg', '/etc/mock/chroot-aliases.cfg']
+2024-05-11 00:50:19.656427 +0000 build-fedora43: output: DEBUG:     version:  5.5
+2024-05-11 00:50:19.656447 +0000 build-fedora43: output: DEBUG:     basedir:  /builder/build
+2024-05-11 00:50:19.656466 +0000 build-fedora43: output: DEBUG:     resultdir:  /builder/build
+2024-05-11 00:50:19.656485 +0000 build-fedora43: output: DEBUG:     rootdir:  /builder/build/fedora-40-x86_64/root
+2024-05-11 00:50:19.656504 +0000 build-fedora43: output: DEBUG:     cache_topdir:  /builder/cache/mock
+2024-05-11 00:50:19.656521 +0000 build-fedora43: output: DEBUG:     clean:  False
+2024-05-11 00:50:19.656897 +0000 build-fedora43: output: DEBUG:     check:  True
+2024-05-11 00:50:19.656947 +0000 build-fedora43: output: DEBUG:     post_install:  False
+2024-05-11 00:50:19.656967 +0000 build-fedora43: output: DEBUG:     chroothome:  /builddir
+2024-05-11 00:50:19.656986 +0000 build-fedora43: output: DEBUG:     log_config_file:  logging.ini
+2024-05-11 00:50:19.657004 +0000 build-fedora43: output: DEBUG:     rpmbuild_timeout:  0
+2024-05-11 00:50:19.657022 +0000 build-fedora43: output: DEBUG:     host_arch:  x86_64
+2024-05-11 00:50:19.657039 +0000 build-fedora43: output: DEBUG:     chrootuid:  1000
+2024-05-11 00:50:19.657055 +0000 build-fedora43: output: DEBUG:     chrootgid:  135
+2024-05-11 00:50:19.657440 +0000 build-fedora43: output: DEBUG:     chrootgroup:  mock
+2024-05-11 00:50:19.657474 +0000 build-fedora43: output: DEBUG:     chrootuser:  mockbuild
+2024-05-11 00:50:19.657494 +0000 build-fedora43: output: DEBUG:     build_log_fmt_name:  unadorned
+2024-05-11 00:50:19.657513 +0000 build-fedora43: output: DEBUG:     root_log_fmt_name:  detailed
+2024-05-11 00:50:19.657735 +0000 build-fedora43: output: DEBUG:     state_log_fmt_name:  state
+2024-05-11 00:50:19.657771 +0000 build-fedora43: output: DEBUG:     online:  True
+2024-05-11 00:50:19.657793 +0000 build-fedora43: output: DEBUG:     isolation:  None
+2024-05-11 00:50:19.657813 +0000 build-fedora43: output: DEBUG:     use_nspawn:  None
+2024-05-11 00:50:19.657832 +0000 build-fedora43: output: DEBUG:     rpmbuild_networking:  False
+2024-05-11 00:50:19.658113 +0000 build-fedora43: output: DEBUG:     nspawn_args:  ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.db0u53we:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+2024-05-11 00:50:19.658216 +0000 build-fedora43: output: DEBUG:     use_container_host_hostname:  True
+2024-05-11 00:50:19.658245 +0000 build-fedora43: output: DEBUG:     use_bootstrap:  False
+2024-05-11 00:50:19.658264 +0000 build-fedora43: output: DEBUG:     use_bootstrap_image:  True
+2024-05-11 00:50:19.658551 +0000 build-fedora43: output: DEBUG:     bootstrap_image:  fedora:latest
+2024-05-11 00:50:19.658587 +0000 build-fedora43: output: DEBUG:     bootstrap_image_ready:  False
+2024-05-11 00:50:19.658609 +0000 build-fedora43: output: DEBUG:     bootstrap_image_fallback:  True
+2024-05-11 00:50:19.658629 +0000 build-fedora43: output: DEBUG:     bootstrap_image_keep_getting:  120
+2024-05-11 00:50:19.658647 +0000 build-fedora43: output: DEBUG:     internal_dev_setup:  True
+2024-05-11 00:50:19.658864 +0000 build-fedora43: output: DEBUG:     cleanup_on_success:  False
+2024-05-11 00:50:19.658899 +0000 build-fedora43: output: DEBUG:     cleanup_on_failure:  False
+2024-05-11 00:50:19.658925 +0000 build-fedora43: output: DEBUG:     exclude_from_homedir_cleanup:  ['build/SOURCES', '.bash_history', '.bashrc']
+2024-05-11 00:50:19.658946 +0000 build-fedora43: output: DEBUG:     createrepo_on_rpms:  False
+2024-05-11 00:50:19.658968 +0000 build-fedora43: output: DEBUG:     createrepo_command:  /usr/bin/createrepo_c -d -q -x *.src.rpm
+2024-05-11 00:50:19.659189 +0000 build-fedora43: output: DEBUG:     tar_binary:  /bin/tar
+2024-05-11 00:50:19.659251 +0000 build-fedora43: output: DEBUG:     tar:  gnutar
+2024-05-11 00:50:19.659271 +0000 build-fedora43: output: DEBUG:     backup_on_clean:  False
+2024-05-11 00:50:19.659290 +0000 build-fedora43: output: DEBUG:     backup_base_dir:  /builder/build/backup
+2024-05-11 00:50:19.659310 +0000 build-fedora43: output: DEBUG:     redhat_subscription_required:  False
+2024-05-11 00:50:19.659547 +0000 build-fedora43: output: DEBUG:     ssl_ca_bundle_path:  None
+2024-05-11 00:50:19.659582 +0000 build-fedora43: output: DEBUG:     ssl_extra_certs:  None
+2024-05-11 00:50:19.659816 +0000 build-fedora43: output: DEBUG:     plugins:  ['tmpfs', 'root_cache', 'yum_cache', 'mount', 'bind_mount', 'ccache', 'selinux', 'package_state', 'chroot_scan', 'lvm_root', 'compress_logs', 'sign', 'pm_request', 'hw_info', 'procenv', 'showrc', 'rpkg_preprocessor', 'rpmautospec', '__init__', 'overlayfs']
+2024-05-11 00:50:19.659857 +0000 build-fedora43: output: DEBUG:     plugin_dir:  /usr/lib/python3.12/site-packages/mockbuild/plugins
+2024-05-11 00:50:19.661609 +0000 build-fedora43: output: DEBUG:     plugin_conf:  {'ccache_enable': False, 'ccache_opts': {'max_cache_size': '4G', 'compress': None, 'dir': '/builder/cache/mock/fedora-40-x86_64/ccache/u1000/', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'yum_cache_enable': True, 'yum_cache_opts': {'max_age_days': 30, 'max_metadata_age_days': 30, 'online': True, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'root_cache_enable': True, 'root_cache_opts': {'age_check': False, 'max_age_days': 15, 'dir': '/builder/cache/mock/fedora-40-x86_64/root_cache/', 'compress_program': 'pigz', 'decompress_program': None, 'exclude_dirs': ['./proc', './sys', './dev', './tmp/ccache', './var/cache/yum', './var/cache/dnf', './var/log'], 'extension': '.gz', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'bind_mount_enable': False, 'bind_mount_opts': {'dirs': [('/builder/plugins', '/plugins')], 'create_dirs': False, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'mount_enable': True, 'mount_opts': {'dirs': [], 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'tmpfs_enable': False, 'tmpfs_opts': {'required_ram_mb': 900, 'max_fs_size': None, 'mode': '0755', 'keep_mounted': False, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'selinux_enable': True, 'selinux_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'package_state_enable': True, 'package_state_opts': {'available_pkgs': False, 'installed_pkgs': True, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'pm_request_enable': False, 'pm_request_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'lvm_root_enable': False, 'lvm_root_opts': {'pool_name': 'mockbuild', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'chroot_scan_enable': False, 'chroot_scan_opts': {'regexes': ['^[^k]?core(\\.\\d+)?$', '\\.log$'], 'only_failed': True, 'write_tar': False, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'sign_enable': False, 'sign_opts': {'cmd': 'rpmsign', 'opts': '--addsign %(rpms)s', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'hw_info_enable': True, 'hw_info_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'procenv_enable': False, 'procenv_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'showrc_enable': False, 'showrc_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'compress_logs_enable': False, 'compress_logs_opts': {'command': 'gzip', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'rpkg_preprocessor_enable': False, 'rpkg_preprocessor_opts': {'requires': ['preproc-rpmspec'], 'cmd': '/usr/bin/preproc-rpmspec %(source_spec)s --output %(target_spec)s', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'rpmautospec_enable': False, 'rpmautospec_opts': {'requires': ['rpmautospec'], 'cmd_base': ['/usr/bin/rpmautospec', 'process-distgit'], 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, '__init___enable': False, '__init___opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'overlayfs_enable': False, 'overlayfs_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}}
+2024-05-11 00:50:19.661690 +0000 build-fedora43: output: DEBUG:     environment:  {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}
+2024-05-11 00:50:19.661711 +0000 build-fedora43: output: DEBUG:     scm:  False
+2024-05-11 00:50:19.661769 +0000 build-fedora43: output: DEBUG:     scm_opts:  {'method': 'git', 'cvs_get': 'cvs -d /srv/cvs co SCM_BRN SCM_PKG', 'git_get': 'git clone SCM_BRN git://localhost/SCM_PKG.git SCM_PKG', 'svn_get': 'svn co file:///srv/svn/SCM_PKG/SCM_BRN SCM_PKG', 'distgit_get': 'rpkg clone -a --branch SCM_BRN SCM_PKG SCM_PKG', 'distgit_src_get': 'rpkg sources', 'spec': 'SCM_PKG.spec', 'int_src_dir': None, 'ext_src_dir': '/dev/null', 'write_tar': False, 'git_timestamps': False, 'exclude_vcs': True}
+2024-05-11 00:50:19.661789 +0000 build-fedora43: output: DEBUG:     use_host_resolv:  False
+2024-05-11 00:50:19.661808 +0000 build-fedora43: output: DEBUG:     chroot_setup_cmd:  install @buildsys-build
+2024-05-11 00:50:19.661825 +0000 build-fedora43: output: DEBUG:     repo_arch:  x86_64
+2024-05-11 00:50:19.662054 +0000 build-fedora43: output: DEBUG:     repo_arch_map:  {}
+2024-05-11 00:50:19.662086 +0000 build-fedora43: output: DEBUG:     target_arch:  x86_64
+2024-05-11 00:50:19.662104 +0000 build-fedora43: output: DEBUG:     releasever:  40
+2024-05-11 00:50:19.662121 +0000 build-fedora43: output: DEBUG:     rpmbuild_arch:  x86_64
+2024-05-11 00:50:19.662137 +0000 build-fedora43: output: DEBUG:     dnf_vars:  {}
+2024-05-11 00:50:19.662526 +0000 build-fedora43: output: DEBUG:     yum_builddep_opts:  []
+2024-05-11 00:50:19.662560 +0000 build-fedora43: output: DEBUG:     yum_common_opts:  []
+2024-05-11 00:50:19.662579 +0000 build-fedora43: output: DEBUG:     update_before_build:  True
+2024-05-11 00:50:19.662599 +0000 build-fedora43: output: DEBUG:     priorities.conf:
+2024-05-11 00:50:19.662614 +0000 build-fedora43: output: [main]
+2024-05-11 00:50:19.662679 +0000 build-fedora43: output: enabled=0
+2024-05-11 00:50:19.662698 +0000 build-fedora43: output: DEBUG:     rhnplugin.conf:
+2024-05-11 00:50:19.662721 +0000 build-fedora43: output: [main]
+2024-05-11 00:50:19.662737 +0000 build-fedora43: output: enabled=0
+2024-05-11 00:50:19.663066 +0000 build-fedora43: output: DEBUG:     subscription-manager.conf:
+2024-05-11 00:50:19.663348 +0000 build-fedora43: output: DEBUG:     more_buildreqs:  {}
+2024-05-11 00:50:19.663380 +0000 build-fedora43: output: DEBUG:     nosync:  False
+2024-05-11 00:50:19.663398 +0000 build-fedora43: output: DEBUG:     nosync_force:  False
+2024-05-11 00:50:19.663426 +0000 build-fedora43: output: DEBUG:     files:  {'etc/hosts': '127.0.0.1 localhost localhost.localdomain\n::1       localhost localhost.localdomain localhost6 localhost6.localdomain6\n'}
+2024-05-11 00:50:19.663683 +0000 build-fedora43: output: DEBUG:     macros:  {'%_topdir': '/builddir/build', '%_rpmfilename': '%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm', '%_buildhost': 'reproducible', '%clamp_mtime_to_source_date_epoch': '1', '%source_date_epoch_from_changelog': '1', '%use_source_date_epoch_as_buildtime': '1', '%_platform_multiplier': 1}
+2024-05-11 00:50:19.663715 +0000 build-fedora43: output: DEBUG:     hostname:  None
+2024-05-11 00:50:19.663733 +0000 build-fedora43: output: DEBUG:     module_enable:  []
+2024-05-11 00:50:19.663750 +0000 build-fedora43: output: DEBUG:     module_install:  []
+2024-05-11 00:50:19.663768 +0000 build-fedora43: output: DEBUG:     module_setup_commands:  []
+2024-05-11 00:50:19.663976 +0000 build-fedora43: output: DEBUG:     forcearch:  None
+2024-05-11 00:50:19.664016 +0000 build-fedora43: output: DEBUG:     bootstrap_chroot_additional_packages:  []
+2024-05-11 00:50:19.664035 +0000 build-fedora43: output: DEBUG:     bootstrap_module_enable:  []
+2024-05-11 00:50:19.664061 +0000 build-fedora43: output: DEBUG:     bootstrap_module_install:  []
+2024-05-11 00:50:19.664080 +0000 build-fedora43: output: DEBUG:     bootstrap_module_setup_commands:  []
+2024-05-11 00:50:19.664390 +0000 build-fedora43: output: DEBUG:     no_root_shells:  False
+2024-05-11 00:50:19.664425 +0000 build-fedora43: output: DEBUG:     extra_chroot_dirs:  ['/run/lock']
+2024-05-11 00:50:19.664444 +0000 build-fedora43: output: DEBUG:     package_manager:  dnf
+2024-05-11 00:50:19.664462 +0000 build-fedora43: output: DEBUG:     package_manager_max_attempts:  1
+2024-05-11 00:50:19.664696 +0000 build-fedora43: output: DEBUG:     package_manager_attempt_delay:  10
+2024-05-11 00:50:19.664729 +0000 build-fedora43: output: DEBUG:     dynamic_buildrequires:  True
+2024-05-11 00:50:19.664750 +0000 build-fedora43: output: DEBUG:     dynamic_buildrequires_max_loops:  10
+2024-05-11 00:50:19.664768 +0000 build-fedora43: output: DEBUG:     external_buildrequires:  False
+2024-05-11 00:50:19.664785 +0000 build-fedora43: output: DEBUG:     dev_loop_count:  12
+2024-05-11 00:50:19.665112 +0000 build-fedora43: output: DEBUG:     yum_command:  /usr/bin/yum
+2024-05-11 00:50:19.665151 +0000 build-fedora43: output: DEBUG:     system_yum_command:  /usr/bin/yum
+2024-05-11 00:50:19.665205 +0000 build-fedora43: output: DEBUG:     yum_install_command:  install yum yum-utils
+2024-05-11 00:50:19.665228 +0000 build-fedora43: output: DEBUG:     yum_builddep_command:  /usr/bin/yum-builddep
+2024-05-11 00:50:19.665245 +0000 build-fedora43: output: DEBUG:     yum_avoid_opts:  {}
+2024-05-11 00:50:19.665263 +0000 build-fedora43: output: DEBUG:     dnf_command:  /usr/bin/dnf-3
+2024-05-11 00:50:19.665530 +0000 build-fedora43: output: DEBUG:     system_dnf_command:  /usr/bin/dnf-3
+2024-05-11 00:50:19.665570 +0000 build-fedora43: output: DEBUG:     dnf_common_opts:  ['--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing']
+2024-05-11 00:50:19.665593 +0000 build-fedora43: output: DEBUG:     dnf_install_command:  install python3-dnf python3-dnf-plugins-core
+2024-05-11 00:50:19.665614 +0000 build-fedora43: output: DEBUG:     dnf_disable_plugins:  ['local', 'spacewalk', 'versionlock']
+2024-05-11 00:50:19.665816 +0000 build-fedora43: output: DEBUG:     dnf_avoid_opts:  {}
+2024-05-11 00:50:19.665852 +0000 build-fedora43: output: DEBUG:     dnf5_command:  /usr/bin/dnf5
+2024-05-11 00:50:19.665875 +0000 build-fedora43: output: DEBUG:     system_dnf5_command:  /usr/bin/dnf5
+2024-05-11 00:50:19.665902 +0000 build-fedora43: output: DEBUG:     dnf5_common_opts:  ['--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing']
+2024-05-11 00:50:19.665924 +0000 build-fedora43: output: DEBUG:     dnf5_install_command:  install dnf5 dnf5-plugins
+2024-05-11 00:50:19.666137 +0000 build-fedora43: output: DEBUG:     dnf5_disable_plugins:  []
+2024-05-11 00:50:19.666197 +0000 build-fedora43: output: DEBUG:     dnf5_avoid_opts:  {'remove': ['--allowerasing']}
+2024-05-11 00:50:19.666219 +0000 build-fedora43: output: DEBUG:     microdnf_command:  /usr/bin/microdnf
+2024-05-11 00:50:19.666241 +0000 build-fedora43: output: DEBUG:     microdnf_install_command:  dnf-install microdnf dnf dnf-plugins-core
+2024-05-11 00:50:19.666261 +0000 build-fedora43: output: DEBUG:     microdnf_builddep_command:  /usr/bin/dnf
+2024-05-11 00:50:19.666506 +0000 build-fedora43: output: DEBUG:     microdnf_builddep_opts:  []
+2024-05-11 00:50:19.666921 +0000 build-fedora43: output: DEBUG:     microdnf_common_opts:  []
+2024-05-11 00:50:19.666972 +0000 build-fedora43: output: DEBUG:     microdnf_avoid_opts:  {}
+2024-05-11 00:50:19.666992 +0000 build-fedora43: output: DEBUG:     rpm_command:  /bin/rpm
+2024-05-11 00:50:19.667012 +0000 build-fedora43: output: DEBUG:     rpmbuild_command:  /usr/bin/rpmbuild
+2024-05-11 00:50:19.667032 +0000 build-fedora43: output: DEBUG:     user_agent:  Mock (fedora-40-x86_64; x86_64)
+2024-05-11 00:50:19.667366 +0000 build-fedora43: output: DEBUG:     opstimeout:  0
+2024-05-11 00:50:19.667400 +0000 build-fedora43: output: DEBUG:     stderr_line_prefix:
+2024-05-11 00:50:19.667420 +0000 build-fedora43: output: DEBUG:     chroot_additional_packages:  []
+2024-05-11 00:50:19.667451 +0000 build-fedora43: output: DEBUG:     additional_packages:  []
+2024-05-11 00:50:19.667919 +0000 build-fedora43: output: DEBUG:     no-config:  {'epel-8': {'alternatives': {'alma+epel-8': {'description': ['Builds against AlmaLinux 8 repositories, together with the official EPEL repositories.', 'Project page: https://almalinux.org/']}, 'centos-stream+epel-8': {'description': ['Builds against CentOS Stream 8 repositories (some packages may be a bit ahead the Red Hat Enterprise Linux 8) together with the official EPEL 8 repositories.', 'Project page: https://www.centos.org/centos-stream/']}, 'circlelinux+epel-8': {'description': ['Builds against Circle Linux 8 repositories, together with the official EPEL repositories.', 'Project page: https://cclinux.org/']}, 'rhel+epel-8': {'description': ['Builds against Red Hat Enterprise Linux 8 repositories, together with the official EPEL repositories.', 'This mimics what is done in the official EPEL build system, but you need a Red Hat subscription:', 'https://rpm-software-management.github.io/mock/Feature-rhelchroots']}, 'rocky+epel-8': {'description': ['Builds against Rocky Linux 8 repositories, together with the official EPEL repositories.', 'Project page: https://rockylinux.org/']}}}, 'epel-9': {'alternatives': {'alma+epel-9': {'description': ['Builds against AlmaLinux 9 repositories, together with the official EPEL repositories.', 'Project page: https://almalinux.org/']}, 'centos-stream+epel-9': {'description': ['Builds against CentOS Stream 9 repositories (some packages may be a bit ahead the Red Hat Enterprise Linux 9) together with the official EPEL repositories.', 'Project page: https://www.centos.org/centos-stream/']}, 'rhel+epel-9': {'description': ['Builds against Red Hat Enterprise Linux 9 repositories, together with the official EPEL repositories.', 'This mimics what is done in the official EPEL build system, but you need a Red Hat subscription:', 'https://rpm-software-management.github.io/mock/Feature-rhelchroots']}, 'rocky+epel-9': {'description': ['Builds against Rocky Linux 9 repositories, together with the official EPEL repositories.', 'Project page: https://rockylinux.org/']}}}}
+2024-05-11 00:50:19.668136 +0000 build-fedora43: output: DEBUG:     seccomp:  False
+2024-05-11 00:50:19.668168 +0000 build-fedora43: output: DEBUG:     copy_host_users:  []
+2024-05-11 00:50:19.668216 +0000 build-fedora43: output: DEBUG:     use_host_shadow_utils:  True
+2024-05-11 00:50:19.668247 +0000 build-fedora43: output: DEBUG:     qemu_user_static_mapping:  {'aarch64': 'aarch64', 'armv7hl': 'arm', 'i386': 'i386', 'i686': 'i386', 'ppc64': 'ppc64', 'ppc64le': 'ppc64le', 's390x': 's390x', 'x86_64': 'x86_64'}
+2024-05-11 00:50:19.668265 +0000 build-fedora43: output: DEBUG:     recursion_limit:  5000
+2024-05-11 00:50:19.668282 +0000 build-fedora43: output: DEBUG:     config_path:  /etc/mock
+2024-05-11 00:50:19.668299 +0000 build-fedora43: output: DEBUG:     chroot_name:  fedora-40-x86_64
+2024-05-11 00:50:19.668679 +0000 build-fedora43: output: DEBUG:     config_file:  /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg
+2024-05-11 00:50:19.668715 +0000 build-fedora43: output: DEBUG:     dist:  fc40
+2024-05-11 00:50:19.668735 +0000 build-fedora43: output: DEBUG:     legal_host_arches:  ('x86_64',)
+2024-05-11 00:50:19.668753 +0000 build-fedora43: output: DEBUG:     root:  fedora-40-x86_64
+2024-05-11 00:50:19.668769 +0000 build-fedora43: output: DEBUG:     dnf.conf:
+2024-05-11 00:50:19.668784 +0000 build-fedora43: output: [main]
+2024-05-11 00:50:19.668800 +0000 build-fedora43: output: keepcache=1
+2024-05-11 00:50:19.668816 +0000 build-fedora43: output: debuglevel=2
+2024-05-11 00:50:19.668832 +0000 build-fedora43: output: reposdir=/dev/null
+2024-05-11 00:50:19.669059 +0000 build-fedora43: output: logfile=/var/log/yum.log
+2024-05-11 00:50:19.669096 +0000 build-fedora43: output: retries=20
+2024-05-11 00:50:19.669114 +0000 build-fedora43: output: obsoletes=1
+2024-05-11 00:50:19.669129 +0000 build-fedora43: output: gpgcheck=0
+2024-05-11 00:50:19.669398 +0000 build-fedora43: output: assumeyes=1
+2024-05-11 00:50:19.669432 +0000 build-fedora43: output: syslog_ident=mock
+2024-05-11 00:50:19.669452 +0000 build-fedora43: output: syslog_device=
+2024-05-11 00:50:19.669470 +0000 build-fedora43: output: install_weak_deps=0
+2024-05-11 00:50:19.669487 +0000 build-fedora43: output: metadata_expire=0
+2024-05-11 00:50:19.669746 +0000 build-fedora43: output: mdpolicy=group:primary
+2024-05-11 00:50:19.669785 +0000 build-fedora43: output: best=1
+2024-05-11 00:50:19.669803 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.669819 +0000 build-fedora43: output: # repos
+2024-05-11 00:50:19.669836 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.670056 +0000 build-fedora43: output: [fedora]
+2024-05-11 00:50:19.670096 +0000 build-fedora43: output: name=fedora
+2024-05-11 00:50:19.670122 +0000 build-fedora43: output: metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
+2024-05-11 00:50:19.670836 +0000 build-fedora43: output: failovermethod=priority
+2024-05-11 00:50:19.670881 +0000 build-fedora43: output: gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-primary
+2024-05-11 00:50:19.670900 +0000 build-fedora43: output: gpgcheck=1
+2024-05-11 00:50:19.670920 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-11 00:50:19.670936 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.670953 +0000 build-fedora43: output: [updates]
+2024-05-11 00:50:19.670970 +0000 build-fedora43: output: name=updates
+2024-05-11 00:50:19.670994 +0000 build-fedora43: output: metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
+2024-05-11 00:50:19.671012 +0000 build-fedora43: output: failovermethod=priority
+2024-05-11 00:50:19.671035 +0000 build-fedora43: output: gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-primary
+2024-05-11 00:50:19.671051 +0000 build-fedora43: output: gpgcheck=1
+2024-05-11 00:50:19.671407 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-11 00:50:19.671441 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.671458 +0000 build-fedora43: output: [builder-local]
+2024-05-11 00:50:19.671483 +0000 build-fedora43: output: name=builder-local
+2024-05-11 00:50:19.671501 +0000 build-fedora43: output: baseurl=file:///builder/repository
+2024-05-11 00:50:19.671517 +0000 build-fedora43: output: gpgcheck=0
+2024-05-11 00:50:19.671533 +0000 build-fedora43: output: exclude=qubes-release
+2024-05-11 00:50:19.671872 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-11 00:50:19.671906 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.671924 +0000 build-fedora43: output: [qubes-current]
+2024-05-11 00:50:19.671940 +0000 build-fedora43: output: name=qubes-vm-current
+2024-05-11 00:50:19.671960 +0000 build-fedora43: output: baseurl=https://yum.qubes-os.org/rNone/current/vm/fc$releasever
+2024-05-11 00:50:19.671976 +0000 build-fedora43: output: failovermethod=priority
+2024-05-11 00:50:19.671997 +0000 build-fedora43: output: gpgkey=file:///builder/plugins/chroot_rpm/keys/RPM-GPG-KEY-qubes-None-primary
+2024-05-11 00:50:19.672012 +0000 build-fedora43: output: gpgcheck=1
+2024-05-11 00:50:19.672232 +0000 build-fedora43: output: repo_gpgcheck = 1
+2024-05-11 00:50:19.672287 +0000 build-fedora43: output: exclude=qubes-release
+2024-05-11 00:50:19.672308 +0000 build-fedora43: output: enabled=0
+2024-05-11 00:50:19.672325 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-11 00:50:19.672549 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.672583 +0000 build-fedora43: output: [qubes-current-testing]
+2024-05-11 00:50:19.672603 +0000 build-fedora43: output: name=qubes-vm-testing
+2024-05-11 00:50:19.672625 +0000 build-fedora43: output: baseurl=https://yum.qubes-os.org/rNone/current-testing/vm/fc$releasever
+2024-05-11 00:50:19.672643 +0000 build-fedora43: output: failovermethod=priority
+2024-05-11 00:50:19.672855 +0000 build-fedora43: output: gpgkey=file:///builder/plugins/chroot_rpm/keys/RPM-GPG-KEY-qubes-None-primary
+2024-05-11 00:50:19.672902 +0000 build-fedora43: output: gpgcheck=1
+2024-05-11 00:50:19.672925 +0000 build-fedora43: output: repo_gpgcheck = 1
+2024-05-11 00:50:19.672945 +0000 build-fedora43: output: exclude=qubes-release
+2024-05-11 00:50:19.673161 +0000 build-fedora43: output: enabled=0
+2024-05-11 00:50:19.673229 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-11 00:50:19.673247 +0000 build-fedora43: output: 
+2024-05-11 00:50:19.673267 +0000 build-fedora43: output: DEBUG:     __jinja_expand:  True
+2024-05-11 00:50:19.673285 +0000 build-fedora43: output: DEBUG:     verbose:  2
+2024-05-11 00:50:19.673569 +0000 build-fedora43: output: DEBUG:     print_main_output:  False
+2024-05-11 00:50:19.673604 +0000 build-fedora43: output: DEBUG:     cache_alterations:  False
+2024-05-11 00:50:19.673625 +0000 build-fedora43: output: DEBUG:     enable_disable_repos:  []
+2024-05-11 00:50:19.673644 +0000 build-fedora43: output: DEBUG:     build_log_fmt_str:  %(message)s
+2024-05-11 00:50:19.673861 +0000 build-fedora43: output: DEBUG:     root_log_fmt_str:  %(levelname)s %(filename)s:%(lineno)d:  %(message)s
+2024-05-11 00:50:19.673901 +0000 build-fedora43: output: DEBUG:     state_log_fmt_str:  %(asctime)s - %(message)s
+2024-05-11 00:50:19.673923 +0000 build-fedora43: output: DEBUG: Local file: /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm
+2024-05-11 00:50:19.673945 +0000 build-fedora43: output: INFO: Start(/builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm)  Config(fedora-40-x86_64)
+2024-05-11 00:50:19.675505 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64
+2024-05-11 00:50:19.676502 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64
+2024-05-11 00:50:19.682723 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build
+2024-05-11 00:50:19.690702 +0000 build-fedora43: output: Mock Version: 5.5
+2024-05-11 00:50:19.691034 +0000 build-fedora43: output: INFO: Mock Version: 5.5
+2024-05-11 00:50:19.691335 +0000 build-fedora43: output: INFO: Mock Version: 5.5
+2024-05-11 00:50:19.698130 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64
+2024-05-11 00:50:19.700432 +0000 build-fedora43: output: Start: chroot init
+2024-05-11 00:50:19.701818 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root
+2024-05-11 00:50:19.703443 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root
+2024-05-11 00:50:19.720106 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build
+2024-05-11 00:50:19.723807 +0000 build-fedora43: output: INFO: calling preinit hooks
+2024-05-11 00:50:19.725614 +0000 build-fedora43: output: INFO: enabled root cache
+2024-05-11 00:50:19.726538 +0000 build-fedora43: output: INFO: skipping root_cache aging check
+2024-05-11 00:50:19.728750 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/root_cache/
+2024-05-11 00:50:19.728785 +0000 build-fedora43: output: Start: unpacking root cache
+2024-05-11 00:50:19.735020 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root
+2024-05-11 00:50:19.739546 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:19.739662 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/builder/cache/mock/fedora-40-x86_64/root_cache/cache.tar.gz', '-C', '/builder/build/fedora-40-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:20.697636 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:20.701201 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./proc
+2024-05-11 00:50:20.703071 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./proc
+2024-05-11 00:50:20.706762 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./sys
+2024-05-11 00:50:20.707989 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./sys
+2024-05-11 00:50:20.712156 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./dev
+2024-05-11 00:50:20.713088 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./dev
+2024-05-11 00:50:20.716787 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./tmp/ccache
+2024-05-11 00:50:20.717875 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./tmp/ccache
+2024-05-11 00:50:20.721779 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./var/cache/yum
+2024-05-11 00:50:20.723348 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./var/cache/yum
+2024-05-11 00:50:20.727043 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./var/cache/dnf
+2024-05-11 00:50:20.728159 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./var/cache/dnf
+2024-05-11 00:50:20.731850 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./var/log
+2024-05-11 00:50:20.733024 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./var/log
+2024-05-11 00:50:20.733068 +0000 build-fedora43: output: Finish: unpacking root cache
+2024-05-11 00:50:20.734365 +0000 build-fedora43: output: INFO: enabled package manager cache
+2024-05-11 00:50:20.736447 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/yum_cache
+2024-05-11 00:50:20.738779 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/dnf_cache
+2024-05-11 00:50:20.738929 +0000 build-fedora43: output: Start: cleaning package manager metadata
+2024-05-11 00:50:20.739898 +0000 build-fedora43: output: Finish: cleaning package manager metadata
+2024-05-11 00:50:20.747115 +0000 build-fedora43: output: INFO: enabled HW Info plugin
+2024-05-11 00:50:20.750597 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:20.750627 +0000 build-fedora43: output: DEBUG: Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:20.762654 +0000 build-fedora43: output: DEBUG: Architecture:                       x86_64
+2024-05-11 00:50:20.762725 +0000 build-fedora43: output: DEBUG: CPU op-mode(s):                     32-bit, 64-bit
+2024-05-11 00:50:20.763157 +0000 build-fedora43: output: DEBUG: Address sizes:                      39 bits physical, 48 bits virtual
+2024-05-11 00:50:20.763238 +0000 build-fedora43: output: DEBUG: Byte Order:                         Little Endian
+2024-05-11 00:50:20.763266 +0000 build-fedora43: output: DEBUG: CPU(s):                             2
+2024-05-11 00:50:20.763286 +0000 build-fedora43: output: DEBUG: On-line CPU(s) list:                0,1
+2024-05-11 00:50:20.763306 +0000 build-fedora43: output: DEBUG: Vendor ID:                          GenuineIntel
+2024-05-11 00:50:20.763329 +0000 build-fedora43: output: DEBUG: Model name:                         11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+2024-05-11 00:50:20.763398 +0000 build-fedora43: output: DEBUG: CPU family:                         6
+2024-05-11 00:50:20.763417 +0000 build-fedora43: output: DEBUG: Model:                              140
+2024-05-11 00:50:20.763436 +0000 build-fedora43: output: DEBUG: Thread(s) per core:                 1
+2024-05-11 00:50:20.763454 +0000 build-fedora43: output: DEBUG: Core(s) per socket:                 2
+2024-05-11 00:50:20.763493 +0000 build-fedora43: output: DEBUG: Socket(s):                          1
+2024-05-11 00:50:20.763519 +0000 build-fedora43: output: DEBUG: Stepping:                           1
+2024-05-11 00:50:20.763539 +0000 build-fedora43: output: DEBUG: BogoMIPS:                           5606.09
+2024-05-11 00:50:20.763861 +0000 build-fedora43: output: DEBUG: Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush acpi mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid md_clear flush_l1d arch_capabilities
+2024-05-11 00:50:20.763900 +0000 build-fedora43: output: DEBUG: Hypervisor vendor:                  Xen
+2024-05-11 00:50:20.763920 +0000 build-fedora43: output: DEBUG: Virtualization type:                full
+2024-05-11 00:50:20.764145 +0000 build-fedora43: output: DEBUG: L1d cache:                          96 KiB (2 instances)
+2024-05-11 00:50:20.764212 +0000 build-fedora43: output: DEBUG: L1i cache:                          64 KiB (2 instances)
+2024-05-11 00:50:20.764236 +0000 build-fedora43: output: DEBUG: L2 cache:                           2.5 MiB (2 instances)
+2024-05-11 00:50:20.764257 +0000 build-fedora43: output: DEBUG: L3 cache:                           24 MiB (2 instances)
+2024-05-11 00:50:20.764277 +0000 build-fedora43: output: DEBUG: NUMA node(s):                       1
+2024-05-11 00:50:20.764296 +0000 build-fedora43: output: DEBUG: NUMA node0 CPU(s):                  0,1
+2024-05-11 00:50:20.764315 +0000 build-fedora43: output: DEBUG: Vulnerability Gather data sampling: Not affected
+2024-05-11 00:50:20.764585 +0000 build-fedora43: output: DEBUG: Vulnerability Itlb multihit:        Not affected
+2024-05-11 00:50:20.764626 +0000 build-fedora43: output: DEBUG: Vulnerability L1tf:                 Not affected
+2024-05-11 00:50:20.764642 +0000 build-fedora43: output: DEBUG: Vulnerability Mds:                  Not affected
+2024-05-11 00:50:20.764658 +0000 build-fedora43: output: DEBUG: Vulnerability Meltdown:             Not affected
+2024-05-11 00:50:20.764674 +0000 build-fedora43: output: DEBUG: Vulnerability Mmio stale data:      Not affected
+2024-05-11 00:50:20.764689 +0000 build-fedora43: output: DEBUG: Vulnerability Retbleed:             Not affected
+2024-05-11 00:50:20.764704 +0000 build-fedora43: output: DEBUG: Vulnerability Spec rstack overflow: Not affected
+2024-05-11 00:50:20.764723 +0000 build-fedora43: output: DEBUG: Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+2024-05-11 00:50:20.764923 +0000 build-fedora43: output: DEBUG: Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+2024-05-11 00:50:20.764957 +0000 build-fedora43: output: DEBUG: Vulnerability Spectre v2:           Mitigation; Enhanced IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+2024-05-11 00:50:20.765164 +0000 build-fedora43: output: DEBUG: Vulnerability Srbds:                Not affected
+2024-05-11 00:50:20.765231 +0000 build-fedora43: output: DEBUG: Vulnerability Tsx async abort:      Not affected
+2024-05-11 00:50:20.765251 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:20.766697 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:20.766800 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:20.772128 +0000 build-fedora43: output: DEBUG:                total        used        free      shared  buff/cache   available
+2024-05-11 00:50:20.772404 +0000 build-fedora43: output: DEBUG: Mem:         1761488      464608      370384         808     1099628     1296880
+2024-05-11 00:50:20.772455 +0000 build-fedora43: output: DEBUG: Swap:        1048572        7936     1040636
+2024-05-11 00:50:20.772474 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:20.776985 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:20.777089 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/df', '-H', '-T', '/builder/build/fedora-40-x86_64/root', '/builder/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:20.781285 +0000 build-fedora43: output: DEBUG: Filesystem     Type  Size  Used Avail Use% Mounted on
+2024-05-11 00:50:20.781557 +0000 build-fedora43: output: DEBUG: /dev/xvdb      ext4   32G  750M   31G   3% /builder
+2024-05-11 00:50:20.781600 +0000 build-fedora43: output: DEBUG: /dev/xvdb      ext4   32G  750M   31G   3% /builder
+2024-05-11 00:50:20.781619 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:20.792380 +0000 build-fedora43: output: DEBUG: create skeleton dirs
+2024-05-11 00:50:20.795483 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/lib/rpm
+2024-05-11 00:50:20.798630 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/lib/yum
+2024-05-11 00:50:20.801347 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/lib/dbus
+2024-05-11 00:50:20.804109 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/log
+2024-05-11 00:50:20.806967 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/dnf
+2024-05-11 00:50:20.809728 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/yum
+2024-05-11 00:50:20.812527 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/rpm
+2024-05-11 00:50:20.815411 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/tmp
+2024-05-11 00:50:20.818114 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/tmp/ccache
+2024-05-11 00:50:20.820913 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/tmp
+2024-05-11 00:50:20.825317 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/dnf
+2024-05-11 00:50:20.831684 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/dnf/vars
+2024-05-11 00:50:20.834380 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/yum.repos.d
+2024-05-11 00:50:20.837166 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/yum
+2024-05-11 00:50:20.839860 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/proc
+2024-05-11 00:50:20.842624 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/sys
+2024-05-11 00:50:20.845400 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/run/lock
+2024-05-11 00:50:20.852130 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/pts
+2024-05-11 00:50:20.853171 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/dev/pts
+2024-05-11 00:50:20.856197 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/shm
+2024-05-11 00:50:20.857178 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/dev/shm
+2024-05-11 00:50:20.860085 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/mapper
+2024-05-11 00:50:20.861147 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/dev/mapper
+2024-05-11 00:50:20.861280 +0000 build-fedora43: output: DEBUG: kernel version == 6.1.75-1.qubes.fc32.x86_64
+2024-05-11 00:50:20.938988 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/etc/fstab
+2024-05-11 00:50:20.940546 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/etc/yum/yum.conf
+2024-05-11 00:50:20.942548 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/etc/dnf/dnf.conf
+2024-05-11 00:50:20.944434 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/var/log/yum.log
+2024-05-11 00:50:20.946253 +0000 build-fedora43: output: DEBUG: rootdir = /builder/build/fedora-40-x86_64/root
+2024-05-11 00:50:20.946269 +0000 build-fedora43: output: DEBUG: resultdir = /builder/build
+2024-05-11 00:50:20.948743 +0000 build-fedora43: output: DEBUG: searching for 'dnf' package manager or alternatives
+2024-05-11 00:50:20.952946 +0000 build-fedora43: output: INFO: Package manager dnf detected and used (fallback)
+2024-05-11 00:50:20.956643 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/mock
+2024-05-11 00:50:20.960745 +0000 build-fedora43: output: DEBUG: Updating files in /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+2024-05-11 00:50:20.962633 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust
+2024-05-11 00:50:20.966033 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/./extracted
+2024-05-11 00:50:20.968151 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/./source
+2024-05-11 00:50:20.971252 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/pem
+2024-05-11 00:50:20.973324 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/openssl
+2024-05-11 00:50:20.975474 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/edk2
+2024-05-11 00:50:20.977601 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/java
+2024-05-11 00:50:20.985926 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/pem/directory-hash
+2024-05-11 00:50:21.106493 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/source/blocklist
+2024-05-11 00:50:21.109695 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/source/anchors
+2024-05-11 00:50:21.113339 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/source/blacklist
+2024-05-11 00:50:21.117505 +0000 build-fedora43: output: DEBUG: Updating files in /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+2024-05-11 00:50:21.120327 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source
+2024-05-11 00:50:21.132302 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source/./blocklist
+2024-05-11 00:50:21.134095 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source/./anchors
+2024-05-11 00:50:21.138654 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source/./blacklist
+2024-05-11 00:50:21.147550 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/dnf
+2024-05-11 00:50:21.148675 +0000 build-fedora43: output: DEBUG: configure DNF vars
+2024-05-11 00:50:21.153627 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/yum
+2024-05-11 00:50:21.156786 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.156843 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'bind', '/builder/cache/mock/fedora-40-x86_64/yum_cache', '/builder/build/fedora-40-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.165330 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.171031 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/dnf
+2024-05-11 00:50:21.176815 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.176947 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'bind', '/builder/cache/mock/fedora-40-x86_64/dnf_cache', '/builder/build/fedora-40-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.188100 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.190221 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.190406 +0000 build-fedora43: output: DEBUG: Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.222232 +0000 build-fedora43: output: DEBUG: rpm-4.19.1.1-1.fc39.x86_64
+2024-05-11 00:50:21.224852 +0000 build-fedora43: output: DEBUG: rpm-sequoia-1.6.0-1.fc39.x86_64
+2024-05-11 00:50:21.240808 +0000 build-fedora43: output: DEBUG: python3-dnf-4.19.2-1.fc39.noarch
+2024-05-11 00:50:21.245685 +0000 build-fedora43: output: DEBUG: python3-dnf-plugins-core-4.6.0-1.fc39.noarch
+2024-05-11 00:50:21.246084 +0000 build-fedora43: output: DEBUG: package yum is not installed
+2024-05-11 00:50:21.246390 +0000 build-fedora43: output: DEBUG: package yum-utils is not installed
+2024-05-11 00:50:21.253277 +0000 build-fedora43: output: DEBUG: dnf5-5.1.17-1.fc39.x86_64
+2024-05-11 00:50:21.259443 +0000 build-fedora43: output: DEBUG: dnf5-plugins-5.1.17-1.fc39.x86_64
+2024-05-11 00:50:21.261311 +0000 build-fedora43: output: DEBUG: Child return code was: 2
+2024-05-11 00:50:21.264876 +0000 build-fedora43: output: INFO: Buildroot is handled by package management from host and used with --installroot:
+2024-05-11 00:50:21.265155 +0000 build-fedora43: output:   rpm-4.19.1.1-1.fc39.x86_64
+2024-05-11 00:50:21.265274 +0000 build-fedora43: output:   rpm-sequoia-1.6.0-1.fc39.x86_64
+2024-05-11 00:50:21.265297 +0000 build-fedora43: output:   python3-dnf-4.19.2-1.fc39.noarch
+2024-05-11 00:50:21.265317 +0000 build-fedora43: output:   python3-dnf-plugins-core-4.6.0-1.fc39.noarch
+2024-05-11 00:50:21.265356 +0000 build-fedora43: output:   dnf5-5.1.17-1.fc39.x86_64
+2024-05-11 00:50:21.265383 +0000 build-fedora43: output:   dnf5-plugins-5.1.17-1.fc39.x86_64
+2024-05-11 00:50:21.325142 +0000 build-fedora43: output: Start: installing minimal buildroot with dnf
+2024-05-11 00:50:21.357554 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/proc
+2024-05-11 00:50:21.364311 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.364407 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.371516 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.375439 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/proc
+2024-05-11 00:50:21.379214 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.379314 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.384784 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.392481 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.392580 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.399010 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.408195 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/sys
+2024-05-11 00:50:21.417339 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.417369 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.432055 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.440251 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/sys
+2024-05-11 00:50:21.443850 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.443884 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.448541 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.459063 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.459229 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.465013 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.473548 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/shm
+2024-05-11 00:50:21.480331 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.480406 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/builder/build/fedora-40-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.493621 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.500115 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/pts
+2024-05-11 00:50:21.506835 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.506887 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/builder/build/fedora-40-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.513657 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:50:21.545369 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/installation-homedir
+2024-05-11 00:50:21.550729 +0000 build-fedora43: output: DEBUG: ['/usr/bin/dnf-3', '--installroot', '/builder/build/fedora-40-x86_64/root/', '--releasever', '40', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', '@buildsys-build']
+2024-05-11 00:50:21.565493 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:50:21.565862 +0000 build-fedora43: output: DEBUG: Executing command: ['/usr/bin/dnf-3', '--installroot', '/builder/build/fedora-40-x86_64/root/', '--releasever', '40', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', '@buildsys-build'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builder/build/fedora-40-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+2024-05-11 00:50:21.838095 +0000 build-fedora43: output: DEBUG: No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+2024-05-11 00:50:24.902939 +0000 build-fedora43: output: DEBUG: fedora                                          8.9 kB/s |  25 kB     00:02
+2024-05-11 00:50:42.933161 +0000 build-fedora43: output: DEBUG: fedora                                           86 kB/s | 1.5 MB     00:18
+2024-05-11 00:51:00.719286 +0000 build-fedora43: output: DEBUG: updates                                         9.3 kB/s |  21 kB     00:02
+2024-05-11 00:53:01.122680 +0000 build-fedora43: output: DEBUG: updates                                         0.0  B/s |   0  B     02:00
+2024-05-11 00:53:01.125951 +0000 build-fedora43: output: DEBUG: Errors during downloading metadata for repository 'updates':
+2024-05-11 00:53:01.126409 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.fi.muni.cz/pub/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.fi.muni.cz]
+2024-05-11 00:53:01.126469 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.netsite.dk/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netsite.dk]
+2024-05-11 00:53:01.126511 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.serverion.com/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.serverion.com]
+2024-05-11 00:53:01.126837 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.datacenter.by/pub/fedoraproject.org/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.datacenter.by]
+2024-05-11 00:53:01.126926 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.lysator.liu.se/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lysator.liu.se]
+2024-05-11 00:53:01.126970 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.lip6.fr/ftp/pub/linux/distributions/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lip6.fr]
+2024-05-11 00:53:01.127382 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ask4.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ask4.mm.fcix.net]
+2024-05-11 00:53:01.127871 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.lip6.fr/ftp/pub/linux/distributions/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lip6.fr]
+2024-05-11 00:53:01.128344 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.lysator.liu.se/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lysator.liu.se]
+2024-05-11 00:53:01.128411 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.plusline.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.plusline.net]
+2024-05-11 00:53:01.129336 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.fau.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.fau.de]
+2024-05-11 00:53:01.129473 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.halifax.rwth-aachen.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.halifax.rwth-aachen.de]
+2024-05-11 00:53:01.129515 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.otenet.gr/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.otenet.gr]
+2024-05-11 00:53:01.129551 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://fedora-mirror02.rbc.ru/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora-mirror02.rbc.ru]
+2024-05-11 00:53:01.129587 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://creeperhost.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: creeperhost.mm.fcix.net]
+2024-05-11 00:53:01.129671 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://b4sh.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: b4sh.mm.fcix.net]
+2024-05-11 00:53:01.129719 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://b4sh.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: b4sh.mm.fcix.net]
+2024-05-11 00:53:01.129755 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.netzwerge.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netzwerge.de]
+2024-05-11 00:53:01.129918 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.upjs.sk/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.upjs.sk]
+2024-05-11 00:53:01.130115 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://fedora.mirror.wearetriple.com/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirror.wearetriple.com]
+2024-05-11 00:53:01.130818 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://fedora.ip-connect.info/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.ip-connect.info]
+2024-05-11 00:53:01.131251 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirrors.dotsrc.org/fedora-enchilada/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.dotsrc.org]
+2024-05-11 00:53:01.131312 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.fau.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.fau.de]
+2024-05-11 00:53:01.131346 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirrors.xtom.de/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.xtom.de]
+2024-05-11 00:53:01.131379 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.bahnhof.net/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.bahnhof.net]
+2024-05-11 00:53:01.131411 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ipng.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ipng.mm.fcix.net]
+2024-05-11 00:53:01.131442 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ask4.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ask4.mm.fcix.net]
+2024-05-11 00:53:01.131861 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://fr2.rpmfind.net/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fr2.rpmfind.net]
+2024-05-11 00:53:01.131917 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://divergentnetworks.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: divergentnetworks.mm.fcix.net]
+2024-05-11 00:53:01.131951 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ipng.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ipng.mm.fcix.net]
+2024-05-11 00:53:01.131982 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.dogado.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.dogado.de]
+2024-05-11 00:53:01.132014 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.init7.net/fedora/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.init7.net]
+2024-05-11 00:53:01.132421 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://distrib-coffee.ipsl.jussieu.fr/pub/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: distrib-coffee.ipsl.jussieu.fr]
+2024-05-11 00:53:01.132475 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirrors.dotsrc.org/fedora-enchilada/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.dotsrc.org]
+2024-05-11 00:53:01.132508 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.accum.se/mirror/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.accum.se]
+2024-05-11 00:53:01.132556 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://fedora.cu.be/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.cu.be]
+2024-05-11 00:53:01.132590 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.nl.leaseweb.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.nl.leaseweb.net]
+2024-05-11 00:53:01.132622 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.netzwerge.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netzwerge.de]
+2024-05-11 00:53:01.133031 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.plusline.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.plusline.net]
+2024-05-11 00:53:01.133099 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://www.fedora.is/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: www.fedora.is]
+2024-05-11 00:53:01.133133 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.23m.com/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.23m.com]
+2024-05-11 00:53:01.133164 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.netsite.dk/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netsite.dk]
+2024-05-11 00:53:01.133236 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://fedora.mirror.wearetriple.com/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirror.wearetriple.com]
+2024-05-11 00:53:01.133733 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://www.nic.funet.fi/pub/mirrors/fedora.redhat.com/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: www.nic.funet.fi]
+2024-05-11 00:53:01.133786 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.it4i.cz/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.it4i.cz]
+2024-05-11 00:53:01.133821 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.bahnhof.net/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.bahnhof.net]
+2024-05-11 00:53:01.133853 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.linux.org.tr/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.linux.org.tr]
+2024-05-11 00:53:01.133887 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.datacenter.by/pub/fedoraproject.org/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.datacenter.by]
+2024-05-11 00:53:01.133923 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp-stud.hs-esslingen.de/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp-stud.hs-esslingen.de]
+2024-05-11 00:53:01.133958 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.halifax.rwth-aachen.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.halifax.rwth-aachen.de]
+2024-05-11 00:53:01.134414 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://level66.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: level66.mm.fcix.net]
+2024-05-11 00:53:01.134485 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.serverion.com/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.serverion.com]
+2024-05-11 00:53:01.134522 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.23m.com/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.23m.com]
+2024-05-11 00:53:01.134554 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.it4i.cz/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.it4i.cz]
+2024-05-11 00:53:01.134586 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.linux.org.tr/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.linux.org.tr]
+2024-05-11 00:53:01.134619 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://fedora.mirrorservice.org/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirrorservice.org]
+2024-05-11 00:53:01.134911 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.library.ucy.ac.cy/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.library.ucy.ac.cy]
+2024-05-11 00:53:01.134962 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp-stud.hs-esslingen.de/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp-stud.hs-esslingen.de]
+2024-05-11 00:53:01.134994 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://ftp.upjs.sk/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.upjs.sk]
+2024-05-11 00:53:01.135027 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://fedora.ip-connect.info/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.ip-connect.info]
+2024-05-11 00:53:01.135059 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.in2p3.fr/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.in2p3.fr]
+2024-05-11 00:53:01.135090 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirrors.xtom.de/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.xtom.de]
+2024-05-11 00:53:01.135122 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.init7.net/fedora/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.init7.net]
+2024-05-11 00:53:01.135154 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://ftp.nluug.nl/pub/os/Linux/distr/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.nluug.nl]
+2024-05-11 00:53:01.135440 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.accum.se/mirror/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.accum.se]
+2024-05-11 00:53:01.135488 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.slu.cz/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.slu.cz]
+2024-05-11 00:53:01.135523 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.karneval.cz/pub/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.karneval.cz]
+2024-05-11 00:53:01.135571 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://divergentnetworks.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: divergentnetworks.mm.fcix.net]
+2024-05-11 00:53:01.135605 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirror.dogado.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.dogado.de]
+2024-05-11 00:53:01.135638 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://fedora.mirrorservice.org/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirrorservice.org]
+2024-05-11 00:53:01.135895 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://creeperhost.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: creeperhost.mm.fcix.net]
+2024-05-11 00:53:01.135945 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.de.leaseweb.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.de.leaseweb.net]
+2024-05-11 00:53:01.135983 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://mirror.in2p3.fr/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.in2p3.fr]
+2024-05-11 00:53:01.136016 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://level66.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: level66.mm.fcix.net]
+2024-05-11 00:53:01.136097 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://repo.hyron.dev/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: repo.hyron.dev]
+2024-05-11 00:53:01.136139 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://fedora.cu.be/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.cu.be]
+2024-05-11 00:53:01.136209 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for http://www.fedora.is/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: www.fedora.is]
+2024-05-11 00:53:01.136244 +0000 build-fedora43: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://fr2.rpmfind.net/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fr2.rpmfind.net]
+2024-05-11 00:53:01.152928 +0000 build-fedora43: output: DEBUG: Error: Failed to download metadata for repo 'updates': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried
+2024-05-11 00:53:01.191949 +0000 build-fedora43: output: DEBUG: Child return code was: 1
+2024-05-11 00:53:01.195543 +0000 build-fedora43: output: DEBUG: kill orphans in chroot /builder/build/fedora-40-x86_64/root
+2024-05-11 00:53:01.210328 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.210473 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.217968 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.237933 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.238126 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.265707 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.289110 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.289610 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.307334 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.323945 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.324582 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.346244 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.356722 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.356814 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.378392 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.399608 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.399700 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.420635 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.506176 +0000 build-fedora43: output: ERROR: Exception(/builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm) Config(fedora-40-x86_64) 2 minutes 41 seconds
+2024-05-11 00:53:01.507531 +0000 build-fedora43: output: INFO: Results and/or logs in: /builder/build
+2024-05-11 00:53:01.522808 +0000 build-fedora43: output: DEBUG: kill orphans in chroot /builder/build/fedora-40-x86_64/root
+2024-05-11 00:53:01.615634 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.615689 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '/builder/build/fedora-40-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.626371 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.639352 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-11 00:53:01.639430 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '/builder/build/fedora-40-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-11 00:53:01.656225 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-11 00:53:01.660584 +0000 build-fedora43: output: ERROR: Command failed:
+2024-05-11 00:53:01.660865 +0000 build-fedora43: output:  # /usr/bin/dnf-3 --installroot /builder/build/fedora-40-x86_64/root/ --releasever 40 --setopt=deltarpm=False --setopt=allow_vendor_change=yes --allowerasing --disableplugin=local --disableplugin=spacewalk --disableplugin=versionlock install @buildsys-build
+2024-05-11 00:53:01.660928 +0000 build-fedora43: output: No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+2024-05-11 00:53:01.660953 +0000 build-fedora43: output: fedora                                          8.9 kB/s |  25 kB     00:02
+2024-05-11 00:53:01.660975 +0000 build-fedora43: output: fedora                                           86 kB/s | 1.5 MB     00:18
+2024-05-11 00:53:01.661262 +0000 build-fedora43: output: updates                                         9.3 kB/s |  21 kB     00:02
+2024-05-11 00:53:01.661312 +0000 build-fedora43: output: updates                                         0.0  B/s |   0  B     02:00
+2024-05-11 00:53:01.661334 +0000 build-fedora43: output: Errors during downloading metadata for repository 'updates':
+2024-05-11 00:53:01.661368 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.fi.muni.cz/pub/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.fi.muni.cz]
+2024-05-11 00:53:01.661400 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.netsite.dk/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netsite.dk]
+2024-05-11 00:53:01.661713 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.serverion.com/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.serverion.com]
+2024-05-11 00:53:01.661767 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.datacenter.by/pub/fedoraproject.org/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.datacenter.by]
+2024-05-11 00:53:01.661803 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.lysator.liu.se/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lysator.liu.se]
+2024-05-11 00:53:01.662058 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.lip6.fr/ftp/pub/linux/distributions/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lip6.fr]
+2024-05-11 00:53:01.662114 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ask4.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ask4.mm.fcix.net]
+2024-05-11 00:53:01.662158 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.lip6.fr/ftp/pub/linux/distributions/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lip6.fr]
+2024-05-11 00:53:01.662215 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.lysator.liu.se/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.lysator.liu.se]
+2024-05-11 00:53:01.662761 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.plusline.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.plusline.net]
+2024-05-11 00:53:01.662812 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.fau.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.fau.de]
+2024-05-11 00:53:01.662844 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.halifax.rwth-aachen.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.halifax.rwth-aachen.de]
+2024-05-11 00:53:01.663098 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.otenet.gr/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.otenet.gr]
+2024-05-11 00:53:01.663159 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://fedora-mirror02.rbc.ru/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora-mirror02.rbc.ru]
+2024-05-11 00:53:01.663227 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://creeperhost.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: creeperhost.mm.fcix.net]
+2024-05-11 00:53:01.663259 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://b4sh.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: b4sh.mm.fcix.net]
+2024-05-11 00:53:01.663526 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://b4sh.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: b4sh.mm.fcix.net]
+2024-05-11 00:53:01.663571 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.netzwerge.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netzwerge.de]
+2024-05-11 00:53:01.663601 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.upjs.sk/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.upjs.sk]
+2024-05-11 00:53:01.663632 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://fedora.mirror.wearetriple.com/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirror.wearetriple.com]
+2024-05-11 00:53:01.663662 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://fedora.ip-connect.info/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.ip-connect.info]
+2024-05-11 00:53:01.663894 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirrors.dotsrc.org/fedora-enchilada/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.dotsrc.org]
+2024-05-11 00:53:01.663944 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.fau.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.fau.de]
+2024-05-11 00:53:01.663974 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirrors.xtom.de/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.xtom.de]
+2024-05-11 00:53:01.664004 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.bahnhof.net/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.bahnhof.net]
+2024-05-11 00:53:01.664272 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ipng.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ipng.mm.fcix.net]
+2024-05-11 00:53:01.664318 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ask4.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ask4.mm.fcix.net]
+2024-05-11 00:53:01.664350 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://fr2.rpmfind.net/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fr2.rpmfind.net]
+2024-05-11 00:53:01.664573 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://divergentnetworks.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: divergentnetworks.mm.fcix.net]
+2024-05-11 00:53:01.664633 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ipng.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ipng.mm.fcix.net]
+2024-05-11 00:53:01.664665 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.dogado.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.dogado.de]
+2024-05-11 00:53:01.664696 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.init7.net/fedora/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.init7.net]
+2024-05-11 00:53:01.664930 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://distrib-coffee.ipsl.jussieu.fr/pub/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: distrib-coffee.ipsl.jussieu.fr]
+2024-05-11 00:53:01.664982 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirrors.dotsrc.org/fedora-enchilada/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.dotsrc.org]
+2024-05-11 00:53:01.665013 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.accum.se/mirror/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.accum.se]
+2024-05-11 00:53:01.665041 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://fedora.cu.be/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.cu.be]
+2024-05-11 00:53:01.665295 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.nl.leaseweb.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.nl.leaseweb.net]
+2024-05-11 00:53:01.665342 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.netzwerge.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netzwerge.de]
+2024-05-11 00:53:01.665373 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.plusline.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.plusline.net]
+2024-05-11 00:53:01.665590 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://www.fedora.is/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: www.fedora.is]
+2024-05-11 00:53:01.665636 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.23m.com/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.23m.com]
+2024-05-11 00:53:01.665668 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.netsite.dk/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.netsite.dk]
+2024-05-11 00:53:01.665700 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://fedora.mirror.wearetriple.com/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirror.wearetriple.com]
+2024-05-11 00:53:01.665904 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://www.nic.funet.fi/pub/mirrors/fedora.redhat.com/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: www.nic.funet.fi]
+2024-05-11 00:53:01.665950 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.it4i.cz/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.it4i.cz]
+2024-05-11 00:53:01.665995 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.bahnhof.net/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.bahnhof.net]
+2024-05-11 00:53:01.666026 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.linux.org.tr/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.linux.org.tr]
+2024-05-11 00:53:01.666292 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.datacenter.by/pub/fedoraproject.org/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.datacenter.by]
+2024-05-11 00:53:01.666343 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp-stud.hs-esslingen.de/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp-stud.hs-esslingen.de]
+2024-05-11 00:53:01.666375 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.halifax.rwth-aachen.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.halifax.rwth-aachen.de]
+2024-05-11 00:53:01.666405 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://level66.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: level66.mm.fcix.net]
+2024-05-11 00:53:01.666662 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.serverion.com/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.serverion.com]
+2024-05-11 00:53:01.666707 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.23m.com/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.23m.com]
+2024-05-11 00:53:01.666737 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.it4i.cz/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.it4i.cz]
+2024-05-11 00:53:01.666946 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.linux.org.tr/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.linux.org.tr]
+2024-05-11 00:53:01.666993 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://fedora.mirrorservice.org/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirrorservice.org]
+2024-05-11 00:53:01.667026 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.library.ucy.ac.cy/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.library.ucy.ac.cy]
+2024-05-11 00:53:01.667058 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp-stud.hs-esslingen.de/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp-stud.hs-esslingen.de]
+2024-05-11 00:53:01.667290 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://ftp.upjs.sk/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.upjs.sk]
+2024-05-11 00:53:01.667337 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://fedora.ip-connect.info/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.ip-connect.info]
+2024-05-11 00:53:01.667372 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.in2p3.fr/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.in2p3.fr]
+2024-05-11 00:53:01.667589 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirrors.xtom.de/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirrors.xtom.de]
+2024-05-11 00:53:01.667635 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.init7.net/fedora/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.init7.net]
+2024-05-11 00:53:01.667667 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://ftp.nluug.nl/pub/os/Linux/distr/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: ftp.nluug.nl]
+2024-05-11 00:53:01.667697 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.accum.se/mirror/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.accum.se]
+2024-05-11 00:53:01.667917 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.slu.cz/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.slu.cz]
+2024-05-11 00:53:01.667965 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.karneval.cz/pub/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.karneval.cz]
+2024-05-11 00:53:01.668001 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://divergentnetworks.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: divergentnetworks.mm.fcix.net]
+2024-05-11 00:53:01.668031 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://mirror.dogado.de/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.dogado.de]
+2024-05-11 00:53:01.668062 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://fedora.mirrorservice.org/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.mirrorservice.org]
+2024-05-11 00:53:01.668291 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://creeperhost.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: creeperhost.mm.fcix.net]
+2024-05-11 00:53:01.668339 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.de.leaseweb.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.de.leaseweb.net]
+2024-05-11 00:53:01.668373 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://mirror.in2p3.fr/pub/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: mirror.in2p3.fr]
+2024-05-11 00:53:01.668404 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://level66.mm.fcix.net/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: level66.mm.fcix.net]
+2024-05-11 00:53:01.668720 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://repo.hyron.dev/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: repo.hyron.dev]
+2024-05-11 00:53:01.668766 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://fedora.cu.be/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fedora.cu.be]
+2024-05-11 00:53:01.668797 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for http://www.fedora.is/fedora/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: www.fedora.is]
+2024-05-11 00:53:01.668968 +0000 build-fedora43: output:   - Curl error (6): Couldn't resolve host name for https://fr2.rpmfind.net/linux/fedora/linux/updates/40/Everything/x86_64/repodata/repomd.xml [Could not resolve host: fr2.rpmfind.net]
+2024-05-11 00:53:01.669001 +0000 build-fedora43: output: Error: Failed to download metadata for repo 'updates': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried
+2024-05-11 00:53:01.669018 +0000 build-fedora43: output: 
+2024-05-11 00:53:05.148964 +0000 > closing log
