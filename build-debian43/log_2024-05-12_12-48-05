@@ -1,0 +1,32 @@
+2024-05-12 12:48:05.836418 +0000 > starting log
+2024-05-12 12:48:05.837577 +0000 build-debian43: > starting build with log
+2024-05-12 12:48:05.837595 +0000 build-debian43: >> args:
+2024-05-12 12:48:05.837604 +0000 build-debian43: >>   ()
+2024-05-12 12:48:05.837610 +0000 build-debian43: >> component:
+2024-05-12 12:48:05.837617 +0000 build-debian43: >>   vmm-xen-stubdom-linux
+2024-05-12 12:48:05.837627 +0000 build-debian43: >>     commit-hash: e8d523f11e875b7cc373533bd880a23c39889c40
+2024-05-12 12:48:07.164636 +0000 build-debian43: >>     source-hash: fb662767c3c2991a22a078151affb01c1687a82e8b66a29721d0baaf597ef2ad1bab41c166e5ce0907afc32e5939190ffa445cc4fe6fdf035e4b37f7fcc90804
+2024-05-12 12:48:07.164720 +0000 build-debian43: >> distributions:
+2024-05-12 12:48:07.164762 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-05-12 12:48:07.178750 +0000 build-debian43: vmm-xen-stubdom-linux: source already fetched. Updating.
+2024-05-12 12:48:39.471121 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6742 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-05-12 12:48:43.466002 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6742 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-12 12:48:43.876540 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6742 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git /builder/vmm-xen-stubdom-linux /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-05-12 12:48:54.874660 +0000 build-debian43: output: --> Verifying tags...
+2024-05-12 12:48:54.874723 +0000 build-debian43: output: ---> Good tag 8f95559ca92c8aea97dc033ab3bd573b5835536f.
+2024-05-12 12:48:54.874733 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-05-12 12:48:54.874740 +0000 build-debian43: output: --> Merging...
+2024-05-12 12:48:54.874746 +0000 build-debian43: output: --> Updating submodules
+2024-05-12 12:48:55.071192 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6742 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-05-12 12:49:06.442412 +0000 build-debian43: vmm-xen-stubdom-linux: file qemu-8.1.2.tar.xz already downloaded. Skipping.
+2024-05-12 12:49:06.442962 +0000 build-debian43: vmm-xen-stubdom-linux: file linux-5.10.200.tar already downloaded. Skipping.
+2024-05-12 12:49:06.443611 +0000 build-debian43: vmm-xen-stubdom-linux: file busybox-1.31.1.tar.bz2 already downloaded. Skipping.
+2024-05-12 12:49:06.443655 +0000 build-debian43: vmm-xen-stubdom-linux: file pulseaudio-14.2.tar.xz already downloaded. Skipping.
+2024-05-12 12:49:06.444388 +0000 build-debian43: vmm-xen-stubdom-linux: file libusb-1.0.23.tar.bz2 already downloaded. Skipping.
+2024-05-12 12:49:06.595713 +0000 build-debian43: ['cd -- /builder', "git -C /builder/vmm-xen-stubdom-linux rev-parse 'HEAD^{}' >> hash", "git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list 'v*' >> vtags"]
+2024-05-12 12:49:40.346112 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp57 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen--stubdom--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/vmm-xen-stubdom-linux
+2024-05-12 12:49:41.303481 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp57 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/vmm-xen-stubdom-linux rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-05-12 12:49:45.461572 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp57 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmppiuq03qg
+2024-05-12 12:49:46.916867 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp57 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmppiuq03qg
+2024-05-12 12:50:11.988701 +0000 build-debian43: > done
+2024-05-12 12:50:11.988750 +0000 > closing log
