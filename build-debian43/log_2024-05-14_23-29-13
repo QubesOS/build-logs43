@@ -1,0 +1,26 @@
+2024-05-14 23:29:13.686794 +0000 > starting log
+2024-05-14 23:29:13.687067 +0000 build-debian43: > starting build with log
+2024-05-14 23:29:13.687110 +0000 build-debian43: >> args:
+2024-05-14 23:29:13.687120 +0000 build-debian43: >>   ()
+2024-05-14 23:29:13.687127 +0000 build-debian43: >> component:
+2024-05-14 23:29:13.687134 +0000 build-debian43: >>   repo-templates
+2024-05-14 23:29:13.687143 +0000 build-debian43: >>     commit-hash: d7673851d15e7ae287fa3a9c6dec64908dff3b7d
+2024-05-14 23:29:13.687154 +0000 build-debian43: >>     source-hash: 72d8a1fbb4381d5da7b06756982eda696942fe9cb240b0557aa0b3fcea6967a61e83a74093ed51ccb8664c30527858aa3558e16c1fd4abaaa91890f76dd52d1b
+2024-05-14 23:29:13.687160 +0000 build-debian43: >> distributions:
+2024-05-14 23:29:13.687168 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-05-14 23:29:13.687175 +0000 build-debian43: repo-templates: source already fetched. Updating.
+2024-05-14 23:29:31.050128 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp198 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepo--templates /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/repo-templates
+2024-05-14 23:29:31.317208 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp198 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-14 23:29:31.490268 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp198 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-repo-templates.git /builder/repo-templates /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-05-14 23:29:53.468242 +0000 build-debian43: output: --> Verifying tags...
+2024-05-14 23:29:53.468299 +0000 build-debian43: output: ---> Good tag 89405ec5360bb307f1dcb463310d8267f7559aa4.
+2024-05-14 23:29:53.468316 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-05-14 23:29:53.468327 +0000 build-debian43: output: --> Merging...
+2024-05-14 23:29:53.484865 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp198 qubesbuilder.FileCopyOut+-2Fbuilder-2Frepo--templates /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-05-14 23:29:57.358140 +0000 build-debian43: ['cd -- /builder', "git -C /builder/repo-templates rev-parse 'HEAD^{}' >> hash", "git -C /builder/repo-templates tag --points-at HEAD --list 'v*' >> vtags"]
+2024-05-14 23:30:20.568321 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9294 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepo--templates /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/repo-templates
+2024-05-14 23:30:21.175605 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9294 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/repo-templates rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/repo-templates tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-05-14 23:30:21.413652 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9294 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp0covdwb5
+2024-05-14 23:30:21.610240 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9294 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp0covdwb5
+2024-05-14 23:30:25.101902 +0000 build-debian43: > done
+2024-05-14 23:30:25.101948 +0000 > closing log
