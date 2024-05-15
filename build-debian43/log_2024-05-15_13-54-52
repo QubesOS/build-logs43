@@ -1,0 +1,114 @@
+2024-05-15 13:54:52.394033 +0000 > starting log
+2024-05-15 13:54:52.394362 +0000 build-debian43: > starting build with log
+2024-05-15 13:54:52.394380 +0000 build-debian43: >> args:
+2024-05-15 13:54:52.394388 +0000 build-debian43: >>   ()
+2024-05-15 13:54:52.394395 +0000 build-debian43: >> component:
+2024-05-15 13:54:52.394401 +0000 build-debian43: >>   desktop-linux-i3
+2024-05-15 13:54:52.394409 +0000 build-debian43: >>     commit-hash: cc33ef11bb99061a98dc3acf8a73c56ab5f9855e
+2024-05-15 13:54:52.394420 +0000 build-debian43: >>     source-hash: c1f0e5c329b2460293604d52b0dce630b245be3d896531d8c3ee2b2d529c0186fa3fa358a42b3c81d21f73cdfe73c5abfeda840ad668fc7eb10168d9a1ffba6a
+2024-05-15 13:54:52.394426 +0000 build-debian43: >> distributions:
+2024-05-15 13:54:52.394435 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-05-15 13:54:52.394442 +0000 build-debian43: desktop-linux-i3: source already fetched. Updating.
+2024-05-15 13:54:59.808629 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6967 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--i3 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/desktop-linux-i3
+2024-05-15 13:55:00.200508 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6967 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-15 13:55:00.342823 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6967 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-desktop-linux-i3.git /builder/desktop-linux-i3 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-05-15 13:55:21.943950 +0000 build-debian43: output: --> Verifying tags...
+2024-05-15 13:55:21.944015 +0000 build-debian43: output: ---> Good tag 2f3a142ce4cf7faf8452b5cfff10e2bc37c998cd.
+2024-05-15 13:55:21.944035 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-05-15 13:55:21.944049 +0000 build-debian43: output: --> Merging...
+2024-05-15 13:55:21.960353 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6967 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--i3 /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-05-15 13:55:31.246258 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2396 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--i3 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/desktop-linux-i3
+2024-05-15 13:55:31.560765 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2396 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-15 13:55:31.720655 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2396 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/desktop-linux-i3 --file-name i3-4.23.tar.xz --file-url https://i3wm.org/downloads/i3-4.23.tar.xz''.
+2024-05-15 13:55:31.883543 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-05-15 13:55:31.883597 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/desktop-linux-i3 --file-name i3-4.23.tar.xz --file-url https://i3wm.org/downloads/i3-4.23.tar.xz
+2024-05-15 13:55:31.884509 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/desktop-linux-i3'\'' --file-name '\''i3-4.23.tar.xz'\'' --file-url '\''https://i3wm.org/downloads/i3-4.23.tar.xz'\'' --'
+2024-05-15 13:55:31.884564 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/desktop-linux-i3'\'' --file-name '\''i3-4.23.tar.xz'\'' --file-url '\''https://i3wm.org/downloads/i3-4.23.tar.xz'\'' --'
+2024-05-15 13:55:31.884576 +0000 build-debian43: output: ++ set -- --output-dir /builder/desktop-linux-i3 --file-name i3-4.23.tar.xz --file-url https://i3wm.org/downloads/i3-4.23.tar.xz --
+2024-05-15 13:55:31.884585 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-05-15 13:55:31.884591 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:31.884599 +0000 build-debian43: output: + OUTPUT_DIR=/builder/desktop-linux-i3
+2024-05-15 13:55:31.884605 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884611 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884616 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-05-15 13:55:31.884622 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:31.884628 +0000 build-debian43: output: + FILE_NAME=i3-4.23.tar.xz
+2024-05-15 13:55:31.884633 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884639 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884645 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-05-15 13:55:31.884650 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:31.884657 +0000 build-debian43: output: + FILE_URL=https://i3wm.org/downloads/i3-4.23.tar.xz
+2024-05-15 13:55:31.884662 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884668 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884673 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-05-15 13:55:31.884679 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:31.884753 +0000 build-debian43: output: + shift
+2024-05-15 13:55:31.884768 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-05-15 13:55:31.884776 +0000 build-debian43: output: + '[' -z https://i3wm.org/downloads/i3-4.23.tar.xz ']'
+2024-05-15 13:55:31.884786 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-05-15 13:55:31.884792 +0000 build-debian43: output: + '[' -z i3-4.23.tar.xz ']'
+2024-05-15 13:55:31.884799 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_i3-4.23.tar.xz
+2024-05-15 13:55:31.884805 +0000 build-debian43: output: + '[' -n /builder/desktop-linux-i3 ']'
+2024-05-15 13:55:31.884811 +0000 build-debian43: output: + mkdir -p /builder/desktop-linux-i3
+2024-05-15 13:55:31.886866 +0000 build-debian43: output: + cd /builder/desktop-linux-i3
+2024-05-15 13:55:31.886904 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_i3-4.23.tar.xz -- https://i3wm.org/downloads/i3-4.23.tar.xz
+2024-05-15 13:55:53.410475 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-05-15 13:55:53.410542 +0000 build-debian43: output: + '[' -n '' ']'
+2024-05-15 13:55:53.415723 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2396 qubesbuilder.FileCopyOut+-2Fbuilder-2Fdesktop--linux--i3-2Funtrusted_i3--4.23.tar.xz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp22365e_t
+2024-05-15 13:55:55.878249 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp22365e_t --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512'.
+2024-05-15 13:55:55.880646 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-05-15 13:55:55.880714 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp22365e_t --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512
+2024-05-15 13:55:55.882163 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp22365e_t'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512'\'' --'
+2024-05-15 13:55:55.882206 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp22365e_t'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512'\'' --'
+2024-05-15 13:55:55.882221 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp22365e_t --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512 --
+2024-05-15 13:55:55.882228 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-05-15 13:55:55.882234 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-05-15 13:55:55.882240 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:55.882247 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp22365e_t
+2024-05-15 13:55:55.882253 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882259 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882265 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-05-15 13:55:55.882271 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:55.882278 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz
+2024-05-15 13:55:55.882284 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882289 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882294 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-05-15 13:55:55.882300 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:55.882306 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-05-15 13:55:55.882312 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882318 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882324 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-05-15 13:55:55.882330 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:55.882338 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512
+2024-05-15 13:55:55.882344 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882349 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882355 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-05-15 13:55:55.882360 +0000 build-debian43: output: + case "$1" in
+2024-05-15 13:55:55.882365 +0000 build-debian43: output: + shift
+2024-05-15 13:55:55.882371 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-05-15 13:55:55.882378 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz ']'
+2024-05-15 13:55:55.882385 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp22365e_t ']'
+2024-05-15 13:55:55.882392 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp22365e_t
+2024-05-15 13:55:55.884269 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz
+2024-05-15 13:55:55.884300 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_i3-4.23.tar.xz
+2024-05-15 13:55:55.884500 +0000 build-debian43: output: + FILE_NAME=i3-4.23.tar.xz
+2024-05-15 13:55:55.884527 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512 ']'
+2024-05-15 13:55:55.884552 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512 ']'
+2024-05-15 13:55:55.884562 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512 ']'
+2024-05-15 13:55:55.884568 +0000 build-debian43: output: + '[' -n '' ']'
+2024-05-15 13:55:55.884574 +0000 build-debian43: output: + '[' -z '' ']'
+2024-05-15 13:55:55.884580 +0000 build-debian43: output: + '[' -n '' ']'
+2024-05-15 13:55:55.884653 +0000 build-debian43: output: + '[' -n '' ']'
+2024-05-15 13:55:55.884667 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512 ']'
+2024-05-15 13:55:55.884674 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-05-15 13:55:55.884681 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-05-15 13:55:55.886463 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/desktop-linux-i3/i3-4.23.tar.xz.sha512
+2024-05-15 13:55:55.886496 +0000 build-debian43: output: ++ printf '%s  -\n' 342bd6e9ff952dd2408c9af6e79e0279cb5e7388a510dd461be84a82a5fbedb92fa35065d4b76fd88e392026f2eb4979160891ae468f421935fe5922f58a66ba
+2024-05-15 13:55:55.898565 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp22365e_t/untrusted_i3-4.23.tar.xz /home/user/builder-r4.3-debian/tmp/tmp22365e_t/i3-4.23.tar.xz
+2024-05-15 13:55:55.913595 +0000 build-debian43: ['cd -- /builder', "git -C /builder/desktop-linux-i3 rev-parse 'HEAD^{}' >> hash", "git -C /builder/desktop-linux-i3 tag --points-at HEAD --list 'v*' >> vtags"]
+2024-05-15 13:56:03.090072 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8317 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdesktop--linux--i3 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/desktop-linux-i3
+2024-05-15 13:56:03.428372 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp8317 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/desktop-linux-i3 rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/desktop-linux-i3 tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-05-15 13:56:03.604613 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8317 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpbuxt1s1h
+2024-05-15 13:56:03.784831 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8317 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpbuxt1s1h
+2024-05-15 13:56:05.767584 +0000 build-debian43: > done
+2024-05-15 13:56:05.767628 +0000 > closing log
