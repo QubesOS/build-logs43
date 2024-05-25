@@ -1,0 +1,26 @@
+2024-05-25 03:15:33.051338 +0000 > starting log
+2024-05-25 03:15:33.051554 +0000 build-debian43: > starting build with log
+2024-05-25 03:15:33.051571 +0000 build-debian43: >> args:
+2024-05-25 03:15:33.051579 +0000 build-debian43: >>   ()
+2024-05-25 03:15:33.051585 +0000 build-debian43: >> component:
+2024-05-25 03:15:33.051592 +0000 build-debian43: >>   qubes-release
+2024-05-25 03:15:33.051599 +0000 build-debian43: >>     commit-hash: c84b2297ce49b93f225d51a9107c3fa0594736ec
+2024-05-25 03:15:33.051610 +0000 build-debian43: >>     source-hash: b841009515e5f76bac08c155d529a81da14af970ebbfa92f19b5db4943272174b3d2b564a42109651ff3d81833a7933132ed169796f49d89306fe020a83992d3
+2024-05-25 03:15:33.051616 +0000 build-debian43: >> distributions:
+2024-05-25 03:15:33.051624 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-05-25 03:15:33.051631 +0000 build-debian43: qubes-release: source already fetched. Updating.
+2024-05-25 03:15:45.363162 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4687 qubesbuilder.FileCopyIn+-2Fbuilder-2Fqubes--release /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/qubes-release
+2024-05-25 03:15:45.937221 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4687 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-25 03:15:46.138245 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4687 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-05-25 03:16:10.413111 +0000 build-debian43: output: --> Verifying tags...
+2024-05-25 03:16:10.413153 +0000 build-debian43: output: ---> Good tag 93617c0105566ec2523a477d920c7f4ac873e7b1.
+2024-05-25 03:16:10.413162 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-05-25 03:16:10.413169 +0000 build-debian43: output: --> Merging...
+2024-05-25 03:16:10.422773 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4687 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--release /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-05-25 03:16:12.524773 +0000 build-debian43: ['cd -- /builder', "git -C /builder/qubes-release rev-parse 'HEAD^{}' >> hash", "git -C /builder/qubes-release tag --points-at HEAD --list 'v*' >> vtags"]
+2024-05-25 03:16:20.994770 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9897 qubesbuilder.FileCopyIn+-2Fbuilder-2Fqubes--release /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/qubes-release
+2024-05-25 03:16:21.474621 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp9897 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/qubes-release rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/qubes-release tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-05-25 03:16:21.662297 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9897 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpt7y7b0hf
+2024-05-25 03:16:21.819551 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9897 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpt7y7b0hf
+2024-05-25 03:16:23.970920 +0000 build-debian43: > done
+2024-05-25 03:16:23.970963 +0000 > closing log
