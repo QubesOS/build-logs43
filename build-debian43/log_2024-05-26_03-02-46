@@ -1,0 +1,64 @@
+2024-05-26 03:02:46.451968 +0000 > starting log
+2024-05-26 03:02:46.452188 +0000 build-debian43: > starting build with log
+2024-05-26 03:02:46.452204 +0000 build-debian43: >> args:
+2024-05-26 03:02:46.452212 +0000 build-debian43: >>   ()
+2024-05-26 03:02:46.452218 +0000 build-debian43: >> component:
+2024-05-26 03:02:46.452225 +0000 build-debian43: >>   linux-kernel-latest
+2024-05-26 03:02:46.452232 +0000 build-debian43: >>     commit-hash: 25d51f8209e1cbe89ecab074d0c33ff1e4825121
+2024-05-26 03:02:46.452243 +0000 build-debian43: >>     source-hash: 5502a442dda2754aec5f8cff704322917212e3b88c2d7bfcb2029e15caa73655e7abec9c34b872ce5265dee4bb834af03e4e9afac9cd58fceba1f54a0a6daebd
+2024-05-26 03:02:46.452250 +0000 build-debian43: >> distributions:
+2024-05-26 03:02:46.452258 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-05-26 03:02:46.452264 +0000 build-debian43: linux-kernel-latest: source already fetched. Updating.
+2024-05-26 03:03:07.262991 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp219 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel--latest /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel-latest
+2024-05-26 03:03:10.381591 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp219 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-26 03:03:10.901806 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp219 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-kernel /builder/linux-kernel-latest /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-05-26 03:03:31.478085 +0000 build-debian43: output: --> Verifying tags...
+2024-05-26 03:03:31.478126 +0000 build-debian43: output: ---> Good tag f85bac8ab374c1d4cef75760dc096009756a0a2f.
+2024-05-26 03:03:31.478135 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-05-26 03:03:31.478142 +0000 build-debian43: output: --> Merging...
+2024-05-26 03:03:31.478149 +0000 build-debian43: output: --> Updating submodules
+2024-05-26 03:03:31.513591 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp219 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel--latest /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-05-26 03:03:48.789091 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4447 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel--latest /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel-latest
+2024-05-26 03:03:50.839027 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4447 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-26 03:03:51.024418 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp4447 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-kernel-latest --file-name linux-6.9.2.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.sign --uncompress''.
+2024-05-26 03:03:51.129423 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-05-26 03:03:51.129477 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-kernel-latest --file-name linux-6.9.2.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.sign --uncompress
+2024-05-26 03:03:51.131052 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/linux-kernel-latest'\'' --file-name '\''linux-6.9.2.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.sign'\'' --uncompress --'
+2024-05-26 03:03:51.131095 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/linux-kernel-latest'\'' --file-name '\''linux-6.9.2.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.sign'\'' --uncompress --'
+2024-05-26 03:03:51.131111 +0000 build-debian43: output: ++ set -- --output-dir /builder/linux-kernel-latest --file-name linux-6.9.2.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.sign --uncompress --
+2024-05-26 03:03:51.131118 +0000 build-debian43: output: + [[ 10 -gt 0 ]]
+2024-05-26 03:03:51.131125 +0000 build-debian43: output: + case "$1" in
+2024-05-26 03:03:51.131155 +0000 build-debian43: output: + OUTPUT_DIR=/builder/linux-kernel-latest
+2024-05-26 03:03:51.131163 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.131169 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.131174 +0000 build-debian43: output: + [[ 8 -gt 0 ]]
+2024-05-26 03:03:51.131180 +0000 build-debian43: output: + case "$1" in
+2024-05-26 03:03:51.133135 +0000 build-debian43: output: + FILE_NAME=linux-6.9.2.tar.xz
+2024-05-26 03:03:51.133168 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133176 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133183 +0000 build-debian43: output: + [[ 6 -gt 0 ]]
+2024-05-26 03:03:51.133188 +0000 build-debian43: output: + case "$1" in
+2024-05-26 03:03:51.133197 +0000 build-debian43: output: + FILE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz
+2024-05-26 03:03:51.133203 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133208 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133214 +0000 build-debian43: output: + [[ 4 -gt 0 ]]
+2024-05-26 03:03:51.133220 +0000 build-debian43: output: + case "$1" in
+2024-05-26 03:03:51.133229 +0000 build-debian43: output: + SIGNATURE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.sign
+2024-05-26 03:03:51.133235 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133241 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133246 +0000 build-debian43: output: + [[ 2 -gt 0 ]]
+2024-05-26 03:03:51.133252 +0000 build-debian43: output: + case "$1" in
+2024-05-26 03:03:51.133257 +0000 build-debian43: output: + UNCOMPRESS=1
+2024-05-26 03:03:51.133262 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133268 +0000 build-debian43: output: + shift
+2024-05-26 03:03:51.133273 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-05-26 03:03:51.133281 +0000 build-debian43: output: + '[' -z https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz ']'
+2024-05-26 03:03:51.133289 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-05-26 03:03:51.133295 +0000 build-debian43: output: + '[' -z linux-6.9.2.tar.xz ']'
+2024-05-26 03:03:51.133301 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.9.2.tar.xz
+2024-05-26 03:03:51.133309 +0000 build-debian43: output: + '[' -n /builder/linux-kernel-latest ']'
+2024-05-26 03:03:51.133315 +0000 build-debian43: output: + mkdir -p /builder/linux-kernel-latest
+2024-05-26 03:03:51.135886 +0000 build-debian43: output: + cd /builder/linux-kernel-latest
+2024-05-26 03:03:51.135927 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-6.9.2.tar.xz -- https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.2.tar.xz
+2024-05-26 03:03:57.109899 +0000 build-debian43: output: curl: (6) Could not resolve host: cdn.kernel.org
+2024-05-26 03:04:00.203883 +0000 > closing log
