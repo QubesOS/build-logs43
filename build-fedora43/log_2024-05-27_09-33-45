@@ -1,0 +1,556 @@
+2024-05-27 09:33:45.352827 +0000 > starting log
+2024-05-27 09:33:45.353034 +0000 build-fedora43: > starting build with log
+2024-05-27 09:33:45.353050 +0000 build-fedora43: >> args:
+2024-05-27 09:33:45.353058 +0000 build-fedora43: >>   ()
+2024-05-27 09:33:45.353064 +0000 build-fedora43: >> component:
+2024-05-27 09:33:45.353069 +0000 build-fedora43: >>   rpm-oxide
+2024-05-27 09:33:45.353077 +0000 build-fedora43: >>     commit-hash: 14424c843fb434856d8739e9c5def74174204115
+2024-05-27 09:33:45.353088 +0000 build-fedora43: >>     source-hash: 1b0da0b28cf88870237514afb475fbcf6df864241af6f096795c30616dbf3a71c2853f4cb5d755c01f7693bc64dc2736119e63737847d3ffc9e5eb8eb14a64f8
+2024-05-27 09:33:45.353094 +0000 build-fedora43: >> distributions:
+2024-05-27 09:33:45.353103 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-05-27 09:33:45.353111 +0000 build-fedora43: rpm-oxide:vm-fedora-40.x86_64: Source hash is the same than already prepared source. Skipping.
+2024-05-27 09:33:45.353120 +0000 build-fedora43: rpm-oxide:vm-fedora-40.x86_64: Cleaning local repository '/home/user/builder-r4.3-fedora/repository/vm-fc40' (all versions).
+2024-05-27 09:33:52.567275 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8035 qubesbuilder.FileCopyIn+-2Fbuilder-2Fbuild-2Fqubes--rpm--oxide--0.2.7--1.fc40.src.rpm /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/components/rpm-oxide/0.2.7-1/vm-fc40/prep/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm
+2024-05-27 09:33:53.067437 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8035 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcache-2Fmock /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/cache/chroot/fc40/mock
+2024-05-27 09:33:55.571335 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8035 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-05-27 09:33:55.696182 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8035 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_rpm /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_rpm
+2024-05-27 09:33:55.812642 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8035 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_rpm /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_rpm
+2024-05-27 09:33:55.909646 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8035 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--fc40 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/repository/vm-fc40
+2024-05-27 09:33:57.168672 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp8035 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=fc40 PACKAGE_SET=vm BIND_MOUNT_ENABLE=True bash -c 'cd /builder/repository && createrepo_c . && sudo chown -R user:mock /builder/build && sudo chown -R root:mock /builder/cache/mock && sudo --preserve-env=DIST,PACKAGE_SET,USE_QUBES_REPO_VERSION /usr/libexec/mock/mock --no-cleanup-after --rebuild /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm --root /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg --resultdir=/builder/build --isolation=nspawn --verbose --plugin-option=root_cache:age_check=False --no-clean && sudo --preserve-env=DIST,PACKAGE_SET,USE_QUBES_REPO_VERSION,BIND_MOUNT_ENABLE /usr/libexec/mock/mock --root /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg --chroot /plugins/build_rpm/scripts/rpmbuildinfo /builddir/build/SRPMS/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm > /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.x86_64.buildinfo && /builder/plugins/build_rpm/scripts/filter-packages-by-dist-arch /builder/build /builder/build/rpm fc40 x86_64''.
+2024-05-27 09:33:57.525561 +0000 build-fedora43: output: Directory walk started
+2024-05-27 09:33:57.525607 +0000 build-fedora43: output: Directory walk done - 209 packages
+2024-05-27 09:33:57.525616 +0000 build-fedora43: output: Temporary output repo path: ./.repodata/
+2024-05-27 09:33:57.525641 +0000 build-fedora43: output: Pool started (with 5 workers)
+2024-05-27 09:33:57.525648 +0000 build-fedora43: output: Pool finished
+2024-05-27 09:33:58.202527 +0000 build-fedora43: output: INFO: mock.py version 5.5 starting (python version = 3.12.3, NVR = mock-5.5-1.fc39), args: /usr/libexec/mock/mock --no-cleanup-after --rebuild /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm --root /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg --resultdir=/builder/build --isolation=nspawn --verbose --plugin-option=root_cache:age_check=False --no-clean
+2024-05-27 09:33:58.238806 +0000 build-fedora43: output: Start: init plugins
+2024-05-27 09:33:58.252905 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/yum_cache
+2024-05-27 09:33:58.256711 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/dnf_cache
+2024-05-27 09:33:58.262218 +0000 build-fedora43: output: INFO: selinux disabled
+2024-05-27 09:33:58.265861 +0000 build-fedora43: output: Finish: init plugins
+2024-05-27 09:33:58.293913 +0000 build-fedora43: output: INFO: Signal handler active
+2024-05-27 09:33:58.299386 +0000 build-fedora43: output: Start: run
+2024-05-27 09:33:58.299456 +0000 build-fedora43: output: DEBUG: mock final configuration:
+2024-05-27 09:33:58.349677 +0000 build-fedora43: output: DEBUG:     _aliases:  {'yum.conf': 'dnf.conf', 'dnf5.conf': 'dnf.conf'}
+2024-05-27 09:33:58.349849 +0000 build-fedora43: output: DEBUG:     config_paths:  ['/builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg', '/etc/mock/site-defaults.cfg', '/etc/mock/chroot-aliases.cfg']
+2024-05-27 09:33:58.349865 +0000 build-fedora43: output: DEBUG:     version:  5.5
+2024-05-27 09:33:58.349874 +0000 build-fedora43: output: DEBUG:     basedir:  /builder/build
+2024-05-27 09:33:58.349881 +0000 build-fedora43: output: DEBUG:     resultdir:  /builder/build
+2024-05-27 09:33:58.349889 +0000 build-fedora43: output: DEBUG:     rootdir:  /builder/build/fedora-40-x86_64/root
+2024-05-27 09:33:58.349899 +0000 build-fedora43: output: DEBUG:     cache_topdir:  /builder/cache/mock
+2024-05-27 09:33:58.349905 +0000 build-fedora43: output: DEBUG:     clean:  False
+2024-05-27 09:33:58.349912 +0000 build-fedora43: output: DEBUG:     check:  True
+2024-05-27 09:33:58.349919 +0000 build-fedora43: output: DEBUG:     post_install:  False
+2024-05-27 09:33:58.349941 +0000 build-fedora43: output: DEBUG:     chroothome:  /builddir
+2024-05-27 09:33:58.349949 +0000 build-fedora43: output: DEBUG:     log_config_file:  logging.ini
+2024-05-27 09:33:58.350067 +0000 build-fedora43: output: DEBUG:     rpmbuild_timeout:  0
+2024-05-27 09:33:58.350154 +0000 build-fedora43: output: DEBUG:     host_arch:  x86_64
+2024-05-27 09:33:58.350167 +0000 build-fedora43: output: DEBUG:     chrootuid:  1000
+2024-05-27 09:33:58.350174 +0000 build-fedora43: output: DEBUG:     chrootgid:  135
+2024-05-27 09:33:58.350180 +0000 build-fedora43: output: DEBUG:     chrootgroup:  mock
+2024-05-27 09:33:58.350262 +0000 build-fedora43: output: DEBUG:     chrootuser:  mockbuild
+2024-05-27 09:33:58.350275 +0000 build-fedora43: output: DEBUG:     build_log_fmt_name:  unadorned
+2024-05-27 09:33:58.350283 +0000 build-fedora43: output: DEBUG:     root_log_fmt_name:  detailed
+2024-05-27 09:33:58.350290 +0000 build-fedora43: output: DEBUG:     state_log_fmt_name:  state
+2024-05-27 09:33:58.350297 +0000 build-fedora43: output: DEBUG:     online:  True
+2024-05-27 09:33:58.350377 +0000 build-fedora43: output: DEBUG:     isolation:  None
+2024-05-27 09:33:58.350389 +0000 build-fedora43: output: DEBUG:     use_nspawn:  None
+2024-05-27 09:33:58.350397 +0000 build-fedora43: output: DEBUG:     rpmbuild_networking:  False
+2024-05-27 09:33:58.350424 +0000 build-fedora43: output: DEBUG:     nspawn_args:  ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.bwr6aw82:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/fuse', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+2024-05-27 09:33:58.350530 +0000 build-fedora43: output: DEBUG:     use_container_host_hostname:  True
+2024-05-27 09:33:58.350544 +0000 build-fedora43: output: DEBUG:     use_bootstrap:  False
+2024-05-27 09:33:58.350553 +0000 build-fedora43: output: DEBUG:     use_bootstrap_image:  True
+2024-05-27 09:33:58.350560 +0000 build-fedora43: output: DEBUG:     bootstrap_image:  fedora:latest
+2024-05-27 09:33:58.350566 +0000 build-fedora43: output: DEBUG:     bootstrap_image_ready:  False
+2024-05-27 09:33:58.350643 +0000 build-fedora43: output: DEBUG:     bootstrap_image_fallback:  True
+2024-05-27 09:33:58.350656 +0000 build-fedora43: output: DEBUG:     bootstrap_image_keep_getting:  120
+2024-05-27 09:33:58.350663 +0000 build-fedora43: output: DEBUG:     internal_dev_setup:  True
+2024-05-27 09:33:58.350746 +0000 build-fedora43: output: DEBUG:     cleanup_on_success:  False
+2024-05-27 09:33:58.350759 +0000 build-fedora43: output: DEBUG:     cleanup_on_failure:  False
+2024-05-27 09:33:58.350767 +0000 build-fedora43: output: DEBUG:     exclude_from_homedir_cleanup:  ['build/SOURCES', '.bash_history', '.bashrc']
+2024-05-27 09:33:58.350842 +0000 build-fedora43: output: DEBUG:     createrepo_on_rpms:  False
+2024-05-27 09:33:58.350856 +0000 build-fedora43: output: DEBUG:     createrepo_command:  /usr/bin/createrepo_c -d -q -x *.src.rpm
+2024-05-27 09:33:58.350864 +0000 build-fedora43: output: DEBUG:     tar_binary:  /bin/tar
+2024-05-27 09:33:58.350870 +0000 build-fedora43: output: DEBUG:     tar:  gnutar
+2024-05-27 09:33:58.350944 +0000 build-fedora43: output: DEBUG:     backup_on_clean:  False
+2024-05-27 09:33:58.350958 +0000 build-fedora43: output: DEBUG:     backup_base_dir:  /builder/build/backup
+2024-05-27 09:33:58.350966 +0000 build-fedora43: output: DEBUG:     redhat_subscription_required:  False
+2024-05-27 09:33:58.350972 +0000 build-fedora43: output: DEBUG:     ssl_ca_bundle_path:  None
+2024-05-27 09:33:58.351050 +0000 build-fedora43: output: DEBUG:     ssl_extra_certs:  None
+2024-05-27 09:33:58.351135 +0000 build-fedora43: output: DEBUG:     plugins:  ['tmpfs', 'root_cache', 'yum_cache', 'mount', 'bind_mount', 'ccache', 'selinux', 'package_state', 'chroot_scan', 'lvm_root', 'compress_logs', 'sign', 'pm_request', 'hw_info', 'procenv', 'showrc', 'rpkg_preprocessor', 'rpmautospec', '__init__', 'overlayfs']
+2024-05-27 09:33:58.351150 +0000 build-fedora43: output: DEBUG:     plugin_dir:  /usr/lib/python3.12/site-packages/mockbuild/plugins
+2024-05-27 09:33:58.351832 +0000 build-fedora43: output: DEBUG:     plugin_conf:  {'ccache_enable': False, 'ccache_opts': {'max_cache_size': '4G', 'compress': None, 'dir': '/builder/cache/mock/fedora-40-x86_64/ccache/u1000/', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'yum_cache_enable': True, 'yum_cache_opts': {'max_age_days': 30, 'max_metadata_age_days': 30, 'online': True, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'root_cache_enable': True, 'root_cache_opts': {'age_check': False, 'max_age_days': 15, 'dir': '/builder/cache/mock/fedora-40-x86_64/root_cache/', 'compress_program': 'pigz', 'decompress_program': None, 'exclude_dirs': ['./proc', './sys', './dev', './tmp/ccache', './var/cache/yum', './var/cache/dnf', './var/log'], 'extension': '.gz', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'bind_mount_enable': False, 'bind_mount_opts': {'dirs': [('/builder/plugins', '/plugins')], 'create_dirs': False, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'mount_enable': True, 'mount_opts': {'dirs': [], 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'tmpfs_enable': False, 'tmpfs_opts': {'required_ram_mb': 900, 'max_fs_size': None, 'mode': '0755', 'keep_mounted': False, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'selinux_enable': True, 'selinux_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'package_state_enable': True, 'package_state_opts': {'available_pkgs': False, 'installed_pkgs': True, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'pm_request_enable': False, 'pm_request_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'lvm_root_enable': False, 'lvm_root_opts': {'pool_name': 'mockbuild', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'chroot_scan_enable': False, 'chroot_scan_opts': {'regexes': ['^[^k]?core(\\.\\d+)?$', '\\.log$'], 'only_failed': True, 'write_tar': False, 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'sign_enable': False, 'sign_opts': {'cmd': 'rpmsign', 'opts': '--addsign %(rpms)s', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'hw_info_enable': True, 'hw_info_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'procenv_enable': False, 'procenv_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'showrc_enable': False, 'showrc_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'compress_logs_enable': False, 'compress_logs_opts': {'command': 'gzip', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'rpkg_preprocessor_enable': False, 'rpkg_preprocessor_opts': {'requires': ['preproc-rpmspec'], 'cmd': '/usr/bin/preproc-rpmspec %(source_spec)s --output %(target_spec)s', 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'rpmautospec_enable': False, 'rpmautospec_opts': {'requires': ['rpmautospec'], 'cmd_base': ['/usr/bin/rpmautospec', 'process-distgit'], 'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, '__init___enable': False, '__init___opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}, 'overlayfs_enable': False, 'overlayfs_opts': {'basedir': '/builder/build/fedora-40-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-40-x86_64', 'root': 'fedora-40-x86_64', 'resultdir': '/builder/build'}}
+2024-05-27 09:33:58.351948 +0000 build-fedora43: output: DEBUG:     environment:  {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}
+2024-05-27 09:33:58.351962 +0000 build-fedora43: output: DEBUG:     scm:  False
+2024-05-27 09:33:58.351987 +0000 build-fedora43: output: DEBUG:     scm_opts:  {'method': 'git', 'cvs_get': 'cvs -d /srv/cvs co SCM_BRN SCM_PKG', 'git_get': 'git clone SCM_BRN git://localhost/SCM_PKG.git SCM_PKG', 'svn_get': 'svn co file:///srv/svn/SCM_PKG/SCM_BRN SCM_PKG', 'distgit_get': 'rpkg clone -a --branch SCM_BRN SCM_PKG SCM_PKG', 'distgit_src_get': 'rpkg sources', 'spec': 'SCM_PKG.spec', 'int_src_dir': None, 'ext_src_dir': '/dev/null', 'write_tar': False, 'git_timestamps': False, 'exclude_vcs': True}
+2024-05-27 09:33:58.351995 +0000 build-fedora43: output: DEBUG:     use_host_resolv:  False
+2024-05-27 09:33:58.352003 +0000 build-fedora43: output: DEBUG:     chroot_setup_cmd:  install @buildsys-build
+2024-05-27 09:33:58.352013 +0000 build-fedora43: output: DEBUG:     repo_arch:  x86_64
+2024-05-27 09:33:58.352019 +0000 build-fedora43: output: DEBUG:     repo_arch_map:  {}
+2024-05-27 09:33:58.352025 +0000 build-fedora43: output: DEBUG:     target_arch:  x86_64
+2024-05-27 09:33:58.352031 +0000 build-fedora43: output: DEBUG:     releasever:  40
+2024-05-27 09:33:58.352038 +0000 build-fedora43: output: DEBUG:     rpmbuild_arch:  x86_64
+2024-05-27 09:33:58.352044 +0000 build-fedora43: output: DEBUG:     dnf_vars:  {}
+2024-05-27 09:33:58.352052 +0000 build-fedora43: output: DEBUG:     yum_builddep_opts:  []
+2024-05-27 09:33:58.352059 +0000 build-fedora43: output: DEBUG:     yum_common_opts:  []
+2024-05-27 09:33:58.352065 +0000 build-fedora43: output: DEBUG:     update_before_build:  True
+2024-05-27 09:33:58.352071 +0000 build-fedora43: output: DEBUG:     priorities.conf:
+2024-05-27 09:33:58.352077 +0000 build-fedora43: output: [main]
+2024-05-27 09:33:58.352082 +0000 build-fedora43: output: enabled=0
+2024-05-27 09:33:58.352088 +0000 build-fedora43: output: DEBUG:     rhnplugin.conf:
+2024-05-27 09:33:58.352094 +0000 build-fedora43: output: [main]
+2024-05-27 09:33:58.352193 +0000 build-fedora43: output: enabled=0
+2024-05-27 09:33:58.352213 +0000 build-fedora43: output: DEBUG:     subscription-manager.conf:
+2024-05-27 09:33:58.352220 +0000 build-fedora43: output: DEBUG:     more_buildreqs:  {}
+2024-05-27 09:33:58.352226 +0000 build-fedora43: output: DEBUG:     nosync:  False
+2024-05-27 09:33:58.352233 +0000 build-fedora43: output: DEBUG:     nosync_force:  False
+2024-05-27 09:33:58.352245 +0000 build-fedora43: output: DEBUG:     files:  {'etc/hosts': '127.0.0.1 localhost localhost.localdomain\n::1       localhost localhost.localdomain localhost6 localhost6.localdomain6\n'}
+2024-05-27 09:33:58.352262 +0000 build-fedora43: output: DEBUG:     macros:  {'%_topdir': '/builddir/build', '%_rpmfilename': '%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm', '%_buildhost': 'reproducible', '%clamp_mtime_to_source_date_epoch': '1', '%source_date_epoch_from_changelog': '1', '%use_source_date_epoch_as_buildtime': '1', '%_platform_multiplier': 1}
+2024-05-27 09:33:58.352270 +0000 build-fedora43: output: DEBUG:     hostname:  None
+2024-05-27 09:33:58.352277 +0000 build-fedora43: output: DEBUG:     module_enable:  []
+2024-05-27 09:33:58.352368 +0000 build-fedora43: output: DEBUG:     module_install:  []
+2024-05-27 09:33:58.352381 +0000 build-fedora43: output: DEBUG:     module_setup_commands:  []
+2024-05-27 09:33:58.352389 +0000 build-fedora43: output: DEBUG:     forcearch:  None
+2024-05-27 09:33:58.352397 +0000 build-fedora43: output: DEBUG:     bootstrap_chroot_additional_packages:  []
+2024-05-27 09:33:58.352404 +0000 build-fedora43: output: DEBUG:     bootstrap_module_enable:  []
+2024-05-27 09:33:58.352477 +0000 build-fedora43: output: DEBUG:     bootstrap_module_install:  []
+2024-05-27 09:33:58.352490 +0000 build-fedora43: output: DEBUG:     bootstrap_module_setup_commands:  []
+2024-05-27 09:33:58.352504 +0000 build-fedora43: output: DEBUG:     no_root_shells:  False
+2024-05-27 09:33:58.352512 +0000 build-fedora43: output: DEBUG:     extra_chroot_dirs:  ['/run/lock']
+2024-05-27 09:33:58.352522 +0000 build-fedora43: output: DEBUG:     package_manager:  dnf
+2024-05-27 09:33:58.352595 +0000 build-fedora43: output: DEBUG:     package_manager_max_attempts:  1
+2024-05-27 09:33:58.352609 +0000 build-fedora43: output: DEBUG:     package_manager_attempt_delay:  10
+2024-05-27 09:33:58.352616 +0000 build-fedora43: output: DEBUG:     dynamic_buildrequires:  True
+2024-05-27 09:33:58.352624 +0000 build-fedora43: output: DEBUG:     dynamic_buildrequires_max_loops:  10
+2024-05-27 09:33:58.352630 +0000 build-fedora43: output: DEBUG:     external_buildrequires:  False
+2024-05-27 09:33:58.352708 +0000 build-fedora43: output: DEBUG:     dev_loop_count:  12
+2024-05-27 09:33:58.352721 +0000 build-fedora43: output: DEBUG:     yum_command:  /usr/bin/yum
+2024-05-27 09:33:58.352729 +0000 build-fedora43: output: DEBUG:     system_yum_command:  /usr/bin/yum
+2024-05-27 09:33:58.352736 +0000 build-fedora43: output: DEBUG:     yum_install_command:  install yum yum-utils
+2024-05-27 09:33:58.352743 +0000 build-fedora43: output: DEBUG:     yum_builddep_command:  /usr/bin/yum-builddep
+2024-05-27 09:33:58.352815 +0000 build-fedora43: output: DEBUG:     yum_avoid_opts:  {}
+2024-05-27 09:33:58.352827 +0000 build-fedora43: output: DEBUG:     dnf_command:  /usr/bin/dnf-3
+2024-05-27 09:33:58.352835 +0000 build-fedora43: output: DEBUG:     system_dnf_command:  /usr/bin/dnf-3
+2024-05-27 09:33:58.352845 +0000 build-fedora43: output: DEBUG:     dnf_common_opts:  ['--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing']
+2024-05-27 09:33:58.352853 +0000 build-fedora43: output: DEBUG:     dnf_install_command:  install python3-dnf python3-dnf-plugins-core
+2024-05-27 09:33:58.352938 +0000 build-fedora43: output: DEBUG:     dnf_disable_plugins:  ['local', 'spacewalk', 'versionlock']
+2024-05-27 09:33:58.352950 +0000 build-fedora43: output: DEBUG:     dnf_avoid_opts:  {}
+2024-05-27 09:33:58.352957 +0000 build-fedora43: output: DEBUG:     dnf5_command:  /usr/bin/dnf5
+2024-05-27 09:33:58.352964 +0000 build-fedora43: output: DEBUG:     system_dnf5_command:  /usr/bin/dnf5
+2024-05-27 09:33:58.352973 +0000 build-fedora43: output: DEBUG:     dnf5_common_opts:  ['--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing']
+2024-05-27 09:33:58.352981 +0000 build-fedora43: output: DEBUG:     dnf5_install_command:  install dnf5 dnf5-plugins
+2024-05-27 09:33:58.353049 +0000 build-fedora43: output: DEBUG:     dnf5_disable_plugins:  []
+2024-05-27 09:33:58.353063 +0000 build-fedora43: output: DEBUG:     dnf5_avoid_opts:  {'remove': ['--allowerasing']}
+2024-05-27 09:33:58.353071 +0000 build-fedora43: output: DEBUG:     microdnf_command:  /usr/bin/microdnf
+2024-05-27 09:33:58.353079 +0000 build-fedora43: output: DEBUG:     microdnf_install_command:  dnf-install microdnf dnf dnf-plugins-core
+2024-05-27 09:33:58.353086 +0000 build-fedora43: output: DEBUG:     microdnf_builddep_command:  /usr/bin/dnf
+2024-05-27 09:33:58.353152 +0000 build-fedora43: output: DEBUG:     microdnf_builddep_opts:  []
+2024-05-27 09:33:58.353165 +0000 build-fedora43: output: DEBUG:     microdnf_common_opts:  []
+2024-05-27 09:33:58.353172 +0000 build-fedora43: output: DEBUG:     microdnf_avoid_opts:  {}
+2024-05-27 09:33:58.353178 +0000 build-fedora43: output: DEBUG:     rpm_command:  /bin/rpm
+2024-05-27 09:33:58.353185 +0000 build-fedora43: output: DEBUG:     rpmbuild_command:  /usr/bin/rpmbuild
+2024-05-27 09:33:58.353263 +0000 build-fedora43: output: DEBUG:     user_agent:  Mock (fedora-40-x86_64; x86_64)
+2024-05-27 09:33:58.353279 +0000 build-fedora43: output: DEBUG:     opstimeout:  0
+2024-05-27 09:33:58.353286 +0000 build-fedora43: output: DEBUG:     stderr_line_prefix:
+2024-05-27 09:33:58.353293 +0000 build-fedora43: output: DEBUG:     chroot_additional_packages:  []
+2024-05-27 09:33:58.353377 +0000 build-fedora43: output: DEBUG:     additional_packages:  []
+2024-05-27 09:33:58.353550 +0000 build-fedora43: output: DEBUG:     no-config:  {'epel-8': {'alternatives': {'alma+epel-8': {'description': ['Builds against AlmaLinux 8 repositories, together with the official EPEL repositories.', 'Project page: https://almalinux.org/']}, 'centos-stream+epel-8': {'description': ['Builds against CentOS Stream 8 repositories (some packages may be a bit ahead the Red Hat Enterprise Linux 8) together with the official EPEL 8 repositories.', 'Project page: https://www.centos.org/centos-stream/']}, 'circlelinux+epel-8': {'description': ['Builds against Circle Linux 8 repositories, together with the official EPEL repositories.', 'Project page: https://cclinux.org/']}, 'rhel+epel-8': {'description': ['Builds against Red Hat Enterprise Linux 8 repositories, together with the official EPEL repositories.', 'This mimics what is done in the official EPEL build system, but you need a Red Hat subscription:', 'https://rpm-software-management.github.io/mock/Feature-rhelchroots']}, 'rocky+epel-8': {'description': ['Builds against Rocky Linux 8 repositories, together with the official EPEL repositories.', 'Project page: https://rockylinux.org/']}}}, 'epel-9': {'alternatives': {'alma+epel-9': {'description': ['Builds against AlmaLinux 9 repositories, together with the official EPEL repositories.', 'Project page: https://almalinux.org/']}, 'centos-stream+epel-9': {'description': ['Builds against CentOS Stream 9 repositories (some packages may be a bit ahead the Red Hat Enterprise Linux 9) together with the official EPEL repositories.', 'Project page: https://www.centos.org/centos-stream/']}, 'rhel+epel-9': {'description': ['Builds against Red Hat Enterprise Linux 9 repositories, together with the official EPEL repositories.', 'This mimics what is done in the official EPEL build system, but you need a Red Hat subscription:', 'https://rpm-software-management.github.io/mock/Feature-rhelchroots']}, 'rocky+epel-9': {'description': ['Builds against Rocky Linux 9 repositories, together with the official EPEL repositories.', 'Project page: https://rockylinux.org/']}}}}
+2024-05-27 09:33:58.353651 +0000 build-fedora43: output: DEBUG:     seccomp:  False
+2024-05-27 09:33:58.353664 +0000 build-fedora43: output: DEBUG:     copy_host_users:  []
+2024-05-27 09:33:58.353671 +0000 build-fedora43: output: DEBUG:     use_host_shadow_utils:  True
+2024-05-27 09:33:58.353683 +0000 build-fedora43: output: DEBUG:     qemu_user_static_mapping:  {'aarch64': 'aarch64', 'armv7hl': 'arm', 'i386': 'i386', 'i686': 'i386', 'ppc64': 'ppc64', 'ppc64le': 'ppc64le', 's390x': 's390x', 'x86_64': 'x86_64'}
+2024-05-27 09:33:58.353690 +0000 build-fedora43: output: DEBUG:     recursion_limit:  5000
+2024-05-27 09:33:58.353696 +0000 build-fedora43: output: DEBUG:     config_path:  /etc/mock
+2024-05-27 09:33:58.353711 +0000 build-fedora43: output: DEBUG:     chroot_name:  fedora-40-x86_64
+2024-05-27 09:33:58.353797 +0000 build-fedora43: output: DEBUG:     config_file:  /builder/plugins/chroot_rpm/mock/fedora-40-x86_64.cfg
+2024-05-27 09:33:58.353810 +0000 build-fedora43: output: DEBUG:     dist:  fc40
+2024-05-27 09:33:58.353817 +0000 build-fedora43: output: DEBUG:     legal_host_arches:  ('x86_64',)
+2024-05-27 09:33:58.353824 +0000 build-fedora43: output: DEBUG:     root:  fedora-40-x86_64
+2024-05-27 09:33:58.353833 +0000 build-fedora43: output: DEBUG:     dnf.conf:
+2024-05-27 09:33:58.353839 +0000 build-fedora43: output: [main]
+2024-05-27 09:33:58.353845 +0000 build-fedora43: output: keepcache=1
+2024-05-27 09:33:58.353918 +0000 build-fedora43: output: debuglevel=2
+2024-05-27 09:33:58.353930 +0000 build-fedora43: output: reposdir=/dev/null
+2024-05-27 09:33:58.353938 +0000 build-fedora43: output: logfile=/var/log/yum.log
+2024-05-27 09:33:58.353944 +0000 build-fedora43: output: retries=20
+2024-05-27 09:33:58.353950 +0000 build-fedora43: output: obsoletes=1
+2024-05-27 09:33:58.353956 +0000 build-fedora43: output: gpgcheck=0
+2024-05-27 09:33:58.354032 +0000 build-fedora43: output: assumeyes=1
+2024-05-27 09:33:58.354044 +0000 build-fedora43: output: syslog_ident=mock
+2024-05-27 09:33:58.354050 +0000 build-fedora43: output: syslog_device=
+2024-05-27 09:33:58.354056 +0000 build-fedora43: output: install_weak_deps=0
+2024-05-27 09:33:58.354062 +0000 build-fedora43: output: metadata_expire=0
+2024-05-27 09:33:58.354069 +0000 build-fedora43: output: mdpolicy=group:primary
+2024-05-27 09:33:58.354151 +0000 build-fedora43: output: best=1
+2024-05-27 09:33:58.354163 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.354170 +0000 build-fedora43: output: # repos
+2024-05-27 09:33:58.354176 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.354182 +0000 build-fedora43: output: [fedora]
+2024-05-27 09:33:58.354189 +0000 build-fedora43: output: name=fedora
+2024-05-27 09:33:58.354274 +0000 build-fedora43: output: metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
+2024-05-27 09:33:58.354291 +0000 build-fedora43: output: failovermethod=priority
+2024-05-27 09:33:58.354300 +0000 build-fedora43: output: gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-primary
+2024-05-27 09:33:58.354306 +0000 build-fedora43: output: gpgcheck=1
+2024-05-27 09:33:58.354312 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-27 09:33:58.354399 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.354412 +0000 build-fedora43: output: [updates]
+2024-05-27 09:33:58.354419 +0000 build-fedora43: output: name=updates
+2024-05-27 09:33:58.354492 +0000 build-fedora43: output: metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
+2024-05-27 09:33:58.354504 +0000 build-fedora43: output: failovermethod=priority
+2024-05-27 09:33:58.354517 +0000 build-fedora43: output: gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-$releasever-primary
+2024-05-27 09:33:58.354523 +0000 build-fedora43: output: gpgcheck=1
+2024-05-27 09:33:58.354593 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-27 09:33:58.354605 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.354611 +0000 build-fedora43: output: [builder-local]
+2024-05-27 09:33:58.354617 +0000 build-fedora43: output: name=builder-local
+2024-05-27 09:33:58.354688 +0000 build-fedora43: output: baseurl=file:///builder/repository
+2024-05-27 09:33:58.354708 +0000 build-fedora43: output: gpgcheck=0
+2024-05-27 09:33:58.354715 +0000 build-fedora43: output: exclude=qubes-release
+2024-05-27 09:33:58.354722 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-27 09:33:58.354727 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.354795 +0000 build-fedora43: output: [qubes-current]
+2024-05-27 09:33:58.354808 +0000 build-fedora43: output: name=qubes-vm-current
+2024-05-27 09:33:58.354817 +0000 build-fedora43: output: baseurl=https://yum.qubes-os.org/rNone/current/vm/fc$releasever
+2024-05-27 09:33:58.354823 +0000 build-fedora43: output: failovermethod=priority
+2024-05-27 09:33:58.354831 +0000 build-fedora43: output: gpgkey=file:///builder/plugins/chroot_rpm/keys/RPM-GPG-KEY-qubes-None-primary
+2024-05-27 09:33:58.354898 +0000 build-fedora43: output: gpgcheck=1
+2024-05-27 09:33:58.354911 +0000 build-fedora43: output: repo_gpgcheck = 1
+2024-05-27 09:33:58.354918 +0000 build-fedora43: output: exclude=qubes-release
+2024-05-27 09:33:58.354923 +0000 build-fedora43: output: enabled=0
+2024-05-27 09:33:58.354935 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-27 09:33:58.355001 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.355014 +0000 build-fedora43: output: [qubes-current-testing]
+2024-05-27 09:33:58.355022 +0000 build-fedora43: output: name=qubes-vm-testing
+2024-05-27 09:33:58.355031 +0000 build-fedora43: output: baseurl=https://yum.qubes-os.org/rNone/current-testing/vm/fc$releasever
+2024-05-27 09:33:58.355037 +0000 build-fedora43: output: failovermethod=priority
+2024-05-27 09:33:58.355109 +0000 build-fedora43: output: gpgkey=file:///builder/plugins/chroot_rpm/keys/RPM-GPG-KEY-qubes-None-primary
+2024-05-27 09:33:58.355125 +0000 build-fedora43: output: gpgcheck=1
+2024-05-27 09:33:58.355132 +0000 build-fedora43: output: repo_gpgcheck = 1
+2024-05-27 09:33:58.355138 +0000 build-fedora43: output: exclude=qubes-release
+2024-05-27 09:33:58.355144 +0000 build-fedora43: output: enabled=0
+2024-05-27 09:33:58.355150 +0000 build-fedora43: output: skip_if_unavailable=0
+2024-05-27 09:33:58.355215 +0000 build-fedora43: output: 
+2024-05-27 09:33:58.355228 +0000 build-fedora43: output: DEBUG:     __jinja_expand:  True
+2024-05-27 09:33:58.355236 +0000 build-fedora43: output: DEBUG:     verbose:  2
+2024-05-27 09:33:58.355244 +0000 build-fedora43: output: DEBUG:     print_main_output:  False
+2024-05-27 09:33:58.355251 +0000 build-fedora43: output: DEBUG:     cache_alterations:  False
+2024-05-27 09:33:58.355324 +0000 build-fedora43: output: DEBUG:     enable_disable_repos:  []
+2024-05-27 09:33:58.355340 +0000 build-fedora43: output: DEBUG:     build_log_fmt_str:  %(message)s
+2024-05-27 09:33:58.355349 +0000 build-fedora43: output: DEBUG:     root_log_fmt_str:  %(levelname)s %(filename)s:%(lineno)d:  %(message)s
+2024-05-27 09:33:58.355356 +0000 build-fedora43: output: DEBUG:     state_log_fmt_str:  %(asctime)s - %(message)s
+2024-05-27 09:33:58.358315 +0000 build-fedora43: output: DEBUG: Local file: /builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm
+2024-05-27 09:33:58.363220 +0000 build-fedora43: output: INFO: Start(/builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm)  Config(fedora-40-x86_64)
+2024-05-27 09:33:58.368065 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64
+2024-05-27 09:33:58.369060 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64
+2024-05-27 09:33:58.375256 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build
+2024-05-27 09:33:58.383091 +0000 build-fedora43: output: Mock Version: 5.5
+2024-05-27 09:33:58.383391 +0000 build-fedora43: output: INFO: Mock Version: 5.5
+2024-05-27 09:33:58.383745 +0000 build-fedora43: output: INFO: Mock Version: 5.5
+2024-05-27 09:33:58.390435 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64
+2024-05-27 09:33:58.391319 +0000 build-fedora43: output: Start: chroot init
+2024-05-27 09:33:58.393867 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root
+2024-05-27 09:33:58.394760 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root
+2024-05-27 09:33:58.406619 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build
+2024-05-27 09:33:58.410383 +0000 build-fedora43: output: INFO: calling preinit hooks
+2024-05-27 09:33:58.412253 +0000 build-fedora43: output: INFO: enabled root cache
+2024-05-27 09:33:58.413250 +0000 build-fedora43: output: INFO: skipping root_cache aging check
+2024-05-27 09:33:58.415321 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/root_cache/
+2024-05-27 09:33:58.415337 +0000 build-fedora43: output: Start: unpacking root cache
+2024-05-27 09:33:58.420240 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root
+2024-05-27 09:33:58.424832 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:58.424880 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/tar', '--use-compress-program', 'pigz', '-xf', '/builder/cache/mock/fedora-40-x86_64/root_cache/cache.tar.gz', '-C', '/builder/build/fedora-40-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.350339 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.354239 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./proc
+2024-05-27 09:33:59.355483 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./proc
+2024-05-27 09:33:59.358950 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./sys
+2024-05-27 09:33:59.360129 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./sys
+2024-05-27 09:33:59.363611 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./dev
+2024-05-27 09:33:59.364932 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./dev
+2024-05-27 09:33:59.368128 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./tmp/ccache
+2024-05-27 09:33:59.369412 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./tmp/ccache
+2024-05-27 09:33:59.372671 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./var/cache/yum
+2024-05-27 09:33:59.373779 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./var/cache/yum
+2024-05-27 09:33:59.377083 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./var/cache/dnf
+2024-05-27 09:33:59.378344 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./var/cache/dnf
+2024-05-27 09:33:59.381947 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/./var/log
+2024-05-27 09:33:59.383260 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/./var/log
+2024-05-27 09:33:59.383278 +0000 build-fedora43: output: Finish: unpacking root cache
+2024-05-27 09:33:59.384365 +0000 build-fedora43: output: INFO: enabled package manager cache
+2024-05-27 09:33:59.386391 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/yum_cache
+2024-05-27 09:33:59.388510 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-40-x86_64/dnf_cache
+2024-05-27 09:33:59.388530 +0000 build-fedora43: output: Start: cleaning package manager metadata
+2024-05-27 09:33:59.389422 +0000 build-fedora43: output: Finish: cleaning package manager metadata
+2024-05-27 09:33:59.396164 +0000 build-fedora43: output: INFO: enabled HW Info plugin
+2024-05-27 09:33:59.399651 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.399716 +0000 build-fedora43: output: DEBUG: Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.405766 +0000 build-fedora43: output: DEBUG: Architecture:                         x86_64
+2024-05-27 09:33:59.405803 +0000 build-fedora43: output: DEBUG: CPU op-mode(s):                       32-bit, 64-bit
+2024-05-27 09:33:59.405813 +0000 build-fedora43: output: DEBUG: Address sizes:                        39 bits physical, 48 bits virtual
+2024-05-27 09:33:59.406297 +0000 build-fedora43: output: DEBUG: Byte Order:                           Little Endian
+2024-05-27 09:33:59.406323 +0000 build-fedora43: output: DEBUG: CPU(s):                               2
+2024-05-27 09:33:59.406406 +0000 build-fedora43: output: DEBUG: On-line CPU(s) list:                  0,1
+2024-05-27 09:33:59.406420 +0000 build-fedora43: output: DEBUG: Vendor ID:                            GenuineIntel
+2024-05-27 09:33:59.406429 +0000 build-fedora43: output: DEBUG: Model name:                           11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+2024-05-27 09:33:59.406437 +0000 build-fedora43: output: DEBUG: CPU family:                           6
+2024-05-27 09:33:59.406444 +0000 build-fedora43: output: DEBUG: Model:                                140
+2024-05-27 09:33:59.406450 +0000 build-fedora43: output: DEBUG: Thread(s) per core:                   1
+2024-05-27 09:33:59.406457 +0000 build-fedora43: output: DEBUG: Core(s) per socket:                   2
+2024-05-27 09:33:59.406548 +0000 build-fedora43: output: DEBUG: Socket(s):                            1
+2024-05-27 09:33:59.406560 +0000 build-fedora43: output: DEBUG: Stepping:                             1
+2024-05-27 09:33:59.406568 +0000 build-fedora43: output: DEBUG: BogoMIPS:                             5606.36
+2024-05-27 09:33:59.406607 +0000 build-fedora43: output: DEBUG: Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush acpi mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+2024-05-27 09:33:59.406723 +0000 build-fedora43: output: DEBUG: Hypervisor vendor:                    Xen
+2024-05-27 09:33:59.406737 +0000 build-fedora43: output: DEBUG: Virtualization type:                  full
+2024-05-27 09:33:59.406747 +0000 build-fedora43: output: DEBUG: L1d cache:                            96 KiB (2 instances)
+2024-05-27 09:33:59.406755 +0000 build-fedora43: output: DEBUG: L1i cache:                            64 KiB (2 instances)
+2024-05-27 09:33:59.406762 +0000 build-fedora43: output: DEBUG: L2 cache:                             2.5 MiB (2 instances)
+2024-05-27 09:33:59.406770 +0000 build-fedora43: output: DEBUG: L3 cache:                             24 MiB (2 instances)
+2024-05-27 09:33:59.406777 +0000 build-fedora43: output: DEBUG: NUMA node(s):                         1
+2024-05-27 09:33:59.406894 +0000 build-fedora43: output: DEBUG: NUMA node0 CPU(s):                    0,1
+2024-05-27 09:33:59.406907 +0000 build-fedora43: output: DEBUG: Vulnerability Gather data sampling:   Not affected
+2024-05-27 09:33:59.406915 +0000 build-fedora43: output: DEBUG: Vulnerability Itlb multihit:          Not affected
+2024-05-27 09:33:59.406922 +0000 build-fedora43: output: DEBUG: Vulnerability L1tf:                   Not affected
+2024-05-27 09:33:59.406929 +0000 build-fedora43: output: DEBUG: Vulnerability Mds:                    Not affected
+2024-05-27 09:33:59.406936 +0000 build-fedora43: output: DEBUG: Vulnerability Meltdown:               Not affected
+2024-05-27 09:33:59.406944 +0000 build-fedora43: output: DEBUG: Vulnerability Mmio stale data:        Not affected
+2024-05-27 09:33:59.406951 +0000 build-fedora43: output: DEBUG: Vulnerability Reg file data sampling: Not affected
+2024-05-27 09:33:59.407033 +0000 build-fedora43: output: DEBUG: Vulnerability Retbleed:               Not affected
+2024-05-27 09:33:59.407048 +0000 build-fedora43: output: DEBUG: Vulnerability Spec rstack overflow:   Not affected
+2024-05-27 09:33:59.407057 +0000 build-fedora43: output: DEBUG: Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+2024-05-27 09:33:59.407069 +0000 build-fedora43: output: DEBUG: Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+2024-05-27 09:33:59.407080 +0000 build-fedora43: output: DEBUG: Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+2024-05-27 09:33:59.407096 +0000 build-fedora43: output: DEBUG: Vulnerability Srbds:                  Not affected
+2024-05-27 09:33:59.407119 +0000 build-fedora43: output: DEBUG: Vulnerability Tsx async abort:        Not affected
+2024-05-27 09:33:59.407126 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.410525 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.410572 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.418402 +0000 build-fedora43: output: DEBUG:                total        used        free      shared  buff/cache   available
+2024-05-27 09:33:59.418459 +0000 build-fedora43: output: DEBUG: Mem:         1770204      358628      322348         896     1118648     1411576
+2024-05-27 09:33:59.418469 +0000 build-fedora43: output: DEBUG: Swap:        1048572           0     1048572
+2024-05-27 09:33:59.418476 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.421882 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.421924 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/df', '-H', '-T', '/builder/build/fedora-40-x86_64/root', '/builder/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.426754 +0000 build-fedora43: output: DEBUG: Filesystem     Type  Size  Used Avail Use% Mounted on
+2024-05-27 09:33:59.426808 +0000 build-fedora43: output: DEBUG: /dev/xvdb      ext4   32G  750M   31G   3% /builder
+2024-05-27 09:33:59.426816 +0000 build-fedora43: output: DEBUG: /dev/xvdb      ext4   32G  750M   31G   3% /builder
+2024-05-27 09:33:59.426822 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.434543 +0000 build-fedora43: output: DEBUG: create skeleton dirs
+2024-05-27 09:33:59.438391 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/lib/rpm
+2024-05-27 09:33:59.441862 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/lib/yum
+2024-05-27 09:33:59.444327 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/lib/dbus
+2024-05-27 09:33:59.447222 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/log
+2024-05-27 09:33:59.450089 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/dnf
+2024-05-27 09:33:59.452966 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/yum
+2024-05-27 09:33:59.458079 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/rpm
+2024-05-27 09:33:59.458472 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/tmp
+2024-05-27 09:33:59.461498 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/tmp/ccache
+2024-05-27 09:33:59.464462 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/tmp
+2024-05-27 09:33:59.472539 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/dnf
+2024-05-27 09:33:59.474692 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/dnf/vars
+2024-05-27 09:33:59.479391 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/yum.repos.d
+2024-05-27 09:33:59.490998 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/yum
+2024-05-27 09:33:59.495170 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/proc
+2024-05-27 09:33:59.496534 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/sys
+2024-05-27 09:33:59.499362 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/run/lock
+2024-05-27 09:33:59.507170 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/pts
+2024-05-27 09:33:59.507259 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/dev/pts
+2024-05-27 09:33:59.510378 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/shm
+2024-05-27 09:33:59.511334 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/dev/shm
+2024-05-27 09:33:59.514306 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/mapper
+2024-05-27 09:33:59.515320 +0000 build-fedora43: output: DEBUG: created dir: /builder/build/fedora-40-x86_64/root/dev/mapper
+2024-05-27 09:33:59.515361 +0000 build-fedora43: output: DEBUG: kernel version == 6.6.29-1.qubes.fc37.x86_64
+2024-05-27 09:33:59.584301 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/etc/fstab
+2024-05-27 09:33:59.585662 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/etc/yum/yum.conf
+2024-05-27 09:33:59.587668 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/etc/dnf/dnf.conf
+2024-05-27 09:33:59.589677 +0000 build-fedora43: output: DEBUG: touching file: /builder/build/fedora-40-x86_64/root/var/log/yum.log
+2024-05-27 09:33:59.591682 +0000 build-fedora43: output: DEBUG: rootdir = /builder/build/fedora-40-x86_64/root
+2024-05-27 09:33:59.591700 +0000 build-fedora43: output: DEBUG: resultdir = /builder/build
+2024-05-27 09:33:59.594210 +0000 build-fedora43: output: DEBUG: searching for 'dnf' package manager or alternatives
+2024-05-27 09:33:59.598524 +0000 build-fedora43: output: INFO: Package manager dnf detected and used (fallback)
+2024-05-27 09:33:59.602298 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/mock
+2024-05-27 09:33:59.605826 +0000 build-fedora43: output: DEBUG: Updating files in /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust with files from /etc/pki/ca-trust
+2024-05-27 09:33:59.607792 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust
+2024-05-27 09:33:59.610745 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/./extracted
+2024-05-27 09:33:59.612884 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/./source
+2024-05-27 09:33:59.615473 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/pem
+2024-05-27 09:33:59.617450 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/openssl
+2024-05-27 09:33:59.619509 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/edk2
+2024-05-27 09:33:59.621560 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/java
+2024-05-27 09:33:59.628210 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/extracted/pem/directory-hash
+2024-05-27 09:33:59.715526 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/source/blocklist
+2024-05-27 09:33:59.718968 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/source/anchors
+2024-05-27 09:33:59.721780 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/pki/ca-trust/source/blacklist
+2024-05-27 09:33:59.726226 +0000 build-fedora43: output: DEBUG: Updating files in /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source with files from /usr/share/pki/ca-trust-source
+2024-05-27 09:33:59.727975 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source
+2024-05-27 09:33:59.739698 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source/./blocklist
+2024-05-27 09:33:59.741874 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source/./anchors
+2024-05-27 09:33:59.743818 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/usr/share/pki/ca-trust-source/./blacklist
+2024-05-27 09:33:59.752448 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/etc/dnf
+2024-05-27 09:33:59.753612 +0000 build-fedora43: output: DEBUG: configure DNF vars
+2024-05-27 09:33:59.758406 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/yum
+2024-05-27 09:33:59.761659 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.761690 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'bind', '/builder/cache/mock/fedora-40-x86_64/yum_cache', '/builder/build/fedora-40-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.766627 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.770206 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/var/cache/dnf
+2024-05-27 09:33:59.772752 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.772806 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'bind', '/builder/cache/mock/fedora-40-x86_64/dnf_cache', '/builder/build/fedora-40-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.778359 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.783907 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.783944 +0000 build-fedora43: output: DEBUG: Executing command: ['rpm', '-q', 'rpm', 'rpm-sequoia', 'python3-dnf', 'python3-dnf-plugins-core', 'yum', 'yum-utils', 'dnf5', 'dnf5-plugins'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.807178 +0000 build-fedora43: output: DEBUG: rpm-4.19.1.1-1.fc39.x86_64
+2024-05-27 09:33:59.808811 +0000 build-fedora43: output: DEBUG: rpm-sequoia-1.6.0-1.fc39.x86_64
+2024-05-27 09:33:59.815294 +0000 build-fedora43: output: DEBUG: python3-dnf-4.19.2-1.fc39.noarch
+2024-05-27 09:33:59.818584 +0000 build-fedora43: output: DEBUG: python3-dnf-plugins-core-4.6.0-1.fc39.noarch
+2024-05-27 09:33:59.818916 +0000 build-fedora43: output: DEBUG: package yum is not installed
+2024-05-27 09:33:59.818941 +0000 build-fedora43: output: DEBUG: package yum-utils is not installed
+2024-05-27 09:33:59.823457 +0000 build-fedora43: output: DEBUG: dnf5-5.1.17-1.fc39.x86_64
+2024-05-27 09:33:59.827978 +0000 build-fedora43: output: DEBUG: dnf5-plugins-5.1.17-1.fc39.x86_64
+2024-05-27 09:33:59.829327 +0000 build-fedora43: output: DEBUG: Child return code was: 2
+2024-05-27 09:33:59.831511 +0000 build-fedora43: output: INFO: Buildroot is handled by package management from host and used with --installroot:
+2024-05-27 09:33:59.831537 +0000 build-fedora43: output:   rpm-4.19.1.1-1.fc39.x86_64
+2024-05-27 09:33:59.831549 +0000 build-fedora43: output:   rpm-sequoia-1.6.0-1.fc39.x86_64
+2024-05-27 09:33:59.831576 +0000 build-fedora43: output:   python3-dnf-4.19.2-1.fc39.noarch
+2024-05-27 09:33:59.831587 +0000 build-fedora43: output:   python3-dnf-plugins-core-4.6.0-1.fc39.noarch
+2024-05-27 09:33:59.831597 +0000 build-fedora43: output:   dnf5-5.1.17-1.fc39.x86_64
+2024-05-27 09:33:59.831608 +0000 build-fedora43: output:   dnf5-plugins-5.1.17-1.fc39.x86_64
+2024-05-27 09:33:59.882366 +0000 build-fedora43: output: Start: installing minimal buildroot with dnf
+2024-05-27 09:33:59.911972 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/proc
+2024-05-27 09:33:59.915567 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.915601 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.921649 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.925267 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/proc
+2024-05-27 09:33:59.928904 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.928933 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.932105 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.935697 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.935725 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.938630 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.942374 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/sys
+2024-05-27 09:33:59.945975 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.946004 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate,mode=0755', 'tmpfs', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.952738 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.953623 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/sys
+2024-05-27 09:33:59.957275 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.957308 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.960475 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.964545 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.964576 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.967482 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.971142 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/shm
+2024-05-27 09:33:59.974717 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.974743 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/builder/build/fedora-40-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.981299 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:33:59.981565 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/dev/pts
+2024-05-27 09:33:59.985181 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:33:59.985214 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/builder/build/fedora-40-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:33:59.988388 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:34:00.001819 +0000 build-fedora43: output: DEBUG: ensuring that dir exists: /builder/build/fedora-40-x86_64/root/installation-homedir
+2024-05-27 09:34:00.004691 +0000 build-fedora43: output: DEBUG: ['/usr/bin/dnf-3', '--installroot', '/builder/build/fedora-40-x86_64/root/', '--releasever', '40', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', '@buildsys-build']
+2024-05-27 09:34:00.010771 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:34:00.010815 +0000 build-fedora43: output: DEBUG: Executing command: ['/usr/bin/dnf-3', '--installroot', '/builder/build/fedora-40-x86_64/root/', '--releasever', '40', '--setopt=deltarpm=False', '--setopt=allow_vendor_change=yes', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', '@buildsys-build'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builder/build/fedora-40-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+2024-05-27 09:34:00.203577 +0000 build-fedora43: output: DEBUG: No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+2024-05-27 09:34:05.285107 +0000 build-fedora43: output: DEBUG: fedora                                          4.8 kB/s |  23 kB     00:04
+2024-05-27 09:34:19.783853 +0000 build-fedora43: output: DEBUG: fedora                                          107 kB/s | 1.5 MB     00:14
+2024-05-27 09:34:37.893210 +0000 build-fedora43: output: DEBUG: updates                                         5.8 kB/s |  22 kB     00:03
+2024-05-27 09:37:01.894764 +0000 build-fedora43: output: DEBUG: updates                                         200 kB/s |  28 MB     02:24
+2024-05-27 09:37:06.232201 +0000 build-fedora43: output: DEBUG: builder-local                                   6.5 MB/s |  98 kB     00:00
+2024-05-27 09:37:08.911915 +0000 build-fedora43: output: DEBUG: Dependencies resolved.
+2024-05-27 09:37:08.914508 +0000 build-fedora43: output: DEBUG: ================================================================================
+2024-05-27 09:37:08.914553 +0000 build-fedora43: output: DEBUG:  Package                          Arch      Version            Repository  Size
+2024-05-27 09:37:08.914565 +0000 build-fedora43: output: DEBUG: ================================================================================
+2024-05-27 09:37:08.914573 +0000 build-fedora43: output: DEBUG: Upgrading:
+2024-05-27 09:37:08.914583 +0000 build-fedora43: output: DEBUG:  fedora-release                   noarch    40-39              updates     11 k
+2024-05-27 09:37:08.914592 +0000 build-fedora43: output: DEBUG:  fedora-release-common            noarch    40-39              updates     21 k
+2024-05-27 09:37:08.914600 +0000 build-fedora43: output: DEBUG:  fedora-release-identity-basic    noarch    40-39              updates     12 k
+2024-05-27 09:37:08.914608 +0000 build-fedora43: output: DEBUG:  glibc                            x86_64    2.39-13.fc40       updates    2.2 M
+2024-05-27 09:37:08.914616 +0000 build-fedora43: output: DEBUG:  glibc-common                     x86_64    2.39-13.fc40       updates    386 k
+2024-05-27 09:37:08.914624 +0000 build-fedora43: output: DEBUG:  glibc-gconv-extra                x86_64    2.39-13.fc40       updates    1.7 M
+2024-05-27 09:37:08.914632 +0000 build-fedora43: output: DEBUG:  glibc-minimal-langpack           x86_64    2.39-13.fc40       updates    103 k
+2024-05-27 09:37:08.914641 +0000 build-fedora43: output: DEBUG:  libblkid                         x86_64    2.40.1-1.fc40      updates    124 k
+2024-05-27 09:37:08.914649 +0000 build-fedora43: output: DEBUG:  libfdisk                         x86_64    2.40.1-1.fc40      updates    159 k
+2024-05-27 09:37:08.914658 +0000 build-fedora43: output: DEBUG:  libmount                         x86_64    2.40.1-1.fc40      updates    155 k
+2024-05-27 09:37:08.914666 +0000 build-fedora43: output: DEBUG:  libsmartcols                     x86_64    2.40.1-1.fc40      updates     83 k
+2024-05-27 09:37:08.914674 +0000 build-fedora43: output: DEBUG:  libuuid                          x86_64    2.40.1-1.fc40      updates     28 k
+2024-05-27 09:37:08.914682 +0000 build-fedora43: output: DEBUG:  shadow-utils                     x86_64    2:4.15.1-2.fc40    updates    1.3 M
+2024-05-27 09:37:08.914690 +0000 build-fedora43: output: DEBUG:  util-linux                       x86_64    2.40.1-1.fc40      updates    1.2 M
+2024-05-27 09:37:08.914718 +0000 build-fedora43: output: DEBUG:  util-linux-core                  x86_64    2.40.1-1.fc40      updates    537 k
+2024-05-27 09:37:08.914725 +0000 build-fedora43: output: DEBUG: Installing Groups:
+2024-05-27 09:37:08.914751 +0000 build-fedora43: output: DEBUG:  Buildsystem building group
+2024-05-27 09:37:08.914758 +0000 build-fedora43: output: DEBUG: Transaction Summary
+2024-05-27 09:37:08.914767 +0000 build-fedora43: output: DEBUG: ================================================================================
+2024-05-27 09:37:08.914773 +0000 build-fedora43: output: DEBUG: Upgrade  15 Packages
+2024-05-27 09:37:08.914917 +0000 build-fedora43: output: DEBUG: Total download size: 8.0 M
+2024-05-27 09:37:08.914944 +0000 build-fedora43: output: DEBUG: Downloading Packages:
+2024-05-27 09:37:12.396321 +0000 build-fedora43: output: DEBUG: Error: Error downloading packages:
+2024-05-27 09:37:12.398461 +0000 build-fedora43: output: DEBUG:   Curl error (6): Couldn't resolve host name for https://mirrors.fedoraproject.org/metalink?repo=updates-released-f40&arch=x86_64 [Could not resolve host: mirrors.fedoraproject.org]
+2024-05-27 09:37:12.538040 +0000 build-fedora43: output: DEBUG: Child return code was: 1
+2024-05-27 09:37:12.557698 +0000 build-fedora43: output: DEBUG: kill orphans in chroot /builder/build/fedora-40-x86_64/root
+2024-05-27 09:37:12.605077 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.605476 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.620613 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.625567 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.625615 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.630743 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.647172 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.647232 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.650363 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.655041 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.655096 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.659513 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.665977 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.666011 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.669069 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.673981 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.674011 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-40-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.678148 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.704317 +0000 build-fedora43: output: ERROR: Exception(/builder/build/qubes-rpm-oxide-0.2.7-1.fc40.src.rpm) Config(fedora-40-x86_64) 3 minutes 14 seconds
+2024-05-27 09:37:12.704342 +0000 build-fedora43: output: INFO: Results and/or logs in: /builder/build
+2024-05-27 09:37:12.707232 +0000 build-fedora43: output: DEBUG: kill orphans in chroot /builder/build/fedora-40-x86_64/root
+2024-05-27 09:37:12.736993 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.737045 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '/builder/build/fedora-40-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.741538 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.746283 +0000 build-fedora43: output: DEBUG: child environment: None
+2024-05-27 09:37:12.746318 +0000 build-fedora43: output: DEBUG: Executing command: ['/bin/umount', '-n', '/builder/build/fedora-40-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2024-05-27 09:37:12.761826 +0000 build-fedora43: output: DEBUG: Child return code was: 0
+2024-05-27 09:37:12.764380 +0000 build-fedora43: output: ERROR: Command failed:
+2024-05-27 09:37:12.764417 +0000 build-fedora43: output:  # /usr/bin/dnf-3 --installroot /builder/build/fedora-40-x86_64/root/ --releasever 40 --setopt=deltarpm=False --setopt=allow_vendor_change=yes --allowerasing --disableplugin=local --disableplugin=spacewalk --disableplugin=versionlock install @buildsys-build
+2024-05-27 09:37:12.764428 +0000 build-fedora43: output: No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+2024-05-27 09:37:12.764437 +0000 build-fedora43: output: fedora                                          4.8 kB/s |  23 kB     00:04
+2024-05-27 09:37:12.764445 +0000 build-fedora43: output: fedora                                          107 kB/s | 1.5 MB     00:14
+2024-05-27 09:37:12.764453 +0000 build-fedora43: output: updates                                         5.8 kB/s |  22 kB     00:03
+2024-05-27 09:37:12.764460 +0000 build-fedora43: output: updates                                         200 kB/s |  28 MB     02:24
+2024-05-27 09:37:12.764468 +0000 build-fedora43: output: builder-local                                   6.5 MB/s |  98 kB     00:00
+2024-05-27 09:37:12.764475 +0000 build-fedora43: output: Dependencies resolved.
+2024-05-27 09:37:12.764484 +0000 build-fedora43: output: ================================================================================
+2024-05-27 09:37:12.764491 +0000 build-fedora43: output:  Package                          Arch      Version            Repository  Size
+2024-05-27 09:37:12.764499 +0000 build-fedora43: output: ================================================================================
+2024-05-27 09:37:12.764505 +0000 build-fedora43: output: Upgrading:
+2024-05-27 09:37:12.764513 +0000 build-fedora43: output:  fedora-release                   noarch    40-39              updates     11 k
+2024-05-27 09:37:12.764521 +0000 build-fedora43: output:  fedora-release-common            noarch    40-39              updates     21 k
+2024-05-27 09:37:12.764528 +0000 build-fedora43: output:  fedora-release-identity-basic    noarch    40-39              updates     12 k
+2024-05-27 09:37:12.764536 +0000 build-fedora43: output:  glibc                            x86_64    2.39-13.fc40       updates    2.2 M
+2024-05-27 09:37:12.764544 +0000 build-fedora43: output:  glibc-common                     x86_64    2.39-13.fc40       updates    386 k
+2024-05-27 09:37:12.764552 +0000 build-fedora43: output:  glibc-gconv-extra                x86_64    2.39-13.fc40       updates    1.7 M
+2024-05-27 09:37:12.764560 +0000 build-fedora43: output:  glibc-minimal-langpack           x86_64    2.39-13.fc40       updates    103 k
+2024-05-27 09:37:12.764567 +0000 build-fedora43: output:  libblkid                         x86_64    2.40.1-1.fc40      updates    124 k
+2024-05-27 09:37:12.764575 +0000 build-fedora43: output:  libfdisk                         x86_64    2.40.1-1.fc40      updates    159 k
+2024-05-27 09:37:12.764583 +0000 build-fedora43: output:  libmount                         x86_64    2.40.1-1.fc40      updates    155 k
+2024-05-27 09:37:12.764591 +0000 build-fedora43: output:  libsmartcols                     x86_64    2.40.1-1.fc40      updates     83 k
+2024-05-27 09:37:12.764598 +0000 build-fedora43: output:  libuuid                          x86_64    2.40.1-1.fc40      updates     28 k
+2024-05-27 09:37:12.764606 +0000 build-fedora43: output:  shadow-utils                     x86_64    2:4.15.1-2.fc40    updates    1.3 M
+2024-05-27 09:37:12.764614 +0000 build-fedora43: output:  util-linux                       x86_64    2.40.1-1.fc40      updates    1.2 M
+2024-05-27 09:37:12.764636 +0000 build-fedora43: output:  util-linux-core                  x86_64    2.40.1-1.fc40      updates    537 k
+2024-05-27 09:37:12.764643 +0000 build-fedora43: output: Installing Groups:
+2024-05-27 09:37:12.764649 +0000 build-fedora43: output:  Buildsystem building group
+2024-05-27 09:37:12.764655 +0000 build-fedora43: output: 
+2024-05-27 09:37:12.764661 +0000 build-fedora43: output: Transaction Summary
+2024-05-27 09:37:12.764669 +0000 build-fedora43: output: ================================================================================
+2024-05-27 09:37:12.764675 +0000 build-fedora43: output: Upgrade  15 Packages
+2024-05-27 09:37:12.764681 +0000 build-fedora43: output: 
+2024-05-27 09:37:12.764687 +0000 build-fedora43: output: Total download size: 8.0 M
+2024-05-27 09:37:12.764693 +0000 build-fedora43: output: Downloading Packages:
+2024-05-27 09:37:12.764708 +0000 build-fedora43: output: 
+2024-05-27 09:37:12.764715 +0000 build-fedora43: output: Error: Error downloading packages:
+2024-05-27 09:37:12.764727 +0000 build-fedora43: output:   Curl error (6): Couldn't resolve host name for https://mirrors.fedoraproject.org/metalink?repo=updates-released-f40&arch=x86_64 [Could not resolve host: mirrors.fedoraproject.org]
+2024-05-27 09:37:12.764732 +0000 build-fedora43: output: 
+2024-05-27 09:37:15.338351 +0000 > closing log
