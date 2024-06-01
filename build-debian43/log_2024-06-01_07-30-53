@@ -1,0 +1,114 @@
+2024-06-01 07:30:53.659956 +0000 > starting log
+2024-06-01 07:30:53.660175 +0000 build-debian43: > starting build with log
+2024-06-01 07:30:53.660191 +0000 build-debian43: >> args:
+2024-06-01 07:30:53.660199 +0000 build-debian43: >>   ()
+2024-06-01 07:30:53.660205 +0000 build-debian43: >> component:
+2024-06-01 07:30:53.660211 +0000 build-debian43: >>   intel-microcode
+2024-06-01 07:30:53.660219 +0000 build-debian43: >>     commit-hash: f5e2c26f380fe9f45f95d906b120b40e639f8599
+2024-06-01 07:30:53.660230 +0000 build-debian43: >>     source-hash: a44f41137307c5dfda12fddadcd004b99a373e18e056a95d29b8d7dfbb0b016d62a3dd72aeecbebd227599306059ffe57f78e6cdc6882512cf97f3c320aa41e5
+2024-06-01 07:30:53.660240 +0000 build-debian43: >> distributions:
+2024-06-01 07:30:53.660249 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-06-01 07:30:53.660255 +0000 build-debian43: intel-microcode: source already fetched. Updating.
+2024-06-01 07:31:21.690429 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7541 qubesbuilder.FileCopyIn+-2Fbuilder-2Fintel--microcode /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/intel-microcode
+2024-06-01 07:31:22.761547 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7541 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-01 07:31:23.005236 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7541 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-intel-microcode.git /builder/intel-microcode /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-06-01 07:31:29.382700 +0000 build-debian43: output: --> Verifying tags...
+2024-06-01 07:31:29.382746 +0000 build-debian43: output: ---> Good tag 6fcb9a773c02c43bb771f921aa335481481ed387.
+2024-06-01 07:31:29.382757 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-06-01 07:31:29.382764 +0000 build-debian43: output: --> Merging...
+2024-06-01 07:31:29.394249 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7541 qubesbuilder.FileCopyOut+-2Fbuilder-2Fintel--microcode /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-06-01 07:31:48.101087 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6895 qubesbuilder.FileCopyIn+-2Fbuilder-2Fintel--microcode /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/intel-microcode
+2024-06-01 07:31:48.440596 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6895 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-01 07:31:48.690391 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6895 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/intel-microcode --file-name microcode-20240531.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz''.
+2024-06-01 07:31:48.925604 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-06-01 07:31:48.925696 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/intel-microcode --file-name microcode-20240531.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz
+2024-06-01 07:31:48.927604 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/intel-microcode'\'' --file-name '\''microcode-20240531.tar.gz'\'' --file-url '\''https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz'\'' --'
+2024-06-01 07:31:48.927680 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/intel-microcode'\'' --file-name '\''microcode-20240531.tar.gz'\'' --file-url '\''https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz'\'' --'
+2024-06-01 07:31:48.927702 +0000 build-debian43: output: ++ set -- --output-dir /builder/intel-microcode --file-name microcode-20240531.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz --
+2024-06-01 07:31:48.928616 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-06-01 07:31:48.928648 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:31:48.928660 +0000 build-debian43: output: + OUTPUT_DIR=/builder/intel-microcode
+2024-06-01 07:31:48.928670 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928679 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928688 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-06-01 07:31:48.928696 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:31:48.928706 +0000 build-debian43: output: + FILE_NAME=microcode-20240531.tar.gz
+2024-06-01 07:31:48.928714 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928723 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928731 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-06-01 07:31:48.928740 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:31:48.928753 +0000 build-debian43: output: + FILE_URL=https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz
+2024-06-01 07:31:48.928762 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928770 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928779 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-06-01 07:31:48.928790 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:31:48.928798 +0000 build-debian43: output: + shift
+2024-06-01 07:31:48.928807 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-06-01 07:31:48.928820 +0000 build-debian43: output: + '[' -z https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz ']'
+2024-06-01 07:31:48.928832 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-06-01 07:31:48.928842 +0000 build-debian43: output: + '[' -z microcode-20240531.tar.gz ']'
+2024-06-01 07:31:48.928852 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_microcode-20240531.tar.gz
+2024-06-01 07:31:48.928868 +0000 build-debian43: output: + '[' -n /builder/intel-microcode ']'
+2024-06-01 07:31:48.928878 +0000 build-debian43: output: + mkdir -p /builder/intel-microcode
+2024-06-01 07:31:48.930113 +0000 build-debian43: output: + cd /builder/intel-microcode
+2024-06-01 07:31:48.930356 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_microcode-20240531.tar.gz -- https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240531.tar.gz
+2024-06-01 07:32:00.775825 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-06-01 07:32:00.775871 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-01 07:32:00.781335 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6895 qubesbuilder.FileCopyOut+-2Fbuilder-2Fintel--microcode-2Funtrusted_microcode--20240531.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1
+2024-06-01 07:32:03.405070 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512'.
+2024-06-01 07:32:03.406821 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-06-01 07:32:03.408017 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512
+2024-06-01 07:32:03.409084 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpi4dzzri1'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512'\'' --'
+2024-06-01 07:32:03.409125 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpi4dzzri1'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512'\'' --'
+2024-06-01 07:32:03.409145 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1 --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512 --
+2024-06-01 07:32:03.409153 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-06-01 07:32:03.409159 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-06-01 07:32:03.409165 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:32:03.409172 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpi4dzzri1
+2024-06-01 07:32:03.409178 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409183 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409189 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-06-01 07:32:03.409195 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:32:03.409205 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz
+2024-06-01 07:32:03.409211 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409217 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409222 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-06-01 07:32:03.409228 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:32:03.409237 +0000 build-debian43: output: + CHECKSUM_CMD=sha512sum
+2024-06-01 07:32:03.409243 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409248 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409254 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-06-01 07:32:03.409260 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:32:03.409268 +0000 build-debian43: output: + FILE_CHECKSUM=/home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512
+2024-06-01 07:32:03.409274 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409280 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409285 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-06-01 07:32:03.409291 +0000 build-debian43: output: + case "$1" in
+2024-06-01 07:32:03.409311 +0000 build-debian43: output: + shift
+2024-06-01 07:32:03.409317 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-06-01 07:32:03.409327 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz ']'
+2024-06-01 07:32:03.409334 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1 ']'
+2024-06-01 07:32:03.409341 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1
+2024-06-01 07:32:03.409367 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz
+2024-06-01 07:32:03.410680 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_microcode-20240531.tar.gz
+2024-06-01 07:32:03.410711 +0000 build-debian43: output: + FILE_NAME=microcode-20240531.tar.gz
+2024-06-01 07:32:03.410720 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512 ']'
+2024-06-01 07:32:03.410729 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512 ']'
+2024-06-01 07:32:03.410737 +0000 build-debian43: output: + '[' -e /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512 ']'
+2024-06-01 07:32:03.410743 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-01 07:32:03.410748 +0000 build-debian43: output: + '[' -z '' ']'
+2024-06-01 07:32:03.410754 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-01 07:32:03.410760 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-01 07:32:03.410768 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512 ']'
+2024-06-01 07:32:03.410773 +0000 build-debian43: output: + '[' -z sha512sum ']'
+2024-06-01 07:32:03.410780 +0000 build-debian43: output: + sha512sum --status -c /dev/fd/63
+2024-06-01 07:32:03.411248 +0000 build-debian43: output: +++ cat /home/user/builder-r4.3-debian/sources/intel-microcode/microcode-20240531.tar.gz.sha512
+2024-06-01 07:32:03.411776 +0000 build-debian43: output: ++ printf '%s  -\n' fb9d772491f279ebb691248e4a665da45c986ca7b4668ecf311c5fcb91a42400f7a5b35e8bfc31ceb1c9d598e753c817359900e3fa316d825f8ecec21ec63cfe
+2024-06-01 07:32:03.564998 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/untrusted_microcode-20240531.tar.gz /home/user/builder-r4.3-debian/tmp/tmpi4dzzri1/microcode-20240531.tar.gz
+2024-06-01 07:32:03.592369 +0000 build-debian43: ['cd -- /builder', "git -C /builder/intel-microcode rev-parse 'HEAD^{}' >> hash", "git -C /builder/intel-microcode tag --points-at HEAD --list 'v*' >> vtags"]
+2024-06-01 07:32:15.484131 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp2161 qubesbuilder.FileCopyIn+-2Fbuilder-2Fintel--microcode /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/intel-microcode
+2024-06-01 07:32:15.911252 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp2161 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/intel-microcode rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/intel-microcode tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-06-01 07:32:16.168077 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2161 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpzx8fbvke
+2024-06-01 07:32:16.522489 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2161 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpzx8fbvke
+2024-06-01 07:32:19.168677 +0000 build-debian43: > done
+2024-06-01 07:32:19.168722 +0000 > closing log
