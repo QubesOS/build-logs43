@@ -1,0 +1,133 @@
+2024-06-10 21:01:53.796650 +0000 > starting log
+2024-06-10 21:01:53.796908 +0000 build-debian43: > starting build with log
+2024-06-10 21:01:53.796925 +0000 build-debian43: >> args:
+2024-06-10 21:01:53.796934 +0000 build-debian43: >>   ()
+2024-06-10 21:01:53.796940 +0000 build-debian43: >> component:
+2024-06-10 21:01:53.796946 +0000 build-debian43: >>   python-fido2
+2024-06-10 21:01:53.796953 +0000 build-debian43: >>     commit-hash: 0666f157753d16a55c41725663e3330515318d85
+2024-06-10 21:01:53.796965 +0000 build-debian43: >>     source-hash: 7e8e8b5559dee7d3df33b0a9e94bf1ef940e033f84b7f3e5a46e2d9a52dda5c7c8c8e3f682a8deafba2420a74efc4cf707d73fe32728b0efb3795287dcd17102
+2024-06-10 21:01:53.796971 +0000 build-debian43: >> distributions:
+2024-06-10 21:01:53.796979 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-06-10 21:01:53.796986 +0000 build-debian43: python-fido2: source already fetched. Updating.
+2024-06-10 21:02:03.012643 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7398 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--fido2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-fido2
+2024-06-10 21:02:03.336797 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7398 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-10 21:02:03.469776 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7398 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-fido2.git /builder/python-fido2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-06-10 21:02:14.346998 +0000 build-debian43: output: No version tag.
+2024-06-10 21:02:14.357846 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7398 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--fido2 /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-06-10 21:02:25.238092 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3661 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--fido2 /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/python-fido2
+2024-06-10 21:02:25.501447 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3661 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-10 21:02:25.673945 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3661 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/python-fido2 --file-name fido2-1.1.2.tar.gz --file-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz --signature-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig''.
+2024-06-10 21:02:25.910743 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-06-10 21:02:25.910827 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/python-fido2 --file-name fido2-1.1.2.tar.gz --file-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz --signature-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:25.918549 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/python-fido2'\'' --file-name '\''fido2-1.1.2.tar.gz'\'' --file-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz'\'' --signature-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig'\'' --'
+2024-06-10 21:02:25.918636 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/python-fido2'\'' --file-name '\''fido2-1.1.2.tar.gz'\'' --file-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz'\'' --signature-url '\''https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig'\'' --'
+2024-06-10 21:02:25.918659 +0000 build-debian43: output: ++ set -- --output-dir /builder/python-fido2 --file-name fido2-1.1.2.tar.gz --file-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz --signature-url https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig --
+2024-06-10 21:02:25.918672 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-06-10 21:02:25.918682 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:25.918691 +0000 build-debian43: output: + OUTPUT_DIR=/builder/python-fido2
+2024-06-10 21:02:25.918701 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918710 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918718 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-06-10 21:02:25.918725 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:25.918734 +0000 build-debian43: output: + FILE_NAME=fido2-1.1.2.tar.gz
+2024-06-10 21:02:25.918742 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918754 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918763 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-06-10 21:02:25.918770 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:25.918781 +0000 build-debian43: output: + FILE_URL=https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz
+2024-06-10 21:02:25.918790 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918798 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918806 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-06-10 21:02:25.918813 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:25.918825 +0000 build-debian43: output: + SIGNATURE_URL=https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:25.918833 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918841 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918848 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-06-10 21:02:25.918880 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:25.918888 +0000 build-debian43: output: + shift
+2024-06-10 21:02:25.918896 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-06-10 21:02:25.918907 +0000 build-debian43: output: + '[' -z https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz ']'
+2024-06-10 21:02:25.918952 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-06-10 21:02:25.918963 +0000 build-debian43: output: + '[' -z fido2-1.1.2.tar.gz ']'
+2024-06-10 21:02:25.918972 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_fido2-1.1.2.tar.gz
+2024-06-10 21:02:25.918988 +0000 build-debian43: output: + '[' -n /builder/python-fido2 ']'
+2024-06-10 21:02:25.918997 +0000 build-debian43: output: + mkdir -p /builder/python-fido2
+2024-06-10 21:02:25.922163 +0000 build-debian43: output: + cd /builder/python-fido2
+2024-06-10 21:02:25.922217 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fido2-1.1.2.tar.gz -- https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz
+2024-06-10 21:02:50.623728 +0000 build-debian43: output: + '[' '' == 1 ']'
+2024-06-10 21:02:50.623819 +0000 build-debian43: output: + '[' -n https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig ']'
+2024-06-10 21:02:50.623902 +0000 build-debian43: output: ++ basename https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:50.623927 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:50.623949 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:50.623981 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_fido2-1.1.2.tar.gz.sig https://github.com/Yubico/python-fido2/releases/download/1.1.2/fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:54.670126 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3661 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--fido2-2Funtrusted_fido2--1.1.2.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x
+2024-06-10 21:02:55.003440 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3661 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--fido2-2Funtrusted_fido2--1.1.2.tar.gz.sig /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x
+2024-06-10 21:02:57.154970 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc'.
+2024-06-10 21:02:57.156733 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-06-10 21:02:57.157031 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc
+2024-06-10 21:02:57.157799 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc'\'' --'
+2024-06-10 21:02:57.157831 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc'\'' --'
+2024-06-10 21:02:57.157851 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x --untrusted-file /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig --pubkey-file /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc --
+2024-06-10 21:02:57.157939 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-06-10 21:02:57.157971 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-06-10 21:02:57.157978 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:57.157985 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x
+2024-06-10 21:02:57.157992 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158435 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158448 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-06-10 21:02:57.158455 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:57.158465 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz
+2024-06-10 21:02:57.158471 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158476 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158482 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-06-10 21:02:57.158487 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:57.158496 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:57.158502 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158507 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158513 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-06-10 21:02:57.158518 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:57.158524 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-06-10 21:02:57.158529 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158534 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158540 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-06-10 21:02:57.158545 +0000 build-debian43: output: + case "$1" in
+2024-06-10 21:02:57.158550 +0000 build-debian43: output: + shift
+2024-06-10 21:02:57.158556 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-06-10 21:02:57.158563 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz ']'
+2024-06-10 21:02:57.158570 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x ']'
+2024-06-10 21:02:57.158577 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x
+2024-06-10 21:02:57.158914 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz
+2024-06-10 21:02:57.159588 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_fido2-1.1.2.tar.gz
+2024-06-10 21:02:57.159602 +0000 build-debian43: output: + FILE_NAME=fido2-1.1.2.tar.gz
+2024-06-10 21:02:57.159608 +0000 build-debian43: output: + '[' -z '' ']'
+2024-06-10 21:02:57.159616 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-06-10 21:02:57.159622 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-10 21:02:57.159630 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-06-10 21:02:57.159638 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc ']'
+2024-06-10 21:02:57.159649 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-06-10 21:02:57.159656 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-06-10 21:02:57.160277 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc ']'
+2024-06-10 21:02:57.160293 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-10 21:02:57.160302 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig ']'
+2024-06-10 21:02:57.160311 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc ']'
+2024-06-10 21:02:57.160326 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:57.160388 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:57.160401 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=fido2-1.1.2.tar.gz.sig
+2024-06-10 21:02:57.161115 +0000 build-debian43: output: ++ mktemp -d
+2024-06-10 21:02:57.161358 +0000 build-debian43: output: + keyring_dir=/tmp/tmp.k0mYcvHuBc
+2024-06-10 21:02:57.161370 +0000 build-debian43: output: + sq toolbox keyring merge
+2024-06-10 21:02:57.164948 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.k0mYcvHuBc/keyring /home/user/builder-r4.3-debian/sources/python-fido2/debian-pkg/debian/upstream/signing-key.asc
+2024-06-10 21:02:57.178840 +0000 build-debian43: output: + sq toolbox dearmor --output /tmp/tmp.k0mYcvHuBc/keyring.gpg /tmp/tmp.k0mYcvHuBc/keyring
+2024-06-10 21:02:57.182808 +0000 build-debian43: output: ++ sqv --version
+2024-06-10 21:02:57.184158 +0000 build-debian43: output: + sqv_version='sqv 1.2.1 (sequoia-openpgp 1.20.0, using OpenSSL)'
+2024-06-10 21:02:57.184432 +0000 build-debian43: output: + printf '%s\n' 'sqv 1.2.0' 'sqv 1.2.1 (sequoia-openpgp 1.20.0, using OpenSSL)'
+2024-06-10 21:02:57.184495 +0000 build-debian43: output: + sort -VC
+2024-06-10 21:02:57.185576 +0000 build-debian43: output: ++ dirname /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file
+2024-06-10 21:02:57.186217 +0000 build-debian43: output: + script_dir=/home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts
+2024-06-10 21:02:57.186232 +0000 build-debian43: output: + export SEQUOIA_CRYPTO_POLICY=/home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/sequoia-crypto-policy.toml
+2024-06-10 21:02:57.186242 +0000 build-debian43: output: + SEQUOIA_CRYPTO_POLICY=/home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/sequoia-crypto-policy.toml
+2024-06-10 21:02:57.186254 +0000 build-debian43: output: + sqv --keyring /tmp/tmp.k0mYcvHuBc/keyring /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz.sig /home/user/builder-r4.3-debian/tmp/tmpyh3fwe4x/untrusted_fido2-1.1.2.tar.gz
+2024-06-10 21:02:57.189974 +0000 build-debian43: output: Signing key on 20EE325B86A81BCBD3E56798F04367096FBA95E8 is bad:
+2024-06-10 21:02:57.190000 +0000 build-debian43: output:            The primary key is not live
+2024-06-10 21:02:57.190007 +0000 build-debian43: output:   because: Expired on 2020-05-01T11:07:16Z
+2024-06-10 21:02:57.199477 +0000 > closing log
