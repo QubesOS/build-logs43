@@ -1,0 +1,257 @@
+2024-06-17 06:09:32.337372 +0000 > starting log
+2024-06-17 06:09:32.337590 +0000 build-debian43: > starting build with log
+2024-06-17 06:09:32.337606 +0000 build-debian43: >> args:
+2024-06-17 06:09:32.337614 +0000 build-debian43: >>   ()
+2024-06-17 06:09:32.337620 +0000 build-debian43: >> component:
+2024-06-17 06:09:32.337626 +0000 build-debian43: >>   linux-kernel
+2024-06-17 06:09:32.337634 +0000 build-debian43: >>     commit-hash: 2f02b8a5aebf5147b48b6d241bcf331622a97db1
+2024-06-17 06:09:32.337645 +0000 build-debian43: >>     source-hash: 1c0b07d08ab5266c201373c11b8af045ac6760f913f4f101b6dc15c6928ff82251191198ee3d0ac0033785c5181e81af374efffbc995a67320303a7c8b251da5
+2024-06-17 06:09:32.337651 +0000 build-debian43: >> distributions:
+2024-06-17 06:09:32.337658 +0000 build-debian43: >>   [<QubesDistribution vm-debian-12.amd64>, <QubesDistribution vm-debian-13.amd64>]
+2024-06-17 06:09:32.337665 +0000 build-debian43: linux-kernel: source already fetched. Updating.
+2024-06-17 06:09:39.958963 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp868 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel
+2024-06-17 06:09:40.993684 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp868 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-17 06:09:41.297948 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp868 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-kernel.git /builder/linux-kernel /builder/keyring /builder/plugins/fetch/keys --git-branch stable-6.6 --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-06-17 06:09:53.219717 +0000 build-debian43: output: --> Verifying tags...
+2024-06-17 06:09:53.219764 +0000 build-debian43: output: ---> Good tag 1a303a160ddf285b99d3c80caaa940631e36526d.
+2024-06-17 06:09:53.219774 +0000 build-debian43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-06-17 06:09:53.219781 +0000 build-debian43: output: --> Merging...
+2024-06-17 06:09:53.219788 +0000 build-debian43: output: --> Updating submodules
+2024-06-17 06:09:53.251943 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp868 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/sources
+2024-06-17 06:10:03.194221 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6181 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel
+2024-06-17 06:10:04.142019 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6181 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-17 06:10:04.512480 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp6181 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-kernel --file-name linux-6.6.33.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign --uncompress''.
+2024-06-17 06:10:04.664306 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-06-17 06:10:04.664386 +0000 build-debian43: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-kernel --file-name linux-6.6.33.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign --uncompress
+2024-06-17 06:10:04.665936 +0000 build-debian43: output: + OPTS=' --output-dir '\''/builder/linux-kernel'\'' --file-name '\''linux-6.6.33.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign'\'' --uncompress --'
+2024-06-17 06:10:04.665985 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/builder/linux-kernel'\'' --file-name '\''linux-6.6.33.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign'\'' --uncompress --'
+2024-06-17 06:10:04.666022 +0000 build-debian43: output: ++ set -- --output-dir /builder/linux-kernel --file-name linux-6.6.33.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign --uncompress --
+2024-06-17 06:10:04.666031 +0000 build-debian43: output: + [[ 10 -gt 0 ]]
+2024-06-17 06:10:04.666038 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:10:04.666045 +0000 build-debian43: output: + OUTPUT_DIR=/builder/linux-kernel
+2024-06-17 06:10:04.667613 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667651 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667658 +0000 build-debian43: output: + [[ 8 -gt 0 ]]
+2024-06-17 06:10:04.667665 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:10:04.667672 +0000 build-debian43: output: + FILE_NAME=linux-6.6.33.tar.xz
+2024-06-17 06:10:04.667678 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667683 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667689 +0000 build-debian43: output: + [[ 6 -gt 0 ]]
+2024-06-17 06:10:04.667695 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:10:04.667703 +0000 build-debian43: output: + FILE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz
+2024-06-17 06:10:04.667709 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667715 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667720 +0000 build-debian43: output: + [[ 4 -gt 0 ]]
+2024-06-17 06:10:04.667726 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:10:04.667734 +0000 build-debian43: output: + SIGNATURE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign
+2024-06-17 06:10:04.667739 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667745 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667750 +0000 build-debian43: output: + [[ 2 -gt 0 ]]
+2024-06-17 06:10:04.667756 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:10:04.667761 +0000 build-debian43: output: + UNCOMPRESS=1
+2024-06-17 06:10:04.667766 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667772 +0000 build-debian43: output: + shift
+2024-06-17 06:10:04.667777 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-06-17 06:10:04.667785 +0000 build-debian43: output: + '[' -z https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz ']'
+2024-06-17 06:10:04.667793 +0000 build-debian43: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-06-17 06:10:04.667799 +0000 build-debian43: output: + '[' -z linux-6.6.33.tar.xz ']'
+2024-06-17 06:10:04.667806 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.6.33.tar.xz
+2024-06-17 06:10:04.667813 +0000 build-debian43: output: + '[' -n /builder/linux-kernel ']'
+2024-06-17 06:10:04.667819 +0000 build-debian43: output: + mkdir -p /builder/linux-kernel
+2024-06-17 06:10:04.671535 +0000 build-debian43: output: + cd /builder/linux-kernel
+2024-06-17 06:10:04.671596 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-6.6.33.tar.xz -- https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.xz
+2024-06-17 06:27:29.722279 +0000 build-debian43: output: + '[' 1 == 1 ']'
+2024-06-17 06:27:29.722426 +0000 build-debian43: output: + '[' linux-6.6.33.tar.xz '!=' linux-6.6.33.tar.xz ']'
+2024-06-17 06:27:29.722463 +0000 build-debian43: output: + '[' linux-6.6.33.tar '!=' linux-6.6.33.tar.xz ']'
+2024-06-17 06:27:29.722484 +0000 build-debian43: output: + unxz untrusted_linux-6.6.33.tar.xz
+2024-06-17 06:27:38.197187 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.6.33.tar
+2024-06-17 06:27:38.198608 +0000 build-debian43: output: + '[' -n https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign ']'
+2024-06-17 06:27:38.198828 +0000 build-debian43: output: ++ basename https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign
+2024-06-17 06:27:38.200403 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=linux-6.6.33.tar.sign
+2024-06-17 06:27:38.200423 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-6.6.33.tar.sign
+2024-06-17 06:27:38.200434 +0000 build-debian43: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-6.6.33.tar.sign https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.33.tar.sign
+2024-06-17 06:27:42.813600 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6181 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel-2Funtrusted_linux--6.6.33.tar.sign /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp5v19wria
+2024-06-17 06:27:43.028816 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6181 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel-2Funtrusted_linux--6.6.33.tar /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp5v19wria
+2024-06-17 06:27:53.480500 +0000 build-debian43: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.3-debian/tmp/tmp5v19wria --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign --pubkey-file /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc --pubkey-file /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-1-key.asc'.
+2024-06-17 06:27:53.483042 +0000 build-debian43: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-06-17 06:27:53.483630 +0000 build-debian43: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp5v19wria --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign --pubkey-file /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc --pubkey-file /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-1-key.asc
+2024-06-17 06:27:53.485293 +0000 build-debian43: output: + OPTS=' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp5v19wria'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-1-key.asc'\'' --'
+2024-06-17 06:27:53.485334 +0000 build-debian43: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.3-debian/tmp/tmp5v19wria'\'' --untrusted-file '\''/home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-1-key.asc'\'' --'
+2024-06-17 06:27:53.485405 +0000 build-debian43: output: ++ set -- --output-dir /home/user/builder-r4.3-debian/tmp/tmp5v19wria --untrusted-file /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar --untrusted-signature-file /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign --pubkey-file /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc --pubkey-file /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-1-key.asc --
+2024-06-17 06:27:53.485416 +0000 build-debian43: output: + PUBKEY_FILE=()
+2024-06-17 06:27:53.485424 +0000 build-debian43: output: + [[ 11 -gt 0 ]]
+2024-06-17 06:27:53.485432 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:27:53.485441 +0000 build-debian43: output: + OUTPUT_DIR=/home/user/builder-r4.3-debian/tmp/tmp5v19wria
+2024-06-17 06:27:53.485450 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485457 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485464 +0000 build-debian43: output: + [[ 9 -gt 0 ]]
+2024-06-17 06:27:53.485472 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:27:53.485482 +0000 build-debian43: output: + UNTRUSTED_FILE=/home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar
+2024-06-17 06:27:53.485489 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485497 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485504 +0000 build-debian43: output: + [[ 7 -gt 0 ]]
+2024-06-17 06:27:53.485511 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:27:53.485522 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign
+2024-06-17 06:27:53.485530 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485537 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485544 +0000 build-debian43: output: + [[ 5 -gt 0 ]]
+2024-06-17 06:27:53.485551 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:27:53.485559 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-06-17 06:27:53.485566 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485573 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485580 +0000 build-debian43: output: + [[ 3 -gt 0 ]]
+2024-06-17 06:27:53.485587 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:27:53.485595 +0000 build-debian43: output: + PUBKEY_FILE+=("$2")
+2024-06-17 06:27:53.485636 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485645 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485654 +0000 build-debian43: output: + [[ 1 -gt 0 ]]
+2024-06-17 06:27:53.485661 +0000 build-debian43: output: + case "$1" in
+2024-06-17 06:27:53.485669 +0000 build-debian43: output: + shift
+2024-06-17 06:27:53.485676 +0000 build-debian43: output: + [[ 0 -gt 0 ]]
+2024-06-17 06:27:53.485687 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar ']'
+2024-06-17 06:27:53.485696 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp5v19wria ']'
+2024-06-17 06:27:53.485705 +0000 build-debian43: output: + mkdir -p /home/user/builder-r4.3-debian/tmp/tmp5v19wria
+2024-06-17 06:27:53.486135 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar
+2024-06-17 06:27:53.487105 +0000 build-debian43: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.6.33.tar
+2024-06-17 06:27:53.487116 +0000 build-debian43: output: + FILE_NAME=linux-6.6.33.tar
+2024-06-17 06:27:53.487124 +0000 build-debian43: output: + '[' -z '' ']'
+2024-06-17 06:27:53.487138 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign ']'
+2024-06-17 06:27:53.487147 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-17 06:27:53.487157 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign ']'
+2024-06-17 06:27:53.487167 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc ']'
+2024-06-17 06:27:53.487178 +0000 build-debian43: output: + '[' -z /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign ']'
+2024-06-17 06:27:53.487409 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign ']'
+2024-06-17 06:27:53.487422 +0000 build-debian43: output: + '[' '!' -e /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc ']'
+2024-06-17 06:27:53.487429 +0000 build-debian43: output: + '[' -n '' ']'
+2024-06-17 06:27:53.487440 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign ']'
+2024-06-17 06:27:53.487449 +0000 build-debian43: output: + '[' -n /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc ']'
+2024-06-17 06:27:53.487460 +0000 build-debian43: output: ++ basename /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign
+2024-06-17 06:27:53.488237 +0000 build-debian43: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-6.6.33.tar.sign
+2024-06-17 06:27:53.488246 +0000 build-debian43: output: + SIGNATURE_FILE_NAME=linux-6.6.33.tar.sign
+2024-06-17 06:27:53.488353 +0000 build-debian43: output: ++ mktemp -d
+2024-06-17 06:27:53.488986 +0000 build-debian43: output: + keyring_dir=/tmp/tmp.dTh6BE28Ql
+2024-06-17 06:27:53.488995 +0000 build-debian43: output: + sq toolbox keyring merge
+2024-06-17 06:27:53.493948 +0000 build-debian43: output: + sq toolbox keyring merge --output /tmp/tmp.dTh6BE28Ql/keyring /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-2-key.asc /home/user/builder-r4.3-debian/sources/linux-kernel/kernel.org-1-key.asc
+2024-06-17 06:27:53.501450 +0000 build-debian43: output: + sq toolbox dearmor --output /tmp/tmp.dTh6BE28Ql/keyring.gpg /tmp/tmp.dTh6BE28Ql/keyring
+2024-06-17 06:27:53.505335 +0000 build-debian43: output: ++ sqv --version
+2024-06-17 06:27:53.508503 +0000 build-debian43: output: + sqv_version='sqv 1.2.1 (sequoia-openpgp 1.20.0, using OpenSSL)'
+2024-06-17 06:27:53.508845 +0000 build-debian43: output: + printf '%s\n' 'sqv 1.2.0' 'sqv 1.2.1 (sequoia-openpgp 1.20.0, using OpenSSL)'
+2024-06-17 06:27:53.508868 +0000 build-debian43: output: + sort -VC
+2024-06-17 06:27:53.509886 +0000 build-debian43: output: ++ dirname /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file
+2024-06-17 06:27:53.510792 +0000 build-debian43: output: + script_dir=/home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts
+2024-06-17 06:27:53.510817 +0000 build-debian43: output: + export SEQUOIA_CRYPTO_POLICY=/home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/sequoia-crypto-policy.toml
+2024-06-17 06:27:53.510826 +0000 build-debian43: output: + SEQUOIA_CRYPTO_POLICY=/home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/sequoia-crypto-policy.toml
+2024-06-17 06:27:53.510838 +0000 build-debian43: output: + sqv --keyring /tmp/tmp.dTh6BE28Ql/keyring /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar
+2024-06-17 06:27:55.141702 +0000 build-debian43: output: 647F28654894E3BD457199BE38DBBDC86092693E
+2024-06-17 06:27:55.141750 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar.sign /home/user/builder-r4.3-debian/tmp/tmp5v19wria/linux-6.6.33.tar.sign
+2024-06-17 06:27:55.143146 +0000 build-debian43: output: + rm -rf /tmp/tmp.dTh6BE28Ql
+2024-06-17 06:27:55.144168 +0000 build-debian43: output: + mv /home/user/builder-r4.3-debian/tmp/tmp5v19wria/untrusted_linux-6.6.33.tar /home/user/builder-r4.3-debian/tmp/tmp5v19wria/linux-6.6.33.tar
+2024-06-17 06:27:56.510914 +0000 build-debian43: ['cd -- /builder', "git -C /builder/linux-kernel rev-parse 'HEAD^{}' >> hash", "git -C /builder/linux-kernel tag --points-at HEAD --list 'v*' >> vtags"]
+2024-06-17 06:28:04.317224 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3134 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel
+2024-06-17 06:28:05.520722 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp3134 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/linux-kernel rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/linux-kernel tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-06-17 06:28:06.097298 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3134 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp89te3lhx
+2024-06-17 06:28:06.267596 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3134 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp89te3lhx
+2024-06-17 06:28:17.078273 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1323 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel
+2024-06-17 06:28:18.291592 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp1323 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/modules && cd -- /builder && git -C /builder/linux-kernel/linux-utils rev-parse HEAD >> modules && git -C /builder/linux-kernel/dummy-psu rev-parse HEAD >> modules && git -C /builder/linux-kernel/dummy-backlight rev-parse HEAD >> modules && git -C /builder/linux-kernel/v4l2loopback rev-parse HEAD >> modules''.
+2024-06-17 06:28:18.498102 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1323 qubesbuilder.FileCopyOut+-2Fbuilder-2Fmodules /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/tmp/tmp89te3lhx
+2024-06-17 06:28:28.110522 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7152 qubesbuilder.FileCopyIn+-2Fbuilder-2Flinux--kernel /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-debian/sources/linux-kernel
+2024-06-17 06:28:29.203984 +0000 build-debian43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7152 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-17 06:28:29.397603 +0000 build-debian43: Executing '/usr/bin/qvm-run-vm -- disp7152 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/linux-utils linux-utils-97271bab41f588b0.tar.gz linux-utils/ && /builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/dummy-psu dummy-psu-49475d88d94e079b.tar.gz dummy-psu/ && /builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/dummy-backlight dummy-backlight-33420931ad20f1e3.tar.gz dummy-backlight/ && /builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/v4l2loopback v4l2loopback-1ecf810f0d687b64.tar.gz v4l2loopback/''.
+2024-06-17 06:28:29.545785 +0000 build-debian43: output: ++ tar --version
+2024-06-17 06:28:29.545827 +0000 build-debian43: output: ++ head -1
+2024-06-17 06:28:29.546273 +0000 build-debian43: output: ++ awk '{print $4}'
+2024-06-17 06:28:29.549917 +0000 build-debian43: output: + TAR_VERSION=1.35
+2024-06-17 06:28:29.550171 +0000 build-debian43: output: ++ readlink -f /builder/linux-kernel/linux-utils
+2024-06-17 06:28:29.550829 +0000 build-debian43: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/linux-utils
+2024-06-17 06:28:29.550844 +0000 build-debian43: output: + GIT_ARCHIVE_TYPE=gz
+2024-06-17 06:28:29.550867 +0000 build-debian43: output: + GIT_TARBALL_NAME=linux-utils-97271bab41f588b0.tar
+2024-06-17 06:28:29.550874 +0000 build-debian43: output: + '[' xlinux-utils/ '!=' x ']'
+2024-06-17 06:28:29.550881 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=linux-utils/
+2024-06-17 06:28:29.550887 +0000 build-debian43: output: + pushd /builder/linux-kernel/linux-utils
+2024-06-17 06:28:29.550894 +0000 build-debian43: output: /builder/linux-kernel/linux-utils ~
+2024-06-17 06:28:29.551133 +0000 build-debian43: output: ++ git log -1 --format=%ct
+2024-06-17 06:28:29.570209 +0000 build-debian43: output: + SOURCE_DATE_EPOCH=1603593639
+2024-06-17 06:28:29.570855 +0000 build-debian43: output: ++ printf '%s\n' 1.35 1.28
+2024-06-17 06:28:29.570879 +0000 build-debian43: output: ++ sort -V
+2024-06-17 06:28:29.571904 +0000 build-debian43: output: ++ head -n1
+2024-06-17 06:28:29.582936 +0000 build-debian43: output: + '[' 1.28 == 1.28 ']'
+2024-06-17 06:28:29.582988 +0000 build-debian43: output: + tar --sort=name --mtime=@1603593639 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%linux-utils/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude linux-utils-97271bab41f588b0.tar -cf linux-utils-97271bab41f588b0.tar .
+2024-06-17 06:28:29.584738 +0000 build-debian43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-06-17 06:28:29.584771 +0000 build-debian43: output: + gzip -fn linux-utils-97271bab41f588b0.tar
+2024-06-17 06:28:29.599389 +0000 build-debian43: output: + popd
+2024-06-17 06:28:29.599435 +0000 build-debian43: output: ~
+2024-06-17 06:28:29.603130 +0000 build-debian43: output: ++ tar --version
+2024-06-17 06:28:29.603171 +0000 build-debian43: output: ++ head -1
+2024-06-17 06:28:29.608951 +0000 build-debian43: output: ++ awk '{print $4}'
+2024-06-17 06:28:29.609424 +0000 build-debian43: output: + TAR_VERSION=1.35
+2024-06-17 06:28:29.609746 +0000 build-debian43: output: ++ readlink -f /builder/linux-kernel/dummy-psu
+2024-06-17 06:28:29.611270 +0000 build-debian43: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/dummy-psu
+2024-06-17 06:28:29.611290 +0000 build-debian43: output: + GIT_ARCHIVE_TYPE=gz
+2024-06-17 06:28:29.611425 +0000 build-debian43: output: + GIT_TARBALL_NAME=dummy-psu-49475d88d94e079b.tar
+2024-06-17 06:28:29.611443 +0000 build-debian43: output: + '[' xdummy-psu/ '!=' x ']'
+2024-06-17 06:28:29.611450 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=dummy-psu/
+2024-06-17 06:28:29.611457 +0000 build-debian43: output: + pushd /builder/linux-kernel/dummy-psu
+2024-06-17 06:28:29.611639 +0000 build-debian43: output: /builder/linux-kernel/dummy-psu ~
+2024-06-17 06:28:29.613005 +0000 build-debian43: output: ++ git log -1 --format=%ct
+2024-06-17 06:28:29.613023 +0000 build-debian43: output: + SOURCE_DATE_EPOCH=1602292420
+2024-06-17 06:28:29.613718 +0000 build-debian43: output: ++ sort -V
+2024-06-17 06:28:29.613733 +0000 build-debian43: output: ++ printf '%s\n' 1.35 1.28
+2024-06-17 06:28:29.613946 +0000 build-debian43: output: ++ head -n1
+2024-06-17 06:28:29.615918 +0000 build-debian43: output: + '[' 1.28 == 1.28 ']'
+2024-06-17 06:28:29.616179 +0000 build-debian43: output: + tar --sort=name --mtime=@1602292420 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%dummy-psu/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude dummy-psu-49475d88d94e079b.tar -cf dummy-psu-49475d88d94e079b.tar .
+2024-06-17 06:28:29.618401 +0000 build-debian43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-06-17 06:28:29.618568 +0000 build-debian43: output: + gzip -fn dummy-psu-49475d88d94e079b.tar
+2024-06-17 06:28:29.620603 +0000 build-debian43: output: ~
+2024-06-17 06:28:29.620621 +0000 build-debian43: output: + popd
+2024-06-17 06:28:29.623048 +0000 build-debian43: output: ++ head -1
+2024-06-17 06:28:29.623074 +0000 build-debian43: output: ++ tar --version
+2024-06-17 06:28:29.623083 +0000 build-debian43: output: ++ awk '{print $4}'
+2024-06-17 06:28:29.624155 +0000 build-debian43: output: + TAR_VERSION=1.35
+2024-06-17 06:28:29.625181 +0000 build-debian43: output: ++ readlink -f /builder/linux-kernel/dummy-backlight
+2024-06-17 06:28:29.625201 +0000 build-debian43: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/dummy-backlight
+2024-06-17 06:28:29.625208 +0000 build-debian43: output: + GIT_ARCHIVE_TYPE=gz
+2024-06-17 06:28:29.625215 +0000 build-debian43: output: + GIT_TARBALL_NAME=dummy-backlight-33420931ad20f1e3.tar
+2024-06-17 06:28:29.625221 +0000 build-debian43: output: + '[' xdummy-backlight/ '!=' x ']'
+2024-06-17 06:28:29.625228 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=dummy-backlight/
+2024-06-17 06:28:29.625234 +0000 build-debian43: output: + pushd /builder/linux-kernel/dummy-backlight
+2024-06-17 06:28:29.625524 +0000 build-debian43: output: /builder/linux-kernel/dummy-backlight ~
+2024-06-17 06:28:29.625544 +0000 build-debian43: output: ++ git log -1 --format=%ct
+2024-06-17 06:28:29.627252 +0000 build-debian43: output: + SOURCE_DATE_EPOCH=1600607528
+2024-06-17 06:28:29.627805 +0000 build-debian43: output: ++ printf '%s\n' 1.35 1.28
+2024-06-17 06:28:29.627824 +0000 build-debian43: output: ++ sort -V
+2024-06-17 06:28:29.628093 +0000 build-debian43: output: ++ head -n1
+2024-06-17 06:28:29.629181 +0000 build-debian43: output: + '[' 1.28 == 1.28 ']'
+2024-06-17 06:28:29.629210 +0000 build-debian43: output: + tar --sort=name --mtime=@1600607528 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%dummy-backlight/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude dummy-backlight-33420931ad20f1e3.tar -cf dummy-backlight-33420931ad20f1e3.tar .
+2024-06-17 06:28:29.632936 +0000 build-debian43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-06-17 06:28:29.632977 +0000 build-debian43: output: + gzip -fn dummy-backlight-33420931ad20f1e3.tar
+2024-06-17 06:28:29.634148 +0000 build-debian43: output: ~
+2024-06-17 06:28:29.634528 +0000 build-debian43: output: + popd
+2024-06-17 06:28:29.637987 +0000 build-debian43: output: ++ tar --version
+2024-06-17 06:28:29.638012 +0000 build-debian43: output: ++ head -1
+2024-06-17 06:28:29.638037 +0000 build-debian43: output: ++ awk '{print $4}'
+2024-06-17 06:28:29.639846 +0000 build-debian43: output: + TAR_VERSION=1.35
+2024-06-17 06:28:29.639874 +0000 build-debian43: output: ++ readlink -f /builder/linux-kernel/v4l2loopback
+2024-06-17 06:28:29.640736 +0000 build-debian43: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/v4l2loopback
+2024-06-17 06:28:29.640759 +0000 build-debian43: output: + GIT_ARCHIVE_TYPE=gz
+2024-06-17 06:28:29.640768 +0000 build-debian43: output: + GIT_TARBALL_NAME=v4l2loopback-1ecf810f0d687b64.tar
+2024-06-17 06:28:29.640774 +0000 build-debian43: output: + '[' xv4l2loopback/ '!=' x ']'
+2024-06-17 06:28:29.640781 +0000 build-debian43: output: + GIT_ARCHIVE_PREFIX=v4l2loopback/
+2024-06-17 06:28:29.640787 +0000 build-debian43: output: + pushd /builder/linux-kernel/v4l2loopback
+2024-06-17 06:28:29.640793 +0000 build-debian43: output: /builder/linux-kernel/v4l2loopback ~
+2024-06-17 06:28:29.641273 +0000 build-debian43: output: ++ git log -1 --format=%ct
+2024-06-17 06:28:29.642479 +0000 build-debian43: output: + SOURCE_DATE_EPOCH=1659652207
+2024-06-17 06:28:29.643428 +0000 build-debian43: output: ++ printf '%s\n' 1.35 1.28
+2024-06-17 06:28:29.643822 +0000 build-debian43: output: ++ sort -V
+2024-06-17 06:28:29.643839 +0000 build-debian43: output: ++ head -n1
+2024-06-17 06:28:29.645099 +0000 build-debian43: output: + '[' 1.28 == 1.28 ']'
+2024-06-17 06:28:29.645125 +0000 build-debian43: output: + tar --sort=name --mtime=@1659652207 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%v4l2loopback/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude v4l2loopback-1ecf810f0d687b64.tar -cf v4l2loopback-1ecf810f0d687b64.tar .
+2024-06-17 06:28:29.647013 +0000 build-debian43: output: + case "$GIT_ARCHIVE_TYPE" in
+2024-06-17 06:28:29.647031 +0000 build-debian43: output: + gzip -fn v4l2loopback-1ecf810f0d687b64.tar
+2024-06-17 06:28:29.654329 +0000 build-debian43: output: + popd
+2024-06-17 06:28:29.654553 +0000 build-debian43: output: ~
+2024-06-17 06:28:29.666862 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7152 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel-2Fv4l2loopback-2Fv4l2loopback--1ecf810f0d687b64.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/distfiles/linux-kernel
+2024-06-17 06:28:29.897774 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7152 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel-2Fdummy--backlight-2Fdummy--backlight--33420931ad20f1e3.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/distfiles/linux-kernel
+2024-06-17 06:28:30.043483 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7152 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel-2Flinux--utils-2Flinux--utils--97271bab41f588b0.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/distfiles/linux-kernel
+2024-06-17 06:28:30.188636 +0000 build-debian43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7152 qubesbuilder.FileCopyOut+-2Fbuilder-2Flinux--kernel-2Fdummy--psu-2Fdummy--psu--49475d88d94e079b.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-debian/distfiles/linux-kernel
+2024-06-17 06:28:32.474966 +0000 build-debian43: > done
+2024-06-17 06:28:32.475058 +0000 > closing log
