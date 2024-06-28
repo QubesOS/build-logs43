@@ -1,0 +1,26 @@
+2024-06-28 14:38:01.720102 +0000 > starting log
+2024-06-28 14:38:01.720637 +0000 build-fedora43: > starting build with log
+2024-06-28 14:38:01.720652 +0000 build-fedora43: >> args:
+2024-06-28 14:38:01.720669 +0000 build-fedora43: >>   ()
+2024-06-28 14:38:01.720675 +0000 build-fedora43: >> component:
+2024-06-28 14:38:01.720682 +0000 build-fedora43: >>   core-admin-linux
+2024-06-28 14:38:01.720689 +0000 build-fedora43: >>     commit-hash: 5becf1c5741f98c6696448ef925ea171bdad8be9
+2024-06-28 14:38:01.720700 +0000 build-fedora43: >>     source-hash: 9f9632e47973ce31b8cdf7c96ffe5aa3578473f52e7905c41c2b7ddf8fb7b4b290fc3e020921cd1e3353e68ba8572d0492489f0ab71711a39438a71e9fb9e589
+2024-06-28 14:38:01.720706 +0000 build-fedora43: >> distributions:
+2024-06-28 14:38:01.720714 +0000 build-fedora43: >>   [<QubesDistribution vm-fedora-39.x86_64>, <QubesDistribution vm-fedora-40.x86_64>]
+2024-06-28 14:38:01.720720 +0000 build-fedora43: core-admin-linux: source already fetched. Updating.
+2024-06-28 14:38:09.032534 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5073 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--admin--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/core-admin-linux
+2024-06-28 14:38:09.270333 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5073 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-28 14:38:09.438708 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp5073 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-core-admin-linux.git /builder/core-admin-linux /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-06-28 14:38:13.147071 +0000 build-fedora43: output: --> Verifying tags...
+2024-06-28 14:38:13.147116 +0000 build-fedora43: output: ---> Good tag ea81b4d47b6fadb52253aee97e287f054f5d7667.
+2024-06-28 14:38:13.147125 +0000 build-fedora43: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-06-28 14:38:13.147131 +0000 build-fedora43: output: --> Merging...
+2024-06-28 14:38:13.161465 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5073 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--admin--linux /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/sources
+2024-06-28 14:38:14.941876 +0000 build-fedora43: ['cd -- /builder', "git -C /builder/core-admin-linux rev-parse 'HEAD^{}' >> hash", "git -C /builder/core-admin-linux tag --points-at HEAD --list 'v*' >> vtags"]
+2024-06-28 14:38:22.506206 +0000 build-fedora43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3306 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--admin--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3-fedora/sources/core-admin-linux
+2024-06-28 14:38:22.765005 +0000 build-fedora43: Executing '/usr/bin/qvm-run-vm -- disp3306 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/core-admin-linux rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/core-admin-linux tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-06-28 14:38:22.938113 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3306 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp9mjay00q
+2024-06-28 14:38:23.123536 +0000 build-fedora43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3306 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3-fedora/tmp/tmp9mjay00q
+2024-06-28 14:38:24.917532 +0000 build-fedora43: > done
+2024-06-28 14:38:24.917585 +0000 > closing log
